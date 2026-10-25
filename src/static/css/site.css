@@ -790,7 +790,9 @@ main:focus { outline: none; }
 }
 .lang-menu .lm-panel ul { position: static; min-width: 0; padding: 0; background: none; border: 0; box-shadow: none; }
 .lm-label { margin: 8px 10px 6px; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
-.lm-auto { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.lm-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.lm-list a { min-height: 42px; font-size: 14.5px; }
+.lm-list .lm-code { display: none; }
 .lm-auto button, .lm-original {
   display: flex; align-items: center; width: 100%; min-height: 42px; padding: 0 12px; border: 0; border-radius: 10px;
   background: none; color: var(--muted); font-size: 14.5px; text-align: left; cursor: pointer;

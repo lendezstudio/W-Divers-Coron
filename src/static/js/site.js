@@ -67,7 +67,7 @@
     $$('[data-lang-current]').forEach(function (el) { el.textContent = auto.split('-')[0].toUpperCase(); });
     $$('[data-auto-lang="' + auto + '"]').forEach(function (b) { b.setAttribute('aria-current', 'true'); });
     $$('[data-auto-off]').forEach(function (b) { b.hidden = false; });
-    $$('.lang-menu .lm-site a[aria-current]').forEach(function (a) { a.removeAttribute('aria-current'); });
+    $$('.lang-menu .lm-list a[aria-current]').forEach(function (a) { a.removeAttribute('aria-current'); });
   }
   $$('[data-auto-lang]').forEach(function (b) {
     b.addEventListener('click', function () {

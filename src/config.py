@@ -19,7 +19,7 @@ LOCALES = ["en", "ko"]
 AUTO_LANGS = [
     ("zh-CN", "中文 (简体)"), ("zh-TW", "中文 (繁體)"), ("ja", "日本語"), ("es", "Español"),
     ("fr", "Français"), ("de", "Deutsch"), ("it", "Italiano"), ("ru", "Русский"),
-    ("vi", "Tiếng Việt"), ("th", "ไทย"), ("id", "Bahasa Indonesia"), ("tl", "Filipino"),
+    ("vi", "Tiếng Việt"), ("th", "ไทย"), ("id", "Bahasa Indonesia"), ("ar", "العربية"),
 ]
 DEFAULT_LOCALE = "en"
 

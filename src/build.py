@@ -174,8 +174,7 @@ def lang_menu(L, route, cls=""):
     return (f'<details class="lang-menu notranslate {cls}" translate="no" data-lang-menu>'
             f'<summary aria-label="{e(u["lang_label"])}: {e(L.lang_name)}">{icon("globe")}'
             f'<span data-lang-current>{L.code.upper()}</span>{icon("chev", "ico chev")}</summary>'
-            f'<div class="lm-panel"><p class="lm-label">{e(u["lm_site"])}</p><ul class="lm-site">{site}</ul>'
-            f'<p class="lm-label">{e(u["lm_more"])}</p><ul class="lm-auto">{auto}</ul>'
+            f'<div class="lm-panel"><p class="lm-label">{e(u["lm_site"])}</p><ul class="lm-list">{site}{auto}</ul>'
             f'<button type="button" class="lm-original" data-auto-off hidden>{e(u["lm_original"])}</button>'
             f'<p class="lm-note">{e(u["lm_note"])}</p></div></details>')
 
@@ -236,7 +235,7 @@ def header(L, route, current_path):
   <div class="header-tools">
     {lang_menu(L, route)}
     {btn(url(L.code, "contact"), L.ui["plan_cta"], "btn btn-outline btn-sm header-cta")}
-    <a class="menu-btn" href="#footer-nav" data-menu-open aria-controls="nav-panel">{icon("menu")}<span>{e(L.ui["menu"])}</span></a>
+    <a class="menu-btn" href="#footer-nav" data-menu-open aria-controls="nav-panel">{icon("menu")}<span class="notranslate" translate="no">{e(L.ui["menu"])}</span></a>
   </div>
 </header>'''
 
@@ -247,7 +246,7 @@ def sticky_bar(L, route):
   <div class="header-tools">
     {lang_menu(L, route)}
     {btn(url(L.code, "contact"), L.ui["plan_cta"], "btn btn-outline btn-sm")}
-    <a class="menu-btn" href="#footer-nav" data-menu-open aria-controls="nav-panel" tabindex="-1">{icon("menu")}<span>{e(L.ui["menu"])}</span></a>
+    <a class="menu-btn" href="#footer-nav" data-menu-open aria-controls="nav-panel" tabindex="-1">{icon("menu")}<span class="notranslate" translate="no">{e(L.ui["menu"])}</span></a>
   </div>
 </div>'''
 
@@ -358,7 +357,7 @@ def head(L, route, title, meta, extra_head="", jsonld=None, og_image=None):
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
-<script>document.documentElement.classList.add('js')</script>
+<script>document.documentElement.classList.add('js');if(!/(?:^|;\\s*)googtrans=\\/[^;]+\\/[a-zA-Z-]+/.test(document.cookie)){{document.documentElement.setAttribute('translate','no');var m=document.createElement('meta');m.name='google';m.content='notranslate';document.head.appendChild(m)}}</script>
 {extra_head}{ld}</head>'''
 
 
@@ -1078,7 +1077,7 @@ def render_404():
 <title>{e(L.p["404"]["title"])}</title><meta name="robots" content="noindex">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
-<script>document.documentElement.classList.add('js')</script></head>
+<script>document.documentElement.classList.add('js');if(!/(?:^|;\\s*)googtrans=\\/[^;]+\\/[a-zA-Z-]+/.test(document.cookie)){{document.documentElement.setAttribute('translate','no');var m=document.createElement('meta');m.name='google';m.content='notranslate';document.head.appendChild(m)}}</script></head>
 <body class="is-404">
 <main id="main" class="nf">
   <a class="brand" href="/">{'<img src="/assets/brand/logo-white.png" alt="W Divers Coron" width="110" height="110">'}</a>
