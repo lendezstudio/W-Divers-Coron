@@ -96,13 +96,13 @@ MEDIA = {
     },
     "shop-guests": {
         "src": (IMG, "598556110_3827640630701477_6349572359701715112_n.jpg"),
-        "kind": "business", "focus": "50% 40%", "cats": ["moments"],
+        "kind": "business", "focus": "50% 75%", "cats": ["moments"],
         "alt": {"en": "Guests pose under the W Divers Coron sign.",
                 "ko": "게스트들이 W Divers Coron 간판 아래에서 포즈를 취하고 있습니다."},
     },
     "shop-guests-2": {
         "src": (IMG, "598559289_3831762660289274_2309205698229230351_n.jpg"),
-        "kind": "business", "focus": "50% 45%", "cats": ["moments"],
+        "kind": "business", "focus": "50% 75%", "cats": ["moments"],
         "alt": {"en": "A group of guests gives a thumbs up outside the W Divers Coron shop.",
                 "ko": "W Divers Coron 샵 앞에서 게스트들이 엄지를 들어 보이고 있습니다."},
     },

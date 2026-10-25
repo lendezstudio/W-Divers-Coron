@@ -32,6 +32,7 @@ UI = {
     "lm_original": "원문 보기",
     "plan_cta": "다이빙 문의하기",
     "whatsapp_cta": "WhatsApp으로 문의",
+    "kakao_cta": "카카오톡으로 문의",
     "email_cta": "이메일 보내기",
     "scroll": "스크롤",
     "section_nav": "페이지 섹션",
@@ -348,6 +349,7 @@ PAGES["gallery"] = {
     "intro": "수중 장면과 섬 풍경을 둘러보며 코론에서 보낼 시간을 그려보세요.",
     "img": "stock-clownfish",
     "insta": "Instagram에서 더 보기",
+    "fb": "Facebook에서 더 보기",
     "nav_label": "갤러리 섹션",
     "sections": {
         "underwater": ("수중", "산호초와 난파선, 그리고 그 주변의 생명들."),

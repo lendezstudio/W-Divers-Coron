@@ -32,6 +32,7 @@ UI = {
     "lm_original": "Show original",
     "plan_cta": "Plan Your Dive",
     "whatsapp_cta": "Message on WhatsApp",
+    "kakao_cta": "Message on KakaoTalk",
     "email_cta": "Email W Divers",
     "scroll": "Scroll",
     "section_nav": "Page sections",
@@ -348,6 +349,7 @@ PAGES["gallery"] = {
     "intro": "Explore underwater scenes and island views, then start imagining your time in Coron.",
     "img": "stock-clownfish",
     "insta": "See More on Instagram",
+    "fb": "See More on Facebook",
     "nav_label": "Gallery sections",
     "sections": {
         "underwater": ("Underwater", "Reefs, wrecks and the life around them."),

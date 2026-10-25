@@ -793,12 +793,12 @@ main:focus { outline: none; }
 .lm-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 .lm-list a { min-height: 42px; font-size: 14.5px; }
 .lm-list .lm-code { display: none; }
-.lm-auto button, .lm-original {
+.lm-list button, .lm-original {
   display: flex; align-items: center; width: 100%; min-height: 42px; padding: 0 12px; border: 0; border-radius: 10px;
   background: none; color: var(--muted); font-size: 14.5px; text-align: left; cursor: pointer;
 }
-.lm-auto button:hover, .lm-original:hover { background: rgba(241, 245, 242, .08); color: var(--fg); }
-.lm-auto button[aria-current] { color: var(--fg); background: rgba(78, 170, 166, .16); }
+.lm-list button:hover, .lm-original:hover { background: rgba(241, 245, 242, .08); color: var(--fg); }
+.lm-list button[aria-current] { color: var(--fg); background: rgba(78, 170, 166, .16); }
 .lm-original { margin-top: 6px; justify-content: center; border: 1px solid var(--line-strong); color: var(--fg); }
 .lm-original[hidden] { display: none; }
 .lm-note { margin: 10px 10px 4px; font-size: 12px; line-height: 1.5; color: var(--muted); }
@@ -817,3 +817,9 @@ font { vertical-align: inherit !important; }
   /* the sticky bar's backdrop-filter makes it the containing block, so 100% is the bar's height */
   .sticky-bar .lang-menu .lm-panel { position: fixed; left: 12px; right: 12px; top: calc(100% + 6px); width: auto; max-height: calc(100vh - 90px); }
 }
+
+/* large tile pinned to the right half (alternating blocks in the gallery) */
+.tile.lg-right { grid-column: 3 / span 2; }
+@media (max-width: 639px) { .tile.lg-right { grid-column: span 2; } }
+
+.gallery-more { display: flex; flex-wrap: wrap; gap: 12px; }

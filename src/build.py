@@ -425,6 +425,7 @@ def cta_band(L, heading, text, label, interest=None, topic=None, note=None):
     <div class="cta-actions">
       {btn(contact_url(L.code, interest, topic), label, "btn btn-solid")}
       {ext(wa_url(), icon("whatsapp") + "<span>" + e(L.ui["whatsapp_cta"]) + "</span>", "text-link with-ico", L)}
+      <a class="text-link with-ico" href="{url(L.code, "contact")}#kakao">{icon("kakao")}<span>{e(L.ui["kakao_cta"])}</span></a>
     </div>
     {n}
   </div>
@@ -792,6 +793,8 @@ ROUTE_IMG = {"diving": "stock-wall", "first": "stock-pair", "courses": "pool-pai
 
 # Curated gallery: (media key, tile size). Sizes are chosen so each section
 # fills complete rows of a 4-column grid: lg = 2x2, wide = 2x1, "" = 1x1.
+# lg-right pins a large tile to the right half, so blocks alternate sides.
+# Group photos use lg tiles: their near-4:3 shape keeps everyone in frame.
 GALLERY = [
     ("underwater", [("stock-turtle", "lg"), ("hero-fish", ""), ("rock-walls", ""), ("wreck-bow", ""),
                     ("stock-reef-snake", ""), ("stock-wall", ""), ("stock-pair", ""), ("wreck-mast", ""),
@@ -799,8 +802,9 @@ GALLERY = [
     ("video", "dugong"),
     ("islands", [("island-aerial", "lg"), ("flag-boat", ""), ("island-small", ""), ("beach-walk", ""),
                  ("boat-group", "")]),
-    ("moments", [("shop-guests", "wide"), ("boat-briefing", ""), ("diver-sand", ""), ("pool-skills", ""),
-                 ("seabed-group", ""), ("shop-guests-2", "wide")]),
+    ("moments", [("shop-guests", "lg"), ("boat-briefing", ""), ("diver-sand", ""), ("pool-skills", ""),
+                 ("seabed-group", ""), ("shop-guests-2", "lg lg-right"), ("pool-pair", ""), ("surface-group", ""),
+                 ("pool-indoor", ""), ("tanks-boat", "")]),
 ]
 
 
@@ -832,7 +836,7 @@ def render_gallery(L):
         for key, size in items:
             w0, _ = SIZES[key]
             full = f"/assets/img/{key}-{1920 if w0 >= 1920 else (1280 if w0 >= 1280 else 640)}.webp"
-            sz = "(min-width: 900px) 46vw, 92vw" if size == "lg" else "(min-width: 900px) 23vw, 46vw"
+            sz = "(min-width: 900px) 46vw, 92vw" if "lg" in size else "(min-width: 900px) 23vw, 46vw"
             tiles += f'''<li class="tile {size} reveal"><a class="frame" href="{full}" data-lightbox data-caption="{e(media.MEDIA[key]["alt"][c])}">{picture(key, L, sz)}</a></li>'''
         secs += f'''<section class="gal-sec" id="g-{k}" aria-labelledby="g-{k}-h">
   {head.replace('class="section-h"', f'class="section-h" id="g-{k}-h"', 1)}
@@ -847,7 +851,8 @@ def render_gallery(L):
 <div class="wrap gallery">
   <nav class="gal-nav" aria-label="{e(P["nav_label"])}"><ul>{nav}</ul></nav>
   {secs}
-  <p class="gallery-more">{ext(config.CONTACT["instagram"], icon("instagram") + "<span>" + e(P["insta"]) + "</span>", "btn btn-outline with-ico", L)}</p>
+  <p class="gallery-more">{ext(config.CONTACT["instagram"], icon("instagram") + "<span>" + e(P["insta"]) + "</span>", "btn btn-outline with-ico", L)}
+    {ext(config.CONTACT["facebook"], icon("facebook") + "<span>" + e(P["fb"]) + "</span>", "btn btn-outline with-ico", L)}</p>
 </div>
 {lightbox}
 {cta_band(L, P["cta"], L.p["home"]["contact_t"], L.ui["plan_cta"])}
