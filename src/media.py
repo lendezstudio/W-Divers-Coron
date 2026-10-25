@@ -173,6 +173,25 @@ MEDIA = {
         "alt": {"en": "A dive mask lies on wet sand at the water's edge.",
                 "ko": "물가의 젖은 모래 위에 다이빙 마스크가 놓여 있습니다."},
     },
+    "stock-fins": {
+        "src": (PEX, "pexels-mcphotographer-1139603240-26860915.jpg"),
+        "kind": "stock", "focus": "50% 45%", "cats": [],
+        "alt": {"en": "A pair of dive fins resting in clear shallow water.",
+                "ko": "맑고 얕은 물속에 다이빙 핀 한 쌍이 놓여 있습니다."},
+    },
+    # Google downloads supplied by Lyneth; thematic only, no location claimed
+    "island-aerial": {
+        "src": (IMG, "Apo-Reef.jpg"),
+        "kind": "stock", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "Aerial view of a white-sand beach and turquoise shallows beside a forested island.",
+                "ko": "숲이 우거진 섬 옆으로 하얀 모래사장과 청록빛 얕은 바다가 펼쳐진 항공 사진입니다."},
+    },
+    "island-small": {
+        "src": (IMG, "images (1).jpg"),
+        "kind": "stock", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "A small green island ringed by white sand and clear blue water, seen from above.",
+                "ko": "하얀 모래와 맑은 바다로 둘러싸인 작은 초록 섬을 위에서 본 모습입니다."},
+    },
     "stock-split": {
         "src": (PEX, "pexels-toulouse-3098973.jpg"),
         "kind": "stock", "focus": "50% 60%", "cats": [],

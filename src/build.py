@@ -549,7 +549,7 @@ def render_diving(L):
         for ch in P["chooser"])
     extra = f'''<div class="chooser"><p class="chooser-h" id="chooser-h">{e(P["chooser_h"])}</p>
       <ul aria-labelledby="chooser-h">{chooser}</ul></div>'''
-    op = opening(L, P["eyebrow"], P["h1"], P["intro"], "wreck-mast", [(L.names["diving"], url(c, "diving"))], extra)
+    op = opening(L, P["eyebrow"], P["h1"], P["intro"], "stock-wall", [(L.names["diving"], url(c, "diving"))], extra)
     big = "".join(f'''<article class="big-panel reveal">
       <a href="{url(c, b["to"])}" class="frame big-frame">
         {picture(b["img"], L, "(min-width: 900px) 44vw, 100vw")}
@@ -585,6 +585,8 @@ def render_service(L, key):
         secs += f'<section class="prose-sec reveal"><h2>{e(s["h"])}</h2>{paras(s["p"])}</section>'
         if i == 0 and P.get("inline_img"):
             secs += f'<figure class="frame inline-fig reveal">{picture(P["inline_img"], L, "(min-width: 900px) 56vw, 100vw")}</figure>'
+        if i == 0 and P.get("inline_video"):
+            secs += f'<div class="inline-video reveal">{video_figure(L, P["inline_video"])}</div>'
     catalog = ""
     if key == "courses":
         catalog = course_catalog(L)
@@ -752,33 +754,53 @@ def render_about(L):
     return layout(L, ("about",), P["title"], P["meta"], op, body, jsonld=[business_ld(L)])
 
 
+# Curated gallery: (media key, tile size). Sizes are chosen so each section
+# fills complete rows of a 4-column grid: lg = 2x2, wide = 2x1, "" = 1x1.
+GALLERY = [
+    ("underwater", [("stock-turtle", "lg"), ("hero-fish", ""), ("rock-walls", ""), ("wreck-bow", ""),
+                    ("stock-reef-snake", ""), ("stock-wall", ""), ("stock-pair", ""), ("wreck-mast", ""),
+                    ("stock-descent", "")]),
+    ("video", "dugong"),
+    ("islands", [("island-aerial", "lg"), ("flag-boat", ""), ("island-small", ""), ("beach-walk", ""),
+                 ("boat-group", "")]),
+    ("moments", [("shop-guests", "wide"), ("boat-briefing", ""), ("diver-sand", ""), ("pool-skills", ""),
+                 ("seabed-group", ""), ("shop-guests-2", "wide")]),
+]
+
+
+def video_figure(L, key, cls="frame video-fig"):
+    v = media.VIDEOS[key]
+    return f'''<figure class="{cls}">
+  <video controls preload="none" playsinline poster="/assets/video/{key}-poster.jpg" width="640" height="360">
+    <source src="/assets/video/{key}.mp4" type="video/mp4">{e(L.ui["video_fallback"])}</video>
+  <figcaption>{e(v["caption"][L.code])}</figcaption>
+</figure>'''
+
+
 def render_gallery(L):
     P = L.p["gallery"]
     c = L.code
     op = opening(L, P["eyebrow"], P["h1"], P["intro"], P["img"], [(L.names["gallery"], url(c, "gallery"))])
-    order = ["hero-fish", "wreck-bow", "boat-group", "stock-turtle", "seabed-group", "flag-boat", "stock-clownfish",
-             "wreck-mast", "shop-guests", "stock-descent", "rock-walls", "beach-walk", "stock-reef-snake",
-             "diver-sand", "boat-briefing", "stock-wall", "tanks-boat", "pool-skills", "stock-pair", "shop-guests-2",
-             "pool-pair", "shop-front"]
-    order = [k for k in order if media.MEDIA[k]["cats"]]
-    cats = [k for k in ("underwater", "islands", "moments") if any(k in media.MEDIA[m]["cats"] for m in order)]
-    has_video = bool(media.VIDEOS)
-    btns = [f'<button type="button" aria-pressed="true" data-filter="all">{e(L.ui["gallery_all"])}</button>']
-    btns += [f'<button type="button" aria-pressed="false" data-filter="{k}">{e(L.ui["gallery_" + k])}</button>' for k in cats]
-    if has_video:
-        btns.append(f'<button type="button" aria-pressed="false" data-filter="video">{e(L.ui["gallery_video"])}</button>')
-    items = ""
-    for k in order:
-        m = media.MEDIA[k]
-        w0, _ = SIZES[k]
-        full = f"/assets/img/{k}-{1920 if w0 >= 1920 else (1280 if w0 >= 1280 else 640)}.webp"
-        items += f'''<li class="g-item reveal" data-cat="{" ".join(m["cats"])}">
-          <a href="{full}" data-lightbox data-caption="{e(m["alt"][c])}">{picture(k, L, "(min-width: 1100px) 30vw, (min-width: 640px) 45vw, 100vw")}</a></li>'''
-    for k, v in media.VIDEOS.items():
-        items += f'''<li class="g-item g-video reveal" data-cat="video">
-          <figure><video controls preload="none" playsinline poster="/assets/video/{k}-poster.jpg" width="640" height="360">
-            <source src="/assets/video/{k}.mp4" type="video/mp4">{e(L.ui["video_fallback"])}</video>
-          <figcaption>{e(v["caption"][c])}</figcaption></figure></li>'''
+    nav = "".join(f'<li><a href="#g-{k}">{e(P["sections"][k][0])}</a></li>' for k, _ in GALLERY)
+    secs = ""
+    for k, items in GALLERY:
+        h, t = P["sections"][k]
+        head = f'<div class="gal-head reveal"><h2 class="section-h">{e(h)}</h2><p class="muted">{e(t)}</p></div>'
+        if k == "video":
+            secs += f'''<section class="gal-sec gal-video" id="g-{k}" aria-labelledby="g-{k}-h">
+  <div class="gal-video-grid">{video_figure(L, items)}
+    <div class="gal-video-copy reveal"><h2 class="section-h" id="g-{k}-h">{e(h)}</h2><p class="muted">{e(t)}</p>
+      {arrow_link(url(c, "reef"), P["video_link"], "arrow-link light")}</div></div></section>'''
+            continue
+        tiles = ""
+        for key, size in items:
+            w0, _ = SIZES[key]
+            full = f"/assets/img/{key}-{1920 if w0 >= 1920 else (1280 if w0 >= 1280 else 640)}.webp"
+            sz = "(min-width: 900px) 46vw, 92vw" if size == "lg" else "(min-width: 900px) 23vw, 46vw"
+            tiles += f'''<li class="tile {size} reveal"><a class="frame" href="{full}" data-lightbox data-caption="{e(media.MEDIA[key]["alt"][c])}">{picture(key, L, sz)}</a></li>'''
+        secs += f'''<section class="gal-sec" id="g-{k}" aria-labelledby="g-{k}-h">
+  {head.replace('class="section-h"', f'class="section-h" id="g-{k}-h"', 1)}
+  <ul class="gal-grid">{tiles}</ul></section>'''
     lightbox = f'''<dialog class="lightbox" aria-label="{e(L.ui["lb_label"])}" data-lightbox-dialog>
   <figure><img alt="" src="data:," data-lb-img><figcaption data-lb-cap></figcaption></figure>
   <button type="button" class="lb-btn lb-prev" data-lb-prev aria-label="{e(L.ui["lb_prev"])}">{icon("arrow", "ico flip")}</button>
@@ -786,11 +808,11 @@ def render_gallery(L):
   <button type="button" class="lb-btn lb-close" data-lb-close aria-label="{e(L.ui["lb_close"])}">{icon("close")}</button>
 </dialog>'''
     body = f'''
-<section class="wrap gallery">
-  <div class="filters" role="group" aria-label="{e(L.ui["gallery_filter"])}" data-filter-group="gallery">{"".join(btns)}</div>
-  <ul class="g-grid" data-filter-target="gallery">{items}</ul>
+<div class="wrap gallery">
+  <nav class="gal-nav" aria-label="{e(P["nav_label"])}"><ul>{nav}</ul></nav>
+  {secs}
   <p class="gallery-more">{ext(config.CONTACT["instagram"], icon("instagram") + "<span>" + e(P["insta"]) + "</span>", "btn btn-outline with-ico", L)}</p>
-</section>
+</div>
 {lightbox}
 {cta_band(L, P["cta"], L.p["home"]["contact_t"], L.ui["plan_cta"])}
 '''
@@ -959,7 +981,7 @@ def render_contact(L):
 def render_booking(L):
     P = L.p["booking"]
     c = L.code
-    op = opening(L, P["eyebrow"], P["h1"], P["intro"], None, [(L.names["booking"], url(c, "booking"))])
+    op = opening(L, P["eyebrow"], P["h1"], P["intro"], "stock-fins", [(L.names["booking"], url(c, "booking"))])
     steps = "".join(f'<li class="step reveal"><span class="step-n" aria-hidden="true">{i + 1:02d}</span><div><h2>{e(s["h"])}</h2><p>{e(s["p"])}</p></div></li>'
                     for i, s in enumerate(P["steps"]))
     body = f'''

@@ -196,6 +196,7 @@ PAGES["reef"] = {
         {"h": "물속에서 무엇이 좋은지 알려주세요.", "p": ["여유로운 다이빙, 수중 사진, 다양한 일정 등 원하는 것이 있다면 문의할 때 말씀해 주세요. 야생동물과의 만남이나 시야는 보장되지 않습니다."]},
         {"h": "궁금한 점을 모두 가져오세요.", "p": ["적합한 포인트, 예상되는 바다 상황, 장비 준비, 그리고 리프 트립을 전체 여행 일정에 어떻게 넣을 수 있는지 물어보세요."]},
     ],
+    "inline_video": "dugong",
     "cta": "리프 다이빙 문의하기",
     "interest": "reef",
     "related": [("diving", None), ("plan", None), ("gallery", None)],
@@ -279,7 +280,7 @@ PAGES["island"] = {
     "eyebrow": "아일랜드 호핑",
     "h1": "코론의 또 다른 얼굴을 만나보세요.",
     "intro": "여행 중 물 위에서의 시간도 가져보세요. 일행에 맞는 아일랜드 호핑 일정과 옵션을 W Divers에 문의하세요.",
-    "img": "boat-group",
+    "img": "island-aerial",
     "summary": {
         "h": "운영 방식을 확인하세요",
         "for": "출발 전에 확인할 내용:",
@@ -302,7 +303,7 @@ PAGES["plan"] = {
     "eyebrow": "여행 준비 가이드",
     "h1": "조금만 준비하면 경험에 더 집중할 수 있습니다.",
     "intro": "코론 다이빙 여행을 확정하기 전에 날짜와 궁금한 점을 한곳에 정리해 보세요.",
-    "img": "tanks-boat",
+    "img": "stock-mask",
     "steps": [
         {"id": "before", "h": "도착하기 전에.", "p": "여행 날짜, 인원, 다이빙 경험을 팀에 알려주세요. 자격증 소지자 대상 활동을 예약하신다면 자격증과 최근 다이빙 기록을 준비해 두세요."},
         {"id": "meeting", "h": "하루가 시작되는 곳을 확인하세요.", "p": "미팅 장소와 시간은 W Divers에 직접 확인하세요. 호텔 픽업을 기대하기 전에 이동이 포함되는지 먼저 물어보세요."},
@@ -339,8 +340,16 @@ PAGES["gallery"] = {
     "eyebrow": "갤러리",
     "h1": "바다와 함께하는 시간을 가까이에서.",
     "intro": "수중 장면과 섬 풍경을 둘러보며 코론에서 보낼 시간을 그려보세요.",
-    "img": "rock-walls",
+    "img": "stock-clownfish",
     "insta": "Instagram에서 더 보기",
+    "nav_label": "갤러리 섹션",
+    "sections": {
+        "underwater": ("수중", "산호초와 난파선, 그리고 그 주변의 생명들."),
+        "video": ("영상", "듀공과 함께한 고요한 몇 초."),
+        "islands": ("물 위의 풍경", "섬 풍경과 바다 위에서의 하루."),
+        "moments": ("W Divers의 순간", "게스트, 샵, 그리고 보트 위의 시간."),
+    },
+    "video_link": "리프 다이빙 알아보기",
     "cta": "나의 여행 계획하기",
 }
 
@@ -498,7 +507,7 @@ PAGES["404"] = {
 
 SITES = [
     {
-        "slug": "okikawa-maru", "name": "오키카와 마루 (Okikawa Maru)", "type": "wreck", "img": "seabed-group",
+        "slug": "okikawa-maru", "name": "오키카와 마루 (Okikawa Maru)", "type": "wreck", "img": "stock-turtle",
         "card": "산호가 자라고 다양한 해양 생물이 모여드는 대형 난파선.",
         "title": "오키카와 마루 난파선 가이드 | 코론 다이빙 포인트 | W Divers Coron",
         "meta": "코론의 오키카와 마루 난파선 소개와 방문 계획 전에 W Divers Coron에 물어볼 질문.",

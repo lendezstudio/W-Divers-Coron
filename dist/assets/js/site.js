@@ -122,6 +122,7 @@
   }
   trackSections($$('.hero-rail a'));
   trackSections($$('.toc a'));
+  trackSections($$('.gal-nav a'));
 
   /* Filters (gallery, dive sites) */
   $$('[data-filter-group]').forEach(function (group) {

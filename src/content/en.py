@@ -196,6 +196,7 @@ PAGES["reef"] = {
         {"h": "Tell us what draws you underwater.", "p": ["Whether you prefer a relaxed pace, underwater photography or a varied itinerary, mention it when you inquire. Wildlife encounters and visibility are never guaranteed."]},
         {"h": "Bring your questions with you.", "p": ["Ask about suitable sites, likely conditions, equipment arrangements and how a reef trip can fit into the rest of your visit."]},
     ],
+    "inline_video": "dugong",
     "cta": "Ask About Reef Diving",
     "interest": "reef",
     "related": [("diving", None), ("plan", None), ("gallery", None)],
@@ -279,7 +280,7 @@ PAGES["island"] = {
     "eyebrow": "Island hopping",
     "h1": "See another side of Coron.",
     "intro": "Give your visit some time above the surface. Ask W Divers about island-hopping arrangements and the options available for your group.",
-    "img": "boat-group",
+    "img": "island-aerial",
     "summary": {
         "h": "Ask for the arrangements",
         "for": "Confirm before you go:",
@@ -302,7 +303,7 @@ PAGES["plan"] = {
     "eyebrow": "Planning guide",
     "h1": "A little planning makes more room for the experience.",
     "intro": "Bring your dates and questions together before confirming your Coron diving trip.",
-    "img": "tanks-boat",
+    "img": "stock-mask",
     "steps": [
         {"id": "before", "h": "Before you arrive.", "p": "Contact the team with your travel dates, group size and diving background. Keep your certification and recent dive information available if you're booking certified-diver activities."},
         {"id": "meeting", "h": "Know where your day starts.", "p": "Confirm the meeting point and time directly with W Divers. Ask whether transfers are part of your arrangement before relying on hotel pickup."},
@@ -339,8 +340,16 @@ PAGES["gallery"] = {
     "eyebrow": "Gallery",
     "h1": "A closer look at life around the water.",
     "intro": "Explore underwater scenes and island views, then start imagining your time in Coron.",
-    "img": "rock-walls",
+    "img": "stock-clownfish",
     "insta": "See More on Instagram",
+    "nav_label": "Gallery sections",
+    "sections": {
+        "underwater": ("Underwater", "Reefs, wrecks and the life around them."),
+        "video": ("On video", "A few quiet seconds with a dugong."),
+        "islands": ("Above the surface", "Island views and days on the water."),
+        "moments": ("W Divers moments", "Guests, the shop and time on the boat."),
+    },
+    "video_link": "Explore reef diving",
     "cta": "Plan Your Own Visit",
 }
 
@@ -498,7 +507,7 @@ PAGES["404"] = {
 
 SITES = [
     {
-        "slug": "okikawa-maru", "name": "Okikawa Maru", "type": "wreck", "img": "seabed-group",
+        "slug": "okikawa-maru", "name": "Okikawa Maru", "type": "wreck", "img": "stock-turtle",
         "card": "A large wreck with coral growth and abundant marine life around its structure.",
         "title": "Okikawa Maru Wreck Guide | Coron Dive Sites | W Divers Coron",
         "meta": "An introduction to the Okikawa Maru wreck in Coron, with the questions to ask W Divers Coron before planning a visit.",

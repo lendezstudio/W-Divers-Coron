@@ -33,12 +33,16 @@ Private project notes. Nothing on this list is shown on the public website. Item
 | `599959646_...jpg` | TDI technical diving banner. Would imply a credential. |
 | `594074064_...jpg` | Group with certificates. Would imply certification courses. |
 | `512677394_...jpg` | Night shot of tanks and a dive watch. Low clarity. |
-| `Apo-Reef.jpg`, `3D2N-explore-Apo-Reef-Tour-Package-A.jpg`, `images (1).jpg` | Apo Reef / unknown locations, not Coron |
+| `3D2N-explore-Apo-Reef-Tour-Package-A.jpg` | Shows an "Apo Reef Natural Park" sign, which is not Coron |
 | `gallery-*.jpg`, `group-shop-lounge.jpg`, `team-shop-interior.jpg`, `island-hopping-boat.jpg`, `hero-reef-diver.jpg`, `reef-diving-coral.jpg`, `wreck-diving-splitshot.jpg` | From the earlier demo. Some show a different shop interior and signage, possibly the similarly named listing. Not used, to avoid blending businesses. |
 | `assets/logo-full.png`, `logo-mark.png`, `logo-source.png`, `favicon.png` | Teal "W" logo from the earlier demo. Does not match the shop signage. The site uses the supplied black mark (`Restored divers coron logo...png`) and a white reversed version generated from it. |
 | Dugong video | Used in the gallery's Video tab with a neutral caption. Confirm it is W Divers footage and whether a location can be named. |
 
 Pool training photos are used on the First-Time Divers and Courses pages without saying where they were taken. Confirm the location if a caption is wanted.
+
+## Google images in use
+
+`Apo-Reef.jpg` (Island Hopping opening and gallery) and `images (1).jpg` (gallery) are used as general island scenery, at Lyneth's request. Neither is captioned as Coron. Confirm the usage rights for both images before launch.
 
 ## Content decisions to review
 
