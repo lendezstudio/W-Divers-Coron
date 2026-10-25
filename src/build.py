@@ -157,16 +157,27 @@ def lang_links(L, route, cls="lang"):
     return "".join(out)
 
 
-def lang_menu(L, route):
-    """Compact language picker for the header: globe + current code, opening a list of all languages."""
-    items = ""
+def lang_menu(L, route, cls=""):
+    """Language picker: the site's own languages, then Google automatic translation for others.
+
+    Marked translate="no" so browser or Google translation never rewrites the menu itself.
+    """
+    site = ""
     for c in config.LOCALES:
         name = Locale.cache[c].lang_name
         cur = ' aria-current="true"' if c == L.code else ""
-        items += (f'<li><a href="{url(c, *route)}" hreflang="{c}" lang="{c}" data-set-lang="{c}"{cur}>'
-                  f'<span class="lm-code">{c.upper()}</span>{e(name)}</a></li>')
-    return (f'<details class="lang-menu" data-lang-menu><summary aria-label="{e(L.ui["lang_label"])}: {e(L.lang_name)}">'
-            f'{icon("globe")}<span>{L.code.upper()}</span>{icon("chev", "ico chev")}</summary><ul>{items}</ul></details>')
+        site += (f'<li><a href="{url(c, *route)}" hreflang="{c}" lang="{c}" data-set-lang="{c}"{cur}>'
+                 f'<span class="lm-code">{c.upper()}</span>{e(name)}</a></li>')
+    auto = "".join(f'<li><button type="button" data-auto-lang="{code}" lang="{code}">{e(name)}</button></li>'
+                   for code, name in config.AUTO_LANGS)
+    u = L.ui
+    return (f'<details class="lang-menu notranslate {cls}" translate="no" data-lang-menu>'
+            f'<summary aria-label="{e(u["lang_label"])}: {e(L.lang_name)}">{icon("globe")}'
+            f'<span data-lang-current>{L.code.upper()}</span>{icon("chev", "ico chev")}</summary>'
+            f'<div class="lm-panel"><p class="lm-label">{e(u["lm_site"])}</p><ul class="lm-site">{site}</ul>'
+            f'<p class="lm-label">{e(u["lm_more"])}</p><ul class="lm-auto">{auto}</ul>'
+            f'<button type="button" class="lm-original" data-auto-off hidden>{e(u["lm_original"])}</button>'
+            f'<p class="lm-note">{e(u["lm_note"])}</p></div></details>')
 
 
 def social_list(L, which=("facebook", "instagram", "whatsapp"), cls="social"):
@@ -259,7 +270,7 @@ def nav_panel(L, route, current_path):
     <div class="nav-panel-foot">
       {btn(url(L.code, "contact"), L.ui["plan_cta"], "btn btn-solid")}
       {ext(wa_url(), e(L.ui["whatsapp_cta"]), "text-link", L)}
-      <div class="panel-lang">{lang_links(L, route)}</div>
+      <div class="panel-lang">{lang_menu(L, route, "lang-menu--inline")}</div>
       {social_list(L, ("facebook", "instagram", "whatsapp", "kakao", "naver", "mail"))}
     </div>
   </div>
@@ -913,7 +924,7 @@ def render_contact(L):
         "errors": {k: P[k] for k in ("err_name", "err_method", "err_detail", "err_email", "err_interest", "err_message")},
     }
     kakao = "".join(f'''<li class="kakao-id"><span class="kakao-label">{e(L.ui[k["label_key"]])}</span>
-        <code>{e(k["id"])}</code>
+        <code class="notranslate" translate="no">{e(k["id"])}</code>
         <button type="button" class="btn btn-ghost btn-sm" data-copy="{e(k["id"])}" data-copied="{e(L.ui["copied"])}" data-failed="{e(L.ui["copy_failed"])}">{icon("copy")}<span>{e(L.ui["copy_id"])}</span></button></li>'''
                     for k in config.KAKAO_IDS)
     body = f'''

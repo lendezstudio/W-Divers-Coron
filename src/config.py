@@ -13,6 +13,14 @@ SITE_URL = ""
 BASE_PATH = "/W-Divers-Coron"
 
 LOCALES = ["en", "ko"]
+
+# Extra languages offered through Google's automatic website translation.
+# Loaded only when a visitor picks one. Codes are Google Translate codes.
+AUTO_LANGS = [
+    ("zh-CN", "中文 (简体)"), ("zh-TW", "中文 (繁體)"), ("ja", "日本語"), ("es", "Español"),
+    ("fr", "Français"), ("de", "Deutsch"), ("it", "Italiano"), ("ru", "Русский"),
+    ("vi", "Tiếng Việt"), ("th", "ไทย"), ("id", "Bahasa Indonesia"), ("tl", "Filipino"),
+]
 DEFAULT_LOCALE = "en"
 
 BUSINESS_NAME = "W Divers Coron"

@@ -27,6 +27,10 @@ UI = {
     "close_menu": "Close menu",
     "primary_nav": "Main navigation",
     "lang_label": "Language",
+    "lm_site": "Website languages",
+    "lm_more": "More languages · automatic translation",
+    "lm_note": "Translated automatically by Google. Wording may be inaccurate; confirm trip details with W Divers.",
+    "lm_original": "Show original",
     "plan_cta": "Plan Your Dive",
     "whatsapp_cta": "Message on WhatsApp",
     "email_cta": "Email W Divers",
@@ -334,7 +338,7 @@ PAGES["about"] = {
     "contact_link": "Contact W Divers",
     "gallery_link": "Browse the gallery",
     "lang_h": "Korean and English",
-    "lang_t": "You can read this website in English and Korean, and contact W Divers through WhatsApp, KakaoTalk, email or social media. Ask the team which language is available for your activity and briefing.",
+    "lang_t": "You can read this website in English and Korean, use automatic translation for other languages from the language menu, and contact W Divers through WhatsApp, KakaoTalk, email or social media. Ask the team which language is available for your activity and briefing.",
 }
 
 PAGES["gallery"] = {
@@ -486,8 +490,8 @@ PAGES["privacy"] = {
         {"h": "Who we are", "p": ["This website is for W Divers Coron, based in Coron, Palawan, Philippines. You can contact us about privacy at {email}."]},
         {"h": "Information you choose to share", "p": ["The inquiry builder on the contact page helps you write a message that may include your name, contact detail, travel dates, group size, diving experience and language preference.", "This website does not store or transmit what you type into the inquiry builder. The text stays in your browser until you choose to continue in WhatsApp, prepare an email or copy it. You then review and send the message yourself in that app."]},
         {"h": "How we use your inquiry", "p": ["When you send us a message, we use the information you include to reply and to discuss the trip or activity you asked about."]},
-        {"h": "External services", "p": ["If you choose WhatsApp, email, KakaoTalk, Facebook, Instagram, Naver Blog or Google Maps, the message or visit is handled by that service under its own privacy terms. This website links to those services; it does not embed them or load their content automatically.", "Like most websites, the hosting provider that delivers these pages may process technical request information, such as IP addresses, to serve and protect the site."]},
-        {"h": "Storage in your browser", "p": ["If you choose a language from the language menu, this website remembers that choice in your browser's local storage so it can open the right language next time. You can clear it at any time through your browser settings.", "This website does not use analytics, advertising cookies or tracking pixels."]},
+        {"h": "External services", "p": ["If you choose WhatsApp, email, KakaoTalk, Facebook, Instagram, Naver Blog or Google Maps, the message or visit is handled by that service under its own privacy terms. This website links to those services; it does not embed them or load their content automatically.", "If you choose a language under \"More languages\" in the language menu, the page loads Google's website translation service. Google then receives the page text and standard request information, such as your IP address, to translate it, under Google's privacy terms. Nothing is loaded from Google unless you choose one of those languages.", "Like most websites, the hosting provider that delivers these pages may process technical request information, such as IP addresses, to serve and protect the site."]},
+        {"h": "Storage in your browser", "p": ["If you choose a language from the language menu, this website remembers that choice in your browser's local storage so it can open the right language next time. Choosing an automatic translation stores a \"googtrans\" cookie that keeps the translation on as you move between pages; \"Show original\" removes it. You can clear both at any time through your browser settings.", "This website does not use analytics, advertising cookies or tracking pixels."]},
         {"h": "Questions about your information", "p": ["To ask about information you've sent us, or to request a correction or deletion, email {email}."]},
     ],
 }

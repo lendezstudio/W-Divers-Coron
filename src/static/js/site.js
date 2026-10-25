@@ -34,6 +34,54 @@
   doc.addEventListener('click', function (ev) {
     langMenus.forEach(function (d) { if (d.open && !d.contains(ev.target)) { d.open = false; } });
   });
+  /* Automatic translation (Google). Nothing loads from Google unless the visitor picks a language. */
+  var pageLang = root.lang || 'en';
+  var host = location.hostname;
+  var readAuto = function () {
+    var m = doc.cookie.match(/(?:^|;\s*)googtrans=([^;]*)/);
+    if (!m) { return null; }
+    var parts = decodeURIComponent(m[1]).split('/');
+    return parts[2] && parts[2] !== pageLang ? parts[2] : null;
+  };
+  var writeAuto = function (code) {
+    var val = code ? '/' + pageLang + '/' + code : '';
+    var exp = code ? '' : '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    doc.cookie = 'googtrans=' + val + '; path=/' + exp;
+    doc.cookie = 'googtrans=' + val + '; path=/; domain=' + host + exp;
+  };
+  var auto = readAuto();
+  if (auto) {
+    writeAuto(auto); // keep the source language in step with the page being viewed
+    var holder = doc.createElement('div');
+    holder.id = 'gt-el'; holder.hidden = true;
+    doc.body.appendChild(holder);
+    window.wdTranslateInit = function () {
+      /* global google */
+      new google.translate.TranslateElement({ pageLanguage: pageLang, autoDisplay: false }, 'gt-el');
+    };
+    var gs = doc.createElement('script');
+    gs.src = 'https://translate.google.com/translate_a/element.js?cb=wdTranslateInit';
+    gs.async = true;
+    doc.head.appendChild(gs);
+    root.classList.add('is-auto-translated');
+    $$('[data-lang-current]').forEach(function (el) { el.textContent = auto.split('-')[0].toUpperCase(); });
+    $$('[data-auto-lang="' + auto + '"]').forEach(function (b) { b.setAttribute('aria-current', 'true'); });
+    $$('[data-auto-off]').forEach(function (b) { b.hidden = false; });
+    $$('.lang-menu .lm-site a[aria-current]').forEach(function (a) { a.removeAttribute('aria-current'); });
+  }
+  $$('[data-auto-lang]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      writeAuto(b.getAttribute('data-auto-lang'));
+      location.reload();
+    });
+  });
+  $$('[data-auto-off]').forEach(function (b) {
+    b.addEventListener('click', function () { writeAuto(null); location.reload(); });
+  });
+  $$('[data-set-lang]').forEach(function (a) {
+    a.addEventListener('click', function () { writeAuto(null); });
+  });
+
   /* Pages restored with the Back button must not reopen a stale menu */
   window.addEventListener('pageshow', function () {
     langMenus.forEach(function (d) { d.open = false; });

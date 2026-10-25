@@ -44,6 +44,10 @@ Pool training photos are used on the First-Time Divers and Courses pages without
 
 `Apo-Reef.jpg` (Island Hopping opening and gallery) and `images (1).jpg` (gallery) are used as general island scenery, at Lyneth's request. Neither is captioned as Coron. Confirm the usage rights for both images before launch.
 
+## Automatic translation
+
+The language menu offers 12 extra languages through Google's website translation (loaded only when a visitor picks one; disclosed on the privacy page). These are machine translations: only English and Korean are written for the site. Google no longer offers this widget to new sign-ups, and it could stop working in future. If it does, the menu's "More languages" section can be removed in `config.AUTO_LANGS`.
+
 ## Content decisions to review
 
 - The brief was cut off at 50,000 characters, during Journal Article 2. Article 2's later sections and all of Article 3 ("Divers and non-divers in one Coron trip") were written to match the brief's rules. Please review both. The truncated part may also have listed more locales. The site ships with English and Korean, and more can be added via `src/content/<code>.py` and `LOCALES` in `src/config.py`.
