@@ -199,8 +199,9 @@ def lang_menu(L, route, cls=""):
     for c in config.LOCALES:
         o = Locale.cache[c]
         cur = ' aria-current="true"' if c == L.code else ""
-        items += (f'<li><a href="{url(c, *route)}" hreflang="{o.html_lang}" lang="{o.html_lang}" dir="{o.dir}" '
-                  f'data-set-lang="{c}"{cur}>{e(o.lang_name)}</a></li>')
+        # dir goes on the name only, so every row aligns with the page, not with its own script
+        items += (f'<li><a href="{url(c, *route)}" hreflang="{o.html_lang}" lang="{o.html_lang}" '
+                  f'data-set-lang="{c}"{cur}><span dir="{o.dir}">{e(o.lang_name)}</span></a></li>')
     u = L.ui
     return (f'<details class="lang-menu notranslate {cls}" translate="no" data-lang-menu>'
             f'<summary aria-label="{e(u["lang_label"])}: {e(L.lang_name)}">{icon("globe")}'
