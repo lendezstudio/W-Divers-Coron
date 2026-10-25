@@ -17,11 +17,12 @@ DEFAULT_LOCALE = "en"
 
 BUSINESS_NAME = "W Divers Coron"
 
-# Authoritative contact configuration supplied by Lyneth on 25 October 2026.
+# Authoritative contact configuration supplied by Lyneth on 25 October 2026
+# (Instagram updated the same day to @wdiverscoronpalawan). Pages show channel
+# names, not usernames.
 CONTACT = {
     "facebook": "https://www.facebook.com/Wdiverscoronpalawan",
-    "instagram": "https://www.instagram.com/coronwdi57/",
-    "instagram_handle": "@coronwdi57",
+    "instagram": "https://www.instagram.com/wdiverscoronpalawan/",
     "whatsapp_display": "+82 10 8621 8096",
     "whatsapp_number": "821086218096",
     "email": "wdiverscoron@gmail.com",

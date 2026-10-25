@@ -294,7 +294,7 @@ def footer(L):
         <li>{icon("mail")}<a href="mailto:{C["email"]}">{C["email"]}</a></li>
         <li>{icon("kakao")}<a href="{url(c, "contact")}#kakao">{e(u["kakao"])}</a></li>
         <li>{icon("facebook")}{ext(C["facebook"], e(u["facebook"]), "", L)}</li>
-        <li>{icon("instagram")}{ext(C["instagram"], e(C["instagram_handle"]), "", L)}</li>
+        <li>{icon("instagram")}{ext(C["instagram"], e(L.ui["instagram"]), "", L)}</li>
         <li>{icon("naver")}{ext(C["naver"], e(u["naver"]), "", L)}</li>
         <li>{icon("pin")}{ext(C["maps"], e(u["maps"]), "", L)}</li>
       </ul>
@@ -734,7 +734,7 @@ def render_about(L):
     op = opening(L, P["eyebrow"], P["h1"], P["intro"], P["img"], [(L.names["about"], url(c, "about"))])
     channels = [
         (icon("facebook"), L.ui["facebook"], C["facebook"]),
-        (icon("instagram"), L.ui["instagram"] + " " + C["instagram_handle"], C["instagram"]),
+        (icon("instagram"), L.ui["instagram"], C["instagram"]),
         (icon("naver"), L.ui["naver"], C["naver"]),
     ]
     ch = "".join(f'<li>{ext(h, i + "<span>" + e(t) + "</span>", "chan", L)}</li>' for i, t, h in channels)
@@ -970,7 +970,7 @@ def render_contact(L):
       <ul class="chan-list">
         <li>{ext(wa_url(), icon("whatsapp") + "<span>" + e(L.ui["whatsapp"]) + " · " + e(C["whatsapp_display"]) + "</span>", "chan", L)}</li>
         <li><a class="chan" href="mailto:{C["email"]}">{icon("mail")}<span>{C["email"]}</span></a></li>
-        <li>{ext(C["instagram"], icon("instagram") + "<span>" + e(C["instagram_handle"]) + "</span>", "chan", L)}</li>
+        <li>{ext(C["instagram"], icon("instagram") + "<span>" + e(L.ui["instagram"]) + "</span>", "chan", L)}</li>
         <li>{ext(C["facebook"], icon("facebook") + "<span>" + e(L.ui["facebook"]) + "</span>", "chan", L)}</li>
         <li>{ext(C["naver"], icon("naver") + "<span>" + e(L.ui["naver"]) + "</span>", "chan", L)}</li>
       </ul>
