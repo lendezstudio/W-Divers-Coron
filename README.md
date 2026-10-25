@@ -42,8 +42,8 @@ With `BASE_PATH` set, preview from a parent folder that contains a `W-Divers-Cor
 
 ## Common edits
 
-- **Change copy:** edit the matching key in both `src/content/en.py` and `src/content/ko.py`, then rebuild.
-- **Add a dive site:** add an entry to `SITES` in both content files, plus its sources in `SITE_META` (`src/data.py`).
+- **Change copy:** edit the key in `src/content/en.py` and the same key in each language file in `src/content/`, then rebuild.
+- **Add a dive site:** add an entry to `SITES` in `en.py` and in each language file (in the same position), plus its sources in `SITE_META` (`src/data.py`).
 - **Publish a course:** add a verified entry to `COURSES` in `src/data.py`. The schema is documented there.
 - **Add a language:** create `src/content/<code>.py` (use `_` for `-`, e.g. `zh_hans.py`) with `LANG`, `LANG_NAME`, `SHORT`, `OG_LOCALE` (and `DIR = "rtl"` for right-to-left scripts), plus translated `UI`, `ROUTE_NAMES`, `PAGES`, `SITES`, `ARTICLES` and `ALT`. Only text is needed; links, images and ids come from `en.py`. Add the code to `LOCALES`, then run `python src/check_translations.py <code>` to list anything missing.
 - **Check translations:** `python src/check_translations.py` reports missing text for every language.
