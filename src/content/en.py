@@ -2,6 +2,7 @@
 
 LANG = "en"
 LANG_NAME = "English"
+SHORT = "EN"
 OG_LOCALE = "en_US"
 
 UI = {
@@ -28,8 +29,6 @@ UI = {
     "primary_nav": "Main navigation",
     "lang_label": "Language",
     "lm_site": "Choose a language",
-    "lm_note": "English and Korean are written for this website. Other languages are translated automatically by Google, so wording may be inaccurate; confirm trip details with W Divers.",
-    "lm_original": "Show original",
     "plan_cta": "Plan Your Dive",
     "whatsapp_cta": "Message on WhatsApp",
     "kakao_cta": "Message on KakaoTalk",
@@ -44,7 +43,6 @@ UI = {
     "privacy": "Privacy",
     "booking_info": "Booking Information",
     "sitemap": "Sitemap",
-    "credit_prefix": "Designed by",
     "rights": "All rights reserved.",
     "breadcrumb": "Breadcrumb",
     "new_tab": "(opens in a new tab)",
@@ -61,14 +59,7 @@ UI = {
     "copied": "Copied",
     "copy_failed": "Copy failed. Select the ID and copy it manually.",
     "kakao_help": "Open KakaoTalk, choose Add Friend, then search by ID and paste the ID you copied.",
-    "read_more": "Read more",
     "related": "Keep planning",
-    "gallery_all": "All",
-    "gallery_underwater": "Underwater",
-    "gallery_islands": "Island Views",
-    "gallery_moments": "W Divers Moments",
-    "gallery_video": "Video",
-    "gallery_filter": "Filter photos",
     "lb_close": "Close",
     "lb_prev": "Previous image",
     "lb_next": "Next image",
@@ -80,10 +71,11 @@ UI = {
     "filter_reef": "Reefs & Other Sites",
     "type_wreck": "Wreck",
     "type_reef": "Reef",
+    "video_caption": "A dugong glides past divers. Wildlife encounters are never guaranteed.",
+    "reviewed_value": "October 2026",
     "reviewed": "Guide last reviewed",
     "read_guide": "Read the site guide",
     "read_article": "Read the article",
-    "year_note": "",
 }
 
 ROUTE_NAMES = {
@@ -319,7 +311,6 @@ PAGES["plan"] = {
         {"id": "flying", "h": "Leave space between diving and flying.", "p": "Tell the team about your onward travel before arranging dives. Flying after diving requires an appropriate surface interval; follow current guidance from your dive professional, your training and your dive computer. Read DAN's flying-after-diving guidance for general background.", "link": "DAN: Flying after diving"},
         {"id": "care", "h": "Keep Coron worth coming back to.", "p": "Follow your guide's instructions, maintain appropriate buoyancy, leave wrecks and marine life undisturbed, and take your waste back with you."},
     ],
-    "more_h": "More planning help",
     "cta": "Talk Through Your Trip",
     "interest": "unsure",
 }
@@ -330,15 +321,15 @@ PAGES["about"] = {
     "eyebrow": "About W Divers Coron",
     "h1": "Your Coron plans start with a conversation.",
     "intro": "W Divers Coron is based in Coron, Palawan. This is a place to explore wreck-diving, reef-diving and island-hopping options, then get in touch about the trip you want to arrange.",
-    "img": "shop-front",
+    "img": "flag-boat",
     "s1_h": "A destination with more than one way to explore.",
     "s1_t": "Some visitors arrive with a wreck on their wish list. Others are considering their first scuba experience or planning a day on the water with friends. Start with your interests, then ask the team about the options for your visit.",
     "s2_h": "Get to know W Divers.",
     "s2_t": "Find recent updates through our social channels, browse our photographs, or message us directly with your plans.",
     "contact_link": "Contact W Divers",
     "gallery_link": "Browse the gallery",
-    "lang_h": "Korean and English",
-    "lang_t": "You can read this website in English and Korean, use automatic translation for other languages from the language menu, and contact W Divers through WhatsApp, KakaoTalk, email or social media. Ask the team which language is available for your activity and briefing.",
+    "lang_h": "Languages",
+    "lang_t": "This website is available in English, Korean, Chinese, Japanese, Spanish, French, German, Italian, Russian, Vietnamese, Thai, Indonesian and Arabic. You can contact W Divers through WhatsApp, KakaoTalk, email or social media. Ask the team which language is available for your activity and briefing.",
 }
 
 PAGES["gallery"] = {
@@ -461,7 +452,6 @@ PAGES["contact"] = {
     "directions_h": "Find W Divers in Coron.",
     "directions_t": "Open the location on Google Maps. Confirm your meeting point and time with the team before your activity.",
     "directions_btn": "Open in Google Maps",
-    "social_h": "Follow along",
     "noscript": "The inquiry builder needs JavaScript. You can still reach W Divers directly through WhatsApp, email or the other channels on this page.",
 }
 
@@ -491,8 +481,8 @@ PAGES["privacy"] = {
         {"h": "Who we are", "p": ["This website is for W Divers Coron, based in Coron, Palawan, Philippines. You can contact us about privacy at {email}."]},
         {"h": "Information you choose to share", "p": ["The inquiry builder on the contact page helps you write a message that may include your name, contact detail, travel dates, group size, diving experience and language preference.", "This website does not store or transmit what you type into the inquiry builder. The text stays in your browser until you choose to continue in WhatsApp, prepare an email or copy it. You then review and send the message yourself in that app."]},
         {"h": "How we use your inquiry", "p": ["When you send us a message, we use the information you include to reply and to discuss the trip or activity you asked about."]},
-        {"h": "External services", "p": ["If you choose WhatsApp, email, KakaoTalk, Facebook, Instagram, Naver Blog or Google Maps, the message or visit is handled by that service under its own privacy terms. This website links to those services; it does not embed them or load their content automatically.", "If you choose a language other than English or Korean in the language menu, the page loads Google's website translation service. Google then receives the page text and standard request information, such as your IP address, to translate it, under Google's privacy terms. Nothing is loaded from Google unless you choose one of those languages.", "Like most websites, the hosting provider that delivers these pages may process technical request information, such as IP addresses, to serve and protect the site."]},
-        {"h": "Storage in your browser", "p": ["If you choose a language from the language menu, this website remembers that choice in your browser's local storage so it can open the right language next time. Choosing an automatic translation stores a \"googtrans\" cookie that keeps the translation on as you move between pages; \"Show original\" removes it. You can clear both at any time through your browser settings.", "This website does not use analytics, advertising cookies or tracking pixels."]},
+        {"h": "External services", "p": ["If you choose WhatsApp, email, KakaoTalk, Facebook, Instagram, Naver Blog or Google Maps, the message or visit is handled by that service under its own privacy terms. This website links to those services; it does not embed them or load their content automatically.", "Like most websites, the hosting provider that delivers these pages may process technical request information, such as IP addresses, to serve and protect the site."]},
+        {"h": "Storage in your browser", "p": ["If you choose a language from the language menu, this website remembers that choice in your browser's local storage so it can open the right language next time. You can clear it at any time through your browser settings.", "This website does not use analytics, advertising cookies or tracking pixels."]},
         {"h": "Questions about your information", "p": ["To ask about information you've sent us, or to request a correction or deletion, email {email}."]},
     ],
 }

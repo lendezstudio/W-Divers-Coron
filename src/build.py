@@ -44,16 +44,45 @@ e = html.escape
 
 # ----------------------------------------------------------------- helpers
 
+# Scripts whose display type needs heavier weights and no Latin letter-spacing.
+ALT_SCRIPT = {"ko", "zh-hans", "zh-hant", "ja", "th", "ar", "ru", "vi"}
+
+
+def merge(base, over):
+    """Overlay translated text on the English structure.
+
+    Dicts merge key by key; lists of dicts merge item by item, so translation
+    files only carry text and inherit links, images and ids from English.
+    """
+    if isinstance(base, dict) and isinstance(over, dict):
+        out = dict(base)
+        for k, v in over.items():
+            out[k] = merge(base[k], v) if k in base else v
+        return out
+    if (isinstance(base, list) and isinstance(over, list) and len(base) == len(over)
+            and all(isinstance(x, dict) for x in base + over)):
+        return [merge(b, o) for b, o in zip(base, over)]
+    return over
+
+
 class Locale:
     def __init__(self, code):
-        mod = importlib.import_module(f"content.{code}")
+        en = importlib.import_module("content.en")
+        mod = importlib.import_module(f"content.{code.replace('-', '_')}")
+
+        def get(name):
+            return getattr(en, name) if code == "en" else merge(getattr(en, name), getattr(mod, name, {}))
         self.code = code
-        self.ui = mod.UI
-        self.p = mod.PAGES
-        self.names = mod.ROUTE_NAMES
-        self.sites = mod.SITES
-        self.articles = mod.ARTICLES
+        self.ui = get("UI")
+        self.p = get("PAGES")
+        self.names = get("ROUTE_NAMES")
+        self.sites = get("SITES")
+        self.articles = get("ARTICLES")
+        self.alt = getattr(mod, "ALT", {})
         self.lang_name = mod.LANG_NAME
+        self.html_lang = mod.LANG
+        self.short = getattr(mod, "SHORT", code.upper())
+        self.dir = getattr(mod, "DIR", "ltr")
         self.og_locale = mod.OG_LOCALE
 
     def site(self, slug):
@@ -91,6 +120,12 @@ def ext(href, label, cls="", L=None, extra=""):
     return f'<a{c} href="{e(href)}" target="_blank" rel="noopener"{extra}>{label}{hint}</a>'
 
 
+def alt_text(key, L):
+    """Photo description in the page language; English if a translation has none."""
+    m = media.MEDIA[key]
+    return L.alt.get(key) or m["alt"].get(L.code) or m["alt"]["en"]
+
+
 def picture(key, L, sizes="100vw", cls="", loading="lazy", fetchpriority=None, alt=None):
     m = media.MEDIA[key]
     w0, h0 = SIZES[key]
@@ -98,7 +133,7 @@ def picture(key, L, sizes="100vw", cls="", loading="lazy", fetchpriority=None, a
     fb = 1280 if w0 >= 1280 else 640
     fw, fh = (fb, round(h0 * fb / w0)) if w0 >= fb else (w0, h0)
     srcset = ", ".join(f"/assets/img/{key}-{w}.webp {min(w, w0)}w" for w in widths)
-    a = m["alt"][L.code] if alt is None else alt
+    a = alt_text(key, L) if alt is None else alt
     fp = f' fetchpriority="{fetchpriority}"' if fetchpriority else ""
     c = f' class="{cls}"' if cls else ""
     return (f'<picture{c}><source type="image/webp" srcset="{srcset}" sizes="{sizes}">'
@@ -125,7 +160,7 @@ ICONS = {
 
 
 def icon(name, cls="ico"):
-    return f'<svg class="{cls}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">{ICONS[name]}</svg>'
+    return f'<svg class="{cls} ico-{name}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">{ICONS[name]}</svg>'
 
 
 def arrow_link(href, label, cls="arrow-link"):
@@ -152,31 +187,25 @@ def lang_links(L, route, cls="lang"):
     for c in config.LOCALES:
         name = Locale.cache[c].lang_name
         cur = ' aria-current="true"' if c == L.code else ""
-        out.append(f'<a class="{cls}" href="{url(c, *route)}" hreflang="{c}" lang="{c}" data-set-lang="{c}"{cur}>'
+        hl = Locale.cache[c].html_lang
+        out.append(f'<a class="{cls}" href="{url(c, *route)}" hreflang="{hl}" lang="{hl}" data-set-lang="{c}"{cur}>'
                    f'<span class="vh">{e(L.ui["lang_label"])}: </span>{e(name)}</a>')
     return "".join(out)
 
 
 def lang_menu(L, route, cls=""):
-    """Language picker: the site's own languages, then Google automatic translation for others.
-
-    Marked translate="no" so browser or Google translation never rewrites the menu itself.
-    """
-    site = ""
+    """Language picker listing every written language. translate="no" keeps browsers from rewriting it."""
+    items = ""
     for c in config.LOCALES:
-        name = Locale.cache[c].lang_name
+        o = Locale.cache[c]
         cur = ' aria-current="true"' if c == L.code else ""
-        site += (f'<li><a href="{url(c, *route)}" hreflang="{c}" lang="{c}" data-set-lang="{c}"{cur}>'
-                 f'<span class="lm-code">{c.upper()}</span>{e(name)}</a></li>')
-    auto = "".join(f'<li><button type="button" data-auto-lang="{code}" lang="{code}">{e(name)}</button></li>'
-                   for code, name in config.AUTO_LANGS)
+        items += (f'<li><a href="{url(c, *route)}" hreflang="{o.html_lang}" lang="{o.html_lang}" dir="{o.dir}" '
+                  f'data-set-lang="{c}"{cur}>{e(o.lang_name)}</a></li>')
     u = L.ui
     return (f'<details class="lang-menu notranslate {cls}" translate="no" data-lang-menu>'
             f'<summary aria-label="{e(u["lang_label"])}: {e(L.lang_name)}">{icon("globe")}'
-            f'<span data-lang-current>{L.code.upper()}</span>{icon("chev", "ico chev")}</summary>'
-            f'<div class="lm-panel"><p class="lm-label">{e(u["lm_site"])}</p><ul class="lm-list">{site}{auto}</ul>'
-            f'<button type="button" class="lm-original" data-auto-off hidden>{e(u["lm_original"])}</button>'
-            f'<p class="lm-note">{e(u["lm_note"])}</p></div></details>')
+            f'<span>{e(L.short)}</span>{icon("chev", "ico chev")}</summary>'
+            f'<div class="lm-panel"><p class="lm-label">{e(u["lm_site"])}</p><ul class="lm-list">{items}</ul></div></details>')
 
 
 def social_list(L, which=("facebook", "instagram", "whatsapp"), cls="social"):
@@ -311,7 +340,10 @@ def footer(L, route):
     </div>
     <div class="footer-col">
       <h2 class="footer-h">{e(u["footer_legal"])}</h2><ul>{lis(legal)}</ul>
-      <div class="footer-lang">{lang_links(L, route)}</div>
+      <div class="footer-lang notranslate" translate="no">
+        <p class="footer-lang-h">{icon("globe")}<span>{e(L.ui["lang_label"])}</span></p>
+        <div class="footer-lang-list">{lang_links(L, route)}</div>
+      </div>
     </div>
   </div>
   <div class="wrap footer-base">
@@ -329,7 +361,7 @@ def head(L, route, title, meta, extra_head="", jsonld=None, og_image=None):
     if config.SITE_URL:
         alt = f'<link rel="canonical" href="{config.SITE_URL}{path}">\n'
         for c in config.LOCALES:
-            alt += f'<link rel="alternate" hreflang="{c}" href="{config.SITE_URL}{url(c, *route)}">\n'
+            alt += f'<link rel="alternate" hreflang="{Locale.cache[c].html_lang}" href="{config.SITE_URL}{url(c, *route)}">\n'
         alt += f'<link rel="alternate" hreflang="x-default" href="{config.SITE_URL}{url(config.DEFAULT_LOCALE, *route)}">\n'
         alt += f'<meta property="og:url" content="{config.SITE_URL}{path}">\n'
     og = og_image or "/assets/img/og-default.jpg"
@@ -339,9 +371,10 @@ def head(L, route, title, meta, extra_head="", jsonld=None, og_image=None):
     for block in (jsonld or []):
         ld += f'<script type="application/ld+json">{json.dumps(block, ensure_ascii=False)}</script>\n'
     return f'''<!doctype html>
-<html lang="{L.code}">
+<html lang="{L.html_lang}" dir="{L.dir}" translate="no" class="{"alt-script" if L.code in ALT_SCRIPT else ""}">
 <head>
 <meta charset="utf-8">
+<meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(meta)}">
@@ -357,7 +390,7 @@ def head(L, route, title, meta, extra_head="", jsonld=None, og_image=None):
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
-<script>document.documentElement.classList.add('js');if(!/(?:^|;\\s*)googtrans=\\/[^;]+\\/[a-zA-Z-]+/.test(document.cookie)){{document.documentElement.setAttribute('translate','no');var m=document.createElement('meta');m.name='google';m.content='notranslate';document.head.appendChild(m)}}</script>
+<script>document.documentElement.classList.add('js')</script>
 {extra_head}{ld}</head>'''
 
 
@@ -686,7 +719,7 @@ def render_site(L, s):
     P = L.p["site"]
     c = L.code
     meta = data.SITE_META[s["slug"]]
-    reviewed = data.REVIEWED_LABEL[meta["reviewed"]][c]
+    reviewed = L.ui.get("reviewed_value") or data.REVIEWED_LABEL[meta["reviewed"]]["en"]
     name_plain = s["name"]
     op = opening(L, P["eyebrow"], s["name"], s["card"], s["img"],
                  [(L.names["sites"], url(c, "sites")), (s["name"], url(c, "site", s["slug"]))], note=P["img_note"])
@@ -763,9 +796,8 @@ def render_about(L):
     <p>{e(P["s1_t"])}</p>
   </div>
   <div class="about-strip">
-    <figure class="frame reveal">{picture("shop-guests", L, "(min-width: 900px) 30vw, 100vw")}</figure>
-    <figure class="frame reveal">{picture("boat-briefing", L, "(min-width: 900px) 30vw, 100vw")}</figure>
-    <figure class="frame reveal">{picture("diver-sand", L, "(min-width: 900px) 30vw, 100vw")}</figure>
+    <figure class="frame reveal is-landscape">{picture("shop-guests", L, "(min-width: 900px) 60vw, 100vw")}</figure>
+    <figure class="frame reveal is-portrait">{picture("shop-front", L, "(min-width: 900px) 34vw, 100vw")}</figure>
   </div>
 </section>
 <section class="paper">
@@ -813,7 +845,7 @@ def video_figure(L, key, cls="frame video-fig"):
     return f'''<figure class="{cls}">
   <video controls preload="none" playsinline poster="/assets/video/{key}-poster.jpg" width="640" height="360">
     <source src="/assets/video/{key}.mp4" type="video/mp4">{e(L.ui["video_fallback"])}</video>
-  <figcaption>{e(v["caption"][L.code])}</figcaption>
+  <figcaption>{e(L.ui.get("video_caption") or v["caption"]["en"])}</figcaption>
 </figure>'''
 
 
@@ -837,7 +869,7 @@ def render_gallery(L):
             w0, _ = SIZES[key]
             full = f"/assets/img/{key}-{1920 if w0 >= 1920 else (1280 if w0 >= 1280 else 640)}.webp"
             sz = "(min-width: 900px) 46vw, 92vw" if "lg" in size else "(min-width: 900px) 23vw, 46vw"
-            tiles += f'''<li class="tile {size} reveal"><a class="frame" href="{full}" data-lightbox data-caption="{e(media.MEDIA[key]["alt"][c])}">{picture(key, L, sz)}</a></li>'''
+            tiles += f'''<li class="tile {size} reveal"><a class="frame" href="{full}" data-lightbox data-caption="{e(alt_text(key, L))}">{picture(key, L, sz)}</a></li>'''
         secs += f'''<section class="gal-sec" id="g-{k}" aria-labelledby="g-{k}-h">
   {head.replace('class="section-h"', f'class="section-h" id="g-{k}-h"', 1)}
   <ul class="gal-grid">{tiles}</ul></section>'''
@@ -1065,57 +1097,68 @@ def render_sitemap(L):
     return layout(L, ("sitemap",), P["title"], P["meta"], op, body)
 
 
+# Picks a written language from the visitor's saved choice or browser languages.
+LANG_PICK_JS = """function wdPick(codes){var l=null;try{l=localStorage.getItem('wd-lang')}catch(e){}
+if(codes.indexOf(l)>-1)return l;var n=navigator.languages||[navigator.language||''];
+for(var i=0;i<n.length;i++){var t=(n[i]||'').toLowerCase();
+if(t.indexOf('zh')===0){return /(tw|hk|mo|hant)/.test(t)?'zh-hant':'zh-hans'}
+var p=t.split('-')[0];if(codes.indexOf(p)>-1)return p}return 'en'}"""
+
+
 def render_404():
     blocks = ""
     for c in config.LOCALES:
         L = Locale.cache[c]
         P = L.p["404"]
         links = "".join(f'<li><a href="{url(c, k)}">{e(L.names[k])}</a></li>' for k in ("diving", "sites", "plan", "contact"))
-        blocks += f'''<section class="nf-block" lang="{c}" data-nf="{c}">
+        blocks += f'''<section class="nf-block" lang="{L.html_lang}" dir="{L.dir}" data-nf="{c}">
       <p class="eyebrow">404</p><h1 class="po-title">{e(P["h1"])}</h1><span class="rule" aria-hidden="true"></span>
       <p class="lead">{e(P["t"])}</p><ul class="nf-links">{links}</ul>
       {btn(url(c, "home"), P["home"], "btn btn-outline")}</section>'''
     L = Locale.cache[config.DEFAULT_LOCALE]
+    codes = json.dumps(config.LOCALES)
     return f'''<!doctype html>
-<html lang="{L.code}">
+<html lang="en" translate="no">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
 <title>{e(L.p["404"]["title"])}</title><meta name="robots" content="noindex">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
-<script>document.documentElement.classList.add('js');if(!/(?:^|;\\s*)googtrans=\\/[^;]+\\/[a-zA-Z-]+/.test(document.cookie)){{document.documentElement.setAttribute('translate','no');var m=document.createElement('meta');m.name='google';m.content='notranslate';document.head.appendChild(m)}}</script></head>
+<script>document.documentElement.classList.add('js')</script></head>
 <body class="is-404">
 <main id="main" class="nf">
   <a class="brand" href="/">{'<img src="/assets/brand/logo-white.png" alt="W Divers Coron" width="110" height="110">'}</a>
   <div class="frame nf-frame">{blocks}</div>
 </main>
 <script>
-(function(){{var m=location.pathname.match(/\\/(ko|en)\\//);var l=m?m[1]:null;
-try{{l=l||localStorage.getItem('wd-lang')}}catch(e){{}}
-if(l){{document.documentElement.lang=l;document.querySelectorAll('[data-nf]').forEach(function(b){{if(b.getAttribute('data-nf')!==l)b.hidden=true}})}}}})();
+{LANG_PICK_JS}
+(function(){{var codes={codes};var m=location.pathname.match(/\\/([a-z]{{2}}(?:-[a-z]{{4}})?)\\//);
+var l=m&&codes.indexOf(m[1])>-1?m[1]:wdPick(codes);
+document.querySelectorAll('[data-nf]').forEach(function(b){{if(b.getAttribute('data-nf')!==l)b.hidden=true}})}})();
 </script>
 </body></html>'''
 
 
 def render_root():
     en = Locale.cache["en"]
-    ko = Locale.cache["ko"]
+    codes = json.dumps(config.LOCALES)
+    choices = "".join(f'<a class="btn btn-outline" href="/{c}/" hreflang="{Locale.cache[c].html_lang}" '
+                      f'lang="{Locale.cache[c].html_lang}">{e(Locale.cache[c].lang_name)}</a>' for c in config.LOCALES)
     return f'''<!doctype html>
-<html lang="en">
+<html lang="en" translate="no">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
 <title>W Divers Coron | Coron, Palawan</title>
 <meta name="description" content="{e(en.p["home"]["meta"])}">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
 <script>
-(function(){{var l=null;try{{l=localStorage.getItem('wd-lang')}}catch(e){{}}
-if(l!=='en'&&l!=='ko'){{var n=(navigator.languages||[navigator.language||'']).join(',').toLowerCase();l=/(^|,)ko/.test(n)?'ko':'en'}}
-location.replace('{config.BASE_PATH.rstrip("/")}/'+l+'/');}})();
+{LANG_PICK_JS}
+location.replace('{config.BASE_PATH.rstrip("/")}/'+wdPick({codes})+'/');
 </script></head>
 <body class="is-404"><main class="nf">
 <img src="/assets/brand/logo-white.png" alt="W Divers Coron" width="110" height="110">
-<div class="frame nf-frame"><div class="lang-choose">
-<a class="btn btn-outline" href="/en/" hreflang="en" lang="en">English</a>
-<a class="btn btn-outline" href="/ko/" hreflang="ko" lang="ko">{e(ko.lang_name)}</a></div></div>
+<div class="frame nf-frame"><div class="lang-choose">{choices}</div></div>
 </main></body></html>'''
 
 

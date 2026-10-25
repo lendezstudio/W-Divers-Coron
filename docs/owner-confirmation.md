@@ -44,9 +44,11 @@ Pool training photos are used on the First-Time Divers and Courses pages without
 
 `Apo-Reef.jpg` (Island Hopping opening and gallery) and `images (1).jpg` (gallery) are used as general island scenery, at Lyneth's request. Neither is captioned as Coron. Confirm the usage rights for both images before launch.
 
-## Automatic translation
+## Languages
 
-The language menu offers 12 extra languages through Google's website translation (loaded only when a visitor picks one; disclosed on the privacy page). These are machine translations: only English and Korean are written for the site. Google no longer offers this widget to new sign-ups, and it could stop working in future. If it does, the menu's "More languages" section can be removed in `config.AUTO_LANGS`.
+The site is written in 14 languages: English, Korean, Simplified Chinese, Traditional Chinese, Japanese, Spanish, French, German, Italian, Russian, Vietnamese, Thai, Indonesian and Arabic (right-to-left). The 12 languages added on 25 October 2026 were written for this project, not machine-translated, but they have not been reviewed by native speakers. Before launch, have a fluent speaker check at least the home, contact and booking pages in each language.
+
+Every page is marked `translate="no"` so browsers do not auto-translate it over the chosen language. Wreck names stay in their romanized form (Okikawa Maru, etc.) except in Korean. The inquiry message sent to W Divers keeps English field labels in every language so the team can always read it.
 
 ## Content decisions to review
 
@@ -59,7 +61,7 @@ The language menu offers 12 extra languages through Google's website translation
 
 ## Before launch
 
-- [ ] Owner reviews all English and Korean copy (the Korean was written for this project, not professionally translated)
+- [ ] Owner reviews all copy; native speakers check each of the 13 non-English languages
 - [ ] Confirm KakaoTalk IDs, address wording and photo permissions
 - [ ] Set `SITE_URL` and rebuild
 - [ ] Configure the host to serve `/404.html` for missing pages

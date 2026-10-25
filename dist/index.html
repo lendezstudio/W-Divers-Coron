@@ -1,18 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" translate="no">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
 <title>W Divers Coron | Coron, Palawan</title>
 <meta name="description" content="Explore wreck diving, reef diving and island-hopping options in Coron, Palawan, then share your dates and experience with W Divers Coron to start planning.">
 <link rel="icon" type="image/png" sizes="32x32" href="/W-Divers-Coron/assets/brand/favicon-32.png">
-<link rel="stylesheet" href="/W-Divers-Coron/assets/css/site.css?v=202610252042">
+<link rel="stylesheet" href="/W-Divers-Coron/assets/css/site.css?v=202610252142">
 <script>
-(function(){var l=null;try{l=localStorage.getItem('wd-lang')}catch(e){}
-if(l!=='en'&&l!=='ko'){var n=(navigator.languages||[navigator.language||'']).join(',').toLowerCase();l=/(^|,)ko/.test(n)?'ko':'en'}
-location.replace('/W-Divers-Coron/'+l+'/');})();
+function wdPick(codes){var l=null;try{l=localStorage.getItem('wd-lang')}catch(e){}
+if(codes.indexOf(l)>-1)return l;var n=navigator.languages||[navigator.language||''];
+for(var i=0;i<n.length;i++){var t=(n[i]||'').toLowerCase();
+if(t.indexOf('zh')===0){return /(tw|hk|mo|hant)/.test(t)?'zh-hant':'zh-hans'}
+var p=t.split('-')[0];if(codes.indexOf(p)>-1)return p}return 'en'}
+location.replace('/W-Divers-Coron/'+wdPick(["en", "ko", "zh-hans", "zh-hant", "ja", "es", "fr", "de", "it", "ru", "vi", "th", "id", "ar"])+'/');
 </script></head>
 <body class="is-404"><main class="nf">
 <img src="/W-Divers-Coron/assets/brand/logo-white.png" alt="W Divers Coron" width="110" height="110">
-<div class="frame nf-frame"><div class="lang-choose">
-<a class="btn btn-outline" href="/W-Divers-Coron/en/" hreflang="en" lang="en">English</a>
-<a class="btn btn-outline" href="/W-Divers-Coron/ko/" hreflang="ko" lang="ko">한국어</a></div></div>
+<div class="frame nf-frame"><div class="lang-choose"><a class="btn btn-outline" href="/W-Divers-Coron/en/" hreflang="en" lang="en">English</a><a class="btn btn-outline" href="/W-Divers-Coron/ko/" hreflang="ko" lang="ko">한국어</a><a class="btn btn-outline" href="/W-Divers-Coron/zh-hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a class="btn btn-outline" href="/W-Divers-Coron/zh-hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a><a class="btn btn-outline" href="/W-Divers-Coron/ja/" hreflang="ja" lang="ja">日本語</a><a class="btn btn-outline" href="/W-Divers-Coron/es/" hreflang="es" lang="es">Español</a><a class="btn btn-outline" href="/W-Divers-Coron/fr/" hreflang="fr" lang="fr">Français</a><a class="btn btn-outline" href="/W-Divers-Coron/de/" hreflang="de" lang="de">Deutsch</a><a class="btn btn-outline" href="/W-Divers-Coron/it/" hreflang="it" lang="it">Italiano</a><a class="btn btn-outline" href="/W-Divers-Coron/ru/" hreflang="ru" lang="ru">Русский</a><a class="btn btn-outline" href="/W-Divers-Coron/vi/" hreflang="vi" lang="vi">Tiếng Việt</a><a class="btn btn-outline" href="/W-Divers-Coron/th/" hreflang="th" lang="th">ไทย</a><a class="btn btn-outline" href="/W-Divers-Coron/id/" hreflang="id" lang="id">Bahasa Indonesia</a><a class="btn btn-outline" href="/W-Divers-Coron/ar/" hreflang="ar" lang="ar">العربية</a></div></div>
 </main></body></html>
