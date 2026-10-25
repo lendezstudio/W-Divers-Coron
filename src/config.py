@@ -1,10 +1,16 @@
 """Site-wide configuration. Edit values here, then run `python src/build.py`."""
 
-# Set to the live origin (no trailing slash) once the domain is confirmed,
-# e.g. "https://www.example.com". While empty, canonical URLs, hreflang
+# Set to the full URL of the site root (no trailing slash, including any
+# BASE_PATH) once the domain is confirmed, e.g. "https://www.example.com".
+# While empty, canonical URLs, hreflang
 # alternates, og:url and sitemap.xml are not generated, because publishing
 # them for a domain the business does not own would be wrong.
 SITE_URL = ""
+
+# URL prefix when the site is served from a sub-folder. GitHub Pages project
+# sites live at https://<user>.github.io/<repo>/, so this is "/W-Divers-Coron".
+# Set to "" when the site moves to its own domain.
+BASE_PATH = "/W-Divers-Coron"
 
 LOCALES = ["en", "ko"]
 DEFAULT_LOCALE = "en"

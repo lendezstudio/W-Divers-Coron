@@ -12,6 +12,12 @@ python src/build.py
 
 The output goes to `dist/`. Deploy that folder as the web root on any static host. Image derivatives are cached, so later builds are fast.
 
+### GitHub Pages
+
+The site is served from https://lendezstudio.github.io/W-Divers-Coron/, which is why `BASE_PATH` in `src/config.py` is `/W-Divers-Coron`. Set it to `""` when the site moves to its own domain.
+
+`.github/workflows/pages.yml` publishes the committed `dist/` folder on every push to `main` or `website-build`. One-time setup: **Settings > Pages > Build and deployment > Source: GitHub Actions**. Always rebuild before committing.
+
 Preview locally:
 
 ```
@@ -19,7 +25,7 @@ cd dist
 python -m http.server 8000
 ```
 
-Then open http://localhost:8000/. Pages use root-relative links, so open them through a server, not by double-clicking the files.
+With `BASE_PATH` set, preview from a parent folder that contains a `W-Divers-Coron` copy of `dist`, or build with `BASE_PATH = ""` and open http://localhost:8000/. Open pages through a server, not by double-clicking the files.
 
 ## Where things live
 

@@ -8,6 +8,7 @@ import html
 import importlib
 import json
 import os
+import re
 import shutil
 import sys
 
@@ -1025,7 +1026,7 @@ def render_404():
   <div class="frame nf-frame">{blocks}</div>
 </main>
 <script>
-(function(){{var m=location.pathname.match(/^\\/(ko|en)\\//);var l=m?m[1]:null;
+(function(){{var m=location.pathname.match(/\\/(ko|en)\\//);var l=m?m[1]:null;
 try{{l=l||localStorage.getItem('wd-lang')}}catch(e){{}}
 if(l){{document.documentElement.lang=l;document.querySelectorAll('[data-nf]').forEach(function(b){{if(b.getAttribute('data-nf')!==l)b.hidden=true}})}}}})();
 </script>
@@ -1045,7 +1046,7 @@ def render_root():
 <script>
 (function(){{var l=null;try{{l=localStorage.getItem('wd-lang')}}catch(e){{}}
 if(l!=='en'&&l!=='ko'){{var n=(navigator.languages||[navigator.language||'']).join(',').toLowerCase();l=/(^|,)ko/.test(n)?'ko':'en'}}
-location.replace('/'+l+'/');}})();
+location.replace('{config.BASE_PATH.rstrip("/")}/'+l+'/');}})();
 </script></head>
 <body class="is-404"><main class="nf">
 <img src="/assets/brand/logo-white.png" alt="W Divers Coron" width="110" height="110">
@@ -1057,7 +1058,18 @@ location.replace('/'+l+'/');}})();
 
 # ----------------------------------------------------------------- build
 
+def with_base(content):
+    """Prefix root-relative URLs with BASE_PATH so the site works from a sub-folder."""
+    b = config.BASE_PATH.rstrip("/")
+    if not b:
+        return content
+    content = re.sub(r'(\s(?:href|src|content|poster)=")/(?!/)', rf"\1{b}/", content)
+    content = re.sub(r'srcset="[^"]*"', lambda m: m.group(0).replace("/assets/", f"{b}/assets/"), content)
+    return content.replace('"image": "/assets/', f'"image": "{b}/assets/')
+
+
 def write(path, content):
+    content = with_base(content)
     full = os.path.join(DIST, path.lstrip("/"))
     if full.endswith("/") or full.endswith(os.sep):
         full = os.path.join(full, "index.html")
@@ -1120,6 +1132,8 @@ def main():
         os.remove(sm)
     with open(os.path.join(DIST, "robots.txt"), "w", encoding="utf-8") as f:
         f.write(robots)
+    # Serve files as-is on GitHub Pages (no Jekyll processing)
+    open(os.path.join(DIST, ".nojekyll"), "w").close()
     print(f"Built {len(pages)} pages in {config.LOCALES} -> {DIST}")
 
 
