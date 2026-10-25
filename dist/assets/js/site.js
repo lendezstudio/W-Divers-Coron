@@ -34,6 +34,10 @@
   doc.addEventListener('click', function (ev) {
     langMenus.forEach(function (d) { if (d.open && !d.contains(ev.target)) { d.open = false; } });
   });
+  /* Pages restored with the Back button must not reopen a stale menu */
+  window.addEventListener('pageshow', function () {
+    langMenus.forEach(function (d) { d.open = false; });
+  });
   langMenus.forEach(function (d) {
     d.addEventListener('keydown', function (ev) {
       if (ev.key === 'Escape' && d.open) { d.open = false; $('summary', d).focus(); }

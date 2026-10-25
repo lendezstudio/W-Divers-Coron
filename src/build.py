@@ -266,7 +266,7 @@ def nav_panel(L, route, current_path):
 </div>'''
 
 
-def footer(L):
+def footer(L, route):
     u = L.ui
     c = L.code
     C = config.CONTACT
@@ -301,7 +301,7 @@ def footer(L):
     </div>
     <div class="footer-col">
       <h2 class="footer-h">{e(u["footer_legal"])}</h2><ul>{lis(legal)}</ul>
-      <div class="footer-lang">{lang_links(L, ("home",))}</div>
+      <div class="footer-lang">{lang_links(L, route)}</div>
     </div>
   </div>
   <div class="wrap footer-base">
@@ -363,7 +363,7 @@ def layout(L, route, title, meta, opening, body, extra_head="", jsonld=None, bod
 {opening}
 {body}
 </main>
-{footer(L)}
+{footer(L, route)}
 <script src="/assets/js/site.js?v={ASSET_V}" defer></script>
 </body>
 </html>
@@ -487,6 +487,7 @@ def render_home(L):
 
     routes = "".join(f'''<li class="route reveal">
       <a href="{url(c, r["to"])}">
+        <span class="route-img frame">{picture(ROUTE_IMG[r["to"]], L, "(min-width: 640px) 200px, 92vw", alt="")}</span>
         <span class="route-n" aria-hidden="true">0{i + 1}</span>
         <span class="route-k">{e(r["k"])}</span>
         <span class="route-t">{e(r["t"])}</span>
@@ -494,6 +495,7 @@ def render_home(L):
       </a></li>''' for i, r in enumerate(P["routes"]))
 
     sites = "".join(f'''<li class="reveal"><a href="{url(c, "site", s["slug"])}">
+      <span class="site-img">{picture(s["img"], L, "(min-width: 900px) 40vw, 92vw", alt="")}</span>
       <span class="site-type">{e(L.ui["type_" + s["type"]])}</span>
       <span class="site-name">{e(s["name"])}</span>
       <span class="site-card">{e(s["card"])}</span>
@@ -511,7 +513,7 @@ def render_home(L):
 
 <section class="feature" id="feature" aria-labelledby="feature-h">
   <div class="wrap feature-grid">
-    <figure class="frame feature-media reveal">{picture("wreck-bow", L, "(min-width: 900px) 40vw, 100vw")}</figure>
+    <figure class="frame feature-media reveal">{picture("stock-descent", L, "(min-width: 900px) 40vw, 100vw")}</figure>
     <div class="feature-copy reveal">
       <h2 class="section-h" id="feature-h">{e(P["feature_h"])}</h2>
       <span class="rule" aria-hidden="true"></span>
@@ -531,6 +533,7 @@ def render_home(L):
     <p class="muted">{e(P["sites_t"])}</p>
   </div>
   <ul class="site-grid">{sites}</ul>
+  <p class="img-note">{e(L.p["sites"]["img_note"])}</p>
   <p class="reveal">{arrow_link(url(c, "sites"), P["sites_all"], "arrow-link light")}</p>
 </section>
 
@@ -641,7 +644,7 @@ def course_catalog(L):
 def render_sites(L):
     P = L.p["sites"]
     c = L.code
-    op = opening(L, P["eyebrow"], P["h1"], P["intro"], P["img"], [(L.names["sites"], url(c, "sites"))])
+    op = opening(L, P["eyebrow"], P["h1"], P["intro"], P["img"], [(L.names["sites"], url(c, "sites"))], note=P["img_note"])
     types = sorted({s["type"] for s in L.sites})
     filt = ""
     if len(types) > 1:
@@ -651,6 +654,7 @@ def render_sites(L):
     rows = "".join(f'''<li class="site-row reveal" data-cat="{s["type"]}">
       <a href="{url(c, "site", s["slug"])}">
         <span class="sr-n" aria-hidden="true">{i + 1:02d}</span>
+        <span class="sr-img frame">{picture(s["img"], L, "(min-width: 900px) 260px, 92vw", alt="")}</span>
         <span class="sr-main"><span class="site-type">{e(L.ui["type_" + s["type"]])}</span>
         <span class="sr-name">{e(s["name"])}</span>
         <span class="sr-card">{e(s["card"])}</span></span>
@@ -713,6 +717,8 @@ def render_plan(L):
             link = f'<p>{ext(config.DAN_FLYING_URL, e(s["link"]), "text-link", L)}</p>'
         steps += f'''<li class="step reveal" id="{s["id"]}"><span class="step-n" aria-hidden="true">{i + 1:02d}</span>
           <div><h2>{e(s["h"])}</h2><p>{e(s["p"])}</p>{link}</div></li>'''
+        if s["id"] == "packing":
+            steps += f'<li class="step-fig reveal"><figure class="frame inline-fig">{picture("stock-fins", L, "(min-width: 900px) 60vw, 92vw")}</figure></li>'
     more = [("faq", None), ("booking", None), ("gallery", None), ("journal", None)]
     body = f'''
 <div class="paper">
@@ -768,6 +774,10 @@ def render_about(L):
 {cta_band(L, L.p["home"]["contact_h"], L.p["home"]["contact_t"], L.p["home"]["contact_btn"])}
 '''
     return layout(L, ("about",), P["title"], P["meta"], op, body, jsonld=[business_ld(L)])
+
+
+# Photo for each homepage route row, keyed by the route's destination page.
+ROUTE_IMG = {"diving": "stock-wall", "first": "stock-pair", "courses": "pool-pair", "island": "island-aerial"}
 
 
 # Curated gallery: (media key, tile size). Sizes are chosen so each section
@@ -838,7 +848,7 @@ def render_gallery(L):
 def render_faq(L):
     P = L.p["faq"]
     c = L.code
-    op = opening(L, P["eyebrow"], P["h1"], P["intro"], None, [(L.names["faq"], url(c, "faq"))])
+    op = opening(L, P["eyebrow"], P["h1"], P["intro"], "diver-sand", [(L.names["faq"], url(c, "faq"))])
     groups = ""
     qa = []
     for g in P["groups"]:
@@ -857,7 +867,7 @@ def render_faq(L):
 def render_journal(L):
     P = L.p["journal"]
     c = L.code
-    op = opening(L, P["eyebrow"], P["h1"], P["intro"], None, [(L.names["journal"], url(c, "journal"))])
+    op = opening(L, P["eyebrow"], P["h1"], P["intro"], "stock-split", [(L.names["journal"], url(c, "journal"))])
     cards = "".join(f'''<li class="j-item reveal"><a href="{url(c, "article", a["slug"])}">
         <span class="j-media frame">{picture(a["img"], L, "(min-width: 900px) 30vw, 100vw")}</span>
         <span class="j-title">{e(a["title"])}</span>
@@ -890,7 +900,7 @@ def render_contact(L):
     P = L.p["contact"]
     c = L.code
     C = config.CONTACT
-    op = opening(L, P["eyebrow"], P["h1"], P["intro"], None, [(L.names["contact"], url(c, "contact"))],
+    op = opening(L, P["eyebrow"], P["h1"], P["intro"], "boat-group", [(L.names["contact"], url(c, "contact"))],
                  extra=f'''<div class="po-actions">{ext(wa_url(), icon("whatsapp") + "<span>" + e(L.ui["whatsapp_cta"]) + "</span>", "btn btn-outline with-ico", L)}
                  <a class="arrow-link light" href="mailto:{C["email"]}"><span>{e(L.ui["email_cta"])}</span>{icon("arrow")}</a></div>''')
     req = f'<span class="req">({e(P["required"])})</span>'
