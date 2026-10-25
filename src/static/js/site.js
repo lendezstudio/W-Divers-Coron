@@ -29,6 +29,17 @@
     });
   });
 
+  /* Language menu: close on outside click or Escape */
+  var langMenus = $$('[data-lang-menu]');
+  doc.addEventListener('click', function (ev) {
+    langMenus.forEach(function (d) { if (d.open && !d.contains(ev.target)) { d.open = false; } });
+  });
+  langMenus.forEach(function (d) {
+    d.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && d.open) { d.open = false; $('summary', d).focus(); }
+    });
+  });
+
   /* Sticky bar after the framed opening */
   var bar = $('[data-sticky]');
   var opening = $('.hero, .page-open');

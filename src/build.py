@@ -120,6 +120,7 @@ ICONS = {
     "kakao": '<path d="M12 4.5c-4.7 0-8.5 3-8.5 6.6 0 2.3 1.5 4.3 3.8 5.5l-.9 3.3 3.8-2.5c.6.1 1.2.2 1.8.2 4.7 0 8.5-3 8.5-6.5S16.7 4.5 12 4.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
     "copy": '<rect x="8.5" y="8.5" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>',
     "play": '<path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/>',
+    "globe": '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5s1.2-6.2 3.6-8.5z" fill="none" stroke="currentColor" stroke-width="1.5"/>',
 }
 
 
@@ -146,23 +147,38 @@ def other_locales(L):
 
 
 def lang_links(L, route, cls="lang"):
+    """Every language as a plain link; the current one is marked. Used in the menu panel and footer."""
     out = []
-    for c in other_locales(L):
+    for c in config.LOCALES:
         name = Locale.cache[c].lang_name
-        out.append(f'<a class="{cls}" href="{url(c, *route)}" hreflang="{c}" lang="{c}" data-set-lang="{c}">'
+        cur = ' aria-current="true"' if c == L.code else ""
+        out.append(f'<a class="{cls}" href="{url(c, *route)}" hreflang="{c}" lang="{c}" data-set-lang="{c}"{cur}>'
                    f'<span class="vh">{e(L.ui["lang_label"])}: </span>{e(name)}</a>')
     return "".join(out)
+
+
+def lang_menu(L, route):
+    """Compact language picker for the header: globe + current code, opening a list of all languages."""
+    items = ""
+    for c in config.LOCALES:
+        name = Locale.cache[c].lang_name
+        cur = ' aria-current="true"' if c == L.code else ""
+        items += (f'<li><a href="{url(c, *route)}" hreflang="{c}" lang="{c}" data-set-lang="{c}"{cur}>'
+                  f'<span class="lm-code">{c.upper()}</span>{e(name)}</a></li>')
+    return (f'<details class="lang-menu" data-lang-menu><summary aria-label="{e(L.ui["lang_label"])}: {e(L.lang_name)}">'
+            f'{icon("globe")}<span>{L.code.upper()}</span>{icon("chev", "ico chev")}</summary><ul>{items}</ul></details>')
 
 
 def social_list(L, which=("facebook", "instagram", "whatsapp"), cls="social"):
     c = config.CONTACT
     hrefs = {"facebook": c["facebook"], "instagram": c["instagram"], "whatsapp": wa_url(),
-             "mail": f"mailto:{c['email']}", "naver": c["naver"], "pin": c["maps"]}
+             "mail": f"mailto:{c['email']}", "naver": c["naver"], "pin": c["maps"],
+             "kakao": url(L.code, "contact") + "#kakao"}
     labels = {"facebook": L.ui["facebook"], "instagram": L.ui["instagram"], "whatsapp": L.ui["whatsapp"],
-              "mail": L.ui["email"], "naver": L.ui["naver"], "pin": L.ui["maps"]}
+              "mail": L.ui["email"], "naver": L.ui["naver"], "pin": L.ui["maps"], "kakao": L.ui["kakao"]}
     items = []
     for w in which:
-        if w == "mail":
+        if w in ("mail", "kakao"):
             items.append(f'<li><a href="{e(hrefs[w])}" aria-label="{e(labels[w])}">{icon(w)}</a></li>')
         else:
             items.append(f'<li><a href="{e(hrefs[w])}" target="_blank" rel="noopener" '
@@ -207,7 +223,7 @@ def header(L, route, current_path):
   {logo(L)}
   <nav class="main-nav" aria-label="{e(L.ui["primary_nav"])}"><ul>{"".join(items)}</ul></nav>
   <div class="header-tools">
-    {lang_links(L, route)}
+    {lang_menu(L, route)}
     {btn(url(L.code, "contact"), L.ui["plan_cta"], "btn btn-outline btn-sm header-cta")}
     <a class="menu-btn" href="#footer-nav" data-menu-open aria-controls="nav-panel">{icon("menu")}<span>{e(L.ui["menu"])}</span></a>
   </div>
@@ -218,7 +234,7 @@ def sticky_bar(L, route):
     return f'''<div class="sticky-bar" data-sticky aria-hidden="true">
   {logo(L, "brand brand-sm")}
   <div class="header-tools">
-    {lang_links(L, route)}
+    {lang_menu(L, route)}
     {btn(url(L.code, "contact"), L.ui["plan_cta"], "btn btn-outline btn-sm")}
     <a class="menu-btn" href="#footer-nav" data-menu-open aria-controls="nav-panel" tabindex="-1">{icon("menu")}<span>{e(L.ui["menu"])}</span></a>
   </div>
@@ -244,7 +260,7 @@ def nav_panel(L, route, current_path):
       {btn(url(L.code, "contact"), L.ui["plan_cta"], "btn btn-solid")}
       {ext(wa_url(), e(L.ui["whatsapp_cta"]), "text-link", L)}
       <div class="panel-lang">{lang_links(L, route)}</div>
-      {social_list(L, ("facebook", "instagram", "whatsapp", "mail"))}
+      {social_list(L, ("facebook", "instagram", "whatsapp", "kakao", "naver", "mail"))}
     </div>
   </div>
 </div>'''
@@ -465,7 +481,7 @@ def render_home(L):
     </div>
     <nav class="hero-rail" aria-label="{e(L.ui["section_nav"])}"><ul>{rail}</ul></nav>
     <a class="scroll-cue" href="#routes"><span>{e(L.ui["scroll"])}</span></a>
-    {social_list(L, ("facebook", "instagram", "whatsapp"), "social hero-social")}
+    {social_list(L, ("facebook", "instagram", "whatsapp", "kakao", "naver"), "social hero-social")}
   </div>
 </section>'''
 
