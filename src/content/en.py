@@ -17,8 +17,13 @@ UI = {
     "sub_trips": "Dive Trips",
     "sub_wreck": "Wreck Diving",
     "sub_reef": "Reef Diving",
-    "sub_first": "First-Time Divers",
-    "sub_courses": "Courses & Training",
+    "sub_first": "DSD (Discover Scuba Diving)",
+    "sub_courses": "Scuba Courses",
+    "sub_tdi": "TDI Advanced Diver Course",
+    "sub_free": "Free Diving",
+    "nav_pros": "Pro's",
+    "nav_special": "Special Trips",
+    "sub_special_all": "All Special Trips",
     "sub_island": "Island Hopping",
     "sub_guide": "Planning Guide",
     "sub_faq": "FAQs",
@@ -76,11 +81,18 @@ UI = {
     "reviewed": "Guide last reviewed",
     "read_guide": "Read the site guide",
     "read_article": "Read the article",
+    "read_trip": "See the trip",
+    "slides_label": "Highlights from W Divers Coron",
+    "slide_n": "Slide {n} of {total}",
+    "slide_show": "Show slide {n}",
+    "slide_pause": "Pause the slideshow",
+    "slide_play": "Play the slideshow",
 }
 
 ROUTE_NAMES = {
     "home": "Home", "diving": "Diving", "wreck": "Wreck Diving", "reef": "Reef Diving",
-    "first": "First-Time Divers", "courses": "Courses & Training", "sites": "Dive Sites",
+    "first": "DSD (Discover Scuba Diving)", "courses": "Scuba Courses", "sites": "Dive Sites",
+    "tdi": "TDI Advanced Diver Course", "freediving": "Free Diving", "pros": "Pro's", "special": "Special Trips",
     "island": "Island Hopping", "plan": "Plan Your Trip", "about": "About", "gallery": "Gallery",
     "faq": "FAQs", "journal": "Journal", "contact": "Contact", "privacy": "Privacy",
     "booking": "Booking Information", "sitemap": "Sitemap",
@@ -100,8 +112,8 @@ PAGES["home"] = {
     "choose_h": "Start with your kind of adventure.",
     "routes": [
         {"k": "Certified divers", "t": "Here for the wrecks, the reefs, or a little of both? Explore the options and share your certification and recent diving experience when you inquire.", "link": "Explore Dive Trips", "to": "diving"},
-        {"k": "First-time divers", "t": "Curious about scuba? Start with what an introductory experience involves and ask which options are available for your visit.", "link": "Your First Dive", "to": "first"},
-        {"k": "Training", "t": "Share your current level and goals, and ask about suitable training and instructor availability.", "link": "Ask About Training", "to": "courses"},
+        {"k": "Discover Scuba Diving (DSD)", "t": "Never dived before? DSD is a supervised first taste of scuba with an instructor beside you. Ask which options suit your dates.", "link": "About DSD", "to": "first"},
+        {"k": "Training", "t": "Scuba courses from your first certification to professional levels, plus TDI training for advanced wreck and technical divers.", "link": "See Scuba Courses", "to": "courses"},
         {"k": "Beyond diving", "t": "Looking for time above the surface too? Ask about island-hopping arrangements for your Coron stay.", "link": "Explore Island Hopping", "to": "island"},
     ],
     "feature_h": "The wrecks brought you here. The details help you plan.",
@@ -124,6 +136,16 @@ PAGES["home"] = {
     "contact_h": "Have your dates in mind?",
     "contact_t": "Send your travel dates, group size and diving experience. If you're still deciding, tell us what you'd like to do.",
     "contact_btn": "Start a Dive Inquiry",
+    "slides": [
+        ("With Korean actors on the set of the film The Golden Holiday (국제수사)", "Meet our Pro's"),
+        ("Filming support: SBS Law of the Jungle in Coron", "Meet our Pro's"),
+        ("Lagoons, limestone cliffs and our boat", "Special Trips"),
+        ("Wreck and reef diving around Coron", "Diving"),
+        ("The W Divers Coron dive boat", "About us"),
+    ],
+    "special_h": "Special trips from Coron.",
+    "special_t": "Longer days and overnight adventures, arranged by the W Divers team on selected dates.",
+    "special_all": "See all special trips",
 }
 
 PAGES["diving"] = {
@@ -200,51 +222,152 @@ PAGES["reef"] = {
 }
 
 PAGES["first"] = {
-    "title": "First-Time Divers in Coron | W Divers Coron",
-    "meta": "New to scuba? Learn how an introductory experience differs from a certification course, and ask W Divers Coron which options suit your visit.",
-    "eyebrow": "First-time divers",
-    "h1": "Curious about your first breath underwater?",
-    "intro": "You don't need to know every piece of equipment to begin asking questions. Tell W Divers you're new to scuba, and ask about introductory options for your dates.",
+    "title": "Discover Scuba Diving (DSD) in Coron | W Divers Coron",
+    "meta": "Try scuba for the first time with Discover Scuba Diving (DSD) at W Divers Coron: a supervised introduction with an instructor, no certification needed.",
+    "eyebrow": "DSD · Discover Scuba Diving",
+    "h1": "Your first breath underwater, with an instructor beside you.",
+    "intro": "Discover Scuba Diving (DSD) is a supervised first taste of scuba for people who have never dived. Tell W Divers you're new to scuba, and ask which DSD options suit your dates.",
     "img": "stock-pair",
     "summary": {
         "h": "Questions worth asking",
         "for": "For people who have never tried scuba, or tried it long ago.",
-        "list": ["Eligibility and minimum age", "Swimming or water-comfort expectations", "Required screening", "Supervision", "Duration and location"],
+        "list": ["Minimum age and who can join", "Swimming or water-comfort expectations", "The medical questionnaire", "Where the session takes place", "How long it lasts and the total price"],
     },
     "sections": [
-        {"h": "An introduction is different from a certification.", "p": ["An introductory experience offers a supervised first taste of scuba. A certification course follows a structured training pathway. Ask which format is available and appropriate for you."]},
-        {"h": "Before you choose an experience.", "p": ["Confirm eligibility, minimum age, swimming or water-comfort expectations, required screening, supervision, duration and the location of the activity. Mention concerns directly to the team; an inquiry form is not a medical clearance."]},
+        {"h": "What a DSD involves.", "p": ["A Discover Scuba Diving session starts with a short briefing on the equipment and how to breathe underwater. You then practise a few basic skills in calm, shallow water before a guided dive with an instructor close by. No certification or previous experience is needed."]},
+        {"h": "An introduction, not a certification.", "p": ["DSD lets you try scuba without committing to a course. If you enjoy it, ask how a scuba course could follow. The two are different steps, so ask which is right for your trip."]},
+        {"h": "Before you book.", "p": ["Confirm the minimum age, swimming or water-comfort expectations, the medical questionnaire, where the session takes place, how long it lasts and what the price includes. Mention any health concerns to the team before your dive; an inquiry form is not a medical clearance."]},
         {"h": "No need to pretend you're confident already.", "p": ["It's fine to have questions about breathing underwater, equipment or being in the sea. Describe what you're comfortable with so the conversation starts in the right place."]},
     ],
     "inline_img": "pool-skills",
-    "cta": "Ask About a First Dive",
+    "cta": "Ask About DSD",
     "interest": "first",
     "related": [("courses", None), ("faq", None), ("article", "planning-your-first-coron-dive-trip")],
 }
 
 PAGES["courses"] = {
-    "title": "Courses and Training in Coron | W Divers Coron",
-    "meta": "Considering scuba training in Coron? Share your experience and goals, and ask W Divers Coron about current courses, prerequisites and instructor availability.",
-    "eyebrow": "Courses & training",
-    "h1": "Take the next step in your diving.",
-    "intro": "Looking to learn scuba or develop your existing skills? Share your current experience, the training you're interested in and how much time you have in Coron.",
+    "title": "Scuba Courses in Coron | W Divers Coron",
+    "meta": "Learn to dive or keep progressing in Coron: scuba courses from beginner to professional levels with W Divers Coron's PADI and SSI instructors.",
+    "eyebrow": "Scuba courses",
+    "h1": "Learn to dive, then keep going.",
+    "intro": "From your first certification to professional levels, W Divers Coron's instructors teach scuba courses with PADI and SSI. Share your experience, the course you're interested in and how much time you have in Coron.",
     "img": "pool-pair",
     "summary": {
-        "h": "Get the whole course picture",
-        "for": "Ask before confirming:",
-        "list": ["Certifying agency and course name", "Eligibility", "Expected duration", "Training components", "Instructor availability", "Total cost, including materials or certification fees"],
+        "h": "Courses to ask about",
+        "for": "Taught by our PADI and SSI instructors:",
+        "list": ["Open Water Diver", "Advanced Open Water Diver", "Rescue Diver and Emergency First Response", "Divemaster", "Specialties: Deep, Enriched Air (Nitrox), Sidemount, Wreck, Peak Performance Buoyancy", "AWARE Coral Reef Conservation"],
     },
     "sections": [
-        {"h": "Start diving.", "p": ["If you're considering your first certification, ask about the training pathway, prerequisites, study requirements and time needed before you plan the rest of your stay."]},
-        {"h": "Develop your skills.", "p": ["Already certified? Tell the team what you want to work on, such as confidence, buoyancy or further training relevant to your diving goals."]},
-        {"h": "Interested in wreck training?", "p": ["Ask which programs are currently offered and what they qualify you to do. Wreck training differs by program; an exterior wreck specialty does not give general permission to enter wrecks."]},
-        {"h": "Get the whole course picture.", "p": ["Before confirming, ask for the certifying agency, course name, eligibility, expected duration, training components, instructor availability and the total cost including any materials or certification fees."]},
+        {"h": "Start diving.", "p": ["If you're considering your first certification, ask about the course, prerequisites, study requirements and the days needed before you plan the rest of your stay."]},
+        {"h": "Keep progressing.", "p": ["Already certified? Advanced and Rescue courses build confidence and skill, and specialties let you focus on what interests you, from deep diving and nitrox to wrecks and buoyancy."]},
+        {"h": "Interested in wreck training?", "p": ["A wreck specialty teaches you to dive around wrecks safely; it is not general permission to go inside them. For advanced wreck and technical training, see our TDI Advanced Diver Course."]},
+        {"h": "Get the whole course picture.", "p": ["Before confirming, ask for the agency, course name, eligibility, expected duration, training components, instructor availability and the total cost including any materials or certification fees."]},
     ],
     "inline_img": "surface-group",
     "catalog_h": "Current courses",
-    "cta": "Ask About Training",
+    "cta": "Ask About Scuba Courses",
     "interest": "courses",
-    "related": [("first", None), ("wreck", None), ("faq", None)],
+    "related": [("tdi", None), ("first", None), ("faq", None)],
+}
+
+PAGES["tdi"] = {
+    "title": "TDI Advanced Diver Course in Coron | W Divers Coron",
+    "meta": "Advanced and technical diver training in Coron with W Divers Coron's TDI instructors, including advanced wreck training for Coron's wrecks.",
+    "eyebrow": "TDI advanced training",
+    "h1": "Train for Coron's wrecks beyond recreational limits.",
+    "intro": "Coron's wrecks draw divers who want to go further. W Divers Coron has TDI instructors, including a TDI Technical and Advanced Wreck Diver instructor, for divers ready to train beyond recreational diving.",
+    "img": "wreck-mast",
+    "summary": {
+        "h": "Before you inquire",
+        "for": "For experienced, certified divers.",
+        "list": ["Your current certification and logged dives", "Nitrox or deep-diving experience", "The TDI course you're interested in", "How many days you have in Coron", "Whether you own technical or sidemount equipment"],
+    },
+    "sections": [
+        {"h": "What TDI training is.", "p": ["TDI (Technical Diving International) teaches advanced and technical diving: longer, deeper and more complex dives that need extra training, equipment and planning. Coron's sheltered wrecks make it a popular place to learn."]},
+        {"h": "Advanced wreck training.", "p": ["Entering a wreck safely is a skill of its own. Advanced wreck training covers dive planning, guideline use, gas management and moving through overhead environments: the training a guided dive cannot replace."]},
+        {"h": "Find the right course.", "p": ["Prerequisites, durations and equipment differ between TDI programs. Tell the team about your experience and goals, and ask which TDI courses are available, what each qualifies you to do and the total cost."]},
+    ],
+    "inline_img": "tanks-boat",
+    "cta": "Ask About TDI Training",
+    "interest": "tdi",
+    "related": [("courses", None), ("wreck", None), ("sites", None)],
+}
+
+PAGES["freediving"] = {
+    "title": "Free Diving in Coron | W Divers Coron",
+    "meta": "Freediving in Coron with W Divers Coron: Barracuda Lake, Cathedral Cave and other clear, sheltered spots on a single breath.",
+    "eyebrow": "Free diving",
+    "h1": "Coron on a single breath.",
+    "intro": "Clear lakes, limestone cliffs and calm, sheltered water make Coron a favourite with freedivers. W Divers Coron runs freediving tours to spots such as Barracuda Lake and Cathedral Cave.",
+    "img": "rock-walls",
+    "summary": {
+        "h": "Before you inquire",
+        "for": "For freedivers and confident snorkellers.",
+        "list": ["Your freediving experience or certification", "The spots you'd like to visit", "Preferred dates", "Whether you need equipment"],
+    },
+    "sections": [
+        {"h": "Why freedivers love Coron.", "p": ["Barracuda Lake, set between limestone walls, is known for its clear water and changing layers of temperature. Cathedral Cave and other sheltered spots offer calm water and dramatic light. Conditions and access can change, so ask what's possible for your dates."]},
+        {"h": "Tours and training.", "p": ["Ask the team about freediving tours and whether a course is available for your level. Freediving should always be done with a trained buddy watching from the surface."]},
+        {"h": "Plan your day.", "p": ["Tell the team about your experience, the spots you'd like to visit and how much time you have. Ask what's included, such as the boat, equipment and entrance fees."]},
+    ],
+    "inline_img": "lagoon-boats",
+    "cta": "Ask About Free Diving",
+    "interest": "freediving",
+    "related": [("special", None), ("island", None), ("gallery", None)],
+}
+
+PAGES["special"] = {
+    "title": "Special Trips from Coron | W Divers Coron",
+    "meta": "Special trips with W Divers Coron: an Apo Reef yacht liveaboard, dugong watching, a deserted-island overnight and the Kyokuzan Maru wreck day trip.",
+    "eyebrow": "Special trips",
+    "h1": "Bigger days out from Coron.",
+    "intro": "Some experiences need an early start, a longer boat ride or a night away. The W Divers team runs these special trips on selected dates; ask what's planned during your stay.",
+    "img": "lagoon-boats",
+    "note": "Dates, inclusions and prices vary by departure. Ask the team for upcoming trips.",
+}
+
+PAGES["trip"] = {
+    "eyebrow": "Special trip",
+    "glance_h": "At a glance",
+    "ask_h": "Ask before you book",
+    "others_h": "Other special trips",
+    "cta": "Ask About {name}",
+    "cta_note": "An inquiry does not reserve a place.",
+}
+
+PAGES["pros"] = {
+    "title": "Pro's: Meet Team W Divers | W Divers Coron",
+    "meta": "Meet Team W Divers Pro's in Coron, Palawan: head instructor Dean Kang, instructor Inhan Kang and divemaster Jex Lenver Tabat.",
+    "eyebrow": "Team W Divers Pro's",
+    "h1": "Meet the people you'll dive with.",
+    "intro": "Shipwrecks, dugongs, hot springs and magnificent caves: an invitation to dive into the waters of Coron. Meet the instructors of Team W Divers.",
+    "img": "dive-boat",
+    "team_h": "Team W Divers",
+    "team": [
+        {"name": "Dean Kang", "role": "Head Instructor", "initials": "DK",
+         "intro": "Dean leads W Divers Coron and trains both divers and instructors, with instructor ratings across five agencies.",
+         "creds_h": "Instructor ratings",
+         "creds": ["SSI Instructor Trainer #112373", "PADI Master Scuba Diver Trainer (MSDT) #370544", "SDI Instructor #25307", "TDI Instructor #25307", "IDEA Instructor #K00419"],
+         "spec_h": "Specialty instructor",
+         "spec": ["Deep", "Enriched Air", "Sidemount", "Equipment Specialist", "Project AWARE", "Peak Performance Buoyancy", "Wreck", "AWARE Coral Reef Conservation", "EFR / Care for Children with AED", "Snorkel"]},
+        {"name": "Inhan Kang", "role": "Rookie Instructor", "initials": "IK",
+         "tag": "Teaches in native-level English, Tagalog and Korean",
+         "intro": "Inhan qualified as a PADI Instructor at 18 and teaches recreational, technical and wreck courses.",
+         "creds_h": "Instructor ratings",
+         "creds": ["PADI Instructor", "SDI Instructor", "TDI Technical Instructor", "TDI Advanced Wreck Diver Instructor"]},
+        {"name": "Jex Lenver Tabat", "nick": "GIGs", "role": "Divemaster", "initials": "JT",
+         "intro": "A Filipino divemaster on the W Divers team, guiding divers on the boat and underwater.",
+         "creds_h": "Certification",
+         "creds": ["SSI Divemaster"]},
+    ],
+    "screen_h": "On screen in Coron.",
+    "screen_t": "The W Divers team has supported Korean film and TV productions shooting in Coron.",
+    "screen": [
+        {"img": "jungle-crew", "cap": "Supporting SBS Law of the Jungle in Coron, including episodes searching for dugongs and a mystery wreck."},
+        {"img": "film-crew", "cap": "With Korean actors while supporting the filming of the Korean film The Golden Holiday (국제수사) in Coron."},
+    ],
+    "cta_h": "Dive with Team W Divers.",
+    "cta_t": "Send your dates, group size and diving experience, and the team will help plan your time in Coron.",
 }
 
 PAGES["sites"] = {
@@ -411,7 +534,7 @@ PAGES["contact"] = {
         "facebook": "The name on your Facebook profile.",
     },
     "f_interest": "What are you interested in?",
-    "f_interest_opts": [("wreck", "Wreck Diving"), ("reef", "Reef Diving"), ("first", "First Scuba Experience"), ("courses", "Courses & Training"), ("island", "Island Hopping"), ("unsure", "Not Sure Yet")],
+    "f_interest_opts": [("wreck", "Wreck Diving"), ("reef", "Reef Diving"), ("first", "Discover Scuba Diving (DSD)"), ("courses", "Scuba Courses"), ("tdi", "TDI Advanced Training"), ("freediving", "Free Diving"), ("special", "Special Trips"), ("island", "Island Hopping"), ("unsure", "Not Sure Yet")],
     "f_choose": "Choose one",
     "f_message": "Your message",
     "f_message_hint": "What would you like to do, and is there anything the team should know?",
@@ -493,7 +616,7 @@ PAGES["sitemap"] = {
     "eyebrow": "Sitemap",
     "h1": "Every page in one place.",
     "intro": "Use this list to find any page on the website.",
-    "groups": ["Diving", "Dive sites", "Plan your trip", "Journal", "About and contact"],
+    "groups": ["Diving", "Dive sites", "Plan your trip", "Journal", "About and contact", "Special trips"],
 }
 
 PAGES["404"] = {
@@ -632,5 +755,64 @@ ARTICLES = [
         ],
         "cta": "Start a Group Inquiry", "interest": "unsure",
         "related": [("island", None), ("first", None), ("faq", None)],
+    },
+]
+
+TRIPS = [
+    {
+        "slug": "apo-reef", "name": "Apo Reef Yacht Liveaboard", "short": "Apo Reef", "img": "island-aerial",
+        "card": "A full-charter yacht trip to one of the Philippines' best-known reefs, for up to 10 divers.",
+        "title": "Apo Reef Yacht Liveaboard | Special Trips | W Divers Coron",
+        "meta": "Join a W Divers Coron yacht liveaboard to Apo Reef Natural Park: a small group of up to 10 divers, several days of diving, meals and cabins on board.",
+        "intro": "Apo Reef Natural Park is one of the most celebrated dive destinations in the Philippines. W Divers Coron charters a yacht for divers-only trips there, with a small group of up to 10 divers.",
+        "facts": [("Format", "Yacht liveaboard, full charter"), ("Group size", "Up to 10 divers"), ("Typical length", "3 nights, 4 days"), ("Dives", "Around 10, plus an optional night dive"), ("Boarding", "Coron, or Manila (Batangas) on some departures")],
+        "sections": [
+            {"h": "A reef worth the journey.", "p": ["Apo Reef lies in the Mindoro Strait, west of Mindoro. It is a protected natural park with wide coral reefs and walls, reached after several hours at sea, which is why the trip runs as a liveaboard."]},
+            {"h": "Life on board.", "p": ["On recent departures, the yacht took up to 10 divers in five double cabins with air conditioning. Meals and snacks were served throughout, diving and guiding were included, and hotel pick-up and drop-off were arranged before and after the trip."]},
+            {"h": "What to check.", "p": ["The Apo Reef Natural Park entrance fee has been charged separately (USD 100 on a recent trip). Dates, the number of dives and the price depend on each departure, so ask the team for the details in writing."]},
+        ],
+        "ask": ["Next departure dates and places left", "Total price and what's included", "Park entrance fee", "Certification and experience required", "Cabin arrangements", "Boarding point"],
+    },
+    {
+        "slug": "dugong-watching", "name": "Dugong Watching", "short": "Dugong Watching", "img": "dive-boat", "video": "dugong",
+        "card": "An early start to look for dugongs in the calm bays of northern Busuanga.",
+        "title": "Dugong Watching Day Trip | Special Trips | W Divers Coron",
+        "meta": "A W Divers Coron day trip to look for dugongs in northern Busuanga, leaving early to arrive before the crowds, with an option to visit Calauit Safari Park.",
+        "intro": "Dugongs, gentle sea mammals that graze on seagrass, live in the waters of northern Busuanga. On this day trip the W Divers boat leaves early to reach the dugong area before other boats arrive.",
+        "facts": [("Format", "Day trip by boat"), ("Start", "Very early morning"), ("Where", "Northern Busuanga (Aban-Aban area)"), ("In the water", "Ask whether snorkelling or diving is planned"), ("Add-on", "Calauit Safari Park visit")],
+        "sections": [
+            {"h": "Why the early start.", "p": ["Popular dugong areas get busy as the day goes on. Leaving before sunrise gives the best chance of a calm, unhurried encounter before other boats arrive."]},
+            {"h": "Respect for the animals.", "p": ["Dugongs are wild and protected. Guests follow the guide's instructions, keep their distance and never touch, chase or feed them. Sightings are never guaranteed."]},
+            {"h": "Make a day of it.", "p": ["The trip can be combined with a visit to Calauit Safari Park on Busuanga. Ask the team how the day is planned and what's included."]},
+        ],
+        "ask": ["Departure time and pick-up", "Snorkelling or diving, and equipment", "Entrance and environmental fees", "Calauit Safari Park option", "Total price and what's included"],
+    },
+    {
+        "slug": "deserted-island-overnight", "name": "Deserted Island 2 Days 1 Night", "short": "Deserted Island 2D1N", "img": "beach-walk",
+        "card": "Two days and a night away from town on a quiet island, with island hopping by day.",
+        "title": "Deserted Island 2 Days 1 Night Tour | Special Trips | W Divers Coron",
+        "meta": "An overnight W Divers Coron trip to an uninhabited island: island hopping by day and a night away from Coron town.",
+        "intro": "Trade Coron town for a quiet island for a night. This overnight trip combines island hopping with an evening and night on an uninhabited island, arranged by the W Divers team.",
+        "facts": [("Format", "Overnight island trip"), ("Length", "2 days, 1 night"), ("Stay", "An uninhabited island"), ("Activities", "Island hopping and time on the beach; ask about snorkelling and diving")],
+        "sections": [
+            {"h": "Two days away from town.", "p": ["Spend the first day island hopping, then settle on a quiet island for the evening. The next day continues on the water before you return to Coron."]},
+            {"h": "Know the arrangements.", "p": ["Overnight trips need clear plans. Ask about sleeping arrangements, meals, drinking water, toilets and shade, what to bring, and what happens if the weather changes."]},
+            {"h": "Who it suits.", "p": ["Groups of friends, families, and divers travelling with non-divers. Mention everyone's interests when you inquire so the team can shape the two days."]},
+        ],
+        "ask": ["Sleeping arrangements and bedding", "Meals and drinking water", "Facilities on the island", "Snorkelling or diving options", "Weather and cancellation terms", "Total price"],
+    },
+    {
+        "slug": "kyokuzan-maru", "name": "Kyokuzan Maru Day Trip", "short": "Kyokuzan Maru", "img": "seabed-group",
+        "card": "A full day out to one of the region's more remote Japanese wrecks.",
+        "title": "Kyokuzan Maru Wreck Day Trip | Special Trips | W Divers Coron",
+        "meta": "A full-day W Divers Coron trip to dive the Kyokuzan Maru, a Japanese cargo wreck away from the main cluster of Coron wrecks.",
+        "intro": "The Kyokuzan Maru lies away from the main cluster of Coron wrecks, so reaching it takes a full day. For wreck enthusiasts, it is a chance to dive a site fewer divers visit.",
+        "facts": [("Format", "Full-day wreck trip"), ("For", "Certified divers"), ("Site", "Kyokuzan Maru, a Japanese cargo wreck"), ("Also", "Ask which other sites can be dived on the way")],
+        "sections": [
+            {"h": "A wreck off the usual route.", "p": ["Like other wrecks in the area, the Kyokuzan Maru was a Japanese cargo ship lost during the Second World War. Its distance from Coron town means fewer visitors, and the longer boat ride is part of the day."]},
+            {"h": "Is it right for you?", "p": ["The planned depth and conditions decide who can join. Share your certification level, logged dives and the date of your last dive, and ask the team what experience the trip requires."]},
+            {"h": "Plan the day.", "p": ["Ask about the departure time, number of dives, equipment, meals and fees, and what happens if conditions change on the day."]},
+        ],
+        "ask": ["Required certification and experience", "Planned depth and number of dives", "Departure time and length of the day", "Equipment, meals and fees", "Total price"],
     },
 ]

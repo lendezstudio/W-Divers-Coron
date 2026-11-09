@@ -34,6 +34,47 @@
   doc.addEventListener('click', function (ev) {
     langMenus.forEach(function (d) { if (d.open && !d.contains(ev.target)) { d.open = false; } });
   });
+  /* Home slideshow: crossfades every 4 s and always runs (it only rests while the tab is hidden).
+     The dots jump to a slide. Without JavaScript the first slide simply stays. */
+  var show = $('[data-slideshow]');
+  if (show) {
+    var slides = $$('[data-slide]', show);
+    var dots = $$('[data-slide-to]', show);
+    var current = 0;
+    var timer = null;
+    var goTo = function (n) {
+      current = (n + slides.length) % slides.length;
+      slides.forEach(function (s, i) {
+        var on = i === current;
+        s.classList.toggle('is-active', on);
+        if (on) { s.removeAttribute('aria-hidden'); } else { s.setAttribute('aria-hidden', 'true'); }
+        $$('a', s).forEach(function (a) { if (on) { a.removeAttribute('tabindex'); } else { a.setAttribute('tabindex', '-1'); } });
+      });
+      dots.forEach(function (d, i) { if (i === current) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); } });
+    };
+    var stop = function () { clearInterval(timer); timer = null; };
+    var start = function () {
+      stop();
+      if (!doc.hidden && slides.length > 1) {
+        timer = setInterval(function () { goTo(current + 1); }, 4000);
+      }
+    };
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () { goTo(+d.getAttribute('data-slide-to')); start(); });
+    });
+    doc.addEventListener('visibilitychange', start);
+    /* swipe on touch screens */
+    var x0 = null;
+    show.addEventListener('touchstart', function (ev) { x0 = ev.touches[0].clientX; }, { passive: true });
+    show.addEventListener('touchend', function (ev) {
+      if (x0 === null) { return; }
+      var dx = ev.changedTouches[0].clientX - x0;
+      x0 = null;
+      if (Math.abs(dx) > 45) { goTo(current + (dx < 0 ? 1 : -1) * (root.dir === 'rtl' ? -1 : 1)); start(); }
+    });
+    start();
+  }
+
   /* Clear the cookie left by the former automatic-translation option */
   if (/(?:^|;\s*)googtrans=/.test(doc.cookie)) {
     doc.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';

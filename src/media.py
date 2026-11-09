@@ -17,6 +17,7 @@ from PIL import Image, ImageFilter, ImageOps
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = os.path.join(ROOT, "assets", "images")
 PEX = os.path.join(ROOT, "assets", "Images from pexels")
+NOV = os.path.join(IMG, "November 9, 2026")
 
 WIDTHS = [640, 1280, 1920]
 
@@ -129,6 +130,43 @@ MEDIA = {
         "kind": "business", "focus": "50% 50%", "cats": [],
         "alt": {"en": "Divers float together at the surface of calm open water.",
                 "ko": "잔잔한 바다 수면에 다이버들이 함께 떠 있습니다."},
+    },
+    # Business photos supplied 9 November 2026 (assets/images/November 9, 2026)
+    "lagoon-boats": {
+        "src": (NOV, "Aerial Lagoon with Limestone Cliffs and Boats-6.png"),
+        "kind": "business", "focus": "60% 60%", "cats": ["islands"],
+        "alt": {"en": "Aerial view of a blue W Divers boat in a lagoon between limestone cliffs.",
+                "ko": "석회암 절벽 사이 라군에 떠 있는 W Divers의 파란 보트를 위에서 본 모습입니다."},
+    },
+    "dive-boat": {
+        "src": (NOV, "Blue W Divers Outrigger Boat at Sea-4.png"),
+        "kind": "business", "focus": "45% 50%", "cats": ["islands", "moments"],
+        "alt": {"en": "The blue W Divers outrigger dive boat at sea, seen from above.",
+                "ko": "바다 위의 파란색 W Divers 아웃리거 다이빙 보트를 위에서 본 모습입니다."},
+    },
+    "jungle-crew": {
+        "src": (NOV, "Four divers posing aboard a boat-3.png"),
+        "kind": "business", "focus": "50% 40%", "cats": ["moments"],
+        "alt": {"en": "Four divers smile on a boat deck during the Law of the Jungle filming in Coron.",
+                "ko": "코론에서 진행된 정글의 법칙 촬영 중 보트 갑판에서 웃고 있는 네 명의 다이버."},
+    },
+    "film-crew-3": {
+        "src": (NOV, "Two Men Posing in a Warm Restaurant-2.png"),
+        "kind": "business", "focus": "50% 35%", "cats": [],
+        "alt": {"en": "Two men smile together in a restaurant in Coron.",
+                "ko": "코론의 한 식당에서 함께 웃고 있는 두 사람."},
+    },
+    "film-crew": {
+        "src": (NOV, "Outdoor Group Portrait with Straw Hat-5.png"),
+        "kind": "business", "focus": "50% 40%", "cats": ["moments"],
+        "alt": {"en": "A group portrait taken during W Divers' support for the film The Golden Holiday in Coron.",
+                "ko": "코론에서 영화 '국제수사' 촬영을 지원할 때 찍은 단체 사진."},
+    },
+    "film-crew-2": {
+        "src": (NOV, "Refined outdoor group portrait-1.png"),
+        "kind": "business", "focus": "50% 35%", "cats": [],
+        "alt": {"en": "Guests and the W Divers team pose together outdoors in Coron.",
+                "ko": "코론 야외에서 게스트와 W Divers 팀이 함께 포즈를 취하고 있습니다."},
     },
     # Stock (Pexels): thematic only
     "stock-pair": {

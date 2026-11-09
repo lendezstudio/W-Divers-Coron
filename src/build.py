@@ -26,7 +26,8 @@ ASSET_V = datetime.datetime.now().strftime("%Y%m%d%H%M")
 
 ROUTES = {
     "home": "", "diving": "diving/", "wreck": "diving/wreck-diving/", "reef": "diving/reef-diving/",
-    "first": "first-time-divers/", "courses": "courses/", "sites": "dive-sites/",
+    "first": "discover-scuba-diving/", "courses": "scuba-courses/", "sites": "dive-sites/",
+    "tdi": "tdi-advanced-diver/", "freediving": "free-diving/", "pros": "pros/", "special": "special-trips/",
     "island": "island-hopping/", "plan": "plan-your-trip/", "about": "about/", "gallery": "gallery/",
     "faq": "faq/", "journal": "journal/", "contact": "contact/", "privacy": "privacy/",
     "booking": "booking-information/", "sitemap": "sitemap/",
@@ -34,9 +35,13 @@ ROUTES = {
 # Which top-level section each route belongs to, for aria-current in the header.
 SECTION = {
     "diving": "diving", "wreck": "diving", "reef": "diving", "first": "diving", "courses": "diving",
+    "tdi": "diving", "freediving": "diving", "pros": "pros", "special": "special", "trip": "special",
     "island": "diving", "sites": "sites", "site": "sites", "plan": "plan", "faq": "plan",
     "gallery": "plan", "journal": "plan", "article": "plan", "about": "about", "contact": "contact",
 }
+
+# Old paths that now redirect, per locale: old path -> route key.
+MOVED = {"first-time-divers/": "first", "courses/": "courses"}
 
 SIZES = {}
 e = html.escape
@@ -71,13 +76,15 @@ class Locale:
         mod = importlib.import_module(f"content.{code.replace('-', '_')}")
 
         def get(name):
-            return getattr(en, name) if code == "en" else merge(getattr(en, name), getattr(mod, name, {}))
+            over = getattr(mod, name, None)
+            return getattr(en, name) if code == "en" or over is None else merge(getattr(en, name), over)
         self.code = code
         self.ui = get("UI")
         self.p = get("PAGES")
         self.names = get("ROUTE_NAMES")
         self.sites = get("SITES")
         self.articles = get("ARTICLES")
+        self.trips = get("TRIPS")
         self.alt = getattr(mod, "ALT", {})
         self.lang_name = mod.LANG_NAME
         self.html_lang = mod.LANG
@@ -88,6 +95,9 @@ class Locale:
     def site(self, slug):
         return next(s for s in self.sites if s["slug"] == slug)
 
+    def trip(self, slug):
+        return next(t for t in self.trips if t["slug"] == slug)
+
     def article(self, slug):
         return next(a for a in self.articles if a["slug"] == slug)
 
@@ -97,6 +107,8 @@ def url(loc, key, slug=None):
         return f"/{loc}/dive-sites/{slug}/"
     if key == "article":
         return f"/{loc}/journal/{slug}/"
+    if key == "trip":
+        return f"/{loc}/special-trips/{slug}/"
     return f"/{loc}/{ROUTES[key]}"
 
 
@@ -155,6 +167,7 @@ ICONS = {
     "kakao": '<path d="M12 4.5c-4.7 0-8.5 3-8.5 6.6 0 2.3 1.5 4.3 3.8 5.5l-.9 3.3 3.8-2.5c.6.1 1.2.2 1.8.2 4.7 0 8.5-3 8.5-6.5S16.7 4.5 12 4.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
     "copy": '<rect x="8.5" y="8.5" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5" fill="none" stroke="currentColor" stroke-width="1.5"/>',
     "play": '<path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/>',
+    "pause": '<path d="M8 5.5h3v13H8zM13 5.5h3v13h-3z" fill="currentColor"/>',
     "globe": '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5s1.2-6.2 3.6-8.5z" fill="none" stroke="currentColor" stroke-width="1.5"/>',
 }
 
@@ -193,7 +206,7 @@ def lang_links(L, route, cls="lang"):
     return "".join(out)
 
 
-def lang_menu(L, route, cls=""):
+def lang_menu(L, route, cls="", label=None):
     """Language picker listing every written language. translate="no" keeps browsers from rewriting it."""
     items = ""
     for c in config.LOCALES:
@@ -205,7 +218,7 @@ def lang_menu(L, route, cls=""):
     u = L.ui
     return (f'<details class="lang-menu notranslate {cls}" translate="no" data-lang-menu>'
             f'<summary aria-label="{e(u["lang_label"])}: {e(L.lang_name)}">{icon("globe")}'
-            f'<span>{e(L.short)}</span>{icon("chev", "ico chev")}</summary>'
+            f'<span>{e(label or L.short)}</span>{icon("chev", "ico chev")}</summary>'
             f'<div class="lm-panel"><p class="lm-label">{e(u["lm_site"])}</p><ul class="lm-list">{items}</ul></div></details>')
 
 
@@ -232,10 +245,14 @@ def nav_model(L):
     u = L.ui
     c = L.code
     return [
+        ("pros", u["nav_pros"], url(c, "pros"), None),
         ("diving", u["nav_diving"], url(c, "diving"), [
             (u["sub_trips"], url(c, "diving")), (u["sub_wreck"], url(c, "wreck")),
             (u["sub_reef"], url(c, "reef")), (u["sub_first"], url(c, "first")),
-            (u["sub_courses"], url(c, "courses")), (u["sub_island"], url(c, "island"))]),
+            (u["sub_courses"], url(c, "courses")), (u["sub_tdi"], url(c, "tdi")),
+            (u["sub_free"], url(c, "freediving")), (u["sub_island"], url(c, "island"))]),
+        ("special", u["nav_special"], url(c, "special"),
+         [(u["sub_special_all"], url(c, "special"))] + [(t["short"], url(c, "trip", t["slug"])) for t in L.trips]),
         ("sites", u["nav_sites"], url(c, "sites"), None),
         ("plan", u["nav_plan"], url(c, "plan"), [
             (u["sub_guide"], url(c, "plan")), (u["sub_faq"], url(c, "faq")),
@@ -341,9 +358,8 @@ def footer(L, route):
     </div>
     <div class="footer-col">
       <h2 class="footer-h">{e(u["footer_legal"])}</h2><ul>{lis(legal)}</ul>
-      <div class="footer-lang notranslate" translate="no">
-        <p class="footer-lang-h">{icon("globe")}<span>{e(L.ui["lang_label"])}</span></p>
-        <div class="footer-lang-list">{lang_links(L, route)}</div>
+      <div class="footer-lang-wrap notranslate" translate="no">
+        {lang_menu(L, route, "footer-lang", L.lang_name)}
       </div>
     </div>
   </div>
@@ -502,17 +518,57 @@ def business_ld(L):
 
 # ----------------------------------------------------------------- pages
 
+COLLAGE = {
+    # (left, top, width, height) in collage-width units, plus the print's tilt
+    2: (64.0, [(0, 0, 76, 57, -1.5), (66, 18.67, 34, 45.33, 3)]),
+    3: (76.0, [(0, 0, 62, 46.5, -1.5), (60, 3, 40, 53.33, 3), (16, 38, 50, 37.5, -2.5)]),
+}
+
+
+def collage(keys, L, load):
+    """Photos laid like prints: a large main photo, others overlapping its corner and edge."""
+    hc, boxes = COLLAGE[len(keys)]
+    sizes = ["(min-width: 900px) 40vw, 80vw", "(min-width: 900px) 20vw, 40vw", "(min-width: 900px) 24vw, 46vw"]
+    out = ""
+    for n, (k, (x, y, w, h, rot)) in enumerate(zip(keys, boxes)):
+        st = (f"left:{x:.2f}%;top:{y / hc * 100:.2f}%;width:{w:.2f}%;height:{h / hc * 100:.2f}%;"
+              f"transform:rotate({rot}deg);z-index:{n}")
+        out += f'<span class="cl-print" style="{st}">{picture(k, L, sizes[n], **load)}</span>'
+    return f'<div class="collage" style="--ar:{100 / hc:.4f}">{out}</div>'
+
+
 def render_home(L):
     P = L.p["home"]
     c = L.code
-    rail_ids = ["top", "routes", "feature", "sites", "planning", "contact-strip"]
-    rail = "".join(f'<li><a href="#{i}" aria-label="{e(lbl)}"><span></span></a></li>' for i, lbl in zip(rail_ids, P["rail"]))
+    u = L.ui
+    total = len(HERO_SLIDES)
+    slides = ""
+    dots = ""
+    for i, (key, fit, to) in enumerate(HERO_SLIDES):
+        cap, link = P["slides"][i]
+        load = {"loading": "eager", "fetchpriority": "high"} if i == 0 else {}
+        label = u["slide_n"].format(n=i + 1, total=total)
+        keys = key if isinstance(key, tuple) else (key,)
+        if fit == "collage":
+            fg = collage(keys, L, load)
+        else:
+            fg = picture(key, L, "(min-width: 900px) 52vw, 100vw", **load)
+        slides += f'''<figure class="hero-slide fit-{fit}{" is-active" if i == 0 else ""}" data-slide role="group"
+          aria-roledescription="slide" aria-label="{e(label)}"{"" if i == 0 else " aria-hidden=\"true\""}>
+        <div class="slide-bg" aria-hidden="true">{picture(keys[0], L, "(min-width: 900px) 88vw, 100vw", alt="", **load)}</div>
+        <div class="slide-fg">{fg}</div>
+        <figcaption class="slide-cap"><span>{e(cap)}</span>
+          <a href="{url(c, to)}"{"" if i == 0 else " tabindex=\"-1\""}>{e(link)}{icon("arrow")}</a></figcaption>
+      </figure>'''
+        dots += (f'<li><button type="button" data-slide-to="{i}" aria-label="{e(u["slide_show"].format(n=i + 1))}: {e(cap)}"'
+                 f'{" aria-current=\"true\"" if i == 0 else ""}><span></span></button></li>')
     hero = f'''<section class="hero" id="top">
   <div class="hero-backdrop" aria-hidden="true"></div>
-  <div class="frame hero-frame">
-    <div class="hero-media">{picture("hero-fish", L, "(min-width: 900px) 88vw, 100vw", loading="eager", fetchpriority="high")}</div>
-    <div class="hero-soft" aria-hidden="true"></div>
-    <span class="hero-divider" aria-hidden="true"></span>
+  <div class="frame hero-frame" data-slideshow aria-roledescription="carousel" aria-label="{e(u["slides_label"])}">
+    <div class="hero-media">{slides}</div>
+    <div class="slide-controls">
+      <ul class="slide-dots">{dots}</ul>
+    </div>
     <div class="hero-copy">
       <p class="eyebrow">{e(P["eyebrow"])}</p>
       <h1 class="hero-title">{e(P["h1"])}</h1>
@@ -524,8 +580,6 @@ def render_home(L):
         {arrow_link(url(c, "sites"), P["secondary"], "arrow-link light")}
       </div>
     </div>
-    <nav class="hero-rail" aria-label="{e(L.ui["section_nav"])}"><ul>{rail}</ul></nav>
-    <a class="scroll-cue" href="#routes"><span>{e(L.ui["scroll"])}</span></a>
     {social_list(L, ("facebook", "instagram", "whatsapp", "kakao", "naver"), "social hero-social")}
   </div>
 </section>'''
@@ -580,6 +634,15 @@ def render_home(L):
   <ul class="site-grid">{sites}</ul>
   <p class="img-note">{e(L.p["sites"]["img_note"])}</p>
   <p class="reveal">{arrow_link(url(c, "sites"), P["sites_all"], "arrow-link light")}</p>
+</section>
+
+<section class="home-special wrap" id="special" aria-labelledby="special-h">
+  <div class="split-head reveal">
+    <h2 class="section-h" id="special-h">{e(P["special_h"])}</h2>
+    <p class="muted">{e(P["special_t"])}</p>
+  </div>
+  {trip_cards(L)}
+  <p class="reveal">{arrow_link(url(c, "special"), P["special_all"], "arrow-link light")}</p>
 </section>
 
 <section class="paper planning" id="planning" aria-labelledby="planning-h">
@@ -640,7 +703,7 @@ def render_diving(L):
 def render_service(L, key):
     P = L.p[key]
     c = L.code
-    parent = [(L.names["diving"], url(c, "diving"))] if key in ("wreck", "reef") else []
+    parent = [(L.names["diving"], url(c, "diving"))] if key in ("wreck", "reef", "first", "courses", "tdi", "freediving") else []
     op = opening(L, P["eyebrow"], P["h1"], P["intro"], P["img"], parent + [(L.names[key], url(c, key))])
     S = P["summary"]
     summ = "".join(f"<li>{e(x)}</li>" for x in S["list"])
@@ -912,6 +975,122 @@ def render_faq(L):
     return layout(L, ("faq",), P["title"], P["meta"], op, body, jsonld=[ld])
 
 
+# Home slideshow: (media key, how the photo fits, route its caption links to).
+# "contain" shows the whole photo over a blurred copy, so group photos are never cropped.
+HERO_SLIDES = [
+    (("film-crew", "film-crew-2", "film-crew-3"), "collage", "pros"),
+    ("jungle-crew", "contain", "pros"),
+    ("lagoon-boats", "contain fit-broad", "special"),
+    ("hero-fish", "contain", "diving"),
+    ("dive-boat", "contain fit-broad", "about"),
+]
+
+
+def trip_cards(L):
+    c = L.code
+    cards = "".join(f'''<li class="j-item reveal"><a href="{url(c, "trip", t["slug"])}">
+        <span class="j-media frame">{picture(t["img"], L, "(min-width: 900px) 40vw, 100vw", alt="")}</span>
+        <span class="j-title">{e(t["name"])}</span>
+        <span class="j-meta">{e(t["card"])}</span>
+        <span class="arrow-link light"><span>{e(L.ui["read_trip"])}</span>{icon("arrow")}</span></a></li>'''
+                    for t in L.trips)
+    return f'<ul class="j-grid trip-grid">{cards}</ul>'
+
+
+def render_special(L):
+    P = L.p["special"]
+    c = L.code
+    op = opening(L, P["eyebrow"], P["h1"], P["intro"], P["img"], [(L.names["special"], url(c, "special"))], note=P["note"])
+    body = f'''<section class="wrap journal">{trip_cards(L)}</section>
+{cta_band(L, L.p["home"]["contact_h"], L.p["home"]["contact_t"], L.ui["plan_cta"], "special")}'''
+    return layout(L, ("special",), P["title"], P["meta"], op, body)
+
+
+def render_trip(L, t):
+    P = L.p["trip"]
+    c = L.code
+    op = opening(L, P["eyebrow"], t["name"], t["intro"], t["img"],
+                 [(L.names["special"], url(c, "special")), (t["name"], url(c, "trip", t["slug"]))])
+    secs = ""
+    for i, s in enumerate(t["sections"]):
+        secs += f'<section class="prose-sec reveal"><h2>{e(s["h"])}</h2>{paras(s["p"])}</section>'
+        if i == 0 and t.get("video"):
+            secs += f'<div class="inline-video reveal">{video_figure(L, t["video"])}</div>'
+    facts = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in t["facts"])
+    ask = "".join(f"<li>{e(x)}</li>" for x in t["ask"])
+    cta = P["cta"].format(name=t["short"])
+    others = "".join(f'<li><a href="{url(c, "trip", o["slug"])}"><span class="sr-name">{e(o["name"])}</span>{icon("arrow")}</a></li>'
+                     for o in L.trips if o["slug"] != t["slug"])
+    body = f'''
+<div class="paper">
+  <div class="wrap with-aside">
+    <div class="prose">{secs}</div>
+    <aside class="summary reveal" aria-labelledby="glance-h">
+      <h2 class="summary-h" id="glance-h">{e(P["glance_h"])}</h2>
+      <dl class="facts">{facts}</dl>
+      <h3 class="summary-sub">{e(P["ask_h"])}</h3>
+      <ul class="checklist">{ask}</ul>
+      {btn(contact_url(c, "special", t["slug"]), cta, "btn btn-dark")}
+      <p class="small summary-note">{e(P["cta_note"])}</p>
+    </aside>
+  </div>
+</div>
+<section class="wrap other-sites reveal" aria-labelledby="other-h"><h2 class="related-h" id="other-h">{e(P["others_h"])}</h2><ul>{others}</ul></section>
+{cta_band(L, cta, "", L.ui["plan_cta"], "special", t["slug"], P["cta_note"])}
+'''
+    return layout(L, ("trip", t["slug"]), t["title"], t["meta"], op, body)
+
+
+def render_pros(L):
+    P = L.p["pros"]
+    c = L.code
+    op = opening(L, P["eyebrow"], P["h1"], P["intro"], P["img"], [(L.names["pros"], url(c, "pros"))])
+    cards = ""
+    for i, m in enumerate(P["team"]):
+        nick = f' <span class="pro-nick">({e(m["nick"])})</span>' if m.get("nick") else ""
+        tag = f'<p class="pro-tag">{e(m["tag"])}</p>' if m.get("tag") else ""
+        creds = "".join(f"<li>{e(x)}</li>" for x in m["creds"])
+        spec = ""
+        if m.get("spec"):
+            spec = (f'<h4 class="pro-sub">{e(m["spec_h"])}</h4>'
+                    f'<ul class="pro-tags">{"".join(f"<li>{e(x)}</li>" for x in m["spec"])}</ul>')
+        cards += f'''<article class="pro-card{" is-lead" if i == 0 else ""} reveal">
+      <div class="pro-head"><span class="pro-avatar" aria-hidden="true">{e(m["initials"])}</span>
+        <div><h3 class="pro-name">{e(m["name"])}{nick}</h3><p class="pro-role">{e(m["role"])}</p></div></div>
+      {tag}<p class="pro-intro">{e(m["intro"])}</p>
+      <h4 class="pro-sub">{e(m["creds_h"])}</h4><ul class="checklist pro-creds">{creds}</ul>{spec}
+    </article>'''
+    screen = "".join(f'''<figure class="screen-fig reveal"><div class="frame">{picture(s["img"], L, "(min-width: 900px) 44vw, 100vw")}</div>
+      <figcaption>{e(s["cap"])}</figcaption></figure>''' for s in P["screen"])
+    body = f'''
+<div class="paper">
+  <section class="wrap pros" aria-labelledby="team-h">
+    <h2 class="section-h reveal" id="team-h">{e(P["team_h"])}</h2>
+    <div class="pro-grid">{cards}</div>
+  </section>
+</div>
+<section class="wrap on-screen" aria-labelledby="screen-h">
+  <div class="split-head reveal"><h2 class="section-h" id="screen-h">{e(P["screen_h"])}</h2><p class="muted">{e(P["screen_t"])}</p></div>
+  <div class="screen-grid">{screen}</div>
+</section>
+{cta_band(L, P["cta_h"], P["cta_t"], L.ui["plan_cta"])}
+'''
+    return layout(L, ("pros",), P["title"], P["meta"], op, body)
+
+
+def redirect_page(target):
+    """Static redirect for a page that moved (GitHub Pages has no server redirects).
+
+    href/canonical get BASE_PATH from with_base(); the refresh and script need it added here.
+    """
+    full = config.BASE_PATH.rstrip("/") + target
+    return f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Moved</title>
+<meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url={full}">
+<link rel="canonical" href="{target}"><script>location.replace("{full}"+location.search+location.hash)</script></head>
+<body><p><a href="{target}">{target}</a></p></body></html>'''
+
+
 def render_journal(L):
     P = L.p["journal"]
     c = L.code
@@ -954,6 +1133,7 @@ def render_contact(L):
     req = f'<span class="req">({e(P["required"])})</span>'
     opt = lambda opts: "".join(f'<option value="{e(v)}">{e(t)}</option>' for v, t in opts)  # noqa: E731
     topics = {s["slug"]: s["name"] for s in L.sites}
+    topics.update({t["slug"]: t["name"] for t in L.trips})
     cfg = {
         "wa": C["whatsapp_number"], "email": C["email"], "subject": P["email_subject"],
         "intro": P["msg_intro"], "labels": P["msg_labels"], "hints": P["f_detail_hint"],
@@ -1084,13 +1264,14 @@ def render_sitemap(L):
     c = L.code
     n = L.names
     op = opening(L, P["eyebrow"], P["h1"], P["intro"], None, [(n["sitemap"], url(c, "sitemap"))])
-    g = P["groups"]
+    g = P["groups"] + Locale.cache["en"].p["sitemap"]["groups"][len(P["groups"]):]
     groups = [
-        (g[0], [(n[k], url(c, k)) for k in ("home", "diving", "wreck", "reef", "first", "courses", "island")]),
+        (g[0], [(n[k], url(c, k)) for k in ("home", "diving", "wreck", "reef", "first", "courses", "tdi", "freediving", "island")]),
+        (g[5], [(n["special"], url(c, "special"))] + [(t["name"], url(c, "trip", t["slug"])) for t in L.trips]),
         (g[1], [(n["sites"], url(c, "sites"))] + [(s["name"], url(c, "site", s["slug"])) for s in L.sites]),
         (g[2], [(n[k], url(c, k)) for k in ("plan", "faq", "gallery", "booking")]),
         (g[3], [(n["journal"], url(c, "journal"))] + [(a["title"], url(c, "article", a["slug"])) for a in L.articles]),
-        (g[4], [(n[k], url(c, k)) for k in ("about", "contact", "privacy")]),
+        (g[4], [(n[k], url(c, k)) for k in ("pros", "about", "contact", "privacy")]),
     ]
     cols = "".join(f'<section><h2>{e(h)}</h2><ul>{"".join(f"<li><a href=\"{u}\">{e(t)}</a></li>" for t, u in items)}</ul></section>'
                    for h, items in groups)
@@ -1210,12 +1391,16 @@ def main():
             (("contact",), render_contact(L)), (("booking",), render_booking(L)),
             (("privacy",), render_privacy(L)), (("sitemap",), render_sitemap(L)),
         ]
-        out += [((k,), render_service(L, k)) for k in ("wreck", "reef", "first", "courses", "island")]
+        out += [((k,), render_service(L, k)) for k in ("wreck", "reef", "first", "courses", "tdi", "freediving", "island")]
+        out += [(("pros",), render_pros(L)), (("special",), render_special(L))]
+        out += [(("trip", t["slug"]), render_trip(L, t)) for t in L.trips]
         out += [(("site", s["slug"]), render_site(L, s)) for s in L.sites]
         out += [(("article", a["slug"]), render_article(L, a)) for a in L.articles]
         for route, content in out:
             write(url(c, *route), content)
             pages.append(route)
+        for old, key in MOVED.items():
+            write(f"/{c}/{old}", redirect_page(url(c, key)))
     write("/404.html", render_404())
     write("/index.html", render_root())
 
