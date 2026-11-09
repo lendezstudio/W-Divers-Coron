@@ -614,3 +614,8 @@ ALT = {
     "island-small": "Una pequeña isla verde rodeada de arena blanca y agua azul clara, vista desde arriba.",
     "stock-split": "Un buceador bajo la línea del agua con un faro en la orilla.",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("es", globals())

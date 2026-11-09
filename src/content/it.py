@@ -614,3 +614,8 @@ ALT = {
     "island-small": "Una piccola isola verde circondata da sabbia bianca e acqua azzurra, vista dall'alto.",
     "stock-split": "Un subacqueo sotto il pelo dell'acqua, con un faro sulla riva sopra di lui.",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("it", globals())

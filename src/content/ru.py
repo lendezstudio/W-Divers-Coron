@@ -614,3 +614,8 @@ ALT = {
     "island-small": "Небольшой зелёный остров в окружении белого песка и прозрачной синей воды, вид сверху.",
     "stock-split": "Дайвер под водой, а над ним на берегу маяк.",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("ru", globals())

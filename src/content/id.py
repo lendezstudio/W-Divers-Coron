@@ -614,3 +614,8 @@ ALT = {
     "island-small": "Pulau kecil hijau dikelilingi pasir putih dan air biru jernih, dilihat dari atas.",
     "stock-split": "Seorang penyelam di bawah permukaan air dengan mercusuar di pantai di atasnya.",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("id", globals())

@@ -938,9 +938,9 @@ GALLERY = [
 def video_figure(L, key, cls="frame video-fig"):
     v = media.VIDEOS[key]
     return f'''<figure class="{cls}">
-  <video controls preload="none" playsinline poster="/assets/video/{key}-poster.jpg" width="640" height="360">
+  <video controls preload="none" playsinline poster="/assets/video/{key}-poster.jpg" width="640" height="360"
+    aria-label="{e(L.ui.get("video_caption") or v["caption"]["en"])}">
     <source src="/assets/video/{key}.mp4" type="video/mp4">{e(L.ui["video_fallback"])}</video>
-  <figcaption>{e(L.ui.get("video_caption") or v["caption"]["en"])}</figcaption>
 </figure>'''
 
 

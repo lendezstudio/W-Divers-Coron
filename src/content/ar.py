@@ -615,3 +615,8 @@ ALT = {
     "island-small": "جزيرة خضراء صغيرة تحيط بها رمال بيضاء ومياه زرقاء صافية، من الأعلى.",
     "stock-split": "غوّاص تحت سطح الماء ومنارة على الشاطئ فوقه.",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("ar", globals())

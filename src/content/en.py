@@ -811,17 +811,17 @@ TRIPS = [
     },
     {
         "slug": "deserted-island-overnight", "name": "Deserted Island 2 Days 1 Night", "short": "Deserted Island 2D1N", "img": "beach-walk",
-        "card": "Two days and a night away from town on a quiet island, with island hopping by day.",
+        "card": "Five dives and a night camping on an uninhabited island, two days away from town.",
         "title": "Deserted Island 2 Days 1 Night Tour | Special Trips | W Divers Coron",
-        "meta": "An overnight W Divers Coron trip to an uninhabited island: island hopping by day and a night away from Coron town.",
-        "intro": "Trade Coron town for a quiet island for a night. This overnight trip combines island hopping with an evening and night on an uninhabited island, arranged by the W Divers team.",
-        "facts": [("Format", "Overnight island trip"), ("Length", "2 days, 1 night"), ("Stay", "An uninhabited island"), ("Activities", "Island hopping and time on the beach; ask about snorkelling and diving")],
+        "meta": "A W Divers Coron 2-day, 1-night diving package: 5 dives and a night camping on an uninhabited island away from Coron town.",
+        "intro": "Trade Coron town for a quiet island for a night. This 2-day, 1-night diving package includes 5 dives and an overnight camp on an uninhabited island, arranged by the W Divers team.",
+        "facts": [("Format", "Diving package with island camping"), ("Length", "2 days, 1 night"), ("Dives", "5 dives"), ("Stay", "Camping on an uninhabited island"), ("Non-divers", "Ask about snorkelling and beach time")],
         "sections": [
-            {"h": "Two days away from town.", "p": ["Spend the first day island hopping, then settle on a quiet island for the evening. The next day continues on the water before you return to Coron."]},
+            {"h": "Five dives and a night on the island.", "p": ["The package includes five dives over the two days. Between dives you head to a quiet, uninhabited island, set up camp for the evening, and wake up on the beach before the next day on the water."]},
             {"h": "Know the arrangements.", "p": ["Overnight trips need clear plans. Ask about sleeping arrangements, meals, drinking water, toilets and shade, what to bring, and what happens if the weather changes."]},
             {"h": "Who it suits.", "p": ["Groups of friends, families, and divers travelling with non-divers. Mention everyone's interests when you inquire so the team can shape the two days."]},
         ],
-        "ask": ["Sleeping arrangements and bedding", "Meals and drinking water", "Facilities on the island", "Snorkelling or diving options", "Weather and cancellation terms", "Total price"],
+        "ask": ["Which dive sites the 5 dives visit", "Tents, bedding and what to bring", "Meals and drinking water", "Facilities on the island", "Options for non-divers", "Weather and cancellation terms", "Total price"],
     },
     {
         "slug": "kyokuzan-maru", "name": "Kyokuzan Maru Day Trip", "short": "Kyokuzan Maru", "img": "seabed-group",

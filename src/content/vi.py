@@ -614,3 +614,8 @@ ALT = {
     "island-small": "Một hòn đảo nhỏ xanh mướt được bao quanh bởi cát trắng và nước biển trong xanh, nhìn từ trên cao.",
     "stock-split": "Một thợ lặn dưới mặt nước, phía trên là ngọn hải đăng trên bờ.",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("vi", globals())

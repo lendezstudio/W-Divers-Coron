@@ -614,3 +614,8 @@ ALT = {
     "island-small": "Une petite île verte entourée de sable blanc et d'eau bleue limpide, vue d'en haut.",
     "stock-split": "Un plongeur sous la surface, avec un phare sur le rivage au-dessus.",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("fr", globals())

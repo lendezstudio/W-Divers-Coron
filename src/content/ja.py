@@ -614,3 +614,8 @@ ALT = {
     "island-small": "白い砂と透き通った青い海に囲まれた、小さな緑の島を上から見た様子。",
     "stock-split": "水面下のダイバーと、その上の岸に立つ灯台。",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("ja", globals())

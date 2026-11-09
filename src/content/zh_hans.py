@@ -614,3 +614,8 @@ ALT = {
     "island-small": "从空中俯瞰被白沙和清澈蓝色海水环绕的绿色小岛。",
     "stock-split": "水面下的潜水员，岸上方可见一座灯塔。",
 }
+
+
+# November 2026 additions (Pro's, Special Trips, new courses, About story): see nov2026/
+from content.nov2026 import apply as _apply_nov2026
+_apply_nov2026("zh-hans", globals())
