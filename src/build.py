@@ -546,6 +546,9 @@ def render_home(L):
     dots = ""
     for i, (key, fit, to) in enumerate(HERO_SLIDES):
         cap, link = P["slides"][i]
+        title, _, sub = cap.partition("\n")          # an optional second line, e.g. the location
+        cap_html = e(title) + (f'<small class="slide-sub">{e(sub)}</small>' if sub else "")
+        cap = f"{title}. {sub}" if sub else title
         load = {"loading": "eager", "fetchpriority": "high"} if i == 0 else {}
         label = u["slide_n"].format(n=i + 1, total=total)
         keys = key if isinstance(key, tuple) else (key,)
@@ -557,7 +560,7 @@ def render_home(L):
           aria-roledescription="slide" aria-label="{e(label)}"{"" if i == 0 else " aria-hidden=\"true\""}>
         <div class="slide-bg" aria-hidden="true">{picture(keys[0], L, "(min-width: 900px) 88vw, 100vw", alt="", **load)}</div>
         <div class="slide-fg">{fg}</div>
-        <figcaption class="slide-cap"><span>{e(cap)}</span>
+        <figcaption class="slide-cap"><span>{cap_html}</span>
           <a href="{url(c, to)}"{"" if i == 0 else " tabindex=\"-1\""}>{e(link)}{icon("arrow")}</a></figcaption>
       </figure>'''
         dots += (f'<li><button type="button" data-slide-to="{i}" aria-label="{e(u["slide_show"].format(n=i + 1))}: {e(cap)}"'
@@ -853,7 +856,38 @@ def render_about(L):
     ]
     ch = "".join(f'<li>{ext(h, i + "<span>" + e(t) + "</span>", "chan", L)}</li>' for i, t, h in channels)
     ch += f'<li><a class="chan" href="{url(c, "contact")}">{icon("arrow")}<span>{e(P["contact_link"])}</span></a></li>'
+    story = "".join(f"<p>{e(t)}</p>" for t in P["story_t"])
+    facts = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in P["facts"])
     body = f'''
+<section class="wrap about-story">
+  <div class="about-story-copy reveal">
+    <p class="eyebrow eyebrow-dark">{e(P["story_k"])}</p>
+    <h2 class="section-h">{e(P["story_h"])}</h2>
+    {story}
+  </div>
+  <figure class="frame reveal about-story-img">{picture("shop-guests-2", L, "(min-width: 900px) 48vw, 100vw")}</figure>
+</section>
+<section class="paper">
+  <div class="wrap about-facts">
+    <div class="reveal">
+      <h2 class="section-h">{e(P["facts_h"])}</h2>
+      <dl class="facts about-facts-list">{facts}</dl>
+    </div>
+    <div class="reveal">
+      <h2 class="section-h">{e(P["wreck_h"])}</h2>
+      <p>{e(P["wreck_t"])}</p>
+    </div>
+  </div>
+</section>
+<section class="wrap about-screen">
+  <figure class="frame reveal about-screen-img">{picture("ssi-jungle", L, "(min-width: 900px) 44vw, 100vw")}</figure>
+  <div class="reveal">
+    <p class="eyebrow eyebrow-dark">{e(P["screen_k"])}</p>
+    <h2 class="section-h">{e(P["screen_h"])}</h2>
+    <p>{e(P["screen_t"])}</p>
+    <p>{arrow_link(url(c, "pros"), P["screen_link"], "arrow-link light")}</p>
+  </div>
+</section>
 <section class="wrap about-intro">
   <div class="about-copy reveal">
     <h2 class="section-h">{e(P["s1_h"])}</h2>
@@ -872,11 +906,8 @@ def render_about(L):
       <ul class="chan-list">{ch}</ul>
       <p>{arrow_link(url(c, "gallery"), P["gallery_link"], "arrow-link")}</p>
     </div>
-    <div class="reveal lang-note">
-      <h2 class="section-h">{e(P["lang_h"])}</h2>
-      <p>{e(P["lang_t"])}</p>
-    </div>
   </div>
+  <p class="wrap about-source">{e(P["source"])}</p>
 </section>
 {cta_band(L, L.p["home"]["contact_h"], L.p["home"]["contact_t"], L.p["home"]["contact_btn"])}
 '''
@@ -1054,8 +1085,14 @@ def render_pros(L):
         if m.get("spec"):
             spec = (f'<h4 class="pro-sub">{e(m["spec_h"])}</h4>'
                     f'<ul class="pro-tags">{"".join(f"<li>{e(x)}</li>" for x in m["spec"])}</ul>')
-        cards += f'''<article class="pro-card{" is-lead" if i == 0 else ""} reveal">
-      <div class="pro-head"><span class="pro-avatar" aria-hidden="true">{e(m["initials"])}</span>
+        if m.get("img"):
+            photo = f'<figure class="pro-photo">{picture(m["img"], L, "(min-width: 900px) 40vw, 92vw")}</figure>'
+            avatar = ""                                   # the photo above already shows them
+        else:
+            photo = ""
+            avatar = f'<span class="pro-avatar" aria-hidden="true">{e(m["initials"])}</span>'
+        cards += f'''<article class="pro-card{" is-lead" if i == 0 else ""} reveal">{photo}
+      <div class="pro-head">{avatar}
         <div><h3 class="pro-name">{e(m["name"])}{nick}</h3><p class="pro-role">{e(m["role"])}</p></div></div>
       {tag}<p class="pro-intro">{e(m["intro"])}</p>
       <h4 class="pro-sub">{e(m["creds_h"])}</h4><ul class="checklist pro-creds">{creds}</ul>{spec}

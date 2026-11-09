@@ -144,6 +144,36 @@ MEDIA = {
         "alt": {"en": "The blue W Divers outrigger dive boat at sea, seen from above.",
                 "ko": "바다 위의 파란색 W Divers 아웃리거 다이빙 보트를 위에서 본 모습입니다."},
     },
+    "dean": {
+        "src": (IMG, "Scuba instructor portrait on a pink boat.png"),
+        "kind": "business", "focus": "50% 22%", "cats": [],
+        "alt": {"en": "Dean Kang, head instructor of W Divers Coron, in a Scubapro wetsuit on a boat in Coron.",
+                "ko": "코론의 보트 위에서 스쿠버프로 슈트를 입은 W Divers Coron 대표 강사 강덕환."},
+    },
+    "ssi-shop": {
+        "src": (os.path.join(IMG, "SSI"), "67dbf144db423_DC_Image_763270_shop_outside.png"),
+        "kind": "business", "focus": "50% 60%", "cats": [],
+        "alt": {"en": "Guests and Dean Kang outside the W Divers Coron shop and free diving centre on Coron's main street.",
+                "ko": "코론 중심가의 W Divers Coron 샵과 프리다이빙 센터 앞에 선 손님들과 강덕환 강사."},
+    },
+    "ssi-jungle": {
+        "src": (os.path.join(IMG, "SSI"), "67dbf1cbe0742_DC_Image_763270_shop_inside.png"),
+        "kind": "business", "focus": "50% 50%", "cats": [],
+        "alt": {"en": "Poster of W Divers' filming support for SBS Law of the Jungle in Coron, 21 to 23 January 2020, with photos and signed autographs.",
+                "ko": "2020년 1월 21~23일 SBS 정글의 법칙 in 코론 촬영 지원 포스터. 사진과 출연진 사인이 담겨 있습니다."},
+    },
+    "inhan": {
+        "src": (IMG, "Restored portrait of Inhan Kang-2.png"),
+        "kind": "business", "focus": "50% 30%", "cats": [],
+        "alt": {"en": "Portrait of Inhan Kang, instructor at W Divers Coron.",
+                "ko": "W Divers Coron 강사 강인한의 인물 사진."},
+    },
+    "jex": {
+        "src": (IMG, "Restored portrait of Jex Lenver Tabat-1.png"),
+        "kind": "business", "focus": "50% 30%", "cats": [],
+        "alt": {"en": "Portrait of Jex Lenver Tabat (GIGs), divemaster at W Divers Coron.",
+                "ko": "W Divers Coron 다이브마스터 젝스 렌버 타밧(GIGs)의 인물 사진."},
+    },
     "jungle-crew": {
         "src": (NOV, "Four divers posing aboard a boat-3.png"),
         "kind": "business", "focus": "50% 40%", "cats": ["moments"],
