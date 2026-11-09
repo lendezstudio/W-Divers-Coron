@@ -828,8 +828,9 @@ def render_plan(L):
             link = f'<p>{ext(config.DAN_FLYING_URL, e(s["link"]), "text-link", L)}</p>'
         steps += f'''<li class="step reveal" id="{s["id"]}"><span class="step-n" aria-hidden="true">{i + 1:02d}</span>
           <div><h2>{e(s["h"])}</h2><p>{e(s["p"])}</p>{link}</div></li>'''
-        if s["id"] == "packing":
-            steps += f'<li class="step-fig reveal"><figure class="frame inline-fig">{picture("stock-fins", L, "(min-width: 900px) 60vw, 92vw")}</figure></li>'
+        step_img = {"meeting": "van-transfer", "packing": "gear-crates"}.get(s["id"])
+        if step_img:
+            steps += f'<li class="step-fig reveal"><figure class="frame inline-fig">{picture(step_img, L, "(min-width: 900px) 60vw, 92vw")}</figure></li>'
     more = [("faq", None), ("booking", None), ("gallery", None), ("journal", None)]
     body = f'''
 <div class="paper">
@@ -915,7 +916,7 @@ def render_about(L):
 
 
 # Photo for each homepage route row, keyed by the route's destination page.
-ROUTE_IMG = {"diving": "stock-wall", "first": "stock-pair", "courses": "pool-pair", "island": "island-aerial"}
+ROUTE_IMG = {"diving": "w-coral-wreck", "first": "dsd-sand", "courses": "pool-pair", "island": "island-aerial"}
 
 
 # Curated gallery: (media key, tile size). Sizes are chosen so each section
@@ -925,13 +926,16 @@ ROUTE_IMG = {"diving": "stock-wall", "first": "stock-pair", "courses": "pool-pai
 GALLERY = [
     ("underwater", [("stock-turtle", "lg"), ("hero-fish", ""), ("rock-walls", ""), ("wreck-bow", ""),
                     ("stock-reef-snake", ""), ("stock-wall", ""), ("stock-pair", ""), ("wreck-mast", ""),
-                    ("stock-descent", "")]),
+                    ("stock-descent", ""), ("dugong-diver", "lg lg-right"), ("w-valves", ""), ("rope", ""),
+                    ("under-boat", ""), ("w-three-divers", "")]),
     ("video", "dugong"),
     ("islands", [("island-aerial", "lg"), ("flag-boat", ""), ("island-small", ""), ("beach-walk", ""),
-                 ("boat-group", "")]),
+                 ("boat-group", ""), ("yacht-aerial", ""), ("fd-cave", ""), ("calauit-zebras", ""),
+                 ("calauit-giraffes", "")]),
     ("moments", [("shop-guests", "lg"), ("boat-briefing", ""), ("diver-sand", ""), ("pool-skills", ""),
                  ("seabed-group", ""), ("shop-guests-2", "lg lg-right"), ("pool-pair", ""), ("surface-group", ""),
-                 ("pool-indoor", ""), ("tanks-boat", "")]),
+                 ("pool-indoor", ""), ("tanks-boat", ""), ("harbor-group", "lg"), ("crew-briefing", ""),
+                 ("briefing-blue", ""), ("heart-divers", ""), ("boat-lunch", "")]),
 ]
 
 
@@ -1047,6 +1051,9 @@ def render_trip(L, t):
         secs += f'<section class="prose-sec reveal"><h2>{e(s["h"])}</h2>{paras(s["p"])}</section>'
         if i == 0 and t.get("video"):
             secs += f'<div class="inline-video reveal">{video_figure(L, t["video"])}</div>'
+        for at, key in t.get("inline", []):
+            if at == i:
+                secs += f'<figure class="frame inline-fig reveal">{picture(key, L, "(min-width: 900px) 56vw, 100vw")}</figure>'
     facts = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in t["facts"])
     ask = "".join(f"<li>{e(x)}</li>" for x in t["ask"])
     cta = P["cta"].format(name=t["short"])

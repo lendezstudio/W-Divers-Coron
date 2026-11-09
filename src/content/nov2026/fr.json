@@ -1,40 +1,657 @@
 {
-"UI": {"sub_first": "DSD (Baptême de plongée)", "sub_courses": "Cours de plongée", "sub_tdi": "Cours TDI Advanced Diver", "sub_free": "Apnée", "nav_pros": "Pro's", "nav_special": "Sorties spéciales", "sub_special_all": "Toutes les sorties spéciales", "read_trip": "Voir la sortie", "slides_label": "Temps forts de W Divers Coron", "slide_n": "Image {n} sur {total}", "slide_show": "Afficher l'image {n}", "slide_pause": "Mettre le diaporama en pause", "slide_play": "Lancer le diaporama"},
-"ROUTE_NAMES": {"first": "DSD (Baptême de plongée)", "courses": "Cours de plongée", "tdi": "Cours TDI Advanced Diver", "freediving": "Apnée", "pros": "Pro's", "special": "Sorties spéciales"},
-"PAGES": {
-"first": {"title": "Baptême de plongée (DSD) à Coron | W Divers Coron", "meta": "Essayez la plongée pour la première fois avec Discover Scuba Diving (DSD) chez W Divers Coron : une initiation encadrée par un instructeur, sans certification.", "eyebrow": "DSD · Discover Scuba Diving", "h1": "Votre première respiration sous l'eau, avec un instructeur à vos côtés.", "intro": "Discover Scuba Diving (DSD) est une première découverte encadrée de la plongée pour ceux qui n'ont jamais plongé. Dites à W Divers que vous débutez et demandez quelles options DSD conviennent à vos dates.",
- "summary": {"h": "Questions à poser", "for": "Pour ceux qui n'ont jamais plongé, ou il y a longtemps.", "list": ["Âge minimum et qui peut participer", "Attentes en natation et aisance dans l'eau", "Le questionnaire médical", "Le lieu de la séance", "La durée et le prix total"]},
- "sections": [{"h": "En quoi consiste un DSD.", "p": ["Une séance Discover Scuba Diving commence par un court briefing sur l'équipement et la respiration sous l'eau. Vous pratiquez ensuite quelques exercices de base en eau calme et peu profonde, avant une plongée guidée avec un instructeur tout près. Aucune certification ni expérience n'est nécessaire."]}, {"h": "Une initiation, pas une certification.", "p": ["Le DSD permet d'essayer la plongée sans s'engager dans un cours. Si vous aimez, demandez comment enchaîner avec un cours de plongée. Ce sont deux étapes différentes, alors demandez laquelle convient à votre voyage."]}, {"h": "Avant de réserver.", "p": ["Vérifiez l'âge minimum, les attentes en natation, le questionnaire médical, le lieu, la durée et ce que comprend le prix. Signalez tout souci de santé à l'équipe avant la plongée ; un formulaire de demande n'est pas un avis médical."]}, {"h": "Inutile de faire semblant d'être déjà à l'aise.", "p": ["Il est normal de se poser des questions sur la respiration sous l'eau, l'équipement ou la mer. Dites ce avec quoi vous êtes à l'aise pour que la conversation parte du bon point."]}],
- "cta": "Se renseigner sur le DSD"},
-"courses": {"title": "Cours de plongée à Coron | W Divers Coron", "meta": "Apprenez à plonger ou progressez à Coron : cours de plongée du débutant au niveau professionnel avec les instructeurs PADI et SSI de W Divers Coron.", "eyebrow": "Cours de plongée", "h1": "Apprendre à plonger, puis continuer.", "intro": "De la première certification aux niveaux professionnels, les instructeurs de W Divers Coron enseignent des cours PADI et SSI. Indiquez votre expérience, le cours qui vous intéresse et votre temps à Coron.",
- "summary": {"h": "Cours disponibles sur demande", "for": "Enseignés par nos instructeurs PADI et SSI :", "list": ["Open Water Diver", "Advanced Open Water Diver", "Rescue Diver et Emergency First Response", "Divemaster", "Spécialités : profonde, nitrox, sidemount, épave, Peak Performance Buoyancy", "AWARE Coral Reef Conservation"]},
- "sections": [{"h": "Commencer la plongée.", "p": ["Si vous envisagez votre première certification, renseignez-vous sur le cours, les prérequis, la théorie et le nombre de jours nécessaires avant de planifier le reste de votre séjour."]}, {"h": "Progresser.", "p": ["Déjà certifié ? Les cours Advanced et Rescue renforcent confiance et compétences, et les spécialités vous permettent de vous concentrer sur ce qui vous plaît, de la plongée profonde et du nitrox aux épaves et à la flottabilité."]}, {"h": "La formation épave vous intéresse ?", "p": ["Une spécialité épave apprend à plonger autour des épaves en sécurité ; ce n'est pas une autorisation générale d'y entrer. Pour la formation épave avancée et technique, voir notre cours TDI Advanced Diver."]}, {"h": "Avoir une vue complète du cours.", "p": ["Avant de confirmer, demandez l'organisme, le nom du cours, les conditions d'accès, la durée prévue, le contenu, la disponibilité de l'instructeur et le coût total, supports et frais de certification compris."]}],
- "catalog_h": "Cours actuels", "cta": "Se renseigner sur les cours"},
-"tdi": {"title": "Cours TDI Advanced Diver à Coron | W Divers Coron", "meta": "Formation à la plongée avancée et technique à Coron avec les instructeurs TDI de W Divers Coron, dont la formation épave avancée pour les épaves de Coron.", "eyebrow": "Formation avancée TDI", "h1": "Se former aux épaves de Coron au-delà des limites loisir.", "intro": "Les épaves de Coron attirent les plongeurs qui veulent aller plus loin. W Divers Coron compte des instructeurs TDI, dont un instructeur TDI Technical et Advanced Wreck Diver, pour les plongeurs prêts à se former au-delà de la plongée loisir.",
- "summary": {"h": "Avant votre demande", "for": "Pour plongeurs certifiés et expérimentés.", "list": ["Votre certification actuelle et vos plongées enregistrées", "Expérience nitrox ou plongée profonde", "Le cours TDI qui vous intéresse", "Le nombre de jours à Coron", "Si vous avez votre propre équipement technique ou sidemount"]},
- "sections": [{"h": "Ce qu'est la formation TDI.", "p": ["TDI (Technical Diving International) forme à la plongée avancée et technique : des plongées plus longues, plus profondes et plus complexes qui demandent formation, équipement et planification supplémentaires. Les épaves abritées de Coron en font un lieu d'apprentissage prisé."]}, {"h": "Formation épave avancée.", "p": ["Pénétrer une épave en sécurité est une compétence à part entière. La formation épave avancée couvre la planification, l'usage du fil d'Ariane, la gestion des gaz et l'évolution en milieu fermé : une formation qu'une plongée guidée ne remplace pas."]}, {"h": "Trouver le bon cours.", "p": ["Prérequis, durées et équipement varient selon les programmes TDI. Parlez à l'équipe de votre expérience et de vos objectifs, et demandez quels cours TDI sont proposés, ce que chacun permet et le coût total."]}],
- "cta": "Se renseigner sur la formation TDI"},
-"freediving": {"title": "Apnée à Coron | W Divers Coron", "meta": "Apnée à Coron avec W Divers Coron : Barracuda Lake, Cathedral Cave et d'autres sites clairs et abrités, en une seule respiration.", "eyebrow": "Apnée", "h1": "Coron en une seule respiration.", "intro": "Lacs limpides, falaises calcaires et eaux calmes et abritées font de Coron un lieu apprécié des apnéistes. W Divers Coron organise des sorties apnée vers des sites comme Barracuda Lake et Cathedral Cave.",
- "summary": {"h": "Avant votre demande", "for": "Pour apnéistes et snorkeleurs à l'aise.", "list": ["Votre expérience ou certification en apnée", "Les sites que vous aimeriez voir", "Dates souhaitées", "Si vous avez besoin d'équipement"]},
- "sections": [{"h": "Pourquoi les apnéistes aiment Coron.", "p": ["Niché entre des parois calcaires, Barracuda Lake est connu pour son eau claire et ses couches de température changeantes. Cathedral Cave et d'autres sites abrités offrent une eau calme et une lumière spectaculaire. Les conditions et l'accès peuvent changer, alors demandez ce qui est possible à vos dates."]}, {"h": "Sorties et formation.", "p": ["Renseignez-vous auprès de l'équipe sur les sorties apnée et sur un éventuel cours adapté à votre niveau. L'apnée se pratique toujours avec un binôme formé qui surveille depuis la surface."]}, {"h": "Organiser votre journée.", "p": ["Parlez à l'équipe de votre expérience, des sites souhaités et de votre temps disponible. Demandez ce qui est inclus, comme le bateau, l'équipement et les droits d'entrée."]}],
- "cta": "Se renseigner sur l'apnée"},
-"special": {"title": "Sorties spéciales depuis Coron | W Divers Coron", "meta": "Sorties spéciales avec W Divers Coron : croisière en yacht à Apo Reef, observation des dugongs, nuit sur une île déserte et journée sur l'épave du Kyokuzan Maru.", "eyebrow": "Sorties spéciales", "h1": "De grandes journées au départ de Coron.", "intro": "Certaines expériences demandent un départ matinal, une plus longue traversée ou une nuit dehors. L'équipe W Divers organise ces sorties spéciales à des dates choisies ; demandez ce qui est prévu pendant votre séjour.", "note": "Dates, prestations et prix varient selon le départ. Demandez à l'équipe les prochaines sorties."},
-"trip": {"eyebrow": "Sortie spéciale", "glance_h": "En bref", "ask_h": "À demander avant de réserver", "others_h": "Autres sorties spéciales", "cta": "Se renseigner sur {name}", "cta_note": "Une demande ne réserve pas de place."},
-"pros": {"title": "Pro's : l'équipe W Divers | W Divers Coron", "meta": "Rencontrez les Pro's de l'équipe W Divers à Coron, Palawan : l'instructeur principal Dean Kang, l'instructeur Inhan Kang et le divemaster Jex Lenver Tabat.", "eyebrow": "Les Pro's de l'équipe W Divers", "h1": "Rencontrez ceux avec qui vous plongerez.", "intro": "Épaves, dugongs, sources chaudes et grottes magnifiques : une invitation à plonger dans les eaux de Coron. Rencontrez les instructeurs de l'équipe W Divers.", "team_h": "L'équipe W Divers",
- "team": [{"role": "Instructeur principal", "intro": "Dean dirige W Divers Coron et forme plongeurs comme instructeurs, avec des qualifications d'instructeur dans cinq organismes.", "creds_h": "Qualifications d'instructeur", "spec_h": "Instructeur de spécialités"}, {"role": "Jeune instructeur", "tag": "Enseigne en anglais, tagalog et coréen de niveau natif", "intro": "Inhan est devenu instructeur PADI à 18 ans et enseigne des cours loisir, techniques et épave.", "creds_h": "Qualifications d'instructeur"}, {"role": "Divemaster", "intro": "Divemaster philippin de l'équipe W Divers, il accompagne les plongeurs sur le bateau et sous l'eau.", "creds_h": "Certification"}],
- "screen_h": "À l'écran à Coron.", "screen_t": "L'équipe W Divers a soutenu des tournages de films et d'émissions coréens à Coron.", "screen": [{"cap": "Soutien à l'émission SBS Law of the Jungle à Coron, dont des épisodes à la recherche de dugongs et d'une épave mystérieuse."}, {"cap": "Avec des acteurs coréens lors du soutien au tournage du film coréen The Golden Holiday (국제수사) à Coron."}], "cta_h": "Plongez avec l'équipe W Divers.", "cta_t": "Envoyez vos dates, la taille du groupe et votre expérience, et l'équipe vous aidera à organiser votre séjour à Coron."},
-"about": {"title": "À propos de W Divers Coron | Plongée à Coron, Palawan", "meta": "W Divers Coron est un centre de plongée coréen à Coron, Palawan, depuis mars 2015 : épaves, dugongs, sources chaudes et grottes.", "h1": "Un centre de plongée coréen à Coron, depuis 2015.", "intro": "Épaves, dugongs, sources chaudes et grottes. W Divers Coron guide les plongeurs dans les eaux de Coron, Palawan, depuis mars 2015, de la première respiration à la pénétration d'épave.", "story_k": "Notre histoire", "story_h": "D'un chantier naval en Corée aux épaves de Coron.", "story_t": ["W Divers Coron est un centre de plongée coréen à Coron, l'une des zones de plongée sur épave les plus connues au monde. Il a été fondé par l'instructeur Dean Kang (강덕환), qui a passé 20 ans chez Hyundai Samho Heavy Industries en Corée, où il présidait aussi le club de plongée de l'entreprise.", "Après le chantier naval, il a choisi Coron, Palawan, pour son second chapitre et a ouvert W Divers dans la rue principale de la ville le 1er mars 2015. Lancer une entreprise à l'étranger sans passer d'abord des années dans la communauté coréenne locale inquiétait son entourage ; il remercie les bonnes personnes qui l'ont aidé à s'installer."], "facts_h": "Ce qui vous attend à votre arrivée", "facts": [["Boutique", "Un centre de plongée climatisé et vitré dans la rue principale de Coron."], ["Bateaux", "Deux bancas de plongée à nous, plus un multicab propre et climatisé pour les transferts."], ["Équipement", "Matériel de location acheté neuf. Ordinateurs de plongée, scooters, nitrox et oxygène disponibles."], ["Hébergement", "Cinq chambres climatisées à nous, et de l'aide pour réserver chambres ventilées, resorts coréens ou resorts de type hôtel avec piscine."], ["Horaires", "Ouvert tous les jours, de 7 h à 21 h."], ["Langues", "Accompagnement en anglais et en coréen."]], "wreck_h": "La plongée sur épave, avec un tampon en souvenir.", "wreck_t": "Les épaves de Coron sont un terrain d'entraînement pour les plongeurs techniques qui apprennent la pénétration, et beaucoup permettent aussi aux plongeurs loisir de regarder à l'intérieur en sécurité. Nos guides ont une longue expérience des épaves, et chaque épave a son tampon pour votre carnet une fois plongée. Au-delà des épaves, il y a Barracuda Lake et Cathedral Cave, où l'eau chaude des sources remonte, et des récifs pour des plongées tranquilles.", "screen_k": "À l'écran", "screen_h": "Guide dugongs et épaves pour SBS Law of the Jungle.", "screen_t": "Du 21 au 23 janvier 2020, W Divers a soutenu le tournage de Law of the Jungle de SBS à Coron. Dean Kang, SSI Instructor Trainer, était le guide dugongs et le guide de pénétration d'épave de l'émission.", "screen_link": "Nos Pro's", "source": "Sources : le profil de W Divers Coron sur SSI et le blog Naver de W Divers."}
-},
-"HOME": {"routes": [{"k": "Plongeurs certifiés", "t": "Venu pour les épaves, les récifs ou un peu des deux ? Découvrez les options et indiquez votre certification et votre expérience récente dans votre demande.", "link": "Voir les sorties plongée"}, {"k": "Baptême de plongée (DSD)", "t": "Jamais plongé ? Le DSD est une première découverte encadrée, avec un instructeur à vos côtés. Demandez quelles options conviennent à vos dates.", "link": "À propos du DSD"}, {"k": "Formation", "t": "Des cours de plongée de la première certification aux niveaux professionnels, plus la formation TDI pour plongeurs épave avancés et techniques.", "link": "Voir les cours"}, {"k": "Au-delà de la plongée", "t": "Envie de temps hors de l'eau aussi ? Renseignez-vous sur les sorties en island hopping pendant votre séjour.", "link": "Voir l'island hopping"}],
- "slides": [["Soutien au tournage du film « The Golden Holiday » (국제수사)\nLieu de tournage : Teru Kaze Maru", "Nos Pro's"], ["Soutien au tournage : SBS Law of the Jungle à Coron", "Nos Pro's"], ["Lagons, falaises calcaires et notre bateau", "Sorties spéciales"], ["Plongée sur épaves et récifs autour de Coron", "Plongée"], ["Le bateau de plongée de W Divers Coron", "À propos"]],
- "special_h": "Sorties spéciales depuis Coron.", "special_t": "Journées plus longues et aventures avec nuitée, organisées par l'équipe W Divers à des dates choisies.", "special_all": "Voir toutes les sorties spéciales"},
-"CONTACT_INTEREST": [["wreck", "Plongée sur épave"], ["reef", "Plongée sur récif"], ["first", "Baptême de plongée (DSD)"], ["courses", "Cours de plongée"], ["tdi", "Formation avancée TDI"], ["freediving", "Apnée"], ["special", "Sorties spéciales"], ["island", "Island hopping"], ["unsure", "Pas encore sûr"]],
-"SITEMAP_GROUPS": ["Plongée", "Sites de plongée", "Préparer le voyage", "Journal", "À propos et contact", "Sorties spéciales"],
-"TRIPS": [
-{"name": "Croisière en yacht à Apo Reef", "short": "Apo Reef", "card": "Un yacht privatisé vers l'un des récifs les plus connus des Philippines, pour 10 plongeurs maximum.", "title": "Croisière en yacht à Apo Reef | Sorties spéciales | W Divers Coron", "meta": "Rejoignez une croisière en yacht de W Divers Coron vers l'Apo Reef Natural Park : un petit groupe de 10 plongeurs maximum, plusieurs jours de plongée, repas et cabines à bord.", "intro": "L'Apo Reef Natural Park est l'une des destinations de plongée les plus célèbres des Philippines. W Divers Coron y affrète un yacht pour des sorties réservées aux plongeurs, en petit groupe de 10 plongeurs maximum.", "facts": [["Format", "Croisière en yacht, privatisée"], ["Groupe", "Jusqu'à 10 plongeurs"], ["Durée habituelle", "3 nuits, 4 jours"], ["Plongées", "Environ 10, plus une plongée de nuit en option"], ["Embarquement", "Coron, ou Manille (Batangas) selon les départs"]], "sections": [{"h": "Un récif qui vaut le voyage.", "p": ["Apo Reef se trouve dans le détroit de Mindoro, à l'ouest de Mindoro. C'est un parc naturel protégé aux vastes récifs coralliens et tombants, accessible après plusieurs heures de mer, d'où le format croisière."]}, {"h": "La vie à bord.", "p": ["Lors des derniers départs, le yacht accueillait jusqu'à 10 plongeurs dans cinq cabines doubles climatisées. Repas et en-cas étaient servis tout au long du séjour, plongées et guidage étaient inclus, et les transferts depuis et vers l'hôtel étaient organisés."]}, {"h": "À vérifier.", "p": ["Le droit d'entrée de l'Apo Reef Natural Park a été facturé à part (100 USD lors d'une sortie récente). Dates, nombre de plongées et prix dépendent de chaque départ ; demandez les détails par écrit à l'équipe."]}], "ask": ["Prochaines dates et places restantes", "Prix total et prestations incluses", "Droit d'entrée du parc", "Certification et expérience requises", "Répartition des cabines", "Lieu d'embarquement"]},
-{"name": "Observation des dugongs", "short": "Dugongs", "card": "Un départ matinal pour chercher les dugongs dans les baies calmes du nord de Busuanga.", "title": "Journée d'observation des dugongs | Sorties spéciales | W Divers Coron", "meta": "Une journée W Divers Coron à la recherche des dugongs au nord de Busuanga, avec un départ matinal pour devancer la foule et une visite possible du Calauit Safari Park.", "intro": "Les dugongs, doux mammifères marins qui broutent les herbiers, vivent dans les eaux du nord de Busuanga. Lors de cette journée, le bateau W Divers part tôt pour atteindre la zone avant les autres bateaux.", "facts": [["Format", "Journée en bateau"], ["Départ", "Très tôt le matin"], ["Où", "Nord de Busuanga (zone d'Aban-Aban)"], ["Dans l'eau", "Demandez si du snorkeling ou de la plongée est prévu"], ["En option", "Visite du Calauit Safari Park"]], "sections": [{"h": "Pourquoi partir tôt.", "p": ["Les zones à dugongs populaires se remplissent au fil de la journée. Partir avant le lever du soleil offre les meilleures chances d'une rencontre calme, avant l'arrivée des autres bateaux."]}, {"h": "Respecter les animaux.", "p": ["Les dugongs sont sauvages et protégés. Les participants suivent les consignes du guide, gardent leurs distances et ne les touchent, ne les poursuivent ni ne les nourrissent jamais. Les observations ne sont jamais garanties."]}, {"h": "Faites-en une journée complète.", "p": ["La sortie peut être combinée avec une visite du Calauit Safari Park à Busuanga. Demandez à l'équipe le déroulé de la journée et ce qui est inclus."]}], "ask": ["Heure de départ et prise en charge", "Snorkeling ou plongée, et équipement", "Droits d'entrée et taxes environnementales", "Option Calauit Safari Park", "Prix total et prestations incluses"]},
-{"name": "Île déserte, 2 jours 1 nuit", "short": "Île déserte 2J1N", "card": "Cinq plongées et une nuit en camping sur une île inhabitée, deux jours loin de la ville.", "title": "Île déserte 2 jours 1 nuit | Sorties spéciales | W Divers Coron", "meta": "Un forfait plongée W Divers Coron de 2 jours et 1 nuit : 5 plongées et une nuit en camping sur une île inhabitée loin de Coron.", "intro": "Échangez la ville de Coron contre une île tranquille le temps d'une nuit. Ce forfait plongée de 2 jours et 1 nuit comprend 5 plongées et une nuit en camping sur une île inhabitée, organisé par l'équipe W Divers.", "facts": [["Format", "Forfait plongée avec camping sur île"], ["Durée", "2 jours, 1 nuit"], ["Plongées", "5 plongées"], ["Hébergement", "Camping sur une île inhabitée"], ["Non-plongeurs", "Renseignez-vous sur le snorkeling et la plage"]], "sections": [{"h": "Cinq plongées et une nuit sur l'île.", "p": ["Le forfait comprend cinq plongées sur deux jours. Entre les plongées, vous rejoignez une île calme et inhabitée, installez le camp pour la soirée et vous réveillez sur la plage avant une nouvelle journée en mer."]}, {"h": "Connaître l'organisation.", "p": ["Une sortie avec nuitée demande une organisation claire. Renseignez-vous sur le couchage, les repas, l'eau potable, les toilettes et l'ombre, ce qu'il faut apporter et ce qui se passe si la météo change."]}, {"h": "Pour qui.", "p": ["Groupes d'amis, familles et plongeurs voyageant avec des non-plongeurs. Indiquez les envies de chacun dans votre demande pour que l'équipe adapte les deux jours."]}], "ask": ["Les sites des 5 plongées", "Tentes, couchage et affaires à apporter", "Repas et eau potable", "Équipements sur l'île", "Options pour les non-plongeurs", "Conditions météo et d'annulation", "Prix total"]},
-{"name": "Journée sur le Kyokuzan Maru", "short": "Kyokuzan Maru", "card": "Une journée entière vers l'une des épaves japonaises les plus isolées de la région.", "title": "Journée épave Kyokuzan Maru | Sorties spéciales | W Divers Coron", "meta": "Une journée W Divers Coron pour plonger sur le Kyokuzan Maru, un cargo japonais à l'écart du principal groupe d'épaves de Coron.", "intro": "Le Kyokuzan Maru repose à l'écart du principal groupe d'épaves de Coron ; l'atteindre prend une journée entière. Pour les passionnés d'épaves, c'est l'occasion de plonger un site moins fréquenté.", "facts": [["Format", "Journée épave"], ["Pour", "Plongeurs certifiés"], ["Site", "Kyokuzan Maru, cargo japonais"], ["Aussi", "Demandez quels autres sites peuvent être plongés en route"]], "sections": [{"h": "Une épave hors des sentiers battus.", "p": ["Comme d'autres épaves de la région, le Kyokuzan Maru était un cargo japonais perdu pendant la Seconde Guerre mondiale. Son éloignement de Coron limite les visiteurs, et la longue traversée fait partie de la journée."]}, {"h": "Est-ce pour vous ?", "p": ["La profondeur prévue et les conditions déterminent qui peut participer. Indiquez votre niveau, vos plongées enregistrées et la date de votre dernière plongée, et demandez à l'équipe l'expérience requise."]}, {"h": "Organiser la journée.", "p": ["Renseignez-vous sur l'heure de départ, le nombre de plongées, l'équipement, les repas et les frais, et sur ce qui se passe si les conditions changent le jour même."]}], "ask": ["Certification et expérience requises", "Profondeur prévue et nombre de plongées", "Heure de départ et durée de la journée", "Équipement, repas et frais", "Prix total"]}
-],
-"ALT": {"lagoon-boats": "Vue aérienne d'un bateau bleu de W Divers dans un lagon entre des falaises calcaires.", "dive-boat": "Le bateau de plongée à balanciers bleu de W Divers en mer, vu du dessus.", "jungle-crew": "Quatre plongeurs sourient sur le pont d'un bateau pendant le tournage de Law of the Jungle à Coron.", "film-crew": "Photo de groupe prise lors du soutien de W Divers au tournage du film The Golden Holiday à Coron.", "film-crew-2": "Des invités et l'équipe W Divers posent ensemble en extérieur à Coron.", "film-crew-3": "Deux hommes sourient ensemble dans un restaurant à Coron.", "dean": "Dean Kang, instructeur principal de W Divers Coron, en combinaison Scubapro sur un bateau à Coron.", "inhan": "Portrait d'Inhan Kang, instructeur chez W Divers Coron.", "jex": "Portrait de Jex Lenver Tabat (GIGs), divemaster chez W Divers Coron.", "ssi-jungle": "Affiche du soutien de W Divers au tournage de SBS Law of the Jungle à Coron, du 21 au 23 janvier 2020, avec photos et autographes."}
+ "UI": {
+  "sub_first": "DSD (Baptême de plongée)",
+  "sub_courses": "Cours de plongée",
+  "sub_tdi": "Cours TDI Advanced Diver",
+  "sub_free": "Apnée",
+  "nav_pros": "Pro's",
+  "nav_special": "Sorties spéciales",
+  "sub_special_all": "Toutes les sorties spéciales",
+  "read_trip": "Voir la sortie",
+  "slides_label": "Temps forts de W Divers Coron",
+  "slide_n": "Image {n} sur {total}",
+  "slide_show": "Afficher l'image {n}",
+  "slide_pause": "Mettre le diaporama en pause",
+  "slide_play": "Lancer le diaporama"
+ },
+ "ROUTE_NAMES": {
+  "first": "DSD (Baptême de plongée)",
+  "courses": "Cours de plongée",
+  "tdi": "Cours TDI Advanced Diver",
+  "freediving": "Apnée",
+  "pros": "Pro's",
+  "special": "Sorties spéciales"
+ },
+ "PAGES": {
+  "first": {
+   "title": "Baptême de plongée (DSD) à Coron | W Divers Coron",
+   "meta": "Essayez la plongée pour la première fois avec Discover Scuba Diving (DSD) chez W Divers Coron : une initiation encadrée par un instructeur, sans certification.",
+   "eyebrow": "DSD · Discover Scuba Diving",
+   "h1": "Votre première respiration sous l'eau, avec un instructeur à vos côtés.",
+   "intro": "Discover Scuba Diving (DSD) est une première découverte encadrée de la plongée pour ceux qui n'ont jamais plongé. Dites à W Divers que vous débutez et demandez quelles options DSD conviennent à vos dates.",
+   "summary": {
+    "h": "Questions à poser",
+    "for": "Pour ceux qui n'ont jamais plongé, ou il y a longtemps.",
+    "list": [
+     "Âge minimum et qui peut participer",
+     "Attentes en natation et aisance dans l'eau",
+     "Le questionnaire médical",
+     "Le lieu de la séance",
+     "La durée et le prix total"
+    ]
+   },
+   "sections": [
+    {
+     "h": "En quoi consiste un DSD.",
+     "p": [
+      "Une séance Discover Scuba Diving commence par un court briefing sur l'équipement et la respiration sous l'eau. Vous pratiquez ensuite quelques exercices de base en eau calme et peu profonde, avant une plongée guidée avec un instructeur tout près. Aucune certification ni expérience n'est nécessaire."
+     ]
+    },
+    {
+     "h": "Une initiation, pas une certification.",
+     "p": [
+      "Le DSD permet d'essayer la plongée sans s'engager dans un cours. Si vous aimez, demandez comment enchaîner avec un cours de plongée. Ce sont deux étapes différentes, alors demandez laquelle convient à votre voyage."
+     ]
+    },
+    {
+     "h": "Avant de réserver.",
+     "p": [
+      "Vérifiez l'âge minimum, les attentes en natation, le questionnaire médical, le lieu, la durée et ce que comprend le prix. Signalez tout souci de santé à l'équipe avant la plongée ; un formulaire de demande n'est pas un avis médical."
+     ]
+    },
+    {
+     "h": "Inutile de faire semblant d'être déjà à l'aise.",
+     "p": [
+      "Il est normal de se poser des questions sur la respiration sous l'eau, l'équipement ou la mer. Dites ce avec quoi vous êtes à l'aise pour que la conversation parte du bon point."
+     ]
+    }
+   ],
+   "cta": "Se renseigner sur le DSD"
+  },
+  "courses": {
+   "title": "Cours de plongée à Coron | W Divers Coron",
+   "meta": "Apprenez à plonger ou progressez à Coron : cours de plongée du débutant au niveau professionnel avec les instructeurs PADI et SSI de W Divers Coron.",
+   "eyebrow": "Cours de plongée",
+   "h1": "Apprendre à plonger, puis continuer.",
+   "intro": "De la première certification aux niveaux professionnels, les instructeurs de W Divers Coron enseignent des cours PADI et SSI. Indiquez votre expérience, le cours qui vous intéresse et votre temps à Coron.",
+   "summary": {
+    "h": "Cours disponibles sur demande",
+    "for": "Enseignés par nos instructeurs PADI et SSI :",
+    "list": [
+     "Open Water Diver",
+     "Advanced Open Water Diver",
+     "Rescue Diver et Emergency First Response",
+     "Divemaster",
+     "Spécialités : profonde, nitrox, sidemount, épave, Peak Performance Buoyancy",
+     "AWARE Coral Reef Conservation"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Commencer la plongée.",
+     "p": [
+      "Si vous envisagez votre première certification, renseignez-vous sur le cours, les prérequis, la théorie et le nombre de jours nécessaires avant de planifier le reste de votre séjour."
+     ]
+    },
+    {
+     "h": "Progresser.",
+     "p": [
+      "Déjà certifié ? Les cours Advanced et Rescue renforcent confiance et compétences, et les spécialités vous permettent de vous concentrer sur ce qui vous plaît, de la plongée profonde et du nitrox aux épaves et à la flottabilité."
+     ]
+    },
+    {
+     "h": "La formation épave vous intéresse ?",
+     "p": [
+      "Une spécialité épave apprend à plonger autour des épaves en sécurité ; ce n'est pas une autorisation générale d'y entrer. Pour la formation épave avancée et technique, voir notre cours TDI Advanced Diver."
+     ]
+    },
+    {
+     "h": "Avoir une vue complète du cours.",
+     "p": [
+      "Avant de confirmer, demandez l'organisme, le nom du cours, les conditions d'accès, la durée prévue, le contenu, la disponibilité de l'instructeur et le coût total, supports et frais de certification compris."
+     ]
+    }
+   ],
+   "catalog_h": "Cours actuels",
+   "cta": "Se renseigner sur les cours"
+  },
+  "tdi": {
+   "title": "Cours TDI Advanced Diver à Coron | W Divers Coron",
+   "meta": "Formation à la plongée avancée et technique à Coron avec les instructeurs TDI de W Divers Coron, dont la formation épave avancée pour les épaves de Coron.",
+   "eyebrow": "Formation avancée TDI",
+   "h1": "Se former aux épaves de Coron au-delà des limites loisir.",
+   "intro": "Les épaves de Coron attirent les plongeurs qui veulent aller plus loin. W Divers Coron compte des instructeurs TDI, dont un instructeur TDI Technical et Advanced Wreck Diver, pour les plongeurs prêts à se former au-delà de la plongée loisir.",
+   "summary": {
+    "h": "Avant votre demande",
+    "for": "Pour plongeurs certifiés et expérimentés.",
+    "list": [
+     "Votre certification actuelle et vos plongées enregistrées",
+     "Expérience nitrox ou plongée profonde",
+     "Le cours TDI qui vous intéresse",
+     "Le nombre de jours à Coron",
+     "Si vous avez votre propre équipement technique ou sidemount"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Ce qu'est la formation TDI.",
+     "p": [
+      "TDI (Technical Diving International) forme à la plongée avancée et technique : des plongées plus longues, plus profondes et plus complexes qui demandent formation, équipement et planification supplémentaires. Les épaves abritées de Coron en font un lieu d'apprentissage prisé."
+     ]
+    },
+    {
+     "h": "Formation épave avancée.",
+     "p": [
+      "Pénétrer une épave en sécurité est une compétence à part entière. La formation épave avancée couvre la planification, l'usage du fil d'Ariane, la gestion des gaz et l'évolution en milieu fermé : une formation qu'une plongée guidée ne remplace pas."
+     ]
+    },
+    {
+     "h": "Trouver le bon cours.",
+     "p": [
+      "Prérequis, durées et équipement varient selon les programmes TDI. Parlez à l'équipe de votre expérience et de vos objectifs, et demandez quels cours TDI sont proposés, ce que chacun permet et le coût total."
+     ]
+    }
+   ],
+   "cta": "Se renseigner sur la formation TDI"
+  },
+  "freediving": {
+   "title": "Apnée à Coron | W Divers Coron",
+   "meta": "Apnée à Coron avec W Divers Coron : Barracuda Lake, Cathedral Cave et d'autres sites clairs et abrités, en une seule respiration.",
+   "eyebrow": "Apnée",
+   "h1": "Coron en une seule respiration.",
+   "intro": "Lacs limpides, falaises calcaires et eaux calmes et abritées font de Coron un lieu apprécié des apnéistes. W Divers Coron organise des sorties apnée vers des sites comme Barracuda Lake et Cathedral Cave.",
+   "summary": {
+    "h": "Avant votre demande",
+    "for": "Pour apnéistes et snorkeleurs à l'aise.",
+    "list": [
+     "Votre expérience ou certification en apnée",
+     "Les sites que vous aimeriez voir",
+     "Dates souhaitées",
+     "Si vous avez besoin d'équipement"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Pourquoi les apnéistes aiment Coron.",
+     "p": [
+      "Niché entre des parois calcaires, Barracuda Lake est connu pour son eau claire et ses couches de température changeantes. Cathedral Cave et d'autres sites abrités offrent une eau calme et une lumière spectaculaire. Les conditions et l'accès peuvent changer, alors demandez ce qui est possible à vos dates."
+     ]
+    },
+    {
+     "h": "Sorties et formation.",
+     "p": [
+      "Renseignez-vous auprès de l'équipe sur les sorties apnée et sur un éventuel cours adapté à votre niveau. L'apnée se pratique toujours avec un binôme formé qui surveille depuis la surface."
+     ]
+    },
+    {
+     "h": "Organiser votre journée.",
+     "p": [
+      "Parlez à l'équipe de votre expérience, des sites souhaités et de votre temps disponible. Demandez ce qui est inclus, comme le bateau, l'équipement et les droits d'entrée."
+     ]
+    }
+   ],
+   "cta": "Se renseigner sur l'apnée"
+  },
+  "special": {
+   "title": "Sorties spéciales depuis Coron | W Divers Coron",
+   "meta": "Sorties spéciales avec W Divers Coron : croisière en yacht à Apo Reef, observation des dugongs, nuit sur une île déserte et journée sur l'épave du Kyokuzan Maru.",
+   "eyebrow": "Sorties spéciales",
+   "h1": "De grandes journées au départ de Coron.",
+   "intro": "Certaines expériences demandent un départ matinal, une plus longue traversée ou une nuit dehors. L'équipe W Divers organise ces sorties spéciales à des dates choisies ; demandez ce qui est prévu pendant votre séjour.",
+   "note": "Dates, prestations et prix varient selon le départ. Demandez à l'équipe les prochaines sorties."
+  },
+  "trip": {
+   "eyebrow": "Sortie spéciale",
+   "glance_h": "En bref",
+   "ask_h": "À demander avant de réserver",
+   "others_h": "Autres sorties spéciales",
+   "cta": "Se renseigner sur {name}",
+   "cta_note": "Une demande ne réserve pas de place."
+  },
+  "pros": {
+   "title": "Pro's : l'équipe W Divers | W Divers Coron",
+   "meta": "Rencontrez les Pro's de l'équipe W Divers à Coron, Palawan : l'instructeur principal Dean Kang, l'instructeur Inhan Kang et le divemaster Jex Lenver Tabat.",
+   "eyebrow": "Les Pro's de l'équipe W Divers",
+   "h1": "Rencontrez ceux avec qui vous plongerez.",
+   "intro": "Épaves, dugongs, sources chaudes et grottes magnifiques : une invitation à plonger dans les eaux de Coron. Rencontrez les instructeurs de l'équipe W Divers.",
+   "team_h": "L'équipe W Divers",
+   "team": [
+    {
+     "role": "Instructeur principal",
+     "intro": "Dean dirige W Divers Coron et forme plongeurs comme instructeurs, avec des qualifications d'instructeur dans cinq organismes.",
+     "creds_h": "Qualifications d'instructeur",
+     "spec_h": "Instructeur de spécialités"
+    },
+    {
+     "role": "Jeune instructeur",
+     "tag": "Enseigne en anglais, tagalog et coréen de niveau natif",
+     "intro": "Inhan est devenu instructeur PADI à 18 ans et enseigne des cours loisir, techniques et épave.",
+     "creds_h": "Qualifications d'instructeur"
+    },
+    {
+     "role": "Divemaster",
+     "intro": "Divemaster philippin de l'équipe W Divers, il accompagne les plongeurs sur le bateau et sous l'eau.",
+     "creds_h": "Certification"
+    }
+   ],
+   "screen_h": "À l'écran à Coron.",
+   "screen_t": "L'équipe W Divers a soutenu des tournages de films et d'émissions coréens à Coron.",
+   "screen": [
+    {
+     "cap": "Soutien à l'émission SBS Law of the Jungle à Coron, dont des épisodes à la recherche de dugongs et d'une épave mystérieuse."
+    },
+    {
+     "cap": "Avec des acteurs coréens lors du soutien au tournage du film coréen The Golden Holiday (국제수사) à Coron."
+    }
+   ],
+   "cta_h": "Plongez avec l'équipe W Divers.",
+   "cta_t": "Envoyez vos dates, la taille du groupe et votre expérience, et l'équipe vous aidera à organiser votre séjour à Coron."
+  },
+  "about": {
+   "title": "À propos de W Divers Coron | Plongée à Coron, Palawan",
+   "meta": "W Divers Coron est un centre de plongée coréen à Coron, Palawan, depuis mars 2015 : épaves, dugongs, sources chaudes et grottes.",
+   "h1": "Un centre de plongée coréen à Coron, depuis 2015.",
+   "intro": "Épaves, dugongs, sources chaudes et grottes. W Divers Coron guide les plongeurs dans les eaux de Coron, Palawan, depuis mars 2015, de la première respiration à la pénétration d'épave.",
+   "story_k": "Notre histoire",
+   "story_h": "D'un chantier naval en Corée aux épaves de Coron.",
+   "story_t": [
+    "W Divers Coron est un centre de plongée coréen à Coron, l'une des zones de plongée sur épave les plus connues au monde. Il a été fondé par l'instructeur Dean Kang (강덕환), qui a passé 20 ans chez Hyundai Samho Heavy Industries en Corée, où il présidait aussi le club de plongée de l'entreprise.",
+    "Après le chantier naval, il a choisi Coron, Palawan, pour son second chapitre et a ouvert W Divers dans la rue principale de la ville le 1er mars 2015. Lancer une entreprise à l'étranger sans passer d'abord des années dans la communauté coréenne locale inquiétait son entourage ; il remercie les bonnes personnes qui l'ont aidé à s'installer."
+   ],
+   "facts_h": "Ce qui vous attend à votre arrivée",
+   "facts": [
+    [
+     "Boutique",
+     "Un centre de plongée climatisé et vitré dans la rue principale de Coron."
+    ],
+    [
+     "Bateaux",
+     "Deux bancas de plongée à nous, plus un multicab propre et climatisé pour les transferts."
+    ],
+    [
+     "Équipement",
+     "Matériel de location acheté neuf. Ordinateurs de plongée, scooters, nitrox et oxygène disponibles."
+    ],
+    [
+     "Hébergement",
+     "Cinq chambres climatisées à nous, et de l'aide pour réserver chambres ventilées, resorts coréens ou resorts de type hôtel avec piscine."
+    ],
+    [
+     "Horaires",
+     "Ouvert tous les jours, de 7 h à 21 h."
+    ],
+    [
+     "Langues",
+     "Accompagnement en anglais et en coréen."
+    ]
+   ],
+   "wreck_h": "La plongée sur épave, avec un tampon en souvenir.",
+   "wreck_t": "Les épaves de Coron sont un terrain d'entraînement pour les plongeurs techniques qui apprennent la pénétration, et beaucoup permettent aussi aux plongeurs loisir de regarder à l'intérieur en sécurité. Nos guides ont une longue expérience des épaves, et chaque épave a son tampon pour votre carnet une fois plongée. Au-delà des épaves, il y a Barracuda Lake et Cathedral Cave, où l'eau chaude des sources remonte, et des récifs pour des plongées tranquilles.",
+   "screen_k": "À l'écran",
+   "screen_h": "Guide dugongs et épaves pour SBS Law of the Jungle.",
+   "screen_t": "Du 21 au 23 janvier 2020, W Divers a soutenu le tournage de Law of the Jungle de SBS à Coron. Dean Kang, SSI Instructor Trainer, était le guide dugongs et le guide de pénétration d'épave de l'émission.",
+   "screen_link": "Nos Pro's",
+   "source": "Sources : le profil de W Divers Coron sur SSI et le blog Naver de W Divers."
+  }
+ },
+ "HOME": {
+  "routes": [
+   {
+    "k": "Plongeurs certifiés",
+    "t": "Venu pour les épaves, les récifs ou un peu des deux ? Découvrez les options et indiquez votre certification et votre expérience récente dans votre demande.",
+    "link": "Voir les sorties plongée"
+   },
+   {
+    "k": "Baptême de plongée (DSD)",
+    "t": "Jamais plongé ? Le DSD est une première découverte encadrée, avec un instructeur à vos côtés. Demandez quelles options conviennent à vos dates.",
+    "link": "À propos du DSD"
+   },
+   {
+    "k": "Formation",
+    "t": "Des cours de plongée de la première certification aux niveaux professionnels, plus la formation TDI pour plongeurs épave avancés et techniques.",
+    "link": "Voir les cours"
+   },
+   {
+    "k": "Au-delà de la plongée",
+    "t": "Envie de temps hors de l'eau aussi ? Renseignez-vous sur les sorties en island hopping pendant votre séjour.",
+    "link": "Voir l'island hopping"
+   }
+  ],
+  "slides": [
+   [
+    "Soutien au tournage du film « The Golden Holiday » (국제수사)\nLieu de tournage : Teru Kaze Maru",
+    "Nos Pro's"
+   ],
+   [
+    "Soutien au tournage : SBS Law of the Jungle à Coron",
+    "Nos Pro's"
+   ],
+   [
+    "Lagons, falaises calcaires et notre bateau",
+    "Sorties spéciales"
+   ],
+   [
+    "Plongée sur épaves et récifs autour de Coron",
+    "Plongée"
+   ],
+   [
+    "Le bateau de plongée de W Divers Coron",
+    "À propos"
+   ]
+  ],
+  "special_h": "Sorties spéciales depuis Coron.",
+  "special_t": "Journées plus longues et aventures avec nuitée, organisées par l'équipe W Divers à des dates choisies.",
+  "special_all": "Voir toutes les sorties spéciales"
+ },
+ "CONTACT_INTEREST": [
+  [
+   "wreck",
+   "Plongée sur épave"
+  ],
+  [
+   "reef",
+   "Plongée sur récif"
+  ],
+  [
+   "first",
+   "Baptême de plongée (DSD)"
+  ],
+  [
+   "courses",
+   "Cours de plongée"
+  ],
+  [
+   "tdi",
+   "Formation avancée TDI"
+  ],
+  [
+   "freediving",
+   "Apnée"
+  ],
+  [
+   "special",
+   "Sorties spéciales"
+  ],
+  [
+   "island",
+   "Island hopping"
+  ],
+  [
+   "unsure",
+   "Pas encore sûr"
+  ]
+ ],
+ "SITEMAP_GROUPS": [
+  "Plongée",
+  "Sites de plongée",
+  "Préparer le voyage",
+  "Journal",
+  "À propos et contact",
+  "Sorties spéciales"
+ ],
+ "TRIPS": [
+  {
+   "name": "Croisière en yacht à Apo Reef",
+   "short": "Apo Reef",
+   "card": "Un yacht privatisé vers l'un des récifs les plus connus des Philippines, pour 10 plongeurs maximum.",
+   "title": "Croisière en yacht à Apo Reef | Sorties spéciales | W Divers Coron",
+   "meta": "Rejoignez une croisière en yacht de W Divers Coron vers l'Apo Reef Natural Park : un petit groupe de 10 plongeurs maximum, plusieurs jours de plongée, repas et cabines à bord.",
+   "intro": "L'Apo Reef Natural Park est l'une des destinations de plongée les plus célèbres des Philippines. W Divers Coron y affrète un yacht pour des sorties réservées aux plongeurs, en petit groupe de 10 plongeurs maximum.",
+   "facts": [
+    [
+     "Format",
+     "Croisière en yacht, privatisée"
+    ],
+    [
+     "Groupe",
+     "Jusqu'à 10 plongeurs"
+    ],
+    [
+     "Durée habituelle",
+     "3 nuits, 4 jours"
+    ],
+    [
+     "Plongées",
+     "Environ 10, plus une plongée de nuit en option"
+    ],
+    [
+     "Embarquement",
+     "Coron, ou Manille (Batangas) selon les départs"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Un récif qui vaut le voyage.",
+     "p": [
+      "Apo Reef se trouve dans le détroit de Mindoro, à l'ouest de Mindoro. C'est un parc naturel protégé aux vastes récifs coralliens et tombants, accessible après plusieurs heures de mer, d'où le format croisière."
+     ]
+    },
+    {
+     "h": "La vie à bord.",
+     "p": [
+      "Lors des derniers départs, le yacht accueillait jusqu'à 10 plongeurs dans cinq cabines doubles climatisées. Repas et en-cas étaient servis tout au long du séjour, plongées et guidage étaient inclus, et les transferts depuis et vers l'hôtel étaient organisés."
+     ]
+    },
+    {
+     "h": "À vérifier.",
+     "p": [
+      "Le droit d'entrée de l'Apo Reef Natural Park a été facturé à part (100 USD lors d'une sortie récente). Dates, nombre de plongées et prix dépendent de chaque départ ; demandez les détails par écrit à l'équipe."
+     ]
+    }
+   ],
+   "ask": [
+    "Prochaines dates et places restantes",
+    "Prix total et prestations incluses",
+    "Droit d'entrée du parc",
+    "Certification et expérience requises",
+    "Répartition des cabines",
+    "Lieu d'embarquement"
+   ]
+  },
+  {
+   "name": "Observation des dugongs",
+   "short": "Dugongs",
+   "card": "Un départ matinal pour chercher les dugongs dans les baies calmes du nord de Busuanga.",
+   "title": "Journée d'observation des dugongs | Sorties spéciales | W Divers Coron",
+   "meta": "Une journée W Divers Coron à la recherche des dugongs au nord de Busuanga, avec un départ matinal pour devancer la foule et une visite possible du Calauit Safari Park.",
+   "intro": "Les dugongs, doux mammifères marins qui broutent les herbiers, vivent dans les eaux du nord de Busuanga. Lors de cette journée, le bateau W Divers part tôt pour atteindre la zone avant les autres bateaux.",
+   "facts": [
+    [
+     "Format",
+     "Journée en bateau"
+    ],
+    [
+     "Départ",
+     "Très tôt le matin"
+    ],
+    [
+     "Où",
+     "Nord de Busuanga (zone d'Aban-Aban)"
+    ],
+    [
+     "Dans l'eau",
+     "Demandez si du snorkeling ou de la plongée est prévu"
+    ],
+    [
+     "En option",
+     "Visite du Calauit Safari Park"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Pourquoi partir tôt.",
+     "p": [
+      "Les zones à dugongs populaires se remplissent au fil de la journée. Partir avant le lever du soleil offre les meilleures chances d'une rencontre calme, avant l'arrivée des autres bateaux."
+     ]
+    },
+    {
+     "h": "Respecter les animaux.",
+     "p": [
+      "Les dugongs sont sauvages et protégés. Les participants suivent les consignes du guide, gardent leurs distances et ne les touchent, ne les poursuivent ni ne les nourrissent jamais. Les observations ne sont jamais garanties."
+     ]
+    },
+    {
+     "h": "Faites-en une journée complète.",
+     "p": [
+      "La sortie peut être combinée avec une visite du Calauit Safari Park à Busuanga. Demandez à l'équipe le déroulé de la journée et ce qui est inclus."
+     ]
+    }
+   ],
+   "ask": [
+    "Heure de départ et prise en charge",
+    "Snorkeling ou plongée, et équipement",
+    "Droits d'entrée et taxes environnementales",
+    "Option Calauit Safari Park",
+    "Prix total et prestations incluses"
+   ]
+  },
+  {
+   "name": "Île déserte, 2 jours 1 nuit",
+   "short": "Île déserte 2J1N",
+   "card": "Cinq plongées et une nuit en camping sur une île inhabitée, deux jours loin de la ville.",
+   "title": "Île déserte 2 jours 1 nuit | Sorties spéciales | W Divers Coron",
+   "meta": "Un forfait plongée W Divers Coron de 2 jours et 1 nuit : 5 plongées et une nuit en camping sur une île inhabitée loin de Coron.",
+   "intro": "Échangez la ville de Coron contre une île tranquille le temps d'une nuit. Ce forfait plongée de 2 jours et 1 nuit comprend 5 plongées et une nuit en camping sur une île inhabitée, organisé par l'équipe W Divers.",
+   "facts": [
+    [
+     "Format",
+     "Forfait plongée avec camping sur île"
+    ],
+    [
+     "Durée",
+     "2 jours, 1 nuit"
+    ],
+    [
+     "Plongées",
+     "5 plongées"
+    ],
+    [
+     "Hébergement",
+     "Camping sur une île inhabitée"
+    ],
+    [
+     "Non-plongeurs",
+     "Renseignez-vous sur le snorkeling et la plage"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Cinq plongées et une nuit sur l'île.",
+     "p": [
+      "Le forfait comprend cinq plongées sur deux jours. Entre les plongées, vous rejoignez une île calme et inhabitée, installez le camp pour la soirée et vous réveillez sur la plage avant une nouvelle journée en mer."
+     ]
+    },
+    {
+     "h": "Connaître l'organisation.",
+     "p": [
+      "Une sortie avec nuitée demande une organisation claire. Renseignez-vous sur le couchage, les repas, l'eau potable, les toilettes et l'ombre, ce qu'il faut apporter et ce qui se passe si la météo change."
+     ]
+    },
+    {
+     "h": "Pour qui.",
+     "p": [
+      "Groupes d'amis, familles et plongeurs voyageant avec des non-plongeurs. Indiquez les envies de chacun dans votre demande pour que l'équipe adapte les deux jours."
+     ]
+    }
+   ],
+   "ask": [
+    "Les sites des 5 plongées",
+    "Tentes, couchage et affaires à apporter",
+    "Repas et eau potable",
+    "Équipements sur l'île",
+    "Options pour les non-plongeurs",
+    "Conditions météo et d'annulation",
+    "Prix total"
+   ]
+  },
+  {
+   "name": "Journée sur le Kyokuzan Maru",
+   "short": "Kyokuzan Maru",
+   "card": "Une journée entière vers l'une des épaves japonaises les plus isolées de la région.",
+   "title": "Journée épave Kyokuzan Maru | Sorties spéciales | W Divers Coron",
+   "meta": "Une journée W Divers Coron pour plonger sur le Kyokuzan Maru, un cargo japonais à l'écart du principal groupe d'épaves de Coron.",
+   "intro": "Le Kyokuzan Maru repose à l'écart du principal groupe d'épaves de Coron ; l'atteindre prend une journée entière. Pour les passionnés d'épaves, c'est l'occasion de plonger un site moins fréquenté.",
+   "facts": [
+    [
+     "Format",
+     "Journée épave"
+    ],
+    [
+     "Pour",
+     "Plongeurs certifiés"
+    ],
+    [
+     "Site",
+     "Kyokuzan Maru, cargo japonais"
+    ],
+    [
+     "Aussi",
+     "Demandez quels autres sites peuvent être plongés en route"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Une épave hors des sentiers battus.",
+     "p": [
+      "Comme d'autres épaves de la région, le Kyokuzan Maru était un cargo japonais perdu pendant la Seconde Guerre mondiale. Son éloignement de Coron limite les visiteurs, et la longue traversée fait partie de la journée."
+     ]
+    },
+    {
+     "h": "Est-ce pour vous ?",
+     "p": [
+      "La profondeur prévue et les conditions déterminent qui peut participer. Indiquez votre niveau, vos plongées enregistrées et la date de votre dernière plongée, et demandez à l'équipe l'expérience requise."
+     ]
+    },
+    {
+     "h": "Organiser la journée.",
+     "p": [
+      "Renseignez-vous sur l'heure de départ, le nombre de plongées, l'équipement, les repas et les frais, et sur ce qui se passe si les conditions changent le jour même."
+     ]
+    }
+   ],
+   "ask": [
+    "Certification et expérience requises",
+    "Profondeur prévue et nombre de plongées",
+    "Heure de départ et durée de la journée",
+    "Équipement, repas et frais",
+    "Prix total"
+   ]
+  }
+ ],
+ "ALT": {
+  "lagoon-boats": "Vue aérienne d'un bateau bleu de W Divers dans un lagon entre des falaises calcaires.",
+  "dive-boat": "Le bateau de plongée à balanciers bleu de W Divers en mer, vu du dessus.",
+  "jungle-crew": "Quatre plongeurs sourient sur le pont d'un bateau pendant le tournage de Law of the Jungle à Coron.",
+  "film-crew": "Photo de groupe prise lors du soutien de W Divers au tournage du film The Golden Holiday à Coron.",
+  "film-crew-2": "Des invités et l'équipe W Divers posent ensemble en extérieur à Coron.",
+  "film-crew-3": "Deux hommes sourient ensemble dans un restaurant à Coron.",
+  "dean": "Dean Kang, instructeur principal de W Divers Coron, en combinaison Scubapro sur un bateau à Coron.",
+  "inhan": "Portrait d'Inhan Kang, instructeur chez W Divers Coron.",
+  "jex": "Portrait de Jex Lenver Tabat (GIGs), divemaster chez W Divers Coron.",
+  "ssi-jungle": "Affiche du soutien de W Divers au tournage de SBS Law of the Jungle à Coron, du 21 au 23 janvier 2020, avec photos et autographes.",
+  "yacht-aerial": "Un catamaran à voile blanc au mouillage sur une eau bleue et calme, vu du dessus.",
+  "yacht-cabin": "Une cabine de yacht lumineuse avec lit double et fenêtres donnant sur des îles vertes.",
+  "dugong-diver": "Un dugong nage dans l'eau bleue ensoleillée, observé à distance par un plongeur.",
+  "calauit-zebras": "Des zèbres broutent près d'un poste de gardes au Calauit Safari Park, à Busuanga.",
+  "calauit-giraffes": "Deux girafes se penchent vers l'objectif sous un ciel bleu au Calauit Safari Park.",
+  "boat-lunch": "Un déjeuner à bord : poisson grillé, poulet, légumes, moules et mangue.",
+  "w-coral-wreck": "Une épave couverte de corail émerge de l'eau bleue, entourée de bancs de poissons.",
+  "w-valves": "Une rangée de soupapes de moteur couvertes de limon dans une épave.",
+  "w-three-divers": "Trois plongeurs font le signe de la victoire à travers une ouverture d'une épave corallienne.",
+  "w-engine-room": "Des machines dans la salle des machines sombre d'une épave.",
+  "w-machinery": "De petits poissons passent devant les machines incrustées d'une épave.",
+  "fd-cave": "Une grotte calcaire aux stalactites reflétées dans une eau immobile.",
+  "fd-beam": "Une apnéiste flotte dans un rai de soleil en eau bleu profond.",
+  "dsd-sand": "Un plongeur glisse au-dessus du sable blanc vers l'objectif, d'autres plongeurs derrière.",
+  "pool-lesson": "Un instructeur prépare l'équipement avec une élève au bord d'une piscine.",
+  "gear-crates": "Des caisses de palmes, masques et matériel prêtes à charger près d'un véhicule bleu.",
+  "van-transfer": "Des invités avec sacs à dos montent dans un van argenté pour un transfert.",
+  "crew-briefing": "Des plongeurs en combinaison réunis pour un briefing sur le pont d'un bateau bleu.",
+  "harbor-group": "Huit invités posent sur le quai, avec des bateaux et des collines vertes derrière.",
+  "briefing-blue": "Des invités se détendent sur un bateau de plongée bleu entre deux plongées.",
+  "heart-divers": "Deux plongeurs souriants forment un cœur en surface près du bateau.",
+  "under-boat": "Des plongeurs descendent au-dessus du sable blanc sous la coque d'un bateau.",
+  "rope": "Un bout d'amarrage couvert de corail pend dans une eau bleue limpide.",
+  "flags-bow": "Les drapeaux coréen et philippin flottent sur un bateau, avec des îles vertes à l'horizon."
+ }
 }

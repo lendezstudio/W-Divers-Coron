@@ -193,7 +193,7 @@ PAGES["wreck"] = {
         {"h": "다이빙 경험을 알려주세요.", "p": ["자격 등급, 대략적인 로그 수, 마지막 다이빙 날짜, 희망 날짜를 함께 보내주세요. 난파선이나 딥 다이빙 관련 교육을 받으셨다면 함께 알려주세요."]},
         {"h": "하루 일정을 꼼꼼히 확인하세요.", "p": ["어떤 포인트가 적합할지, 다이빙은 몇 회인지, 견적에 무엇이 포함되는지 물어보세요. 최종 포인트는 바다 상황과 팀의 판단에 따라 정해집니다."]},
     ],
-    "inline_img": "wreck-mast",
+    "inline_img": "w-three-divers",
     "cta": "난파선 다이빙 계획하기",
     "interest": "wreck",
     "related": [("sites", None), ("article", "wreck-diving-questions-before-booking"), ("faq", None)],
@@ -227,7 +227,7 @@ PAGES["first"] = {
     "eyebrow": "DSD · 체험 다이빙",
     "h1": "강사가 곁에 있는, 물속에서의 첫 호흡.",
     "intro": "DSD(Discover Scuba Diving)는 다이빙을 한 번도 해보지 않은 분을 위한, 감독 아래의 첫 스쿠버 체험입니다. 스쿠버가 처음이라고 W Divers에 알려주시고, 일정에 맞는 DSD 옵션을 문의하세요.",
-    "img": "stock-pair",
+    "img": "dsd-sand",
     "summary": {
         "h": "물어보면 좋은 질문",
         "for": "스쿠버를 한 번도 해보지 않았거나 오래전에 해본 분 대상.",
@@ -239,7 +239,7 @@ PAGES["first"] = {
         {"h": "예약하기 전에.", "p": ["최소 연령, 수영이나 물에 대한 편안함 기준, 건강 상태 질문서, 체험 장소, 소요 시간, 비용에 포함된 내용을 확인하세요. 건강상 걱정되는 점은 다이빙 전에 팀에 알려주세요. 문의 양식은 의학적 허가를 대신하지 않습니다."]},
         {"h": "처음부터 자신 있을 필요는 없습니다.", "p": ["물속 호흡, 장비, 바다에 들어가는 것에 대해 궁금한 점이 있는 것은 자연스러운 일입니다. 어디까지 편안한지 알려주시면 그에 맞춰 대화를 시작할 수 있습니다."]},
     ],
-    "inline_img": "pool-skills",
+    "inline_img": "pool-lesson",
     "cta": "DSD 문의하기",
     "interest": "first",
     "related": [("courses", None), ("faq", None), ("article", "planning-your-first-coron-dive-trip")],
@@ -287,7 +287,7 @@ PAGES["tdi"] = {
         {"h": "어드밴스드 난파선 교육.", "p": ["난파선 안으로 안전하게 들어가는 것은 별도의 기술입니다. 어드밴스드 난파선 교육은 다이빙 계획, 가이드라인 사용, 기체 관리, 오버헤드 환경에서의 이동을 다룹니다. 가이드 다이빙으로는 대신할 수 없는 교육입니다."]},
         {"h": "나에게 맞는 과정 찾기.", "p": ["TDI 프로그램마다 선수 조건, 기간, 장비가 다릅니다. 경험과 목표를 팀에 알려주시고, 현재 가능한 TDI 과정, 각 과정으로 할 수 있게 되는 것, 총비용을 문의하세요."]},
     ],
-    "inline_img": "tanks-boat",
+    "inline_img": "w-engine-room",
     "cta": "TDI 교육 문의하기",
     "interest": "tdi",
     "related": [("courses", None), ("wreck", None), ("sites", None)],
@@ -299,7 +299,7 @@ PAGES["freediving"] = {
     "eyebrow": "프리다이빙",
     "h1": "한 호흡으로 만나는 코론.",
     "intro": "맑은 호수, 석회암 절벽, 잔잔한 바다 덕분에 코론은 프리다이버들이 사랑하는 곳입니다. W Divers Coron은 바라쿠다 레이크와 카테드랄 케이브 같은 포인트로 프리다이빙 투어를 진행합니다.",
-    "img": "rock-walls",
+    "img": "fd-cave",
     "summary": {
         "h": "문의 전에 준비할 내용",
         "for": "프리다이버와 물에 익숙한 스노클러 대상.",
@@ -310,7 +310,7 @@ PAGES["freediving"] = {
         {"h": "투어와 교육.", "p": ["프리다이빙 투어와 내 수준에 맞는 교육이 가능한지 팀에 문의하세요. 프리다이빙은 항상 수면에서 지켜보는 숙련된 버디와 함께해야 합니다."]},
         {"h": "하루를 계획하세요.", "p": ["경험, 가고 싶은 포인트, 가능한 시간을 알려주세요. 보트, 장비, 입장료 등 포함 사항을 확인하세요."]},
     ],
-    "inline_img": "lagoon-boats",
+    "inline_img": "fd-beam",
     "cta": "프리다이빙 문의하기",
     "interest": "freediving",
     "related": [("special", None), ("island", None), ("gallery", None)],
@@ -650,7 +650,7 @@ PAGES["404"] = {
 
 SITES = [
     {
-        "slug": "okikawa-maru", "name": "오키카와 마루 (Okikawa Maru)", "type": "wreck", "img": "stock-turtle",
+        "slug": "okikawa-maru", "name": "오키카와 마루 (Okikawa Maru)", "type": "wreck", "img": "w-machinery",
         "card": "산호가 자라고 다양한 해양 생물이 모여드는 대형 난파선.",
         "title": "오키카와 마루 난파선 가이드 | 코론 다이빙 포인트 | W Divers Coron",
         "meta": "코론의 오키카와 마루 난파선 소개와 방문 계획 전에 W Divers Coron에 물어볼 질문.",
@@ -696,7 +696,7 @@ ARTICLES = [
         "slug": "planning-your-first-coron-dive-trip",
         "title": "코론 첫 다이빙 여행 계획하기",
         "meta": "코론에서 다이빙 옵션을 고르고, 질문을 준비하고, 도착 전에 세부 사항을 정리하기 위한 실용적인 출발점.",
-        "img": "stock-descent",
+        "img": "crew-briefing",
         "body": [
             ("지금 가진 경험에서 시작하세요.", [
                 "포인트를 고르거나 사진을 비교하기 전에, 내가 다이빙 여정의 어디쯤에 있는지 생각해 보세요. 첫 스쿠버 체험을 고민 중인가요, 오랜만에 다시 시작하나요, 아니면 자격증과 최근 다이빙 경험을 갖고 오시나요? 그 출발점에 따라 물어볼 질문이 달라집니다.",

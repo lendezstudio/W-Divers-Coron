@@ -193,7 +193,7 @@ PAGES["wreck"] = {
         {"h": "Help us understand your experience.", "p": ["Include your certification level, approximate logged dives, date of your last dive and preferred dates. Mention any relevant wreck or deep-diving training."]},
         {"h": "Confirm the details of your day.", "p": ["Ask which sites may suit you, how many dives are planned, and what is included in the quotation. Final site choices depend on conditions and the team's assessment."]},
     ],
-    "inline_img": "wreck-mast",
+    "inline_img": "w-three-divers",
     "cta": "Plan a Wreck-Diving Trip",
     "interest": "wreck",
     "related": [("sites", None), ("article", "wreck-diving-questions-before-booking"), ("faq", None)],
@@ -227,7 +227,7 @@ PAGES["first"] = {
     "eyebrow": "DSD · Discover Scuba Diving",
     "h1": "Your first breath underwater, with an instructor beside you.",
     "intro": "Discover Scuba Diving (DSD) is a supervised first taste of scuba for people who have never dived. Tell W Divers you're new to scuba, and ask which DSD options suit your dates.",
-    "img": "stock-pair",
+    "img": "dsd-sand",
     "summary": {
         "h": "Questions worth asking",
         "for": "For people who have never tried scuba, or tried it long ago.",
@@ -239,7 +239,7 @@ PAGES["first"] = {
         {"h": "Before you book.", "p": ["Confirm the minimum age, swimming or water-comfort expectations, the medical questionnaire, where the session takes place, how long it lasts and what the price includes. Mention any health concerns to the team before your dive; an inquiry form is not a medical clearance."]},
         {"h": "No need to pretend you're confident already.", "p": ["It's fine to have questions about breathing underwater, equipment or being in the sea. Describe what you're comfortable with so the conversation starts in the right place."]},
     ],
-    "inline_img": "pool-skills",
+    "inline_img": "pool-lesson",
     "cta": "Ask About DSD",
     "interest": "first",
     "related": [("courses", None), ("faq", None), ("article", "planning-your-first-coron-dive-trip")],
@@ -287,7 +287,7 @@ PAGES["tdi"] = {
         {"h": "Advanced wreck training.", "p": ["Entering a wreck safely is a skill of its own. Advanced wreck training covers dive planning, guideline use, gas management and moving through overhead environments: the training a guided dive cannot replace."]},
         {"h": "Find the right course.", "p": ["Prerequisites, durations and equipment differ between TDI programs. Tell the team about your experience and goals, and ask which TDI courses are available, what each qualifies you to do and the total cost."]},
     ],
-    "inline_img": "tanks-boat",
+    "inline_img": "w-engine-room",
     "cta": "Ask About TDI Training",
     "interest": "tdi",
     "related": [("courses", None), ("wreck", None), ("sites", None)],
@@ -299,7 +299,7 @@ PAGES["freediving"] = {
     "eyebrow": "Free diving",
     "h1": "Coron on a single breath.",
     "intro": "Clear lakes, limestone cliffs and calm, sheltered water make Coron a favourite with freedivers. W Divers Coron runs freediving tours to spots such as Barracuda Lake and Cathedral Cave.",
-    "img": "rock-walls",
+    "img": "fd-cave",
     "summary": {
         "h": "Before you inquire",
         "for": "For freedivers and confident snorkellers.",
@@ -310,7 +310,7 @@ PAGES["freediving"] = {
         {"h": "Tours and training.", "p": ["Ask the team about freediving tours and whether a course is available for your level. Freediving should always be done with a trained buddy watching from the surface."]},
         {"h": "Plan your day.", "p": ["Tell the team about your experience, the spots you'd like to visit and how much time you have. Ask what's included, such as the boat, equipment and entrance fees."]},
     ],
-    "inline_img": "lagoon-boats",
+    "inline_img": "fd-beam",
     "cta": "Ask About Free Diving",
     "interest": "freediving",
     "related": [("special", None), ("island", None), ("gallery", None)],
@@ -650,7 +650,7 @@ PAGES["404"] = {
 
 SITES = [
     {
-        "slug": "okikawa-maru", "name": "Okikawa Maru", "type": "wreck", "img": "stock-turtle",
+        "slug": "okikawa-maru", "name": "Okikawa Maru", "type": "wreck", "img": "w-machinery",
         "card": "A large wreck with coral growth and abundant marine life around its structure.",
         "title": "Okikawa Maru Wreck Guide | Coron Dive Sites | W Divers Coron",
         "meta": "An introduction to the Okikawa Maru wreck in Coron, with the questions to ask W Divers Coron before planning a visit.",
@@ -696,7 +696,7 @@ ARTICLES = [
         "slug": "planning-your-first-coron-dive-trip",
         "title": "Planning your first diving trip to Coron",
         "meta": "A practical starting point for choosing diving options in Coron, preparing your questions and arranging the details before you arrive.",
-        "img": "stock-descent",
+        "img": "crew-briefing",
         "body": [
             ("Start with the experience you already have.", [
                 "Before choosing sites or comparing photographs, think about where you are in your diving journey. Are you considering your first scuba experience, returning after a break, or arriving with recent dives and a certification? That starting point shapes the questions worth asking.",
@@ -782,7 +782,7 @@ ARTICLES = [
 
 TRIPS = [
     {
-        "slug": "apo-reef", "name": "Apo Reef Yacht Liveaboard", "short": "Apo Reef", "img": "island-aerial",
+        "slug": "apo-reef", "name": "Apo Reef Yacht Liveaboard", "short": "Apo Reef", "img": "yacht-aerial", "inline": [[1, "yacht-cabin"]],
         "card": "A full-charter yacht trip to one of the Philippines' best-known reefs, for up to 10 divers.",
         "title": "Apo Reef Yacht Liveaboard | Special Trips | W Divers Coron",
         "meta": "Join a W Divers Coron yacht liveaboard to Apo Reef Natural Park: a small group of up to 10 divers, several days of diving, meals and cabins on board.",
@@ -796,7 +796,7 @@ TRIPS = [
         "ask": ["Next departure dates and places left", "Total price and what's included", "Park entrance fee", "Certification and experience required", "Cabin arrangements", "Boarding point"],
     },
     {
-        "slug": "dugong-watching", "name": "Dugong Watching", "short": "Dugong Watching", "img": "dive-boat", "video": "dugong",
+        "slug": "dugong-watching", "name": "Dugong Watching", "short": "Dugong Watching", "img": "dugong-diver", "inline": [[2, "calauit-zebras"]], "video": "dugong",
         "card": "An early start to look for dugongs in the calm bays of northern Busuanga.",
         "title": "Dugong Watching Day Trip | Special Trips | W Divers Coron",
         "meta": "A W Divers Coron day trip to look for dugongs in northern Busuanga, leaving early to arrive before the crowds, with an option to visit Calauit Safari Park.",
@@ -810,7 +810,7 @@ TRIPS = [
         "ask": ["Departure time and pick-up", "Snorkelling or diving, and equipment", "Entrance and environmental fees", "Calauit Safari Park option", "Total price and what's included"],
     },
     {
-        "slug": "deserted-island-overnight", "name": "Deserted Island 2 Days 1 Night", "short": "Deserted Island 2D1N", "img": "beach-walk",
+        "slug": "deserted-island-overnight", "name": "Deserted Island 2 Days 1 Night", "short": "Deserted Island 2D1N", "img": "beach-walk", "inline": [[1, "boat-lunch"]],
         "card": "Five dives and a night camping on an uninhabited island, two days away from town.",
         "title": "Deserted Island 2 Days 1 Night Tour | Special Trips | W Divers Coron",
         "meta": "A W Divers Coron 2-day, 1-night diving package: 5 dives and a night camping on an uninhabited island away from Coron town.",
@@ -824,7 +824,7 @@ TRIPS = [
         "ask": ["Which dive sites the 5 dives visit", "Tents, bedding and what to bring", "Meals and drinking water", "Facilities on the island", "Options for non-divers", "Weather and cancellation terms", "Total price"],
     },
     {
-        "slug": "kyokuzan-maru", "name": "Kyokuzan Maru Day Trip", "short": "Kyokuzan Maru", "img": "seabed-group",
+        "slug": "kyokuzan-maru", "name": "Kyokuzan Maru Day Trip", "short": "Kyokuzan Maru", "img": "w-coral-wreck", "inline": [[0, "w-valves"]],
         "card": "A full day out to one of the region's more remote Japanese wrecks.",
         "title": "Kyokuzan Maru Wreck Day Trip | Special Trips | W Divers Coron",
         "meta": "A full-day W Divers Coron trip to dive the Kyokuzan Maru, a Japanese cargo wreck away from the main cluster of Coron wrecks.",

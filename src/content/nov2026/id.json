@@ -1,40 +1,657 @@
 {
-"UI": {"sub_first": "DSD (Uji coba selam)", "sub_courses": "Kursus selam", "sub_tdi": "Kursus TDI Advanced Diver", "sub_free": "Freediving", "nav_pros": "Pro's", "nav_special": "Trip spesial", "sub_special_all": "Semua trip spesial", "read_trip": "Lihat trip", "slides_label": "Sorotan W Divers Coron", "slide_n": "Slide {n} dari {total}", "slide_show": "Tampilkan slide {n}", "slide_pause": "Jeda tayangan slide", "slide_play": "Putar tayangan slide"},
-"ROUTE_NAMES": {"first": "DSD (Uji coba selam)", "courses": "Kursus selam", "tdi": "Kursus TDI Advanced Diver", "freediving": "Freediving", "pros": "Pro's", "special": "Trip spesial"},
-"PAGES": {
-"first": {"title": "Uji coba selam (DSD) di Coron | W Divers Coron", "meta": "Coba menyelam pertama kali dengan Discover Scuba Diving (DSD) di W Divers Coron: pengenalan dengan pendampingan instruktur, tanpa sertifikasi.", "eyebrow": "DSD · Discover Scuba Diving", "h1": "Napas pertamamu di bawah air, dengan instruktur di sampingmu.", "intro": "Discover Scuba Diving (DSD) adalah pengalaman pertama menyelam dengan pendampingan bagi yang belum pernah menyelam. Beri tahu W Divers bahwa kamu pemula, lalu tanyakan opsi DSD yang cocok dengan tanggalmu.",
- "summary": {"h": "Pertanyaan yang perlu diajukan", "for": "Untuk yang belum pernah menyelam atau sudah lama sekali.", "list": ["Usia minimum dan siapa yang bisa ikut", "Harapan soal berenang dan kenyamanan di air", "Kuesioner medis", "Lokasi sesi", "Durasi dan total harga"]},
- "sections": [{"h": "Apa saja dalam DSD.", "p": ["Sesi Discover Scuba Diving dimulai dengan briefing singkat tentang peralatan dan cara bernapas di bawah air. Lalu kamu berlatih beberapa keterampilan dasar di air tenang dan dangkal sebelum menyelam dipandu dengan instruktur di dekatmu. Tidak perlu sertifikasi atau pengalaman."]}, {"h": "Pengenalan, bukan sertifikasi.", "p": ["DSD memungkinkanmu mencoba menyelam tanpa langsung ikut kursus. Kalau suka, tanyakan bagaimana melanjutkan ke kursus selam. Keduanya langkah berbeda, jadi tanyakan mana yang cocok untuk perjalananmu."]}, {"h": "Sebelum memesan.", "p": ["Pastikan usia minimum, harapan soal berenang, kuesioner medis, lokasi, durasi, dan apa saja yang termasuk dalam harga. Sampaikan masalah kesehatan apa pun kepada tim sebelum menyelam; formulir pertanyaan bukan izin medis."]}, {"h": "Tidak perlu pura-pura sudah percaya diri.", "p": ["Wajar punya pertanyaan soal bernapas di bawah air, peralatan, atau berada di laut. Ceritakan apa yang membuatmu nyaman agar percakapan dimulai dari titik yang tepat."]}],
- "cta": "Tanya soal DSD"},
-"courses": {"title": "Kursus selam di Coron | W Divers Coron", "meta": "Belajar menyelam atau terus berkembang di Coron: kursus selam dari pemula hingga tingkat profesional bersama instruktur PADI dan SSI W Divers Coron.", "eyebrow": "Kursus selam", "h1": "Belajar menyelam, lalu terus berkembang.", "intro": "Dari sertifikasi pertama hingga tingkat profesional, instruktur W Divers Coron mengajar kursus PADI dan SSI. Ceritakan pengalamanmu, kursus yang diminati, dan berapa lama kamu di Coron.",
- "summary": {"h": "Kursus yang bisa ditanyakan", "for": "Diajar oleh instruktur PADI dan SSI kami:", "list": ["Open Water Diver", "Advanced Open Water Diver", "Rescue Diver dan Emergency First Response", "Divemaster", "Spesialisasi: Deep, Enriched Air (Nitrox), Sidemount, Wreck, Peak Performance Buoyancy", "AWARE Coral Reef Conservation"]},
- "sections": [{"h": "Mulai menyelam.", "p": ["Jika kamu mempertimbangkan sertifikasi pertama, tanyakan tentang kursus, prasyarat, materi belajar, dan jumlah hari yang dibutuhkan sebelum merencanakan sisa perjalanan."]}, {"h": "Terus berkembang.", "p": ["Sudah bersertifikat? Kursus Advanced dan Rescue membangun kepercayaan diri dan keterampilan, dan spesialisasi membuatmu fokus pada minatmu, dari penyelaman dalam dan nitrox hingga kapal karam dan daya apung."]}, {"h": "Tertarik pelatihan kapal karam?", "p": ["Spesialisasi wreck mengajarkan cara menyelam di sekitar kapal karam dengan aman; itu bukan izin umum untuk masuk ke dalamnya. Untuk pelatihan wreck lanjutan dan teknis, lihat Kursus TDI Advanced Diver kami."]}, {"h": "Pahami kursus secara utuh.", "p": ["Sebelum mengonfirmasi, tanyakan agensi, nama kursus, syarat, perkiraan durasi, komponen pelatihan, ketersediaan instruktur, dan total biaya termasuk materi atau biaya sertifikasi."]}],
- "catalog_h": "Kursus saat ini", "cta": "Tanya soal kursus selam"},
-"tdi": {"title": "Kursus TDI Advanced Diver di Coron | W Divers Coron", "meta": "Pelatihan selam lanjutan dan teknis di Coron bersama instruktur TDI W Divers Coron, termasuk pelatihan wreck lanjutan untuk kapal karam Coron.", "eyebrow": "Pelatihan lanjutan TDI", "h1": "Berlatih untuk kapal karam Coron melampaui batas rekreasi.", "intro": "Kapal karam Coron menarik penyelam yang ingin melangkah lebih jauh. W Divers Coron memiliki instruktur TDI, termasuk instruktur TDI Technical dan Advanced Wreck Diver, bagi penyelam yang siap berlatih melampaui penyelaman rekreasi.",
- "summary": {"h": "Sebelum bertanya", "for": "Untuk penyelam bersertifikat yang berpengalaman.", "list": ["Sertifikasi saat ini dan jumlah penyelaman tercatat", "Pengalaman nitrox atau penyelaman dalam", "Kursus TDI yang diminati", "Berapa hari kamu di Coron", "Apakah kamu punya peralatan teknis atau sidemount sendiri"]},
- "sections": [{"h": "Apa itu pelatihan TDI.", "p": ["TDI (Technical Diving International) mengajarkan penyelaman lanjutan dan teknis: penyelaman yang lebih lama, lebih dalam, dan lebih kompleks yang butuh pelatihan, peralatan, dan perencanaan tambahan. Kapal karam Coron yang terlindung membuatnya populer sebagai tempat belajar."]}, {"h": "Pelatihan wreck lanjutan.", "p": ["Masuk ke kapal karam dengan aman adalah keterampilan tersendiri. Pelatihan wreck lanjutan mencakup perencanaan, penggunaan tali pemandu, manajemen gas, dan bergerak di lingkungan tertutup: pelatihan yang tidak bisa digantikan penyelaman berpemandu."]}, {"h": "Temukan kursus yang tepat.", "p": ["Prasyarat, durasi, dan peralatan berbeda di tiap program TDI. Ceritakan pengalaman dan tujuanmu kepada tim, lalu tanyakan kursus TDI apa yang tersedia, kualifikasinya, dan total biayanya."]}],
- "cta": "Tanya soal pelatihan TDI"},
-"freediving": {"title": "Freediving di Coron | W Divers Coron", "meta": "Freediving di Coron bersama W Divers Coron: Barracuda Lake, Cathedral Cave, dan spot jernih serta terlindung lainnya dalam satu tarikan napas.", "eyebrow": "Freediving", "h1": "Coron dalam satu tarikan napas.", "intro": "Danau jernih, tebing kapur, dan air tenang yang terlindung membuat Coron jadi favorit para freediver. W Divers Coron mengadakan tur freediving ke spot seperti Barracuda Lake dan Cathedral Cave.",
- "summary": {"h": "Sebelum bertanya", "for": "Untuk freediver dan snorkeler yang percaya diri.", "list": ["Pengalaman atau sertifikasi freediving", "Spot yang ingin dikunjungi", "Tanggal pilihan", "Apakah butuh peralatan"]},
- "sections": [{"h": "Mengapa freediver menyukai Coron.", "p": ["Barracuda Lake di antara dinding kapur terkenal dengan airnya yang jernih dan lapisan suhu yang berubah. Cathedral Cave dan spot terlindung lainnya menawarkan air tenang dan cahaya dramatis. Kondisi dan akses bisa berubah, jadi tanyakan apa yang memungkinkan pada tanggalmu."]}, {"h": "Tur dan pelatihan.", "p": ["Tanyakan kepada tim tentang tur freediving dan apakah ada kursus untuk levelmu. Freediving harus selalu dilakukan bersama buddy terlatih yang mengawasi dari permukaan."]}, {"h": "Rencanakan harimu.", "p": ["Ceritakan pengalamanmu, spot yang ingin dikunjungi, dan waktu yang kamu punya. Tanyakan apa saja yang termasuk, seperti perahu, peralatan, dan tiket masuk."]}],
- "cta": "Tanya soal freediving"},
-"special": {"title": "Trip spesial dari Coron | W Divers Coron", "meta": "Trip spesial bersama W Divers Coron: liveaboard yacht ke Apo Reef, melihat dugong, bermalam di pulau tak berpenghuni, dan trip sehari ke kapal karam Kyokuzan Maru.", "eyebrow": "Trip spesial", "h1": "Hari-hari besar dari Coron.", "intro": "Beberapa pengalaman butuh berangkat pagi sekali, perjalanan perahu lebih lama, atau semalam di luar kota. Tim W Divers mengadakan trip spesial ini pada tanggal tertentu; tanyakan apa yang direncanakan selama kamu di sana.", "note": "Tanggal, fasilitas, dan harga berbeda tiap keberangkatan. Tanyakan kepada tim trip berikutnya."},
-"trip": {"eyebrow": "Trip spesial", "glance_h": "Sekilas", "ask_h": "Tanyakan sebelum memesan", "others_h": "Trip spesial lainnya", "cta": "Tanya soal {name}", "cta_note": "Pertanyaan tidak memesankan tempat."},
-"pros": {"title": "Pro's: Kenali tim W Divers | W Divers Coron", "meta": "Kenali Pro's tim W Divers di Coron, Palawan: instruktur kepala Dean Kang, instruktur Inhan Kang, dan divemaster Jex Lenver Tabat.", "eyebrow": "Pro's tim W Divers", "h1": "Kenali orang-orang yang akan menyelam bersamamu.", "intro": "Kapal karam, dugong, mata air panas, dan gua yang megah: undangan untuk menyelami perairan Coron. Kenali para instruktur tim W Divers.", "team_h": "Tim W Divers",
- "team": [{"role": "Instruktur kepala", "intro": "Dean memimpin W Divers Coron dan melatih penyelam maupun instruktur, dengan kualifikasi instruktur di lima agensi.", "creds_h": "Kualifikasi instruktur", "spec_h": "Instruktur spesialisasi"}, {"role": "Instruktur muda", "tag": "Mengajar dalam bahasa Inggris, Tagalog, dan Korea setingkat penutur asli", "intro": "Inhan menjadi Instruktur PADI di usia 18 dan mengajar kursus rekreasi, teknis, dan wreck.", "creds_h": "Kualifikasi instruktur"}, {"role": "Divemaster", "intro": "Divemaster Filipina di tim W Divers yang memandu penyelam di perahu dan di bawah air.", "creds_h": "Sertifikasi"}],
- "screen_h": "Di layar, di Coron.", "screen_t": "Tim W Divers telah mendukung produksi film dan TV Korea yang syuting di Coron.", "screen": [{"cap": "Mendukung SBS Law of the Jungle di Coron, termasuk episode pencarian dugong dan kapal karam misterius."}, {"cap": "Bersama aktor Korea saat mendukung syuting film Korea The Golden Holiday (국제수사) di Coron."}], "cta_h": "Menyelam bersama tim W Divers.", "cta_t": "Kirim tanggal, jumlah orang, dan pengalaman menyelammu, lalu tim akan membantu merencanakan waktumu di Coron."},
-"about": {"title": "Tentang W Divers Coron | Menyelam di Coron, Palawan", "meta": "W Divers Coron adalah pusat selam Korea di Coron, Palawan, sejak Maret 2015: kapal karam, dugong, mata air panas, dan gua.", "h1": "Pusat selam Korea di Coron, sejak 2015.", "intro": "Kapal karam, dugong, mata air panas, dan gua. W Divers Coron telah memandu penyelam di perairan Coron, Palawan, sejak Maret 2015, dari napas pertama hingga penetrasi kapal karam.", "story_k": "Kisah kami", "story_h": "Dari galangan kapal di Korea ke kapal karam Coron.", "story_t": ["W Divers Coron adalah pusat selam Korea di Coron, salah satu kawasan selam kapal karam paling terkenal di dunia. Pusat ini didirikan oleh instruktur Dean Kang (강덕환), yang bekerja 20 tahun di Hyundai Samho Heavy Industries di Korea dan juga menjadi ketua klub selam perusahaan.", "Setelah meninggalkan galangan kapal, ia memilih Coron, Palawan, untuk babak keduanya dan membuka W Divers di jalan utama kota pada 1 Maret 2015. Memulai usaha di luar negeri tanpa lebih dulu bertahun-tahun di komunitas Korea setempat membuat orang di sekitarnya khawatir; ia berterima kasih kepada orang-orang baik yang membantunya menetap."], "facts_h": "Yang siap saat kamu tiba", "facts": [["Toko", "Toko selam ber-AC dengan muka kaca di jalan utama Coron."], ["Perahu", "Dua perahu bangka selam milik sendiri, plus multicab ber-AC yang bersih untuk antar-jemput."], ["Peralatan", "Peralatan sewa yang dibeli baru. Tersedia komputer selam, scooter, nitrox, dan oksigen."], ["Menginap", "Lima kamar ber-AC milik sendiri, dan bantuan memesan kamar berkipas, resor Korea, atau resor bergaya hotel dengan kolam renang."], ["Jam buka", "Buka setiap hari, pukul 07.00 sampai 21.00."], ["Bahasa", "Pendampingan dalam bahasa Inggris dan Korea."]], "wreck_h": "Menyelam kapal karam, dengan stempel sebagai kenangan.", "wreck_t": "Kapal karam Coron adalah tempat latihan bagi penyelam teknis yang belajar penetrasi, dan banyak juga yang memungkinkan penyelam rekreasi melihat ke dalam dengan aman. Pemandu kami berpengalaman lama di kapal karam, dan tiap kapal karam punya stempel sendiri untuk logbook-mu setelah kamu menyelaminya. Selain kapal karam, ada Barracuda Lake dan Cathedral Cave, tempat air hangat naik dari mata air panas, serta terumbu untuk penyelaman santai.", "screen_k": "Di layar", "screen_h": "Pemandu dugong dan kapal karam untuk SBS Law of the Jungle.", "screen_t": "Pada 21–23 Januari 2020, W Divers mendukung syuting Law of the Jungle dari SBS di Coron. SSI Instructor Trainer Dean Kang menjadi pemandu dugong dan pemandu penetrasi kapal karam acara tersebut.", "screen_link": "Kenali Pro's kami", "source": "Sumber: profil W Divers Coron di SSI dan blog Naver W Divers."}
-},
-"HOME": {"routes": [{"k": "Penyelam bersertifikat", "t": "Datang untuk kapal karam, terumbu, atau keduanya? Lihat pilihannya dan sebutkan sertifikasi serta pengalaman menyelam terakhirmu saat bertanya.", "link": "Lihat trip selam"}, {"k": "Uji coba selam (DSD)", "t": "Belum pernah menyelam? DSD adalah pengalaman pertama dengan instruktur di sampingmu. Tanyakan opsi yang cocok dengan tanggalmu.", "link": "Tentang DSD"}, {"k": "Pelatihan", "t": "Kursus selam dari sertifikasi pertama hingga tingkat profesional, plus pelatihan TDI untuk penyelam wreck lanjutan dan teknis.", "link": "Lihat kursus selam"}, {"k": "Selain menyelam", "t": "Ingin waktu di atas air juga? Tanyakan soal island hopping selama di Coron.", "link": "Lihat island hopping"}],
- "slides": [["Dukungan syuting film “The Golden Holiday” (국제수사)\nLokasi syuting: Teru Kaze Maru", "Kenali Pro's kami"], ["Dukungan syuting: SBS Law of the Jungle di Coron", "Kenali Pro's kami"], ["Laguna, tebing kapur, dan perahu kami", "Trip spesial"], ["Menyelam kapal karam dan terumbu di sekitar Coron", "Menyelam"], ["Perahu selam W Divers Coron", "Tentang kami"]],
- "special_h": "Trip spesial dari Coron.", "special_t": "Hari-hari yang lebih panjang dan petualangan bermalam, diatur tim W Divers pada tanggal tertentu.", "special_all": "Lihat semua trip spesial"},
-"CONTACT_INTEREST": [["wreck", "Menyelam kapal karam"], ["reef", "Menyelam terumbu"], ["first", "Uji coba selam (DSD)"], ["courses", "Kursus selam"], ["tdi", "Pelatihan lanjutan TDI"], ["freediving", "Freediving"], ["special", "Trip spesial"], ["island", "Island hopping"], ["unsure", "Belum yakin"]],
-"SITEMAP_GROUPS": ["Menyelam", "Titik selam", "Rencanakan perjalanan", "Jurnal", "Tentang dan kontak", "Trip spesial"],
-"TRIPS": [
-{"name": "Liveaboard yacht Apo Reef", "short": "Apo Reef", "card": "Yacht carter penuh ke salah satu terumbu paling terkenal di Filipina, untuk maksimal 10 penyelam.", "title": "Liveaboard yacht Apo Reef | Trip spesial | W Divers Coron", "meta": "Ikuti liveaboard yacht W Divers Coron ke Apo Reef Natural Park: grup kecil maksimal 10 penyelam, beberapa hari menyelam, makan dan kabin di atas kapal.", "intro": "Apo Reef Natural Park adalah salah satu tujuan selam paling terkenal di Filipina. W Divers Coron mencarter yacht untuk trip khusus penyelam ke sana, dengan grup kecil maksimal 10 orang.", "facts": [["Format", "Liveaboard yacht, carter penuh"], ["Ukuran grup", "Maksimal 10 penyelam"], ["Durasi umum", "3 malam, 4 hari"], ["Penyelaman", "Sekitar 10, plus penyelaman malam opsional"], ["Naik kapal", "Coron, atau Manila (Batangas) pada beberapa keberangkatan"]], "sections": [{"h": "Terumbu yang layak dikunjungi.", "p": ["Apo Reef berada di Selat Mindoro, di barat Mindoro. Ini taman alam yang dilindungi dengan terumbu karang dan dinding yang luas, dicapai setelah beberapa jam di laut, karena itu tripnya berupa liveaboard."]}, {"h": "Kehidupan di kapal.", "p": ["Pada keberangkatan terbaru, yacht menampung hingga 10 penyelam di lima kabin ganda ber-AC. Makanan dan camilan tersedia sepanjang trip, penyelaman dan pemandu sudah termasuk, dan antar-jemput hotel diatur sebelum dan sesudah trip."]}, {"h": "Yang perlu dicek.", "p": ["Tiket masuk Apo Reef Natural Park dibayar terpisah (USD 100 pada trip terbaru). Tanggal, jumlah penyelaman, dan harga tergantung tiap keberangkatan, jadi minta rinciannya secara tertulis kepada tim."]}], "ask": ["Tanggal keberangkatan berikutnya dan sisa tempat", "Total harga dan yang termasuk", "Tiket masuk taman", "Sertifikasi dan pengalaman yang diperlukan", "Pembagian kabin", "Lokasi naik kapal"]},
-{"name": "Melihat dugong", "short": "Dugong", "card": "Berangkat pagi sekali untuk mencari dugong di teluk tenang Busuanga utara.", "title": "Trip sehari melihat dugong | Trip spesial | W Divers Coron", "meta": "Trip sehari W Divers Coron mencari dugong di Busuanga utara, berangkat pagi agar tiba sebelum keramaian, dengan opsi mengunjungi Calauit Safari Park.", "intro": "Dugong, mamalia laut yang lembut dan memakan lamun, hidup di perairan Busuanga utara. Dalam trip sehari ini perahu W Divers berangkat pagi agar tiba sebelum perahu lain.", "facts": [["Format", "Trip sehari dengan perahu"], ["Berangkat", "Pagi buta"], ["Lokasi", "Busuanga utara (area Aban-Aban)"], ["Di air", "Tanyakan apakah ada snorkeling atau menyelam"], ["Tambahan", "Kunjungan ke Calauit Safari Park"]], "sections": [{"h": "Mengapa berangkat pagi.", "p": ["Area dugong yang populer makin ramai seiring siang. Berangkat sebelum matahari terbit memberi peluang terbaik untuk pertemuan yang tenang sebelum perahu lain datang."]}, {"h": "Hormati satwanya.", "p": ["Dugong adalah satwa liar yang dilindungi. Peserta mengikuti arahan pemandu, menjaga jarak, dan tidak pernah menyentuh, mengejar, atau memberi makan. Penampakan tidak pernah dijamin."]}, {"h": "Jadikan sehari penuh.", "p": ["Trip ini bisa digabung dengan kunjungan ke Calauit Safari Park di Busuanga. Tanyakan kepada tim rencana harinya dan apa saja yang termasuk."]}], "ask": ["Jam berangkat dan penjemputan", "Snorkeling atau menyelam, dan peralatan", "Tiket masuk dan biaya lingkungan", "Opsi Calauit Safari Park", "Total harga dan yang termasuk"]},
-{"name": "Pulau tak berpenghuni, 2 hari 1 malam", "short": "Pulau 2H1M", "card": "Lima penyelaman dan semalam berkemah di pulau tak berpenghuni, dua hari jauh dari kota.", "title": "Pulau tak berpenghuni 2 hari 1 malam | Trip spesial | W Divers Coron", "meta": "Paket selam W Divers Coron 2 hari 1 malam: 5 penyelaman dan semalam berkemah di pulau tak berpenghuni jauh dari kota Coron.", "intro": "Tukar kota Coron dengan pulau sepi untuk semalam. Paket selam 2 hari 1 malam ini mencakup 5 penyelaman dan berkemah semalam di pulau tak berpenghuni, diatur oleh tim W Divers.", "facts": [["Format", "Paket selam dengan berkemah di pulau"], ["Durasi", "2 hari, 1 malam"], ["Penyelaman", "5 penyelaman"], ["Menginap", "Berkemah di pulau tak berpenghuni"], ["Non-penyelam", "Tanyakan soal snorkeling dan waktu di pantai"]], "sections": [{"h": "Lima penyelaman dan semalam di pulau.", "p": ["Paket ini mencakup lima penyelaman selama dua hari. Di sela penyelaman kamu menuju pulau sepi tak berpenghuni, mendirikan kemah untuk malam, dan bangun di pantai sebelum hari berikutnya di laut."]}, {"h": "Ketahui pengaturannya.", "p": ["Trip bermalam butuh rencana yang jelas. Tanyakan soal tempat tidur, makanan, air minum, toilet dan tempat berteduh, apa yang perlu dibawa, dan apa yang terjadi jika cuaca berubah."]}, {"h": "Cocok untuk siapa.", "p": ["Rombongan teman, keluarga, dan penyelam yang bepergian dengan non-penyelam. Sebutkan minat semua orang saat bertanya agar tim bisa menyusun dua harinya."]}], "ask": ["Titik selam untuk 5 penyelaman", "Tenda, perlengkapan tidur, dan yang perlu dibawa", "Makanan dan air minum", "Fasilitas di pulau", "Pilihan untuk non-penyelam", "Ketentuan cuaca dan pembatalan", "Total harga"]},
-{"name": "Trip sehari Kyokuzan Maru", "short": "Kyokuzan Maru", "card": "Sehari penuh menuju salah satu kapal karam Jepang yang lebih terpencil di kawasan ini.", "title": "Trip sehari kapal karam Kyokuzan Maru | Trip spesial | W Divers Coron", "meta": "Trip sehari penuh W Divers Coron untuk menyelami Kyokuzan Maru, kapal kargo Jepang yang jauh dari kelompok utama kapal karam Coron.", "intro": "Kyokuzan Maru berada jauh dari kelompok utama kapal karam Coron, jadi mencapainya butuh sehari penuh. Bagi pencinta kapal karam, ini kesempatan menyelami situs yang lebih jarang dikunjungi.", "facts": [["Format", "Trip kapal karam sehari penuh"], ["Untuk", "Penyelam bersertifikat"], ["Situs", "Kyokuzan Maru, kapal kargo Jepang"], ["Juga", "Tanyakan situs lain yang bisa diselami di perjalanan"]], "sections": [{"h": "Kapal karam di luar rute biasa.", "p": ["Seperti kapal karam lain di kawasan ini, Kyokuzan Maru adalah kapal kargo Jepang yang tenggelam pada Perang Dunia II. Jaraknya dari kota Coron membuat pengunjungnya lebih sedikit, dan perjalanan perahu yang lebih lama adalah bagian dari hari itu."]}, {"h": "Cocok untukmu?", "p": ["Kedalaman yang direncanakan dan kondisi menentukan siapa yang bisa ikut. Sebutkan tingkat sertifikasi, jumlah penyelaman tercatat, dan tanggal penyelaman terakhirmu, lalu tanyakan pengalaman yang dibutuhkan."]}, {"h": "Rencanakan harinya.", "p": ["Tanyakan jam berangkat, jumlah penyelaman, peralatan, makanan dan biaya, serta apa yang terjadi jika kondisi berubah pada hari itu."]}], "ask": ["Sertifikasi dan pengalaman yang diperlukan", "Kedalaman dan jumlah penyelaman", "Jam berangkat dan lama perjalanan", "Peralatan, makanan, dan biaya", "Total harga"]}
-],
-"ALT": {"lagoon-boats": "Pemandangan udara perahu biru W Divers di laguna di antara tebing kapur.", "dive-boat": "Perahu selam bercadik biru W Divers di laut, dilihat dari atas.", "jungle-crew": "Empat penyelam tersenyum di dek perahu saat syuting Law of the Jungle di Coron.", "film-crew": "Foto grup saat W Divers mendukung syuting film The Golden Holiday di Coron.", "film-crew-2": "Tamu dan tim W Divers berpose bersama di luar ruangan di Coron.", "film-crew-3": "Dua pria tersenyum bersama di sebuah restoran di Coron.", "dean": "Dean Kang, instruktur kepala W Divers Coron, mengenakan baju selam Scubapro di perahu di Coron.", "inhan": "Potret Inhan Kang, instruktur di W Divers Coron.", "jex": "Potret Jex Lenver Tabat (GIGs), divemaster di W Divers Coron.", "ssi-jungle": "Poster dukungan syuting W Divers untuk SBS Law of the Jungle di Coron, 21–23 Januari 2020, dengan foto dan tanda tangan."}
+ "UI": {
+  "sub_first": "DSD (Uji coba selam)",
+  "sub_courses": "Kursus selam",
+  "sub_tdi": "Kursus TDI Advanced Diver",
+  "sub_free": "Freediving",
+  "nav_pros": "Pro's",
+  "nav_special": "Trip spesial",
+  "sub_special_all": "Semua trip spesial",
+  "read_trip": "Lihat trip",
+  "slides_label": "Sorotan W Divers Coron",
+  "slide_n": "Slide {n} dari {total}",
+  "slide_show": "Tampilkan slide {n}",
+  "slide_pause": "Jeda tayangan slide",
+  "slide_play": "Putar tayangan slide"
+ },
+ "ROUTE_NAMES": {
+  "first": "DSD (Uji coba selam)",
+  "courses": "Kursus selam",
+  "tdi": "Kursus TDI Advanced Diver",
+  "freediving": "Freediving",
+  "pros": "Pro's",
+  "special": "Trip spesial"
+ },
+ "PAGES": {
+  "first": {
+   "title": "Uji coba selam (DSD) di Coron | W Divers Coron",
+   "meta": "Coba menyelam pertama kali dengan Discover Scuba Diving (DSD) di W Divers Coron: pengenalan dengan pendampingan instruktur, tanpa sertifikasi.",
+   "eyebrow": "DSD · Discover Scuba Diving",
+   "h1": "Napas pertamamu di bawah air, dengan instruktur di sampingmu.",
+   "intro": "Discover Scuba Diving (DSD) adalah pengalaman pertama menyelam dengan pendampingan bagi yang belum pernah menyelam. Beri tahu W Divers bahwa kamu pemula, lalu tanyakan opsi DSD yang cocok dengan tanggalmu.",
+   "summary": {
+    "h": "Pertanyaan yang perlu diajukan",
+    "for": "Untuk yang belum pernah menyelam atau sudah lama sekali.",
+    "list": [
+     "Usia minimum dan siapa yang bisa ikut",
+     "Harapan soal berenang dan kenyamanan di air",
+     "Kuesioner medis",
+     "Lokasi sesi",
+     "Durasi dan total harga"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Apa saja dalam DSD.",
+     "p": [
+      "Sesi Discover Scuba Diving dimulai dengan briefing singkat tentang peralatan dan cara bernapas di bawah air. Lalu kamu berlatih beberapa keterampilan dasar di air tenang dan dangkal sebelum menyelam dipandu dengan instruktur di dekatmu. Tidak perlu sertifikasi atau pengalaman."
+     ]
+    },
+    {
+     "h": "Pengenalan, bukan sertifikasi.",
+     "p": [
+      "DSD memungkinkanmu mencoba menyelam tanpa langsung ikut kursus. Kalau suka, tanyakan bagaimana melanjutkan ke kursus selam. Keduanya langkah berbeda, jadi tanyakan mana yang cocok untuk perjalananmu."
+     ]
+    },
+    {
+     "h": "Sebelum memesan.",
+     "p": [
+      "Pastikan usia minimum, harapan soal berenang, kuesioner medis, lokasi, durasi, dan apa saja yang termasuk dalam harga. Sampaikan masalah kesehatan apa pun kepada tim sebelum menyelam; formulir pertanyaan bukan izin medis."
+     ]
+    },
+    {
+     "h": "Tidak perlu pura-pura sudah percaya diri.",
+     "p": [
+      "Wajar punya pertanyaan soal bernapas di bawah air, peralatan, atau berada di laut. Ceritakan apa yang membuatmu nyaman agar percakapan dimulai dari titik yang tepat."
+     ]
+    }
+   ],
+   "cta": "Tanya soal DSD"
+  },
+  "courses": {
+   "title": "Kursus selam di Coron | W Divers Coron",
+   "meta": "Belajar menyelam atau terus berkembang di Coron: kursus selam dari pemula hingga tingkat profesional bersama instruktur PADI dan SSI W Divers Coron.",
+   "eyebrow": "Kursus selam",
+   "h1": "Belajar menyelam, lalu terus berkembang.",
+   "intro": "Dari sertifikasi pertama hingga tingkat profesional, instruktur W Divers Coron mengajar kursus PADI dan SSI. Ceritakan pengalamanmu, kursus yang diminati, dan berapa lama kamu di Coron.",
+   "summary": {
+    "h": "Kursus yang bisa ditanyakan",
+    "for": "Diajar oleh instruktur PADI dan SSI kami:",
+    "list": [
+     "Open Water Diver",
+     "Advanced Open Water Diver",
+     "Rescue Diver dan Emergency First Response",
+     "Divemaster",
+     "Spesialisasi: Deep, Enriched Air (Nitrox), Sidemount, Wreck, Peak Performance Buoyancy",
+     "AWARE Coral Reef Conservation"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Mulai menyelam.",
+     "p": [
+      "Jika kamu mempertimbangkan sertifikasi pertama, tanyakan tentang kursus, prasyarat, materi belajar, dan jumlah hari yang dibutuhkan sebelum merencanakan sisa perjalanan."
+     ]
+    },
+    {
+     "h": "Terus berkembang.",
+     "p": [
+      "Sudah bersertifikat? Kursus Advanced dan Rescue membangun kepercayaan diri dan keterampilan, dan spesialisasi membuatmu fokus pada minatmu, dari penyelaman dalam dan nitrox hingga kapal karam dan daya apung."
+     ]
+    },
+    {
+     "h": "Tertarik pelatihan kapal karam?",
+     "p": [
+      "Spesialisasi wreck mengajarkan cara menyelam di sekitar kapal karam dengan aman; itu bukan izin umum untuk masuk ke dalamnya. Untuk pelatihan wreck lanjutan dan teknis, lihat Kursus TDI Advanced Diver kami."
+     ]
+    },
+    {
+     "h": "Pahami kursus secara utuh.",
+     "p": [
+      "Sebelum mengonfirmasi, tanyakan agensi, nama kursus, syarat, perkiraan durasi, komponen pelatihan, ketersediaan instruktur, dan total biaya termasuk materi atau biaya sertifikasi."
+     ]
+    }
+   ],
+   "catalog_h": "Kursus saat ini",
+   "cta": "Tanya soal kursus selam"
+  },
+  "tdi": {
+   "title": "Kursus TDI Advanced Diver di Coron | W Divers Coron",
+   "meta": "Pelatihan selam lanjutan dan teknis di Coron bersama instruktur TDI W Divers Coron, termasuk pelatihan wreck lanjutan untuk kapal karam Coron.",
+   "eyebrow": "Pelatihan lanjutan TDI",
+   "h1": "Berlatih untuk kapal karam Coron melampaui batas rekreasi.",
+   "intro": "Kapal karam Coron menarik penyelam yang ingin melangkah lebih jauh. W Divers Coron memiliki instruktur TDI, termasuk instruktur TDI Technical dan Advanced Wreck Diver, bagi penyelam yang siap berlatih melampaui penyelaman rekreasi.",
+   "summary": {
+    "h": "Sebelum bertanya",
+    "for": "Untuk penyelam bersertifikat yang berpengalaman.",
+    "list": [
+     "Sertifikasi saat ini dan jumlah penyelaman tercatat",
+     "Pengalaman nitrox atau penyelaman dalam",
+     "Kursus TDI yang diminati",
+     "Berapa hari kamu di Coron",
+     "Apakah kamu punya peralatan teknis atau sidemount sendiri"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Apa itu pelatihan TDI.",
+     "p": [
+      "TDI (Technical Diving International) mengajarkan penyelaman lanjutan dan teknis: penyelaman yang lebih lama, lebih dalam, dan lebih kompleks yang butuh pelatihan, peralatan, dan perencanaan tambahan. Kapal karam Coron yang terlindung membuatnya populer sebagai tempat belajar."
+     ]
+    },
+    {
+     "h": "Pelatihan wreck lanjutan.",
+     "p": [
+      "Masuk ke kapal karam dengan aman adalah keterampilan tersendiri. Pelatihan wreck lanjutan mencakup perencanaan, penggunaan tali pemandu, manajemen gas, dan bergerak di lingkungan tertutup: pelatihan yang tidak bisa digantikan penyelaman berpemandu."
+     ]
+    },
+    {
+     "h": "Temukan kursus yang tepat.",
+     "p": [
+      "Prasyarat, durasi, dan peralatan berbeda di tiap program TDI. Ceritakan pengalaman dan tujuanmu kepada tim, lalu tanyakan kursus TDI apa yang tersedia, kualifikasinya, dan total biayanya."
+     ]
+    }
+   ],
+   "cta": "Tanya soal pelatihan TDI"
+  },
+  "freediving": {
+   "title": "Freediving di Coron | W Divers Coron",
+   "meta": "Freediving di Coron bersama W Divers Coron: Barracuda Lake, Cathedral Cave, dan spot jernih serta terlindung lainnya dalam satu tarikan napas.",
+   "eyebrow": "Freediving",
+   "h1": "Coron dalam satu tarikan napas.",
+   "intro": "Danau jernih, tebing kapur, dan air tenang yang terlindung membuat Coron jadi favorit para freediver. W Divers Coron mengadakan tur freediving ke spot seperti Barracuda Lake dan Cathedral Cave.",
+   "summary": {
+    "h": "Sebelum bertanya",
+    "for": "Untuk freediver dan snorkeler yang percaya diri.",
+    "list": [
+     "Pengalaman atau sertifikasi freediving",
+     "Spot yang ingin dikunjungi",
+     "Tanggal pilihan",
+     "Apakah butuh peralatan"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Mengapa freediver menyukai Coron.",
+     "p": [
+      "Barracuda Lake di antara dinding kapur terkenal dengan airnya yang jernih dan lapisan suhu yang berubah. Cathedral Cave dan spot terlindung lainnya menawarkan air tenang dan cahaya dramatis. Kondisi dan akses bisa berubah, jadi tanyakan apa yang memungkinkan pada tanggalmu."
+     ]
+    },
+    {
+     "h": "Tur dan pelatihan.",
+     "p": [
+      "Tanyakan kepada tim tentang tur freediving dan apakah ada kursus untuk levelmu. Freediving harus selalu dilakukan bersama buddy terlatih yang mengawasi dari permukaan."
+     ]
+    },
+    {
+     "h": "Rencanakan harimu.",
+     "p": [
+      "Ceritakan pengalamanmu, spot yang ingin dikunjungi, dan waktu yang kamu punya. Tanyakan apa saja yang termasuk, seperti perahu, peralatan, dan tiket masuk."
+     ]
+    }
+   ],
+   "cta": "Tanya soal freediving"
+  },
+  "special": {
+   "title": "Trip spesial dari Coron | W Divers Coron",
+   "meta": "Trip spesial bersama W Divers Coron: liveaboard yacht ke Apo Reef, melihat dugong, bermalam di pulau tak berpenghuni, dan trip sehari ke kapal karam Kyokuzan Maru.",
+   "eyebrow": "Trip spesial",
+   "h1": "Hari-hari besar dari Coron.",
+   "intro": "Beberapa pengalaman butuh berangkat pagi sekali, perjalanan perahu lebih lama, atau semalam di luar kota. Tim W Divers mengadakan trip spesial ini pada tanggal tertentu; tanyakan apa yang direncanakan selama kamu di sana.",
+   "note": "Tanggal, fasilitas, dan harga berbeda tiap keberangkatan. Tanyakan kepada tim trip berikutnya."
+  },
+  "trip": {
+   "eyebrow": "Trip spesial",
+   "glance_h": "Sekilas",
+   "ask_h": "Tanyakan sebelum memesan",
+   "others_h": "Trip spesial lainnya",
+   "cta": "Tanya soal {name}",
+   "cta_note": "Pertanyaan tidak memesankan tempat."
+  },
+  "pros": {
+   "title": "Pro's: Kenali tim W Divers | W Divers Coron",
+   "meta": "Kenali Pro's tim W Divers di Coron, Palawan: instruktur kepala Dean Kang, instruktur Inhan Kang, dan divemaster Jex Lenver Tabat.",
+   "eyebrow": "Pro's tim W Divers",
+   "h1": "Kenali orang-orang yang akan menyelam bersamamu.",
+   "intro": "Kapal karam, dugong, mata air panas, dan gua yang megah: undangan untuk menyelami perairan Coron. Kenali para instruktur tim W Divers.",
+   "team_h": "Tim W Divers",
+   "team": [
+    {
+     "role": "Instruktur kepala",
+     "intro": "Dean memimpin W Divers Coron dan melatih penyelam maupun instruktur, dengan kualifikasi instruktur di lima agensi.",
+     "creds_h": "Kualifikasi instruktur",
+     "spec_h": "Instruktur spesialisasi"
+    },
+    {
+     "role": "Instruktur muda",
+     "tag": "Mengajar dalam bahasa Inggris, Tagalog, dan Korea setingkat penutur asli",
+     "intro": "Inhan menjadi Instruktur PADI di usia 18 dan mengajar kursus rekreasi, teknis, dan wreck.",
+     "creds_h": "Kualifikasi instruktur"
+    },
+    {
+     "role": "Divemaster",
+     "intro": "Divemaster Filipina di tim W Divers yang memandu penyelam di perahu dan di bawah air.",
+     "creds_h": "Sertifikasi"
+    }
+   ],
+   "screen_h": "Di layar, di Coron.",
+   "screen_t": "Tim W Divers telah mendukung produksi film dan TV Korea yang syuting di Coron.",
+   "screen": [
+    {
+     "cap": "Mendukung SBS Law of the Jungle di Coron, termasuk episode pencarian dugong dan kapal karam misterius."
+    },
+    {
+     "cap": "Bersama aktor Korea saat mendukung syuting film Korea The Golden Holiday (국제수사) di Coron."
+    }
+   ],
+   "cta_h": "Menyelam bersama tim W Divers.",
+   "cta_t": "Kirim tanggal, jumlah orang, dan pengalaman menyelammu, lalu tim akan membantu merencanakan waktumu di Coron."
+  },
+  "about": {
+   "title": "Tentang W Divers Coron | Menyelam di Coron, Palawan",
+   "meta": "W Divers Coron adalah pusat selam Korea di Coron, Palawan, sejak Maret 2015: kapal karam, dugong, mata air panas, dan gua.",
+   "h1": "Pusat selam Korea di Coron, sejak 2015.",
+   "intro": "Kapal karam, dugong, mata air panas, dan gua. W Divers Coron telah memandu penyelam di perairan Coron, Palawan, sejak Maret 2015, dari napas pertama hingga penetrasi kapal karam.",
+   "story_k": "Kisah kami",
+   "story_h": "Dari galangan kapal di Korea ke kapal karam Coron.",
+   "story_t": [
+    "W Divers Coron adalah pusat selam Korea di Coron, salah satu kawasan selam kapal karam paling terkenal di dunia. Pusat ini didirikan oleh instruktur Dean Kang (강덕환), yang bekerja 20 tahun di Hyundai Samho Heavy Industries di Korea dan juga menjadi ketua klub selam perusahaan.",
+    "Setelah meninggalkan galangan kapal, ia memilih Coron, Palawan, untuk babak keduanya dan membuka W Divers di jalan utama kota pada 1 Maret 2015. Memulai usaha di luar negeri tanpa lebih dulu bertahun-tahun di komunitas Korea setempat membuat orang di sekitarnya khawatir; ia berterima kasih kepada orang-orang baik yang membantunya menetap."
+   ],
+   "facts_h": "Yang siap saat kamu tiba",
+   "facts": [
+    [
+     "Toko",
+     "Toko selam ber-AC dengan muka kaca di jalan utama Coron."
+    ],
+    [
+     "Perahu",
+     "Dua perahu bangka selam milik sendiri, plus multicab ber-AC yang bersih untuk antar-jemput."
+    ],
+    [
+     "Peralatan",
+     "Peralatan sewa yang dibeli baru. Tersedia komputer selam, scooter, nitrox, dan oksigen."
+    ],
+    [
+     "Menginap",
+     "Lima kamar ber-AC milik sendiri, dan bantuan memesan kamar berkipas, resor Korea, atau resor bergaya hotel dengan kolam renang."
+    ],
+    [
+     "Jam buka",
+     "Buka setiap hari, pukul 07.00 sampai 21.00."
+    ],
+    [
+     "Bahasa",
+     "Pendampingan dalam bahasa Inggris dan Korea."
+    ]
+   ],
+   "wreck_h": "Menyelam kapal karam, dengan stempel sebagai kenangan.",
+   "wreck_t": "Kapal karam Coron adalah tempat latihan bagi penyelam teknis yang belajar penetrasi, dan banyak juga yang memungkinkan penyelam rekreasi melihat ke dalam dengan aman. Pemandu kami berpengalaman lama di kapal karam, dan tiap kapal karam punya stempel sendiri untuk logbook-mu setelah kamu menyelaminya. Selain kapal karam, ada Barracuda Lake dan Cathedral Cave, tempat air hangat naik dari mata air panas, serta terumbu untuk penyelaman santai.",
+   "screen_k": "Di layar",
+   "screen_h": "Pemandu dugong dan kapal karam untuk SBS Law of the Jungle.",
+   "screen_t": "Pada 21–23 Januari 2020, W Divers mendukung syuting Law of the Jungle dari SBS di Coron. SSI Instructor Trainer Dean Kang menjadi pemandu dugong dan pemandu penetrasi kapal karam acara tersebut.",
+   "screen_link": "Kenali Pro's kami",
+   "source": "Sumber: profil W Divers Coron di SSI dan blog Naver W Divers."
+  }
+ },
+ "HOME": {
+  "routes": [
+   {
+    "k": "Penyelam bersertifikat",
+    "t": "Datang untuk kapal karam, terumbu, atau keduanya? Lihat pilihannya dan sebutkan sertifikasi serta pengalaman menyelam terakhirmu saat bertanya.",
+    "link": "Lihat trip selam"
+   },
+   {
+    "k": "Uji coba selam (DSD)",
+    "t": "Belum pernah menyelam? DSD adalah pengalaman pertama dengan instruktur di sampingmu. Tanyakan opsi yang cocok dengan tanggalmu.",
+    "link": "Tentang DSD"
+   },
+   {
+    "k": "Pelatihan",
+    "t": "Kursus selam dari sertifikasi pertama hingga tingkat profesional, plus pelatihan TDI untuk penyelam wreck lanjutan dan teknis.",
+    "link": "Lihat kursus selam"
+   },
+   {
+    "k": "Selain menyelam",
+    "t": "Ingin waktu di atas air juga? Tanyakan soal island hopping selama di Coron.",
+    "link": "Lihat island hopping"
+   }
+  ],
+  "slides": [
+   [
+    "Dukungan syuting film “The Golden Holiday” (국제수사)\nLokasi syuting: Teru Kaze Maru",
+    "Kenali Pro's kami"
+   ],
+   [
+    "Dukungan syuting: SBS Law of the Jungle di Coron",
+    "Kenali Pro's kami"
+   ],
+   [
+    "Laguna, tebing kapur, dan perahu kami",
+    "Trip spesial"
+   ],
+   [
+    "Menyelam kapal karam dan terumbu di sekitar Coron",
+    "Menyelam"
+   ],
+   [
+    "Perahu selam W Divers Coron",
+    "Tentang kami"
+   ]
+  ],
+  "special_h": "Trip spesial dari Coron.",
+  "special_t": "Hari-hari yang lebih panjang dan petualangan bermalam, diatur tim W Divers pada tanggal tertentu.",
+  "special_all": "Lihat semua trip spesial"
+ },
+ "CONTACT_INTEREST": [
+  [
+   "wreck",
+   "Menyelam kapal karam"
+  ],
+  [
+   "reef",
+   "Menyelam terumbu"
+  ],
+  [
+   "first",
+   "Uji coba selam (DSD)"
+  ],
+  [
+   "courses",
+   "Kursus selam"
+  ],
+  [
+   "tdi",
+   "Pelatihan lanjutan TDI"
+  ],
+  [
+   "freediving",
+   "Freediving"
+  ],
+  [
+   "special",
+   "Trip spesial"
+  ],
+  [
+   "island",
+   "Island hopping"
+  ],
+  [
+   "unsure",
+   "Belum yakin"
+  ]
+ ],
+ "SITEMAP_GROUPS": [
+  "Menyelam",
+  "Titik selam",
+  "Rencanakan perjalanan",
+  "Jurnal",
+  "Tentang dan kontak",
+  "Trip spesial"
+ ],
+ "TRIPS": [
+  {
+   "name": "Liveaboard yacht Apo Reef",
+   "short": "Apo Reef",
+   "card": "Yacht carter penuh ke salah satu terumbu paling terkenal di Filipina, untuk maksimal 10 penyelam.",
+   "title": "Liveaboard yacht Apo Reef | Trip spesial | W Divers Coron",
+   "meta": "Ikuti liveaboard yacht W Divers Coron ke Apo Reef Natural Park: grup kecil maksimal 10 penyelam, beberapa hari menyelam, makan dan kabin di atas kapal.",
+   "intro": "Apo Reef Natural Park adalah salah satu tujuan selam paling terkenal di Filipina. W Divers Coron mencarter yacht untuk trip khusus penyelam ke sana, dengan grup kecil maksimal 10 orang.",
+   "facts": [
+    [
+     "Format",
+     "Liveaboard yacht, carter penuh"
+    ],
+    [
+     "Ukuran grup",
+     "Maksimal 10 penyelam"
+    ],
+    [
+     "Durasi umum",
+     "3 malam, 4 hari"
+    ],
+    [
+     "Penyelaman",
+     "Sekitar 10, plus penyelaman malam opsional"
+    ],
+    [
+     "Naik kapal",
+     "Coron, atau Manila (Batangas) pada beberapa keberangkatan"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Terumbu yang layak dikunjungi.",
+     "p": [
+      "Apo Reef berada di Selat Mindoro, di barat Mindoro. Ini taman alam yang dilindungi dengan terumbu karang dan dinding yang luas, dicapai setelah beberapa jam di laut, karena itu tripnya berupa liveaboard."
+     ]
+    },
+    {
+     "h": "Kehidupan di kapal.",
+     "p": [
+      "Pada keberangkatan terbaru, yacht menampung hingga 10 penyelam di lima kabin ganda ber-AC. Makanan dan camilan tersedia sepanjang trip, penyelaman dan pemandu sudah termasuk, dan antar-jemput hotel diatur sebelum dan sesudah trip."
+     ]
+    },
+    {
+     "h": "Yang perlu dicek.",
+     "p": [
+      "Tiket masuk Apo Reef Natural Park dibayar terpisah (USD 100 pada trip terbaru). Tanggal, jumlah penyelaman, dan harga tergantung tiap keberangkatan, jadi minta rinciannya secara tertulis kepada tim."
+     ]
+    }
+   ],
+   "ask": [
+    "Tanggal keberangkatan berikutnya dan sisa tempat",
+    "Total harga dan yang termasuk",
+    "Tiket masuk taman",
+    "Sertifikasi dan pengalaman yang diperlukan",
+    "Pembagian kabin",
+    "Lokasi naik kapal"
+   ]
+  },
+  {
+   "name": "Melihat dugong",
+   "short": "Dugong",
+   "card": "Berangkat pagi sekali untuk mencari dugong di teluk tenang Busuanga utara.",
+   "title": "Trip sehari melihat dugong | Trip spesial | W Divers Coron",
+   "meta": "Trip sehari W Divers Coron mencari dugong di Busuanga utara, berangkat pagi agar tiba sebelum keramaian, dengan opsi mengunjungi Calauit Safari Park.",
+   "intro": "Dugong, mamalia laut yang lembut dan memakan lamun, hidup di perairan Busuanga utara. Dalam trip sehari ini perahu W Divers berangkat pagi agar tiba sebelum perahu lain.",
+   "facts": [
+    [
+     "Format",
+     "Trip sehari dengan perahu"
+    ],
+    [
+     "Berangkat",
+     "Pagi buta"
+    ],
+    [
+     "Lokasi",
+     "Busuanga utara (area Aban-Aban)"
+    ],
+    [
+     "Di air",
+     "Tanyakan apakah ada snorkeling atau menyelam"
+    ],
+    [
+     "Tambahan",
+     "Kunjungan ke Calauit Safari Park"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Mengapa berangkat pagi.",
+     "p": [
+      "Area dugong yang populer makin ramai seiring siang. Berangkat sebelum matahari terbit memberi peluang terbaik untuk pertemuan yang tenang sebelum perahu lain datang."
+     ]
+    },
+    {
+     "h": "Hormati satwanya.",
+     "p": [
+      "Dugong adalah satwa liar yang dilindungi. Peserta mengikuti arahan pemandu, menjaga jarak, dan tidak pernah menyentuh, mengejar, atau memberi makan. Penampakan tidak pernah dijamin."
+     ]
+    },
+    {
+     "h": "Jadikan sehari penuh.",
+     "p": [
+      "Trip ini bisa digabung dengan kunjungan ke Calauit Safari Park di Busuanga. Tanyakan kepada tim rencana harinya dan apa saja yang termasuk."
+     ]
+    }
+   ],
+   "ask": [
+    "Jam berangkat dan penjemputan",
+    "Snorkeling atau menyelam, dan peralatan",
+    "Tiket masuk dan biaya lingkungan",
+    "Opsi Calauit Safari Park",
+    "Total harga dan yang termasuk"
+   ]
+  },
+  {
+   "name": "Pulau tak berpenghuni, 2 hari 1 malam",
+   "short": "Pulau 2H1M",
+   "card": "Lima penyelaman dan semalam berkemah di pulau tak berpenghuni, dua hari jauh dari kota.",
+   "title": "Pulau tak berpenghuni 2 hari 1 malam | Trip spesial | W Divers Coron",
+   "meta": "Paket selam W Divers Coron 2 hari 1 malam: 5 penyelaman dan semalam berkemah di pulau tak berpenghuni jauh dari kota Coron.",
+   "intro": "Tukar kota Coron dengan pulau sepi untuk semalam. Paket selam 2 hari 1 malam ini mencakup 5 penyelaman dan berkemah semalam di pulau tak berpenghuni, diatur oleh tim W Divers.",
+   "facts": [
+    [
+     "Format",
+     "Paket selam dengan berkemah di pulau"
+    ],
+    [
+     "Durasi",
+     "2 hari, 1 malam"
+    ],
+    [
+     "Penyelaman",
+     "5 penyelaman"
+    ],
+    [
+     "Menginap",
+     "Berkemah di pulau tak berpenghuni"
+    ],
+    [
+     "Non-penyelam",
+     "Tanyakan soal snorkeling dan waktu di pantai"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Lima penyelaman dan semalam di pulau.",
+     "p": [
+      "Paket ini mencakup lima penyelaman selama dua hari. Di sela penyelaman kamu menuju pulau sepi tak berpenghuni, mendirikan kemah untuk malam, dan bangun di pantai sebelum hari berikutnya di laut."
+     ]
+    },
+    {
+     "h": "Ketahui pengaturannya.",
+     "p": [
+      "Trip bermalam butuh rencana yang jelas. Tanyakan soal tempat tidur, makanan, air minum, toilet dan tempat berteduh, apa yang perlu dibawa, dan apa yang terjadi jika cuaca berubah."
+     ]
+    },
+    {
+     "h": "Cocok untuk siapa.",
+     "p": [
+      "Rombongan teman, keluarga, dan penyelam yang bepergian dengan non-penyelam. Sebutkan minat semua orang saat bertanya agar tim bisa menyusun dua harinya."
+     ]
+    }
+   ],
+   "ask": [
+    "Titik selam untuk 5 penyelaman",
+    "Tenda, perlengkapan tidur, dan yang perlu dibawa",
+    "Makanan dan air minum",
+    "Fasilitas di pulau",
+    "Pilihan untuk non-penyelam",
+    "Ketentuan cuaca dan pembatalan",
+    "Total harga"
+   ]
+  },
+  {
+   "name": "Trip sehari Kyokuzan Maru",
+   "short": "Kyokuzan Maru",
+   "card": "Sehari penuh menuju salah satu kapal karam Jepang yang lebih terpencil di kawasan ini.",
+   "title": "Trip sehari kapal karam Kyokuzan Maru | Trip spesial | W Divers Coron",
+   "meta": "Trip sehari penuh W Divers Coron untuk menyelami Kyokuzan Maru, kapal kargo Jepang yang jauh dari kelompok utama kapal karam Coron.",
+   "intro": "Kyokuzan Maru berada jauh dari kelompok utama kapal karam Coron, jadi mencapainya butuh sehari penuh. Bagi pencinta kapal karam, ini kesempatan menyelami situs yang lebih jarang dikunjungi.",
+   "facts": [
+    [
+     "Format",
+     "Trip kapal karam sehari penuh"
+    ],
+    [
+     "Untuk",
+     "Penyelam bersertifikat"
+    ],
+    [
+     "Situs",
+     "Kyokuzan Maru, kapal kargo Jepang"
+    ],
+    [
+     "Juga",
+     "Tanyakan situs lain yang bisa diselami di perjalanan"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Kapal karam di luar rute biasa.",
+     "p": [
+      "Seperti kapal karam lain di kawasan ini, Kyokuzan Maru adalah kapal kargo Jepang yang tenggelam pada Perang Dunia II. Jaraknya dari kota Coron membuat pengunjungnya lebih sedikit, dan perjalanan perahu yang lebih lama adalah bagian dari hari itu."
+     ]
+    },
+    {
+     "h": "Cocok untukmu?",
+     "p": [
+      "Kedalaman yang direncanakan dan kondisi menentukan siapa yang bisa ikut. Sebutkan tingkat sertifikasi, jumlah penyelaman tercatat, dan tanggal penyelaman terakhirmu, lalu tanyakan pengalaman yang dibutuhkan."
+     ]
+    },
+    {
+     "h": "Rencanakan harinya.",
+     "p": [
+      "Tanyakan jam berangkat, jumlah penyelaman, peralatan, makanan dan biaya, serta apa yang terjadi jika kondisi berubah pada hari itu."
+     ]
+    }
+   ],
+   "ask": [
+    "Sertifikasi dan pengalaman yang diperlukan",
+    "Kedalaman dan jumlah penyelaman",
+    "Jam berangkat dan lama perjalanan",
+    "Peralatan, makanan, dan biaya",
+    "Total harga"
+   ]
+  }
+ ],
+ "ALT": {
+  "lagoon-boats": "Pemandangan udara perahu biru W Divers di laguna di antara tebing kapur.",
+  "dive-boat": "Perahu selam bercadik biru W Divers di laut, dilihat dari atas.",
+  "jungle-crew": "Empat penyelam tersenyum di dek perahu saat syuting Law of the Jungle di Coron.",
+  "film-crew": "Foto grup saat W Divers mendukung syuting film The Golden Holiday di Coron.",
+  "film-crew-2": "Tamu dan tim W Divers berpose bersama di luar ruangan di Coron.",
+  "film-crew-3": "Dua pria tersenyum bersama di sebuah restoran di Coron.",
+  "dean": "Dean Kang, instruktur kepala W Divers Coron, mengenakan baju selam Scubapro di perahu di Coron.",
+  "inhan": "Potret Inhan Kang, instruktur di W Divers Coron.",
+  "jex": "Potret Jex Lenver Tabat (GIGs), divemaster di W Divers Coron.",
+  "ssi-jungle": "Poster dukungan syuting W Divers untuk SBS Law of the Jungle di Coron, 21–23 Januari 2020, dengan foto dan tanda tangan.",
+  "yacht-aerial": "Katamaran layar putih berlabuh di air biru yang tenang, dilihat dari atas.",
+  "yacht-cabin": "Kabin yacht yang terang dengan ranjang ganda dan jendela menghadap pulau hijau.",
+  "dugong-diver": "Dugong berenang di air biru bermandi cahaya, diamati penyelam dari kejauhan.",
+  "calauit-zebras": "Zebra merumput dekat pos penjaga di Calauit Safari Park, Busuanga.",
+  "calauit-giraffes": "Dua jerapah mendekat ke kamera di bawah langit biru di Calauit Safari Park.",
+  "boat-lunch": "Makan siang di dek perahu: ikan bakar, ayam, sayur, kerang, dan mangga.",
+  "w-coral-wreck": "Kapal karam berselimut karang muncul dari air biru, dikelilingi kawanan ikan.",
+  "w-valves": "Deretan katup mesin berlapis lumpur di dalam kapal karam.",
+  "w-three-divers": "Tiga penyelam berpose dua jari dari celah kapal karam berkarang.",
+  "w-engine-room": "Mesin di ruang mesin kapal karam yang gelap.",
+  "w-machinery": "Ikan-ikan kecil berenang melewati mesin berkerak di kapal karam.",
+  "fd-cave": "Gua kapur dengan stalaktit yang terpantul di air tenang.",
+  "fd-beam": "Freediver melayang dalam berkas cahaya matahari di air biru pekat.",
+  "dsd-sand": "Penyelam meluncur di atas pasir putih ke arah kamera, penyelam lain di belakang.",
+  "pool-lesson": "Instruktur menyiapkan peralatan bersama murid di tepi kolam renang.",
+  "gear-crates": "Peti berisi fin, masker, dan peralatan selam di samping kendaraan biru.",
+  "van-transfer": "Tamu berransel naik ke van perak untuk antar-jemput.",
+  "crew-briefing": "Penyelam berbaju selam berkumpul untuk briefing di dek perahu biru.",
+  "harbor-group": "Delapan tamu berpose di dermaga dengan perahu dan bukit hijau di belakang.",
+  "briefing-blue": "Tamu bersantai di perahu selam biru di sela penyelaman.",
+  "heart-divers": "Dua penyelam tersenyum membentuk hati di permukaan dekat perahu.",
+  "under-boat": "Penyelam turun di atas pasir putih di bawah lambung perahu.",
+  "rope": "Tali tambat berkerak karang menggantung di air biru jernih.",
+  "flags-bow": "Bendera Korea dan Filipina berkibar di perahu, pulau hijau di cakrawala."
+ }
 }

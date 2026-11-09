@@ -18,6 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = os.path.join(ROOT, "assets", "images")
 PEX = os.path.join(ROOT, "assets", "Images from pexels")
 NOV = os.path.join(IMG, "November 9, 2026")
+NOV10 = os.path.join(IMG, "Enhanced Nov 10")
 
 WIDTHS = [640, 1280, 1920]
 
@@ -173,6 +174,150 @@ MEDIA = {
         "kind": "business", "focus": "50% 30%", "cats": [],
         "alt": {"en": "Portrait of Jex Lenver Tabat (GIGs), divemaster at W Divers Coron.",
                 "ko": "W Divers Coron 다이브마스터 젝스 렌버 타밧(GIGs)의 인물 사진."},
+    },
+    "yacht-aerial": {
+        "src": (NOV10, "Natural Underwater Diving Scene-7 (1).png"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "A white sailing catamaran at anchor in calm blue water, seen from above.",
+                "ko": "잔잔한 푸른 바다에 정박한 흰색 세일링 카타마란을 위에서 본 모습."},
+    },
+    "yacht-cabin": {
+        "src": (NOV10, "Naturally Enhanced Underwater Dive Scene-15.png"),
+        "kind": "business", "focus": "50% 50%", "cats": [],
+        "alt": {"en": "A bright yacht cabin with a double bed and windows looking out to green islands.",
+                "ko": "더블 침대와 초록 섬이 보이는 창이 있는 밝은 요트 객실."},
+    },
+    "dugong-diver": {
+        "src": (NOV10, "Dugong and Diver Beneath Caustic Light-1.png"),
+        "kind": "business", "focus": "40% 45%", "cats": ["underwater"],
+        "alt": {"en": "A dugong swims in sunlit blue water as a diver watches from a respectful distance.",
+                "ko": "햇살이 비치는 푸른 바다에서 헤엄치는 듀공과 거리를 두고 지켜보는 다이버."},
+    },
+    "calauit-zebras": {
+        "src": (NOV10, "Natural underwater diving scene-8.png"),
+        "kind": "business", "focus": "50% 60%", "cats": ["islands"],
+        "alt": {"en": "Zebras graze near a ranger station at Calauit Safari Park on Busuanga.",
+                "ko": "부수앙가 칼라위트 사파리 파크의 관리소 근처에서 풀을 뜯는 얼룩말들."},
+    },
+    "calauit-giraffes": {
+        "src": (NOV10, "Underwater adventure in natural light-3.png"),
+        "kind": "business", "focus": "50% 30%", "cats": ["islands"],
+        "alt": {"en": "Two giraffes lean toward the camera under a blue sky at Calauit Safari Park.",
+                "ko": "칼라위트 사파리 파크의 파란 하늘 아래 카메라 쪽으로 다가온 기린 두 마리."},
+    },
+    "boat-lunch": {
+        "src": (NOV10, "Natural boat lunch spread-3.png"),
+        "kind": "business", "focus": "50% 60%", "cats": ["moments"],
+        "alt": {"en": "A lunch spread of grilled fish, chicken, vegetables, mussels and mango on a boat deck.",
+                "ko": "보트 갑판에 차려진 생선구이, 닭고기, 채소, 홍합, 망고 점심."},
+    },
+    "w-coral-wreck": {
+        "src": (NOV10, "Coral-covered wreck with schooling fish-7 (1).png"),
+        "kind": "business", "focus": "55% 55%", "cats": ["underwater"],
+        "alt": {"en": "A coral-covered shipwreck rises from blue water, surrounded by schooling fish.",
+                "ko": "물고기 떼가 둘러싼, 산호로 덮인 난파선."},
+    },
+    "w-valves": {
+        "src": (NOV10, "Silt-covered engine valves underwater-7.png"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A row of silt-covered engine valves inside a wreck.",
+                "ko": "난파선 안에 줄지어 있는 퇴적물 덮인 엔진 밸브."},
+    },
+    "w-three-divers": {
+        "src": (NOV10, "Three Divers at a Coral Wreck-5.png"),
+        "kind": "business", "focus": "50% 45%", "cats": ["underwater"],
+        "alt": {"en": "Three divers give a peace sign through an opening in a coral-covered wreck.",
+                "ko": "산호로 덮인 난파선의 틈 사이로 브이를 하는 다이버 세 명."},
+    },
+    "w-engine-room": {
+        "src": (NOV10, "Moody Underwater Wreck Engine Room-6.png"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Machinery inside the dim engine room of a wreck.",
+                "ko": "어두운 난파선 기관실 안의 기계 장치."},
+    },
+    "w-machinery": {
+        "src": (NOV10, "Fish Among Underwater Wreck Machinery-2.png"),
+        "kind": "business", "focus": "50% 45%", "cats": ["underwater"],
+        "alt": {"en": "Small fish swim past encrusted machinery on a wreck.",
+                "ko": "난파선의 산호 덮인 기계 사이를 지나는 작은 물고기들."},
+    },
+    "fd-cave": {
+        "src": (NOV10, "Natural underwater diving adventure-14.png"),
+        "kind": "business", "focus": "50% 45%", "cats": ["islands"],
+        "alt": {"en": "A limestone cave with stalactites reflected in still water.",
+                "ko": "잔잔한 물에 비친 종유석이 있는 석회암 동굴."},
+    },
+    "fd-beam": {
+        "src": (NOV10, "Natural underwater diving scene-11.png"),
+        "kind": "business", "focus": "50% 58%", "cats": ["underwater"],
+        "alt": {"en": "A freediver floats in a shaft of sunlight in deep blue water.",
+                "ko": "깊고 푸른 물속, 햇살 줄기 속에 떠 있는 프리다이버."},
+    },
+    "dsd-sand": {
+        "src": (NOV10, "Underwater adventure, naturally enhanced-1.png"),
+        "kind": "business", "focus": "50% 40%", "cats": ["underwater"],
+        "alt": {"en": "A diver glides over white sand toward the camera, with other divers behind.",
+                "ko": "흰 모래 위를 카메라 쪽으로 미끄러지듯 다가오는 다이버와 뒤편의 다른 다이버들."},
+    },
+    "pool-lesson": {
+        "src": (NOV10, "Poolside scuba lesson-2 (1).png"),
+        "kind": "business", "focus": "50% 60%", "cats": ["moments"],
+        "alt": {"en": "An instructor prepares scuba equipment with a student beside a swimming pool.",
+                "ko": "수영장 옆에서 교육생과 함께 스쿠버 장비를 준비하는 강사."},
+    },
+    "gear-crates": {
+        "src": (NOV10, "Colorful Scuba Gear Beside a Blue Vehicle-1 (1).png"),
+        "kind": "business", "focus": "50% 62%", "cats": ["moments"],
+        "alt": {"en": "Crates of fins, masks and dive gear ready to load beside a blue vehicle.",
+                "ko": "파란 차량 옆에 싣기 위해 준비된 핀, 마스크, 다이빙 장비 상자."},
+    },
+    "van-transfer": {
+        "src": (NOV10, "People boarding a silver van-6 (1).png"),
+        "kind": "business", "focus": "50% 50%", "cats": ["moments"],
+        "alt": {"en": "Guests with backpacks board a silver van for a transfer.",
+                "ko": "배낭을 멘 손님들이 이동을 위해 은색 밴에 타는 모습."},
+    },
+    "crew-briefing": {
+        "src": (NOV10, "Boat crew briefing on deck-4.png"),
+        "kind": "business", "focus": "50% 40%", "cats": ["moments"],
+        "alt": {"en": "Divers in wetsuits gather for a briefing on the deck of a blue dive boat.",
+                "ko": "파란 다이빙 보트 갑판에서 브리핑을 위해 모인 슈트 차림의 다이버들."},
+    },
+    "harbor-group": {
+        "src": (NOV10, "Eight-Person Harbor Portrait by Boats-4 (1).png"),
+        "kind": "business", "focus": "50% 50%", "cats": ["moments"],
+        "alt": {"en": "A group of eight guests poses on the harbour wall with boats and green hills behind.",
+                "ko": "보트와 초록 언덕을 배경으로 항구 방파제에서 포즈를 취한 손님 여덟 명."},
+    },
+    "briefing-blue": {
+        "src": (NOV10, "Dive briefing aboard a blue boat-6.png"),
+        "kind": "business", "focus": "50% 40%", "cats": ["moments"],
+        "alt": {"en": "Guests relax on a blue dive boat between dives.",
+                "ko": "다이빙 사이에 파란 다이빙 보트에서 쉬고 있는 손님들."},
+    },
+    "heart-divers": {
+        "src": (NOV10, "Smiling Divers Form a Heart Gesture-7.png"),
+        "kind": "business", "focus": "50% 45%", "cats": ["moments"],
+        "alt": {"en": "Two smiling divers make a heart sign at the surface beside the boat.",
+                "ko": "보트 옆 수면에서 하트를 만들며 웃는 다이버 두 명."},
+    },
+    "under-boat": {
+        "src": (NOV10, "Divers Beneath the Boat-3.png"),
+        "kind": "business", "focus": "50% 55%", "cats": ["underwater"],
+        "alt": {"en": "Divers descend over white sand beneath the hull of a boat.",
+                "ko": "보트 아래 흰 모래 위로 내려가는 다이버들."},
+    },
+    "rope": {
+        "src": (NOV10, "Encrusted Rope Beneath the Surface-5 (1).png"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A coral-encrusted mooring line hangs in clear blue water.",
+                "ko": "맑고 푸른 물속에 늘어진 산호 덮인 계류 밧줄."},
+    },
+    "flags-bow": {
+        "src": (NOV10, "Natural underwater travel scene-4.png"),
+        "kind": "business", "focus": "50% 40%", "cats": ["islands"],
+        "alt": {"en": "Korean and Philippine flags fly from a boat with green islands on the horizon.",
+                "ko": "초록 섬이 보이는 바다 위 보트에 휘날리는 한국 국기와 필리핀 국기."},
     },
     "jungle-crew": {
         "src": (NOV, "Four divers posing aboard a boat-3.png"),

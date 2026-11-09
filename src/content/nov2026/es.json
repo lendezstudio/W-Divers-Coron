@@ -1,40 +1,657 @@
 {
-"UI": {"sub_first": "DSD (Bautismo de buceo)", "sub_courses": "Cursos de buceo", "sub_tdi": "Curso TDI Advanced Diver", "sub_free": "Apnea", "nav_pros": "Pro's", "nav_special": "Salidas especiales", "sub_special_all": "Todas las salidas especiales", "read_trip": "Ver la salida", "slides_label": "Lo mejor de W Divers Coron", "slide_n": "Imagen {n} de {total}", "slide_show": "Mostrar la imagen {n}", "slide_pause": "Pausar la presentación", "slide_play": "Reproducir la presentación"},
-"ROUTE_NAMES": {"first": "DSD (Bautismo de buceo)", "courses": "Cursos de buceo", "tdi": "Curso TDI Advanced Diver", "freediving": "Apnea", "pros": "Pro's", "special": "Salidas especiales"},
-"PAGES": {
-"first": {"title": "Bautismo de buceo (DSD) en Coron | W Divers Coron", "meta": "Prueba el buceo por primera vez con Discover Scuba Diving (DSD) en W Divers Coron: una introducción supervisada por un instructor, sin certificación.", "eyebrow": "DSD · Discover Scuba Diving", "h1": "Tu primera respiración bajo el agua, con un instructor a tu lado.", "intro": "Discover Scuba Diving (DSD) es una primera experiencia supervisada de buceo para quienes nunca han buceado. Dile a W Divers que eres principiante y pregunta qué opciones de DSD encajan con tus fechas.",
- "summary": {"h": "Preguntas que conviene hacer", "for": "Para quienes nunca han buceado o lo hicieron hace mucho.", "list": ["Edad mínima y quién puede participar", "Expectativas sobre natación y comodidad en el agua", "El cuestionario médico", "Dónde se realiza la sesión", "Duración y precio total"]},
- "sections": [{"h": "En qué consiste un DSD.", "p": ["Una sesión de Discover Scuba Diving empieza con una breve explicación del equipo y de cómo respirar bajo el agua. Después practicas algunas habilidades básicas en aguas tranquilas y poco profundas antes de una inmersión guiada con un instructor cerca. No se necesita certificación ni experiencia previa."]}, {"h": "Una introducción, no una certificación.", "p": ["El DSD te permite probar el buceo sin comprometerte con un curso. Si te gusta, pregunta cómo seguir con un curso de buceo. Son pasos distintos, así que pregunta cuál encaja con tu viaje."]}, {"h": "Antes de reservar.", "p": ["Confirma la edad mínima, las expectativas sobre natación, el cuestionario médico, el lugar, la duración y qué incluye el precio. Comenta cualquier problema de salud al equipo antes de bucear; un formulario de consulta no es un apto médico."]}, {"h": "No hace falta fingir que ya te sientes seguro.", "p": ["Es normal tener dudas sobre respirar bajo el agua, el equipo o estar en el mar. Cuenta con qué te sientes cómodo para que la conversación empiece en el punto adecuado."]}],
- "cta": "Preguntar por el DSD"},
-"courses": {"title": "Cursos de buceo en Coron | W Divers Coron", "meta": "Aprende a bucear o sigue avanzando en Coron: cursos de buceo desde principiante hasta nivel profesional con los instructores PADI y SSI de W Divers Coron.", "eyebrow": "Cursos de buceo", "h1": "Aprende a bucear y sigue adelante.", "intro": "Desde tu primera certificación hasta niveles profesionales, los instructores de W Divers Coron imparten cursos PADI y SSI. Cuéntanos tu experiencia, el curso que te interesa y cuánto tiempo tienes en Coron.",
- "summary": {"h": "Cursos por los que puedes preguntar", "for": "Impartidos por nuestros instructores PADI y SSI:", "list": ["Open Water Diver", "Advanced Open Water Diver", "Rescue Diver y Emergency First Response", "Divemaster", "Especialidades: profundo, nitrox, sidemount, pecios, Peak Performance Buoyancy", "AWARE Coral Reef Conservation"]},
- "sections": [{"h": "Empieza a bucear.", "p": ["Si estás pensando en tu primera certificación, pregunta por el curso, los requisitos, el estudio y los días necesarios antes de planear el resto de tu estancia."]}, {"h": "Sigue avanzando.", "p": ["¿Ya tienes certificación? Los cursos Advanced y Rescue refuerzan tu confianza y habilidad, y las especialidades te permiten centrarte en lo que te interesa, del buceo profundo y el nitrox a los pecios y la flotabilidad."]}, {"h": "¿Te interesa la formación en pecios?", "p": ["Una especialidad de pecios enseña a bucear alrededor de pecios con seguridad; no es un permiso general para entrar en ellos. Para formación avanzada y técnica en pecios, consulta nuestro curso TDI Advanced Diver."]}, {"h": "Conoce el curso completo.", "p": ["Antes de confirmar, pregunta por la agencia, el nombre del curso, los requisitos, la duración prevista, los componentes de la formación, la disponibilidad del instructor y el coste total, incluidos materiales y tasas de certificación."]}],
- "catalog_h": "Cursos actuales", "cta": "Preguntar por los cursos"},
-"tdi": {"title": "Curso TDI Advanced Diver en Coron | W Divers Coron", "meta": "Formación de buceo avanzado y técnico en Coron con los instructores TDI de W Divers Coron, incluida la formación avanzada en pecios para los pecios de Coron.", "eyebrow": "Formación avanzada TDI", "h1": "Fórmate para los pecios de Coron más allá de los límites recreativos.", "intro": "Los pecios de Coron atraen a buceadores que quieren ir más lejos. W Divers Coron cuenta con instructores TDI, entre ellos un instructor TDI Technical y Advanced Wreck Diver, para buceadores listos para formarse más allá del buceo recreativo.",
- "summary": {"h": "Antes de consultar", "for": "Para buceadores certificados con experiencia.", "list": ["Tu certificación actual y tus inmersiones registradas", "Experiencia con nitrox o buceo profundo", "El curso TDI que te interesa", "Cuántos días tienes en Coron", "Si tienes equipo técnico o de sidemount propio"]},
- "sections": [{"h": "Qué es la formación TDI.", "p": ["TDI (Technical Diving International) forma en buceo avanzado y técnico: inmersiones más largas, profundas y complejas que requieren formación, equipo y planificación adicionales. Los pecios resguardados de Coron lo convierten en un lugar popular para aprender."]}, {"h": "Formación avanzada en pecios.", "p": ["Entrar en un pecio con seguridad es una habilidad propia. La formación avanzada en pecios cubre la planificación, el uso de carrete y guía, la gestión del gas y el desplazamiento en entornos con techo: una formación que una inmersión guiada no sustituye."]}, {"h": "Encuentra el curso adecuado.", "p": ["Los requisitos, la duración y el equipo varían entre programas TDI. Cuéntale al equipo tu experiencia y tus objetivos, y pregunta qué cursos TDI hay, para qué capacita cada uno y el coste total."]}],
- "cta": "Preguntar por la formación TDI"},
-"freediving": {"title": "Apnea en Coron | W Divers Coron", "meta": "Apnea en Coron con W Divers Coron: Barracuda Lake, Cathedral Cave y otros lugares claros y resguardados, con una sola respiración.", "eyebrow": "Apnea", "h1": "Coron en una sola respiración.", "intro": "Lagos cristalinos, acantilados de caliza y aguas tranquilas y resguardadas hacen de Coron un favorito de los apneístas. W Divers Coron organiza salidas de apnea a lugares como Barracuda Lake y Cathedral Cave.",
- "summary": {"h": "Antes de consultar", "for": "Para apneístas y buceadores de superficie con soltura.", "list": ["Tu experiencia o certificación de apnea", "Los lugares que te gustaría visitar", "Fechas preferidas", "Si necesitas equipo"]},
- "sections": [{"h": "Por qué a los apneístas les encanta Coron.", "p": ["Barracuda Lake, entre paredes de caliza, es conocido por su agua clara y sus capas cambiantes de temperatura. Cathedral Cave y otros lugares resguardados ofrecen aguas tranquilas y una luz espectacular. Las condiciones y el acceso pueden cambiar, así que pregunta qué es posible en tus fechas."]}, {"h": "Salidas y formación.", "p": ["Pregunta al equipo por las salidas de apnea y si hay un curso para tu nivel. La apnea debe practicarse siempre con un compañero formado que vigile desde la superficie."]}, {"h": "Planea tu día.", "p": ["Cuéntale al equipo tu experiencia, los lugares que quieres visitar y el tiempo que tienes. Pregunta qué está incluido, como el barco, el equipo y las entradas."]}],
- "cta": "Preguntar por la apnea"},
-"special": {"title": "Salidas especiales desde Coron | W Divers Coron", "meta": "Salidas especiales con W Divers Coron: crucero en yate a Apo Reef, avistamiento de dugongos, una noche en una isla desierta y excursión al pecio Kyokuzan Maru.", "eyebrow": "Salidas especiales", "h1": "Grandes días desde Coron.", "intro": "Algunas experiencias requieren salir temprano, un trayecto en barco más largo o una noche fuera. El equipo de W Divers organiza estas salidas especiales en fechas concretas; pregunta qué hay previsto durante tu estancia.", "note": "Las fechas, lo incluido y los precios varían según la salida. Pregunta al equipo por las próximas."},
-"trip": {"eyebrow": "Salida especial", "glance_h": "De un vistazo", "ask_h": "Pregunta antes de reservar", "others_h": "Otras salidas especiales", "cta": "Preguntar por {name}", "cta_note": "Una consulta no reserva plaza."},
-"pros": {"title": "Pro's: conoce al equipo W Divers | W Divers Coron", "meta": "Conoce a los Pro's del equipo W Divers en Coron, Palawan: el instructor principal Dean Kang, el instructor Inhan Kang y el divemaster Jex Lenver Tabat.", "eyebrow": "Pro's del equipo W Divers", "h1": "Conoce a las personas con las que bucearás.", "intro": "Pecios, dugongos, aguas termales y cuevas magníficas: una invitación a sumergirte en las aguas de Coron. Conoce a los instructores del equipo W Divers.", "team_h": "Equipo W Divers",
- "team": [{"role": "Instructor principal", "intro": "Dean dirige W Divers Coron y forma tanto a buceadores como a instructores, con títulos de instructor en cinco agencias.", "creds_h": "Títulos de instructor", "spec_h": "Instructor de especialidades"}, {"role": "Instructor novel", "tag": "Enseña en inglés, tagalo y coreano con nivel nativo", "intro": "Inhan se tituló como instructor PADI a los 18 años y enseña cursos recreativos, técnicos y de pecios.", "creds_h": "Títulos de instructor"}, {"role": "Divemaster", "intro": "Divemaster filipino del equipo W Divers que guía a los buceadores en el barco y bajo el agua.", "creds_h": "Certificación"}],
- "screen_h": "En pantalla en Coron.", "screen_t": "El equipo W Divers ha apoyado rodajes de cine y televisión coreanos en Coron.", "screen": [{"cap": "Apoyo a SBS Law of the Jungle en Coron, incluidos episodios en busca de dugongos y de un pecio misterioso."}, {"cap": "Con actores coreanos durante el apoyo al rodaje de la película coreana The Golden Holiday (국제수사) en Coron."}], "cta_h": "Bucea con el equipo W Divers.", "cta_t": "Envía tus fechas, el tamaño del grupo y tu experiencia, y el equipo te ayudará a planear tu tiempo en Coron."},
-"about": {"title": "Sobre W Divers Coron | Buceo en Coron, Palawan", "meta": "W Divers Coron es un centro de buceo coreano en Coron, Palawan, desde marzo de 2015: pecios, dugongos, aguas termales y cuevas.", "h1": "Un centro de buceo coreano en Coron, desde 2015.", "intro": "Pecios, dugongos, aguas termales y cuevas. W Divers Coron guía a buceadores por las aguas de Coron, Palawan, desde marzo de 2015, de la primera respiración a la penetración en pecios.", "story_k": "Nuestra historia", "story_h": "De un astillero en Corea a los pecios de Coron.", "story_t": ["W Divers Coron es un centro de buceo coreano en Coron, una de las zonas de buceo en pecios más conocidas del mundo. Lo fundó el instructor Dean Kang (강덕환), que trabajó 20 años en Hyundai Samho Heavy Industries en Corea, donde también presidió el club de buceo de la empresa.", "Tras dejar el astillero eligió Coron, Palawan, para su segunda etapa y abrió W Divers en la calle principal del pueblo el 1 de marzo de 2015. Emprender en el extranjero sin pasar antes años en la comunidad coreana local preocupaba a quienes lo rodeaban; él agradece a las buenas personas que lo ayudaron a instalarse."], "facts_h": "Lo que te espera al llegar", "facts": [["Tienda", "Un centro de buceo con aire acondicionado y fachada de cristal en la calle principal de Coron."], ["Barcos", "Dos bancas de buceo propias y un multicab limpio y con aire acondicionado para los traslados."], ["Equipo", "Equipo de alquiler comprado nuevo. Hay ordenadores de buceo, scooters, nitrox y oxígeno."], ["Alojamiento", "Cinco habitaciones propias con aire acondicionado y ayuda para reservar habitaciones con ventilador, resorts coreanos o resorts tipo hotel con piscina."], ["Horario", "Abierto todos los días, de 7:00 a 21:00."], ["Idiomas", "Atención en inglés y coreano."]], "wreck_h": "Buceo en pecios, con un sello para recordarlo.", "wreck_t": "Los pecios de Coron son un campo de entrenamiento para buceadores técnicos que aprenden penetración, y muchos también permiten a los buceadores recreativos mirar dentro con seguridad. Nuestros guías tienen una larga experiencia en pecios, y cada pecio tiene su propio sello para tu bitácora una vez buceado. Más allá de los pecios están Barracuda Lake y Cathedral Cave, donde sube agua caliente de fuentes termales, y arrecifes para inmersiones tranquilas.", "screen_k": "En pantalla", "screen_h": "Guía de dugongos y pecios para SBS Law of the Jungle.", "screen_t": "Del 21 al 23 de enero de 2020, W Divers apoyó el rodaje de Law of the Jungle de SBS en Coron. El SSI Instructor Trainer Dean Kang fue el guía de dugongos y de penetración en pecios del programa.", "screen_link": "Conoce a nuestros Pro's", "source": "Fuentes: el perfil de W Divers Coron en SSI y el blog de Naver de W Divers."}
-},
-"HOME": {"routes": [{"k": "Buceadores certificados", "t": "¿Vienes por los pecios, los arrecifes o un poco de ambos? Explora las opciones e indica tu certificación y tu experiencia reciente al consultar.", "link": "Ver salidas de buceo"}, {"k": "Bautismo de buceo (DSD)", "t": "¿Nunca has buceado? El DSD es una primera experiencia supervisada con un instructor a tu lado. Pregunta qué opciones encajan con tus fechas.", "link": "Sobre el DSD"}, {"k": "Formación", "t": "Cursos de buceo desde tu primera certificación hasta niveles profesionales, además de formación TDI para buceadores avanzados de pecios y técnicos.", "link": "Ver cursos de buceo"}, {"k": "Más allá del buceo", "t": "¿Quieres también tiempo fuera del agua? Pregunta por excursiones de island hopping durante tu estancia en Coron.", "link": "Ver island hopping"}],
- "slides": [["Apoyo al rodaje de la película «The Golden Holiday» (국제수사)\nLugar de rodaje: Teru Kaze Maru", "Conoce a nuestros Pro's"], ["Apoyo al rodaje: SBS Law of the Jungle en Coron", "Conoce a nuestros Pro's"], ["Lagunas, acantilados de caliza y nuestro barco", "Salidas especiales"], ["Buceo en pecios y arrecifes alrededor de Coron", "Buceo"], ["El barco de buceo de W Divers Coron", "Sobre nosotros"]],
- "special_h": "Salidas especiales desde Coron.", "special_t": "Días más largos y aventuras con noche incluida, organizados por el equipo de W Divers en fechas concretas.", "special_all": "Ver todas las salidas especiales"},
-"CONTACT_INTEREST": [["wreck", "Buceo en pecios"], ["reef", "Buceo en arrecifes"], ["first", "Bautismo de buceo (DSD)"], ["courses", "Cursos de buceo"], ["tdi", "Formación avanzada TDI"], ["freediving", "Apnea"], ["special", "Salidas especiales"], ["island", "Island hopping"], ["unsure", "Aún no lo sé"]],
-"SITEMAP_GROUPS": ["Buceo", "Puntos de buceo", "Planifica tu viaje", "Diario", "Sobre nosotros y contacto", "Salidas especiales"],
-"TRIPS": [
-{"name": "Crucero en yate a Apo Reef", "short": "Apo Reef", "card": "Un yate fletado en exclusiva a uno de los arrecifes más conocidos de Filipinas, para hasta 10 buceadores.", "title": "Crucero en yate a Apo Reef | Salidas especiales | W Divers Coron", "meta": "Únete a un crucero en yate de W Divers Coron al Apo Reef Natural Park: un grupo pequeño de hasta 10 buceadores, varios días de buceo, comidas y camarotes a bordo.", "intro": "El Apo Reef Natural Park es uno de los destinos de buceo más célebres de Filipinas. W Divers Coron fleta un yate para salidas solo de buceadores, con un grupo pequeño de hasta 10 personas.", "facts": [["Formato", "Crucero en yate, fletado en exclusiva"], ["Grupo", "Hasta 10 buceadores"], ["Duración habitual", "3 noches, 4 días"], ["Inmersiones", "Unas 10, más una nocturna opcional"], ["Embarque", "Coron, o Manila (Batangas) en algunas salidas"]], "sections": [{"h": "Un arrecife que merece el viaje.", "p": ["Apo Reef está en el estrecho de Mindoro, al oeste de Mindoro. Es un parque natural protegido con amplios arrecifes de coral y paredes, al que se llega tras varias horas de mar; por eso la salida es un crucero."]}, {"h": "La vida a bordo.", "p": ["En las salidas recientes, el yate llevó hasta 10 buceadores en cinco camarotes dobles con aire acondicionado. Hubo comidas y tentempiés durante todo el viaje, el buceo y el guiado estaban incluidos, y se organizaron recogida y traslado al hotel antes y después."]}, {"h": "Qué comprobar.", "p": ["La entrada al Apo Reef Natural Park se cobró aparte (100 USD en una salida reciente). Las fechas, el número de inmersiones y el precio dependen de cada salida, así que pide los detalles por escrito al equipo."]}], "ask": ["Próximas fechas y plazas libres", "Precio total y qué incluye", "Entrada al parque", "Certificación y experiencia necesarias", "Distribución de camarotes", "Punto de embarque"]},
-{"name": "Avistamiento de dugongos", "short": "Dugongos", "card": "Una salida temprana para buscar dugongos en las bahías tranquilas del norte de Busuanga.", "title": "Excursión de avistamiento de dugongos | Salidas especiales | W Divers Coron", "meta": "Una excursión de W Divers Coron para buscar dugongos en el norte de Busuanga, saliendo temprano para llegar antes que la multitud, con opción de visitar el Calauit Safari Park.", "intro": "Los dugongos, mamíferos marinos tranquilos que pastan praderas marinas, viven en las aguas del norte de Busuanga. En esta excursión el barco de W Divers sale temprano para llegar a la zona antes que otros barcos.", "facts": [["Formato", "Excursión de un día en barco"], ["Salida", "Muy temprano por la mañana"], ["Dónde", "Norte de Busuanga (zona de Aban-Aban)"], ["En el agua", "Pregunta si se prevé snorkel o buceo"], ["Extra", "Visita al Calauit Safari Park"]], "sections": [{"h": "Por qué salir tan temprano.", "p": ["Las zonas de dugongos populares se llenan a medida que avanza el día. Salir antes del amanecer da la mejor oportunidad de un encuentro tranquilo, antes de que lleguen otros barcos."]}, {"h": "Respeto por los animales.", "p": ["Los dugongos son salvajes y están protegidos. Los participantes siguen las indicaciones del guía, mantienen la distancia y nunca los tocan, persiguen ni alimentan. Los avistamientos nunca están garantizados."]}, {"h": "Aprovecha el día.", "p": ["La excursión puede combinarse con una visita al Calauit Safari Park en Busuanga. Pregunta al equipo cómo se organiza el día y qué incluye."]}], "ask": ["Hora de salida y recogida", "Snorkel o buceo, y equipo", "Entradas y tasas ambientales", "Opción del Calauit Safari Park", "Precio total y qué incluye"]},
-{"name": "Isla desierta, 2 días 1 noche", "short": "Isla desierta 2D1N", "card": "Cinco inmersiones y una noche de acampada en una isla deshabitada, dos días lejos del pueblo.", "title": "Isla desierta 2 días 1 noche | Salidas especiales | W Divers Coron", "meta": "Un paquete de buceo de W Divers Coron de 2 días y 1 noche: 5 inmersiones y una noche de acampada en una isla deshabitada lejos de Coron.", "intro": "Cambia el pueblo de Coron por una isla tranquila durante una noche. Este paquete de buceo de 2 días y 1 noche incluye 5 inmersiones y una acampada en una isla deshabitada, organizado por el equipo de W Divers.", "facts": [["Formato", "Paquete de buceo con acampada en isla"], ["Duración", "2 días, 1 noche"], ["Inmersiones", "5 inmersiones"], ["Alojamiento", "Acampada en una isla deshabitada"], ["No buceadores", "Pregunta por snorkel y tiempo de playa"]], "sections": [{"h": "Cinco inmersiones y una noche en la isla.", "p": ["El paquete incluye cinco inmersiones en dos días. Entre inmersiones vas a una isla tranquila y deshabitada, montas el campamento para la noche y despiertas en la playa antes de otro día en el mar."]}, {"h": "Conoce la organización.", "p": ["Las salidas con noche necesitan planes claros. Pregunta por dónde se duerme, las comidas, el agua potable, los baños y la sombra, qué llevar y qué pasa si cambia el tiempo."]}, {"h": "Para quién es.", "p": ["Grupos de amigos, familias y buceadores que viajan con no buceadores. Menciona los intereses de todos al consultar para que el equipo adapte los dos días."]}], "ask": ["Qué puntos visitan las 5 inmersiones", "Tiendas, ropa de cama y qué llevar", "Comidas y agua potable", "Instalaciones en la isla", "Opciones para no buceadores", "Condiciones de clima y cancelación", "Precio total"]},
-{"name": "Excursión al Kyokuzan Maru", "short": "Kyokuzan Maru", "card": "Un día completo hasta uno de los pecios japoneses más apartados de la zona.", "title": "Excursión al pecio Kyokuzan Maru | Salidas especiales | W Divers Coron", "meta": "Una excursión de día completo de W Divers Coron para bucear el Kyokuzan Maru, un carguero japonés hundido lejos del grupo principal de pecios de Coron.", "intro": "El Kyokuzan Maru está lejos del grupo principal de pecios de Coron, así que llegar lleva un día completo. Para los amantes de los pecios, es la oportunidad de bucear un lugar que visitan menos buceadores.", "facts": [["Formato", "Excursión de un día a un pecio"], ["Para", "Buceadores certificados"], ["Lugar", "Kyokuzan Maru, carguero japonés"], ["Además", "Pregunta qué otros puntos se pueden bucear por el camino"]], "sections": [{"h": "Un pecio fuera de la ruta habitual.", "p": ["Como otros pecios de la zona, el Kyokuzan Maru fue un carguero japonés perdido en la Segunda Guerra Mundial. Su distancia de Coron hace que tenga menos visitantes, y el trayecto más largo en barco forma parte del día."]}, {"h": "¿Es para ti?", "p": ["La profundidad prevista y las condiciones deciden quién puede participar. Indica tu nivel de certificación, tus inmersiones registradas y la fecha de tu última inmersión, y pregunta al equipo qué experiencia se necesita."]}, {"h": "Planea el día.", "p": ["Pregunta por la hora de salida, el número de inmersiones, el equipo, las comidas y las tasas, y qué pasa si las condiciones cambian ese día."]}], "ask": ["Certificación y experiencia necesarias", "Profundidad prevista y número de inmersiones", "Hora de salida y duración del día", "Equipo, comidas y tasas", "Precio total"]}
-],
-"ALT": {"lagoon-boats": "Vista aérea de un barco azul de W Divers en una laguna entre acantilados de caliza.", "dive-boat": "El barco de buceo azul con balancines de W Divers en el mar, visto desde arriba.", "jungle-crew": "Cuatro buceadores sonríen en la cubierta de un barco durante el rodaje de Law of the Jungle en Coron.", "film-crew": "Foto de grupo durante el apoyo de W Divers al rodaje de la película The Golden Holiday en Coron.", "film-crew-2": "Invitados y el equipo de W Divers posan juntos al aire libre en Coron.", "film-crew-3": "Dos hombres sonríen juntos en un restaurante de Coron.", "dean": "Dean Kang, instructor principal de W Divers Coron, con traje Scubapro en un barco en Coron.", "inhan": "Retrato de Inhan Kang, instructor de W Divers Coron.", "jex": "Retrato de Jex Lenver Tabat (GIGs), divemaster de W Divers Coron.", "ssi-jungle": "Cartel del apoyo de W Divers al rodaje de SBS Law of the Jungle en Coron, del 21 al 23 de enero de 2020, con fotos y autógrafos."}
+ "UI": {
+  "sub_first": "DSD (Bautismo de buceo)",
+  "sub_courses": "Cursos de buceo",
+  "sub_tdi": "Curso TDI Advanced Diver",
+  "sub_free": "Apnea",
+  "nav_pros": "Pro's",
+  "nav_special": "Salidas especiales",
+  "sub_special_all": "Todas las salidas especiales",
+  "read_trip": "Ver la salida",
+  "slides_label": "Lo mejor de W Divers Coron",
+  "slide_n": "Imagen {n} de {total}",
+  "slide_show": "Mostrar la imagen {n}",
+  "slide_pause": "Pausar la presentación",
+  "slide_play": "Reproducir la presentación"
+ },
+ "ROUTE_NAMES": {
+  "first": "DSD (Bautismo de buceo)",
+  "courses": "Cursos de buceo",
+  "tdi": "Curso TDI Advanced Diver",
+  "freediving": "Apnea",
+  "pros": "Pro's",
+  "special": "Salidas especiales"
+ },
+ "PAGES": {
+  "first": {
+   "title": "Bautismo de buceo (DSD) en Coron | W Divers Coron",
+   "meta": "Prueba el buceo por primera vez con Discover Scuba Diving (DSD) en W Divers Coron: una introducción supervisada por un instructor, sin certificación.",
+   "eyebrow": "DSD · Discover Scuba Diving",
+   "h1": "Tu primera respiración bajo el agua, con un instructor a tu lado.",
+   "intro": "Discover Scuba Diving (DSD) es una primera experiencia supervisada de buceo para quienes nunca han buceado. Dile a W Divers que eres principiante y pregunta qué opciones de DSD encajan con tus fechas.",
+   "summary": {
+    "h": "Preguntas que conviene hacer",
+    "for": "Para quienes nunca han buceado o lo hicieron hace mucho.",
+    "list": [
+     "Edad mínima y quién puede participar",
+     "Expectativas sobre natación y comodidad en el agua",
+     "El cuestionario médico",
+     "Dónde se realiza la sesión",
+     "Duración y precio total"
+    ]
+   },
+   "sections": [
+    {
+     "h": "En qué consiste un DSD.",
+     "p": [
+      "Una sesión de Discover Scuba Diving empieza con una breve explicación del equipo y de cómo respirar bajo el agua. Después practicas algunas habilidades básicas en aguas tranquilas y poco profundas antes de una inmersión guiada con un instructor cerca. No se necesita certificación ni experiencia previa."
+     ]
+    },
+    {
+     "h": "Una introducción, no una certificación.",
+     "p": [
+      "El DSD te permite probar el buceo sin comprometerte con un curso. Si te gusta, pregunta cómo seguir con un curso de buceo. Son pasos distintos, así que pregunta cuál encaja con tu viaje."
+     ]
+    },
+    {
+     "h": "Antes de reservar.",
+     "p": [
+      "Confirma la edad mínima, las expectativas sobre natación, el cuestionario médico, el lugar, la duración y qué incluye el precio. Comenta cualquier problema de salud al equipo antes de bucear; un formulario de consulta no es un apto médico."
+     ]
+    },
+    {
+     "h": "No hace falta fingir que ya te sientes seguro.",
+     "p": [
+      "Es normal tener dudas sobre respirar bajo el agua, el equipo o estar en el mar. Cuenta con qué te sientes cómodo para que la conversación empiece en el punto adecuado."
+     ]
+    }
+   ],
+   "cta": "Preguntar por el DSD"
+  },
+  "courses": {
+   "title": "Cursos de buceo en Coron | W Divers Coron",
+   "meta": "Aprende a bucear o sigue avanzando en Coron: cursos de buceo desde principiante hasta nivel profesional con los instructores PADI y SSI de W Divers Coron.",
+   "eyebrow": "Cursos de buceo",
+   "h1": "Aprende a bucear y sigue adelante.",
+   "intro": "Desde tu primera certificación hasta niveles profesionales, los instructores de W Divers Coron imparten cursos PADI y SSI. Cuéntanos tu experiencia, el curso que te interesa y cuánto tiempo tienes en Coron.",
+   "summary": {
+    "h": "Cursos por los que puedes preguntar",
+    "for": "Impartidos por nuestros instructores PADI y SSI:",
+    "list": [
+     "Open Water Diver",
+     "Advanced Open Water Diver",
+     "Rescue Diver y Emergency First Response",
+     "Divemaster",
+     "Especialidades: profundo, nitrox, sidemount, pecios, Peak Performance Buoyancy",
+     "AWARE Coral Reef Conservation"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Empieza a bucear.",
+     "p": [
+      "Si estás pensando en tu primera certificación, pregunta por el curso, los requisitos, el estudio y los días necesarios antes de planear el resto de tu estancia."
+     ]
+    },
+    {
+     "h": "Sigue avanzando.",
+     "p": [
+      "¿Ya tienes certificación? Los cursos Advanced y Rescue refuerzan tu confianza y habilidad, y las especialidades te permiten centrarte en lo que te interesa, del buceo profundo y el nitrox a los pecios y la flotabilidad."
+     ]
+    },
+    {
+     "h": "¿Te interesa la formación en pecios?",
+     "p": [
+      "Una especialidad de pecios enseña a bucear alrededor de pecios con seguridad; no es un permiso general para entrar en ellos. Para formación avanzada y técnica en pecios, consulta nuestro curso TDI Advanced Diver."
+     ]
+    },
+    {
+     "h": "Conoce el curso completo.",
+     "p": [
+      "Antes de confirmar, pregunta por la agencia, el nombre del curso, los requisitos, la duración prevista, los componentes de la formación, la disponibilidad del instructor y el coste total, incluidos materiales y tasas de certificación."
+     ]
+    }
+   ],
+   "catalog_h": "Cursos actuales",
+   "cta": "Preguntar por los cursos"
+  },
+  "tdi": {
+   "title": "Curso TDI Advanced Diver en Coron | W Divers Coron",
+   "meta": "Formación de buceo avanzado y técnico en Coron con los instructores TDI de W Divers Coron, incluida la formación avanzada en pecios para los pecios de Coron.",
+   "eyebrow": "Formación avanzada TDI",
+   "h1": "Fórmate para los pecios de Coron más allá de los límites recreativos.",
+   "intro": "Los pecios de Coron atraen a buceadores que quieren ir más lejos. W Divers Coron cuenta con instructores TDI, entre ellos un instructor TDI Technical y Advanced Wreck Diver, para buceadores listos para formarse más allá del buceo recreativo.",
+   "summary": {
+    "h": "Antes de consultar",
+    "for": "Para buceadores certificados con experiencia.",
+    "list": [
+     "Tu certificación actual y tus inmersiones registradas",
+     "Experiencia con nitrox o buceo profundo",
+     "El curso TDI que te interesa",
+     "Cuántos días tienes en Coron",
+     "Si tienes equipo técnico o de sidemount propio"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Qué es la formación TDI.",
+     "p": [
+      "TDI (Technical Diving International) forma en buceo avanzado y técnico: inmersiones más largas, profundas y complejas que requieren formación, equipo y planificación adicionales. Los pecios resguardados de Coron lo convierten en un lugar popular para aprender."
+     ]
+    },
+    {
+     "h": "Formación avanzada en pecios.",
+     "p": [
+      "Entrar en un pecio con seguridad es una habilidad propia. La formación avanzada en pecios cubre la planificación, el uso de carrete y guía, la gestión del gas y el desplazamiento en entornos con techo: una formación que una inmersión guiada no sustituye."
+     ]
+    },
+    {
+     "h": "Encuentra el curso adecuado.",
+     "p": [
+      "Los requisitos, la duración y el equipo varían entre programas TDI. Cuéntale al equipo tu experiencia y tus objetivos, y pregunta qué cursos TDI hay, para qué capacita cada uno y el coste total."
+     ]
+    }
+   ],
+   "cta": "Preguntar por la formación TDI"
+  },
+  "freediving": {
+   "title": "Apnea en Coron | W Divers Coron",
+   "meta": "Apnea en Coron con W Divers Coron: Barracuda Lake, Cathedral Cave y otros lugares claros y resguardados, con una sola respiración.",
+   "eyebrow": "Apnea",
+   "h1": "Coron en una sola respiración.",
+   "intro": "Lagos cristalinos, acantilados de caliza y aguas tranquilas y resguardadas hacen de Coron un favorito de los apneístas. W Divers Coron organiza salidas de apnea a lugares como Barracuda Lake y Cathedral Cave.",
+   "summary": {
+    "h": "Antes de consultar",
+    "for": "Para apneístas y buceadores de superficie con soltura.",
+    "list": [
+     "Tu experiencia o certificación de apnea",
+     "Los lugares que te gustaría visitar",
+     "Fechas preferidas",
+     "Si necesitas equipo"
+    ]
+   },
+   "sections": [
+    {
+     "h": "Por qué a los apneístas les encanta Coron.",
+     "p": [
+      "Barracuda Lake, entre paredes de caliza, es conocido por su agua clara y sus capas cambiantes de temperatura. Cathedral Cave y otros lugares resguardados ofrecen aguas tranquilas y una luz espectacular. Las condiciones y el acceso pueden cambiar, así que pregunta qué es posible en tus fechas."
+     ]
+    },
+    {
+     "h": "Salidas y formación.",
+     "p": [
+      "Pregunta al equipo por las salidas de apnea y si hay un curso para tu nivel. La apnea debe practicarse siempre con un compañero formado que vigile desde la superficie."
+     ]
+    },
+    {
+     "h": "Planea tu día.",
+     "p": [
+      "Cuéntale al equipo tu experiencia, los lugares que quieres visitar y el tiempo que tienes. Pregunta qué está incluido, como el barco, el equipo y las entradas."
+     ]
+    }
+   ],
+   "cta": "Preguntar por la apnea"
+  },
+  "special": {
+   "title": "Salidas especiales desde Coron | W Divers Coron",
+   "meta": "Salidas especiales con W Divers Coron: crucero en yate a Apo Reef, avistamiento de dugongos, una noche en una isla desierta y excursión al pecio Kyokuzan Maru.",
+   "eyebrow": "Salidas especiales",
+   "h1": "Grandes días desde Coron.",
+   "intro": "Algunas experiencias requieren salir temprano, un trayecto en barco más largo o una noche fuera. El equipo de W Divers organiza estas salidas especiales en fechas concretas; pregunta qué hay previsto durante tu estancia.",
+   "note": "Las fechas, lo incluido y los precios varían según la salida. Pregunta al equipo por las próximas."
+  },
+  "trip": {
+   "eyebrow": "Salida especial",
+   "glance_h": "De un vistazo",
+   "ask_h": "Pregunta antes de reservar",
+   "others_h": "Otras salidas especiales",
+   "cta": "Preguntar por {name}",
+   "cta_note": "Una consulta no reserva plaza."
+  },
+  "pros": {
+   "title": "Pro's: conoce al equipo W Divers | W Divers Coron",
+   "meta": "Conoce a los Pro's del equipo W Divers en Coron, Palawan: el instructor principal Dean Kang, el instructor Inhan Kang y el divemaster Jex Lenver Tabat.",
+   "eyebrow": "Pro's del equipo W Divers",
+   "h1": "Conoce a las personas con las que bucearás.",
+   "intro": "Pecios, dugongos, aguas termales y cuevas magníficas: una invitación a sumergirte en las aguas de Coron. Conoce a los instructores del equipo W Divers.",
+   "team_h": "Equipo W Divers",
+   "team": [
+    {
+     "role": "Instructor principal",
+     "intro": "Dean dirige W Divers Coron y forma tanto a buceadores como a instructores, con títulos de instructor en cinco agencias.",
+     "creds_h": "Títulos de instructor",
+     "spec_h": "Instructor de especialidades"
+    },
+    {
+     "role": "Instructor novel",
+     "tag": "Enseña en inglés, tagalo y coreano con nivel nativo",
+     "intro": "Inhan se tituló como instructor PADI a los 18 años y enseña cursos recreativos, técnicos y de pecios.",
+     "creds_h": "Títulos de instructor"
+    },
+    {
+     "role": "Divemaster",
+     "intro": "Divemaster filipino del equipo W Divers que guía a los buceadores en el barco y bajo el agua.",
+     "creds_h": "Certificación"
+    }
+   ],
+   "screen_h": "En pantalla en Coron.",
+   "screen_t": "El equipo W Divers ha apoyado rodajes de cine y televisión coreanos en Coron.",
+   "screen": [
+    {
+     "cap": "Apoyo a SBS Law of the Jungle en Coron, incluidos episodios en busca de dugongos y de un pecio misterioso."
+    },
+    {
+     "cap": "Con actores coreanos durante el apoyo al rodaje de la película coreana The Golden Holiday (국제수사) en Coron."
+    }
+   ],
+   "cta_h": "Bucea con el equipo W Divers.",
+   "cta_t": "Envía tus fechas, el tamaño del grupo y tu experiencia, y el equipo te ayudará a planear tu tiempo en Coron."
+  },
+  "about": {
+   "title": "Sobre W Divers Coron | Buceo en Coron, Palawan",
+   "meta": "W Divers Coron es un centro de buceo coreano en Coron, Palawan, desde marzo de 2015: pecios, dugongos, aguas termales y cuevas.",
+   "h1": "Un centro de buceo coreano en Coron, desde 2015.",
+   "intro": "Pecios, dugongos, aguas termales y cuevas. W Divers Coron guía a buceadores por las aguas de Coron, Palawan, desde marzo de 2015, de la primera respiración a la penetración en pecios.",
+   "story_k": "Nuestra historia",
+   "story_h": "De un astillero en Corea a los pecios de Coron.",
+   "story_t": [
+    "W Divers Coron es un centro de buceo coreano en Coron, una de las zonas de buceo en pecios más conocidas del mundo. Lo fundó el instructor Dean Kang (강덕환), que trabajó 20 años en Hyundai Samho Heavy Industries en Corea, donde también presidió el club de buceo de la empresa.",
+    "Tras dejar el astillero eligió Coron, Palawan, para su segunda etapa y abrió W Divers en la calle principal del pueblo el 1 de marzo de 2015. Emprender en el extranjero sin pasar antes años en la comunidad coreana local preocupaba a quienes lo rodeaban; él agradece a las buenas personas que lo ayudaron a instalarse."
+   ],
+   "facts_h": "Lo que te espera al llegar",
+   "facts": [
+    [
+     "Tienda",
+     "Un centro de buceo con aire acondicionado y fachada de cristal en la calle principal de Coron."
+    ],
+    [
+     "Barcos",
+     "Dos bancas de buceo propias y un multicab limpio y con aire acondicionado para los traslados."
+    ],
+    [
+     "Equipo",
+     "Equipo de alquiler comprado nuevo. Hay ordenadores de buceo, scooters, nitrox y oxígeno."
+    ],
+    [
+     "Alojamiento",
+     "Cinco habitaciones propias con aire acondicionado y ayuda para reservar habitaciones con ventilador, resorts coreanos o resorts tipo hotel con piscina."
+    ],
+    [
+     "Horario",
+     "Abierto todos los días, de 7:00 a 21:00."
+    ],
+    [
+     "Idiomas",
+     "Atención en inglés y coreano."
+    ]
+   ],
+   "wreck_h": "Buceo en pecios, con un sello para recordarlo.",
+   "wreck_t": "Los pecios de Coron son un campo de entrenamiento para buceadores técnicos que aprenden penetración, y muchos también permiten a los buceadores recreativos mirar dentro con seguridad. Nuestros guías tienen una larga experiencia en pecios, y cada pecio tiene su propio sello para tu bitácora una vez buceado. Más allá de los pecios están Barracuda Lake y Cathedral Cave, donde sube agua caliente de fuentes termales, y arrecifes para inmersiones tranquilas.",
+   "screen_k": "En pantalla",
+   "screen_h": "Guía de dugongos y pecios para SBS Law of the Jungle.",
+   "screen_t": "Del 21 al 23 de enero de 2020, W Divers apoyó el rodaje de Law of the Jungle de SBS en Coron. El SSI Instructor Trainer Dean Kang fue el guía de dugongos y de penetración en pecios del programa.",
+   "screen_link": "Conoce a nuestros Pro's",
+   "source": "Fuentes: el perfil de W Divers Coron en SSI y el blog de Naver de W Divers."
+  }
+ },
+ "HOME": {
+  "routes": [
+   {
+    "k": "Buceadores certificados",
+    "t": "¿Vienes por los pecios, los arrecifes o un poco de ambos? Explora las opciones e indica tu certificación y tu experiencia reciente al consultar.",
+    "link": "Ver salidas de buceo"
+   },
+   {
+    "k": "Bautismo de buceo (DSD)",
+    "t": "¿Nunca has buceado? El DSD es una primera experiencia supervisada con un instructor a tu lado. Pregunta qué opciones encajan con tus fechas.",
+    "link": "Sobre el DSD"
+   },
+   {
+    "k": "Formación",
+    "t": "Cursos de buceo desde tu primera certificación hasta niveles profesionales, además de formación TDI para buceadores avanzados de pecios y técnicos.",
+    "link": "Ver cursos de buceo"
+   },
+   {
+    "k": "Más allá del buceo",
+    "t": "¿Quieres también tiempo fuera del agua? Pregunta por excursiones de island hopping durante tu estancia en Coron.",
+    "link": "Ver island hopping"
+   }
+  ],
+  "slides": [
+   [
+    "Apoyo al rodaje de la película «The Golden Holiday» (국제수사)\nLugar de rodaje: Teru Kaze Maru",
+    "Conoce a nuestros Pro's"
+   ],
+   [
+    "Apoyo al rodaje: SBS Law of the Jungle en Coron",
+    "Conoce a nuestros Pro's"
+   ],
+   [
+    "Lagunas, acantilados de caliza y nuestro barco",
+    "Salidas especiales"
+   ],
+   [
+    "Buceo en pecios y arrecifes alrededor de Coron",
+    "Buceo"
+   ],
+   [
+    "El barco de buceo de W Divers Coron",
+    "Sobre nosotros"
+   ]
+  ],
+  "special_h": "Salidas especiales desde Coron.",
+  "special_t": "Días más largos y aventuras con noche incluida, organizados por el equipo de W Divers en fechas concretas.",
+  "special_all": "Ver todas las salidas especiales"
+ },
+ "CONTACT_INTEREST": [
+  [
+   "wreck",
+   "Buceo en pecios"
+  ],
+  [
+   "reef",
+   "Buceo en arrecifes"
+  ],
+  [
+   "first",
+   "Bautismo de buceo (DSD)"
+  ],
+  [
+   "courses",
+   "Cursos de buceo"
+  ],
+  [
+   "tdi",
+   "Formación avanzada TDI"
+  ],
+  [
+   "freediving",
+   "Apnea"
+  ],
+  [
+   "special",
+   "Salidas especiales"
+  ],
+  [
+   "island",
+   "Island hopping"
+  ],
+  [
+   "unsure",
+   "Aún no lo sé"
+  ]
+ ],
+ "SITEMAP_GROUPS": [
+  "Buceo",
+  "Puntos de buceo",
+  "Planifica tu viaje",
+  "Diario",
+  "Sobre nosotros y contacto",
+  "Salidas especiales"
+ ],
+ "TRIPS": [
+  {
+   "name": "Crucero en yate a Apo Reef",
+   "short": "Apo Reef",
+   "card": "Un yate fletado en exclusiva a uno de los arrecifes más conocidos de Filipinas, para hasta 10 buceadores.",
+   "title": "Crucero en yate a Apo Reef | Salidas especiales | W Divers Coron",
+   "meta": "Únete a un crucero en yate de W Divers Coron al Apo Reef Natural Park: un grupo pequeño de hasta 10 buceadores, varios días de buceo, comidas y camarotes a bordo.",
+   "intro": "El Apo Reef Natural Park es uno de los destinos de buceo más célebres de Filipinas. W Divers Coron fleta un yate para salidas solo de buceadores, con un grupo pequeño de hasta 10 personas.",
+   "facts": [
+    [
+     "Formato",
+     "Crucero en yate, fletado en exclusiva"
+    ],
+    [
+     "Grupo",
+     "Hasta 10 buceadores"
+    ],
+    [
+     "Duración habitual",
+     "3 noches, 4 días"
+    ],
+    [
+     "Inmersiones",
+     "Unas 10, más una nocturna opcional"
+    ],
+    [
+     "Embarque",
+     "Coron, o Manila (Batangas) en algunas salidas"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Un arrecife que merece el viaje.",
+     "p": [
+      "Apo Reef está en el estrecho de Mindoro, al oeste de Mindoro. Es un parque natural protegido con amplios arrecifes de coral y paredes, al que se llega tras varias horas de mar; por eso la salida es un crucero."
+     ]
+    },
+    {
+     "h": "La vida a bordo.",
+     "p": [
+      "En las salidas recientes, el yate llevó hasta 10 buceadores en cinco camarotes dobles con aire acondicionado. Hubo comidas y tentempiés durante todo el viaje, el buceo y el guiado estaban incluidos, y se organizaron recogida y traslado al hotel antes y después."
+     ]
+    },
+    {
+     "h": "Qué comprobar.",
+     "p": [
+      "La entrada al Apo Reef Natural Park se cobró aparte (100 USD en una salida reciente). Las fechas, el número de inmersiones y el precio dependen de cada salida, así que pide los detalles por escrito al equipo."
+     ]
+    }
+   ],
+   "ask": [
+    "Próximas fechas y plazas libres",
+    "Precio total y qué incluye",
+    "Entrada al parque",
+    "Certificación y experiencia necesarias",
+    "Distribución de camarotes",
+    "Punto de embarque"
+   ]
+  },
+  {
+   "name": "Avistamiento de dugongos",
+   "short": "Dugongos",
+   "card": "Una salida temprana para buscar dugongos en las bahías tranquilas del norte de Busuanga.",
+   "title": "Excursión de avistamiento de dugongos | Salidas especiales | W Divers Coron",
+   "meta": "Una excursión de W Divers Coron para buscar dugongos en el norte de Busuanga, saliendo temprano para llegar antes que la multitud, con opción de visitar el Calauit Safari Park.",
+   "intro": "Los dugongos, mamíferos marinos tranquilos que pastan praderas marinas, viven en las aguas del norte de Busuanga. En esta excursión el barco de W Divers sale temprano para llegar a la zona antes que otros barcos.",
+   "facts": [
+    [
+     "Formato",
+     "Excursión de un día en barco"
+    ],
+    [
+     "Salida",
+     "Muy temprano por la mañana"
+    ],
+    [
+     "Dónde",
+     "Norte de Busuanga (zona de Aban-Aban)"
+    ],
+    [
+     "En el agua",
+     "Pregunta si se prevé snorkel o buceo"
+    ],
+    [
+     "Extra",
+     "Visita al Calauit Safari Park"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Por qué salir tan temprano.",
+     "p": [
+      "Las zonas de dugongos populares se llenan a medida que avanza el día. Salir antes del amanecer da la mejor oportunidad de un encuentro tranquilo, antes de que lleguen otros barcos."
+     ]
+    },
+    {
+     "h": "Respeto por los animales.",
+     "p": [
+      "Los dugongos son salvajes y están protegidos. Los participantes siguen las indicaciones del guía, mantienen la distancia y nunca los tocan, persiguen ni alimentan. Los avistamientos nunca están garantizados."
+     ]
+    },
+    {
+     "h": "Aprovecha el día.",
+     "p": [
+      "La excursión puede combinarse con una visita al Calauit Safari Park en Busuanga. Pregunta al equipo cómo se organiza el día y qué incluye."
+     ]
+    }
+   ],
+   "ask": [
+    "Hora de salida y recogida",
+    "Snorkel o buceo, y equipo",
+    "Entradas y tasas ambientales",
+    "Opción del Calauit Safari Park",
+    "Precio total y qué incluye"
+   ]
+  },
+  {
+   "name": "Isla desierta, 2 días 1 noche",
+   "short": "Isla desierta 2D1N",
+   "card": "Cinco inmersiones y una noche de acampada en una isla deshabitada, dos días lejos del pueblo.",
+   "title": "Isla desierta 2 días 1 noche | Salidas especiales | W Divers Coron",
+   "meta": "Un paquete de buceo de W Divers Coron de 2 días y 1 noche: 5 inmersiones y una noche de acampada en una isla deshabitada lejos de Coron.",
+   "intro": "Cambia el pueblo de Coron por una isla tranquila durante una noche. Este paquete de buceo de 2 días y 1 noche incluye 5 inmersiones y una acampada en una isla deshabitada, organizado por el equipo de W Divers.",
+   "facts": [
+    [
+     "Formato",
+     "Paquete de buceo con acampada en isla"
+    ],
+    [
+     "Duración",
+     "2 días, 1 noche"
+    ],
+    [
+     "Inmersiones",
+     "5 inmersiones"
+    ],
+    [
+     "Alojamiento",
+     "Acampada en una isla deshabitada"
+    ],
+    [
+     "No buceadores",
+     "Pregunta por snorkel y tiempo de playa"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Cinco inmersiones y una noche en la isla.",
+     "p": [
+      "El paquete incluye cinco inmersiones en dos días. Entre inmersiones vas a una isla tranquila y deshabitada, montas el campamento para la noche y despiertas en la playa antes de otro día en el mar."
+     ]
+    },
+    {
+     "h": "Conoce la organización.",
+     "p": [
+      "Las salidas con noche necesitan planes claros. Pregunta por dónde se duerme, las comidas, el agua potable, los baños y la sombra, qué llevar y qué pasa si cambia el tiempo."
+     ]
+    },
+    {
+     "h": "Para quién es.",
+     "p": [
+      "Grupos de amigos, familias y buceadores que viajan con no buceadores. Menciona los intereses de todos al consultar para que el equipo adapte los dos días."
+     ]
+    }
+   ],
+   "ask": [
+    "Qué puntos visitan las 5 inmersiones",
+    "Tiendas, ropa de cama y qué llevar",
+    "Comidas y agua potable",
+    "Instalaciones en la isla",
+    "Opciones para no buceadores",
+    "Condiciones de clima y cancelación",
+    "Precio total"
+   ]
+  },
+  {
+   "name": "Excursión al Kyokuzan Maru",
+   "short": "Kyokuzan Maru",
+   "card": "Un día completo hasta uno de los pecios japoneses más apartados de la zona.",
+   "title": "Excursión al pecio Kyokuzan Maru | Salidas especiales | W Divers Coron",
+   "meta": "Una excursión de día completo de W Divers Coron para bucear el Kyokuzan Maru, un carguero japonés hundido lejos del grupo principal de pecios de Coron.",
+   "intro": "El Kyokuzan Maru está lejos del grupo principal de pecios de Coron, así que llegar lleva un día completo. Para los amantes de los pecios, es la oportunidad de bucear un lugar que visitan menos buceadores.",
+   "facts": [
+    [
+     "Formato",
+     "Excursión de un día a un pecio"
+    ],
+    [
+     "Para",
+     "Buceadores certificados"
+    ],
+    [
+     "Lugar",
+     "Kyokuzan Maru, carguero japonés"
+    ],
+    [
+     "Además",
+     "Pregunta qué otros puntos se pueden bucear por el camino"
+    ]
+   ],
+   "sections": [
+    {
+     "h": "Un pecio fuera de la ruta habitual.",
+     "p": [
+      "Como otros pecios de la zona, el Kyokuzan Maru fue un carguero japonés perdido en la Segunda Guerra Mundial. Su distancia de Coron hace que tenga menos visitantes, y el trayecto más largo en barco forma parte del día."
+     ]
+    },
+    {
+     "h": "¿Es para ti?",
+     "p": [
+      "La profundidad prevista y las condiciones deciden quién puede participar. Indica tu nivel de certificación, tus inmersiones registradas y la fecha de tu última inmersión, y pregunta al equipo qué experiencia se necesita."
+     ]
+    },
+    {
+     "h": "Planea el día.",
+     "p": [
+      "Pregunta por la hora de salida, el número de inmersiones, el equipo, las comidas y las tasas, y qué pasa si las condiciones cambian ese día."
+     ]
+    }
+   ],
+   "ask": [
+    "Certificación y experiencia necesarias",
+    "Profundidad prevista y número de inmersiones",
+    "Hora de salida y duración del día",
+    "Equipo, comidas y tasas",
+    "Precio total"
+   ]
+  }
+ ],
+ "ALT": {
+  "lagoon-boats": "Vista aérea de un barco azul de W Divers en una laguna entre acantilados de caliza.",
+  "dive-boat": "El barco de buceo azul con balancines de W Divers en el mar, visto desde arriba.",
+  "jungle-crew": "Cuatro buceadores sonríen en la cubierta de un barco durante el rodaje de Law of the Jungle en Coron.",
+  "film-crew": "Foto de grupo durante el apoyo de W Divers al rodaje de la película The Golden Holiday en Coron.",
+  "film-crew-2": "Invitados y el equipo de W Divers posan juntos al aire libre en Coron.",
+  "film-crew-3": "Dos hombres sonríen juntos en un restaurante de Coron.",
+  "dean": "Dean Kang, instructor principal de W Divers Coron, con traje Scubapro en un barco en Coron.",
+  "inhan": "Retrato de Inhan Kang, instructor de W Divers Coron.",
+  "jex": "Retrato de Jex Lenver Tabat (GIGs), divemaster de W Divers Coron.",
+  "ssi-jungle": "Cartel del apoyo de W Divers al rodaje de SBS Law of the Jungle en Coron, del 21 al 23 de enero de 2020, con fotos y autógrafos.",
+  "yacht-aerial": "Un catamarán de vela blanco fondeado en aguas azules y tranquilas, visto desde arriba.",
+  "yacht-cabin": "Un camarote de yate luminoso con cama doble y ventanas hacia islas verdes.",
+  "dugong-diver": "Un dugongo nada en aguas azules soleadas mientras un buceador lo observa a distancia.",
+  "calauit-zebras": "Cebras pastan junto a una caseta de guardas en el Calauit Safari Park, en Busuanga.",
+  "calauit-giraffes": "Dos jirafas se inclinan hacia la cámara bajo un cielo azul en el Calauit Safari Park.",
+  "boat-lunch": "Un almuerzo a bordo: pescado a la parrilla, pollo, verduras, mejillones y mango.",
+  "w-coral-wreck": "Un pecio cubierto de coral surge del agua azul, rodeado de bancos de peces.",
+  "w-valves": "Una hilera de válvulas de motor cubiertas de sedimento dentro de un pecio.",
+  "w-three-divers": "Tres buceadores hacen el signo de la paz a través de una abertura en un pecio con coral.",
+  "w-engine-room": "Maquinaria en la oscura sala de máquinas de un pecio.",
+  "w-machinery": "Pequeños peces nadan junto a la maquinaria incrustada de un pecio.",
+  "fd-cave": "Una cueva de caliza con estalactitas reflejadas en el agua quieta.",
+  "fd-beam": "Una apneísta flota en un haz de luz solar en aguas azul profundo.",
+  "dsd-sand": "Un buceador se desliza sobre arena blanca hacia la cámara, con otros buceadores detrás.",
+  "pool-lesson": "Un instructor prepara el equipo con una alumna junto a una piscina.",
+  "gear-crates": "Cajas con aletas, máscaras y equipo de buceo junto a un vehículo azul.",
+  "van-transfer": "Invitados con mochilas suben a una furgoneta plateada para un traslado.",
+  "crew-briefing": "Buceadores con traje reunidos para la explicación en la cubierta de un barco azul.",
+  "harbor-group": "Ocho invitados posan en el muelle con barcos y colinas verdes detrás.",
+  "briefing-blue": "Invitados descansan en un barco de buceo azul entre inmersiones.",
+  "heart-divers": "Dos buceadores sonrientes forman un corazón en la superficie junto al barco.",
+  "under-boat": "Buceadores descienden sobre arena blanca bajo el casco de un barco.",
+  "rope": "Un cabo de amarre cubierto de coral cuelga en aguas azules y claras.",
+  "flags-bow": "Las banderas de Corea y Filipinas ondean en un barco, con islas verdes en el horizonte."
+ }
 }
