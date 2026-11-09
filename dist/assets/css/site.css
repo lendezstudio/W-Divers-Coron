@@ -1171,3 +1171,9 @@ html:not(.js) .slide-controls { display: none; }
 @media (max-width: 899px) { .pro-grid { grid-template-columns: 1fr; } }
 .about-screen { padding-top: var(--sec); }
 .about-grid { grid-template-columns: minmax(0, 720px); }
+
+/* desktop: never let the hero run past the bottom of the window, so captions, links and dots stay visible */
+@media (min-width: 1024px) {
+  .hero-frame { min-height: 0; height: clamp(600px, 100svh, min(900px, calc(100vw / 1.8))); }
+  .hero-copy { padding-top: 110px; padding-bottom: 90px; }
+}
