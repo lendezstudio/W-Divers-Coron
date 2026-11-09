@@ -353,7 +353,7 @@ main:focus { outline: none; }
 .summary .btn { width: 100%; margin-top: 22px; }
 .summary-note { color: var(--text-muted); margin: 14px 0 0; }
 .checklist li { position: relative; padding: 10px 0 10px 28px; border-top: 1px solid var(--line-dark); font-size: 15.5px; line-height: 1.5; }
-.checklist li::before { content: ""; position: absolute; left: 2px; top: 20px; width: 12px; height: 2px; background: var(--accent-dark); }
+.checklist li::before { content: ""; position: absolute; left: 4px; top: 19px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-dark); }
 .checklist li:last-child { border-bottom: 1px solid var(--line-dark); }
 
 .related { padding-block: calc(var(--sec) * .8); }
@@ -1162,7 +1162,7 @@ html:not(.js) .slide-controls { display: none; }
 .pro-card.is-lead .pro-photo { height: clamp(320px, 30vw, 430px); }
 .pro-card.is-lead .pro-photo img { object-position: 50% 19% !important; }
 @media (max-width: 899px) { .pro-card.is-lead .pro-photo { height: clamp(250px, 72vw, 380px); } .pro-card.is-lead .pro-photo img { object-position: 50% 22% !important; } }
-/* Pro's: one frame for everyone — the same 4:3 photo at the top of each card */
+/* Pro's: one frame for everyone: the same 4:3 photo at the top of each card */
 .pro-photo, .pro-card .pro-photo, .pro-card.is-lead .pro-photo { height: auto !important; aspect-ratio: 4 / 3 !important; }
 .pro-photo img { object-position: 50% 22% !important; }
 .pro-card.is-lead .pro-photo img { object-position: 50% 20% !important; }
@@ -1177,3 +1177,28 @@ html:not(.js) .slide-controls { display: none; }
   .hero-frame { min-height: 0; height: clamp(600px, 100svh, min(900px, calc(100vw / 1.8))); }
   .hero-copy { padding-top: 110px; padding-bottom: 90px; }
 }
+
+/* sticky bar: the same menu as the header, so it stays available while scrolling */
+.sticky-bar .main-nav { margin-left: auto; margin-right: 28px; }
+.sticky-bar .main-nav .top { min-height: 40px; font-size: 14.5px; }
+.sticky-bar .sub { top: calc(100% + 4px); }
+.sticky-bar .menu-btn { display: none; }
+@media (max-width: 1300px) {
+  .sticky-bar .main-nav { display: none; }
+  .sticky-bar .menu-btn { display: inline-flex; }
+}
+
+/* Pro's: three equal cards in one row */
+.pro-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+.pro-card.is-lead { grid-row: auto; }
+.pro-card .pro-photo, .pro-card.is-lead .pro-photo { aspect-ratio: 4 / 3 !important; height: auto !important; }
+@media (max-width: 1099px) { .pro-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 899px) { .pro-grid { grid-template-columns: 1fr; } }
+
+/* On screen: both photos in the same 3:2 frame */
+.screen-fig .frame { aspect-ratio: 3 / 2; }
+.screen-fig .frame picture { height: 100%; }
+.screen-fig .frame img { width: 100%; height: 100% !important; object-fit: cover; }
+
+/* gallery: tall tiles for portrait photos */
+.tile.tall { grid-row: span 2; }

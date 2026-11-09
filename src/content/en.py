@@ -177,6 +177,7 @@ PAGES["diving"] = {
 }
 
 PAGES["wreck"] = {
+    "inline_more": [[1, "w-coral-wreck"]],
     "title": "Wreck Diving in Coron | W Divers Coron",
     "meta": "Plan wreck diving in Coron around your certification and recent experience. Know what to share and what to confirm before you book with W Divers Coron.",
     "eyebrow": "Wreck diving",
@@ -200,6 +201,7 @@ PAGES["wreck"] = {
 }
 
 PAGES["reef"] = {
+    "inline_more": [[0, "dugong-diver"]],
     "title": "Reef Diving in Coron | W Divers Coron",
     "meta": "Ask W Divers Coron about reef-diving options in Coron and a day shaped around your interests, experience and travel dates.",
     "eyebrow": "Reef diving",
@@ -222,6 +224,7 @@ PAGES["reef"] = {
 }
 
 PAGES["first"] = {
+    "inline_more": [[2, "heart-divers"]],
     "title": "Discover Scuba Diving (DSD) in Coron | W Divers Coron",
     "meta": "Try scuba for the first time with Discover Scuba Diving (DSD) at W Divers Coron: a supervised introduction with an instructor, no certification needed.",
     "eyebrow": "DSD · Discover Scuba Diving",
@@ -246,6 +249,7 @@ PAGES["first"] = {
 }
 
 PAGES["courses"] = {
+    "inline_more": [[1, "under-boat"]],
     "title": "Scuba Courses in Coron | W Divers Coron",
     "meta": "Learn to dive or keep progressing in Coron: scuba courses from beginner to professional levels with W Divers Coron's PADI and SSI instructors.",
     "eyebrow": "Scuba courses",
@@ -271,6 +275,7 @@ PAGES["courses"] = {
 }
 
 PAGES["tdi"] = {
+    "inline_more": [[1, "w-machinery"]],
     "title": "TDI Advanced Diver Course in Coron | W Divers Coron",
     "meta": "Advanced and technical diver training in Coron with W Divers Coron's TDI instructors, including advanced wreck training for Coron's wrecks.",
     "eyebrow": "TDI advanced training",
@@ -294,6 +299,7 @@ PAGES["tdi"] = {
 }
 
 PAGES["freediving"] = {
+    "inline_more": [[1, "fd-standing"]],
     "title": "Free Diving in Coron | W Divers Coron",
     "meta": "Freediving in Coron with W Divers Coron: Barracuda Lake, Cathedral Cave and other clear, sheltered spots on a single breath.",
     "eyebrow": "Free diving",
@@ -397,6 +403,7 @@ PAGES["site"] = {
 }
 
 PAGES["island"] = {
+    "inline_more": [[1, "boat-lunch"]],
     "title": "Island Hopping in Coron | W Divers Coron",
     "meta": "Ask W Divers Coron about island-hopping arrangements in Coron for your group, including divers and non-divers travelling together.",
     "eyebrow": "Island hopping",
@@ -782,7 +789,7 @@ ARTICLES = [
 
 TRIPS = [
     {
-        "slug": "apo-reef", "name": "Apo Reef Yacht Liveaboard", "short": "Apo Reef", "img": "yacht-aerial", "inline": [[1, "yacht-cabin"]],
+        "slug": "apo-reef", "name": "Apo Reef Yacht Liveaboard", "short": "Apo Reef", "img": "yacht-aerial", "inline": [[0, "yacht-salon"], [1, "yacht-cabin"]],
         "card": "A full-charter yacht trip to one of the Philippines' best-known reefs, for up to 10 divers.",
         "title": "Apo Reef Yacht Liveaboard | Special Trips | W Divers Coron",
         "meta": "Join a W Divers Coron yacht liveaboard to Apo Reef Natural Park: a small group of up to 10 divers, several days of diving, meals and cabins on board.",
@@ -810,7 +817,7 @@ TRIPS = [
         "ask": ["Departure time and pick-up", "Snorkelling or diving, and equipment", "Entrance and environmental fees", "Calauit Safari Park option", "Total price and what's included"],
     },
     {
-        "slug": "deserted-island-overnight", "name": "Deserted Island 2 Days 1 Night", "short": "Deserted Island 2D1N", "img": "beach-walk", "inline": [[1, "boat-lunch"]],
+        "slug": "deserted-island-overnight", "name": "Deserted Island 2 Days 1 Night", "short": "Deserted Island 2D1N", "img": "beach-walk", "inline": [[0, "heart-divers"], [1, "boat-lunch"]],
         "card": "Five dives and a night camping on an uninhabited island, two days away from town.",
         "title": "Deserted Island 2 Days 1 Night Tour | Special Trips | W Divers Coron",
         "meta": "A W Divers Coron 2-day, 1-night diving package: 5 dives and a night camping on an uninhabited island away from Coron town.",
@@ -824,7 +831,7 @@ TRIPS = [
         "ask": ["Which dive sites the 5 dives visit", "Tents, bedding and what to bring", "Meals and drinking water", "Facilities on the island", "Options for non-divers", "Weather and cancellation terms", "Total price"],
     },
     {
-        "slug": "kyokuzan-maru", "name": "Kyokuzan Maru Day Trip", "short": "Kyokuzan Maru", "img": "w-coral-wreck", "inline": [[0, "w-valves"]],
+        "slug": "kyokuzan-maru", "name": "Kyokuzan Maru Day Trip", "short": "Kyokuzan Maru", "img": "w-coral-wreck", "inline": [[0, "w-valves"], [2, "crew-briefing"]],
         "card": "A full day out to one of the region's more remote Japanese wrecks.",
         "title": "Kyokuzan Maru Wreck Day Trip | Special Trips | W Divers Coron",
         "meta": "A full-day W Divers Coron trip to dive the Kyokuzan Maru, a Japanese cargo wreck away from the main cluster of Coron wrecks.",

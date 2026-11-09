@@ -37,7 +37,7 @@ SECTION = {
     "diving": "diving", "wreck": "diving", "reef": "diving", "first": "diving", "courses": "diving",
     "tdi": "diving", "freediving": "diving", "pros": "pros", "special": "special", "trip": "special",
     "island": "diving", "sites": "sites", "site": "sites", "plan": "plan", "faq": "plan",
-    "gallery": "plan", "journal": "plan", "article": "plan", "about": "about", "contact": "contact",
+    "gallery": "gallery", "journal": "plan", "article": "plan", "about": "about", "contact": "contact",
 }
 
 # Old paths that now redirect, per locale: old path -> route key.
@@ -254,6 +254,7 @@ def nav_model(L):
         ("special", u["nav_special"], url(c, "special"),
          [(u["sub_special_all"], url(c, "special"))] + [(t["short"], url(c, "trip", t["slug"])) for t in L.trips]),
         ("sites", u["nav_sites"], url(c, "sites"), None),
+        ("gallery", u["sub_gallery"], url(c, "gallery"), None),
         ("plan", u["nav_plan"], url(c, "plan"), [
             (u["sub_guide"], url(c, "plan")), (u["sub_faq"], url(c, "faq")),
             (u["sub_gallery"], url(c, "gallery")), (u["sub_journal"], url(c, "journal"))]),
@@ -262,7 +263,7 @@ def nav_model(L):
     ]
 
 
-def header(L, route, current_path):
+def nav_items(L, route, current_path):
     key = route[0]
     sec = SECTION.get(key)
     items = []
@@ -276,9 +277,14 @@ def header(L, route, current_path):
                          f'<ul class="sub">{subs}</ul></li>')
         else:
             items.append(f'<li><a class="top" href="{href}"{cur}>{e(label)}</a></li>')
+    return "".join(items)
+
+
+def header(L, route, current_path):
+    items = nav_items(L, route, current_path)
     return f'''<header class="site-header" data-header>
   {logo(L)}
-  <nav class="main-nav" aria-label="{e(L.ui["primary_nav"])}"><ul>{"".join(items)}</ul></nav>
+  <nav class="main-nav" aria-label="{e(L.ui["primary_nav"])}"><ul>{items}</ul></nav>
   <div class="header-tools">
     {lang_menu(L, route)}
     {btn(url(L.code, "contact"), L.ui["plan_cta"], "btn btn-outline btn-sm header-cta")}
@@ -287,9 +293,10 @@ def header(L, route, current_path):
 </header>'''
 
 
-def sticky_bar(L, route):
+def sticky_bar(L, route, current_path):
     return f'''<div class="sticky-bar" data-sticky aria-hidden="true">
   {logo(L, "brand brand-sm")}
+  <nav class="main-nav" aria-label="{e(L.ui["primary_nav"])}"><ul>{nav_items(L, route, current_path)}</ul></nav>
   <div class="header-tools">
     {lang_menu(L, route)}
     {btn(url(L.code, "contact"), L.ui["plan_cta"], "btn btn-outline btn-sm")}
@@ -416,7 +423,7 @@ def layout(L, route, title, meta, opening, body, extra_head="", jsonld=None, bod
     return f'''{head(L, route, title, meta, extra_head, jsonld, og_image)}
 <body class="{body_cls}">
 <a class="skip" href="#main">{e(L.ui["skip"])}</a>
-{sticky_bar(L, route)}
+{sticky_bar(L, route, current)}
 {nav_panel(L, route, current)}
 {header(L, route, current)}
 <main id="main" tabindex="-1">
@@ -715,6 +722,9 @@ def render_service(L, key):
         secs += f'<section class="prose-sec reveal"><h2>{e(s["h"])}</h2>{paras(s["p"])}</section>'
         if i == 0 and P.get("inline_img"):
             secs += f'<figure class="frame inline-fig reveal">{picture(P["inline_img"], L, "(min-width: 900px) 56vw, 100vw")}</figure>'
+        for at, img_key in P.get("inline_more", []):
+            if at == i:
+                secs += f'<figure class="frame inline-fig reveal">{picture(img_key, L, "(min-width: 900px) 56vw, 100vw")}</figure>'
         if i == 0 and P.get("inline_video"):
             secs += f'<div class="inline-video reveal">{video_figure(L, P["inline_video"])}</div>'
     catalog = ""
@@ -924,18 +934,23 @@ ROUTE_IMG = {"diving": "w-coral-wreck", "first": "dsd-sand", "courses": "pool-pa
 # lg-right pins a large tile to the right half, so blocks alternate sides.
 # Group photos use lg tiles: their near-4:3 shape keeps everyone in frame.
 GALLERY = [
-    ("underwater", [("stock-turtle", "lg"), ("hero-fish", ""), ("rock-walls", ""), ("wreck-bow", ""),
-                    ("stock-reef-snake", ""), ("stock-wall", ""), ("stock-pair", ""), ("wreck-mast", ""),
-                    ("stock-descent", ""), ("dugong-diver", "lg lg-right"), ("w-valves", ""), ("rope", ""),
-                    ("under-boat", ""), ("w-three-divers", "")]),
+    # Each section is built from blocks that fill whole rows of the 4-column grid:
+    # [lg + tall + 2 singles] (2 rows), [wide + 2 singles] (1 row), and the mirrored
+    # [tall + single + lg-right + single] (2 rows). Portrait photos take the tall tiles.
+    ("underwater", [("dugong-diver", "lg"), ("under-boat", "tall"), ("hero-fish", ""), ("w-three-divers", ""),
+                    ("w-coral-wreck", "wide"), ("stock-reef-snake", ""), ("w-valves", ""),
+                    ("rope", "tall"), ("stock-pair", ""), ("stock-turtle", "lg lg-right"), ("stock-wall", ""),
+                    ("w-engine-room", "wide"), ("rock-walls", ""), ("stock-descent", ""),
+                    ("w-machinery", "lg"), ("fd-beam", "tall"), ("wreck-bow", ""), ("wreck-mast", "")]),
     ("video", "dugong"),
-    ("islands", [("island-aerial", "lg"), ("flag-boat", ""), ("island-small", ""), ("beach-walk", ""),
-                 ("boat-group", ""), ("yacht-aerial", ""), ("fd-cave", ""), ("calauit-zebras", ""),
-                 ("calauit-giraffes", "")]),
-    ("moments", [("shop-guests", "lg"), ("boat-briefing", ""), ("diver-sand", ""), ("pool-skills", ""),
-                 ("seabed-group", ""), ("shop-guests-2", "lg lg-right"), ("pool-pair", ""), ("surface-group", ""),
-                 ("pool-indoor", ""), ("tanks-boat", ""), ("harbor-group", "lg"), ("crew-briefing", ""),
-                 ("briefing-blue", ""), ("heart-divers", ""), ("boat-lunch", "")]),
+    ("islands", [("island-aerial", "lg"), ("beach-walk", "tall"), ("boat-group", ""), ("lagoon-boats", ""),
+                 ("yacht-aerial", "wide"), ("island-small", ""), ("fd-cave", ""),
+                 ("calauit-giraffes", "tall"), ("flag-boat", ""), ("calauit-zebras", "lg lg-right"), ("calauit-feeding", "")]),
+    ("moments", [("shop-guests", "lg"), ("heart-divers", "tall"), ("boat-briefing", ""), ("boat-lunch", ""),
+                 ("harbor-group", "wide"), ("diver-sand", ""), ("crew-briefing", ""),
+                 ("briefing-blue", "tall"), ("pool-skills", ""), ("shop-guests-2", "lg lg-right"), ("seabed-group", ""),
+                 ("pool-indoor", "wide"), ("pool-pair", ""), ("surface-group", ""),
+                 ("tanks-boat", ""), ("gear-crates", ""), ("pool-lesson", ""), ("van-transfer", "")]),
 ]
 
 
@@ -967,7 +982,7 @@ def render_gallery(L):
         for key, size in items:
             w0, _ = SIZES[key]
             full = f"/assets/img/{key}-{1920 if w0 >= 1920 else (1280 if w0 >= 1280 else 640)}.webp"
-            sz = "(min-width: 900px) 46vw, 92vw" if "lg" in size else "(min-width: 900px) 23vw, 46vw"
+            sz = "(min-width: 900px) 46vw, 92vw" if ("lg" in size or "wide" in size) else "(min-width: 900px) 23vw, 46vw"
             tiles += f'''<li class="tile {size} reveal"><a class="frame" href="{full}" data-lightbox data-caption="{e(alt_text(key, L))}">{picture(key, L, sz)}</a></li>'''
         secs += f'''<section class="gal-sec" id="g-{k}" aria-labelledby="g-{k}-h">
   {head.replace('class="section-h"', f'class="section-h" id="g-{k}-h"', 1)}

@@ -176,7 +176,7 @@ MEDIA = {
                 "ko": "W Divers Coron 다이브마스터 젝스 렌버 타밧(GIGs)의 인물 사진."},
     },
     "yacht-aerial": {
-        "src": (NOV10, "Natural Underwater Diving Scene-7 (1).png"),
+        "src": (NOV10, "Catamaran at anchor, wide (site version).png"),
         "kind": "business", "focus": "50% 55%", "cats": ["islands"],
         "alt": {"en": "A white sailing catamaran at anchor in calm blue water, seen from above.",
                 "ko": "잔잔한 푸른 바다에 정박한 흰색 세일링 카타마란을 위에서 본 모습."},
@@ -243,7 +243,7 @@ MEDIA = {
     },
     "fd-cave": {
         "src": (NOV10, "Natural underwater diving adventure-14.png"),
-        "kind": "business", "focus": "50% 45%", "cats": ["islands"],
+        "kind": "business", "focus": "50% 70%", "cats": ["islands"],
         "alt": {"en": "A limestone cave with stalactites reflected in still water.",
                 "ko": "잔잔한 물에 비친 종유석이 있는 석회암 동굴."},
     },
@@ -261,7 +261,7 @@ MEDIA = {
     },
     "pool-lesson": {
         "src": (NOV10, "Poolside scuba lesson-2 (1).png"),
-        "kind": "business", "focus": "50% 60%", "cats": ["moments"],
+        "kind": "business", "focus": "50% 8%", "cats": ["moments"],
         "alt": {"en": "An instructor prepares scuba equipment with a student beside a swimming pool.",
                 "ko": "수영장 옆에서 교육생과 함께 스쿠버 장비를 준비하는 강사."},
     },
@@ -319,6 +319,24 @@ MEDIA = {
         "alt": {"en": "Korean and Philippine flags fly from a boat with green islands on the horizon.",
                 "ko": "초록 섬이 보이는 바다 위 보트에 휘날리는 한국 국기와 필리핀 국기."},
     },
+    "yacht-salon": {
+        "src": (NOV10, "Refined Underwater Travel Photograph-19.png"),
+        "kind": "business", "focus": "50% 55%", "cats": [],
+        "alt": {"en": "The yacht's saloon with a galley, sofa seating and a dining table.",
+                "ko": "주방, 소파, 식탁이 있는 요트 살롱."},
+    },
+    "fd-standing": {
+        "src": (NOV10, "Natural underwater diving scene-16.png"),
+        "kind": "business", "focus": "50% 62%", "cats": [],
+        "alt": {"en": "A freediver stands on an underwater rock beneath rays of sunlight.",
+                "ko": "햇살 아래 수중 바위 위에 선 프리다이버."},
+    },
+    "calauit-feeding": {
+        "src": (NOV10, "Natural underwater travel scene-10.png"),
+        "kind": "business", "focus": "50% 45%", "cats": ["islands"],
+        "alt": {"en": "A guest reaches toward a giraffe at Calauit Safari Park on Busuanga.",
+                "ko": "부수앙가 칼라위트 사파리 파크에서 기린에게 손을 뻗는 손님."},
+    },
     "jungle-crew": {
         "src": (NOV, "Four divers posing aboard a boat-3.png"),
         "kind": "business", "focus": "50% 40%", "cats": ["moments"],
@@ -333,7 +351,7 @@ MEDIA = {
     },
     "film-crew": {
         "src": (NOV, "Outdoor Group Portrait with Straw Hat-5.png"),
-        "kind": "business", "focus": "50% 40%", "cats": ["moments"],
+        "kind": "business", "focus": "50% 100%", "cats": ["moments"],
         "alt": {"en": "A group portrait taken during W Divers' support for the film The Golden Holiday in Coron.",
                 "ko": "코론에서 영화 '국제수사' 촬영을 지원할 때 찍은 단체 사진."},
     },
