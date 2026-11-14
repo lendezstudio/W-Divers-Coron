@@ -473,10 +473,7 @@ PAGES["about"] = {
     "img": "c-kwreck",
     "story_k": "Our story",
     "story_h": "From a shipyard in Korea to the wrecks of Coron.",
-    "story_t": [
-        "W Divers Coron is a Korean-run dive centre in Coron, one of the best-known wreck-diving areas in the world. It was founded by instructor Dean Kang (강덕환), who spent 20 years at Hyundai Samho Heavy Industries in Korea, where he was also president of the company's scuba diving club.",
-        "After leaving the shipyard he chose Coron, Palawan for his second chapter and opened W Divers on the town's main street on 1 March 2015. Starting a business abroad without first spending years in the local Korean community worried the people around him; he credits the good people who helped him settle in.",
-    ],
+    "story_t": ["My name is Dean Kang (강덕환). For 20 years I built ships at Hyundai Samho Heavy Industries in Korea. By day I worked in the shipyard; whenever I could, I went diving. I became president of the company's scuba diving club, and somewhere along the way the sea became more than a hobby.", "When I left the shipyard, I already knew where my second chapter would begin: Coron, Palawan, home to some of the best wreck diving in the world. On 1 March 2015 I opened W Divers on the town's main street. The people close to me worried, because I hadn't first spent years in the local Korean community. It wasn't easy, but good people in Coron helped me settle in, and I'm still grateful to them today."],
     "facts_h": "What's ready when you arrive",
     "facts": [
         ("Shop", "An air-conditioned, glass-fronted dive shop on Coron's main street."),
