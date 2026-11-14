@@ -1,0 +1,38 @@
+{
+ "island": [
+  "i-hop-boat",
+  "i-palm-beach",
+  "i-apo-beach",
+  "i-sunset-boat",
+  "i-dawn-beach",
+  "i-sunset-sail",
+  "i-golden-shore",
+  "i-boat-shore"
+ ],
+ "reef": [
+  "c-fd-reef",
+  "c-fd-turtle",
+  "c-fd-sand",
+  "c-fd-surface",
+  "w-coral-wreck",
+  "hero-fish"
+ ],
+ "deserted-island-overnight": [
+  "i-camp",
+  "i-sunset-boat",
+  "i-golden-shore",
+  "i-dawn-beach"
+ ],
+ "apo-reef-cabins": [
+  "c-yacht-cabin",
+  "y-room-twin",
+  "y-room-bunk",
+  "y-room-single",
+  "y-salon",
+  "y-dining"
+ ],
+ "apo-reef": [
+  "i-apo-beach",
+  "i-yacht-island"
+ ]
+}

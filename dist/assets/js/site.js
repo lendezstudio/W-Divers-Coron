@@ -34,16 +34,111 @@
   doc.addEventListener('click', function (ev) {
     langMenus.forEach(function (d) { if (d.open && !d.contains(ev.target)) { d.open = false; } });
   });
+  /* Header and sticky bar: show the menu links whenever they fit on one line next to the logo and
+     buttons; only when they don't (narrow screens, long languages) fall back to the Menu button */
+  var fitNav = function () {
+    $$('.site-header, .sticky-bar').forEach(function (bar) {
+      var nav = $('.main-nav', bar), tools = $('.header-tools', bar), brand = $('.brand', bar);
+      if (!nav || !tools || !brand) { return; }
+      bar.classList.remove('nav-collapsed');
+      if (getComputedStyle(nav).display === 'none') { return; }
+      var n = nav.getBoundingClientRect(), t = tools.getBoundingClientRect(), b = brand.getBoundingClientRect();
+      var rtl = doc.documentElement.dir === 'rtl';
+      var room = rtl ? Math.min(n.left - t.right, b.left - n.right) : Math.min(t.left - n.right, n.left - b.right);
+      if (room < 8 || n.width < 40 || t.right > window.innerWidth + 1 || t.left < -1 || doc.documentElement.scrollWidth > window.innerWidth + 1) { bar.classList.add('nav-collapsed'); }
+    });
+  };
+  fitNav();
+  window.addEventListener('resize', fitNav);
+  window.addEventListener('load', fitNav);
+  if (doc.fonts && doc.fonts.ready) { doc.fonts.ready.then(fitNav); }
   /* Home slideshow: crossfades every 4 s and always runs (it only rests while the tab is hidden).
      The dots jump to a slide. Without JavaScript the first slide simply stays. */
   var show = $('[data-slideshow]');
   if (show) {
     var slides = $$('[data-slide]', show);
+    /* film slide: the hero text is shorter while it shows ("film-on"), and the photo row
+       is sized to end just above that text */
+    var setFilm = function (i) { show.classList.toggle('film-on', !!slides[i] && slides[i].classList.contains('fit-collage')); };
+    /* top of an element relative to the slideshow, ignoring its rise-in animation */
+    var restTop = function (el, base) {
+      var t = el.getBoundingClientRect().top - base;
+      var tf = getComputedStyle(el).transform;
+      if (tf && tf !== 'none' && window.DOMMatrix) { t -= new DOMMatrix(tf).m42; }
+      return t;
+    };
+    var fitRow = function () {
+      /* film slide on computer: the photo row sits in the middle of the hero; the eyebrow,
+         headline and subline sit inside its bottom-left corner, the caption inside its
+         bottom-right corner, and the buttons, dots and icons below it */
+      var row = $('.fit-collage .collage', show);
+      var acts = $('.hero-copy .hero-actions', show);
+      var sub = $('.hero-copy .hero-lines', show);
+      if (!row || !acts || !sub) { return; }
+      var had = show.classList.contains('film-on');
+      show.classList.add('film-on');
+      var sr = show.getBoundingClientRect();
+      var frameH = sr.height || window.innerHeight;
+      var cta = $('.site-header .header-cta');
+      var cr = cta ? cta.getBoundingClientRect() : null;
+      var navB = cr && cr.height ? cr.bottom - sr.top : 74;
+      var gap = 24, pad = 30;
+      var actTop = restTop(acts, sr.top);
+      var dots0 = $('.slide-controls', show);
+      if (dots0 && dots0.offsetHeight) { actTop = Math.min(actTop, restTop(dots0, sr.top)); }
+      var space = Math.min(frameH - 2 * (navB + gap), 2 * (actTop - gap) - frameH);
+      show.style.setProperty('--row-h', Math.max(110, space) + 'px');
+      var h = row.getBoundingClientRect().height || space;
+      var rowTop = Math.round((frameH - h) / 2);
+      var rowBot = rowTop + h;
+      show.style.setProperty('--row-top', rowTop + 'px');
+      /* lift the text block so the subline ends inside the photos */
+      var cur = parseFloat(getComputedStyle(acts).marginTop) || 0;
+      var subBot = restTop(sub, sr.top) + sub.offsetHeight;
+      show.style.setProperty('--act-mt', Math.max(16, Math.round(cur + subBot - (rowBot - pad))) + 'px');
+      show.style.setProperty('--cap-b', Math.round(frameH - rowBot + pad) + 'px');
+      if (!had) { show.classList.remove('film-on'); }
+    };
+    /* ocean design: centre the film photo strip on the hero text block */
+    var rtlDir = function () { return doc.documentElement.dir === 'rtl'; };
+    var fitFan = function () {
+      var copy = $('.oc-copy', show);
+      if (!copy) { return; }
+      var r = copy.getBoundingClientRect(), sr = show.getBoundingClientRect();
+      show.style.setProperty('--fan-mid', Math.round(r.top - sr.top + r.height / 2) + 'px');
+      /* the slide caption sits a fixed gap under the "Explore" link */
+      var plan = $('.oc-plan', show);
+      if (plan) { show.style.setProperty('--cap-top', Math.round(plan.getBoundingClientRect().bottom - sr.top + 28) + 'px'); }
+      /* the strip fills the room beside the text, keeping a clear gap */
+      var lines = $$('.oc-copy .hero-line > *', show), edge = rtlDir() ? r.right : r.left;
+      lines.forEach(function (el) { var b = el.getBoundingClientRect(); if (b.width) { edge = rtlDir() ? Math.min(edge, b.left) : Math.max(edge, b.right); } });
+      var room = rtlDir() ? (edge - sr.left) - (sr.right - r.right) - 28 : (sr.right - edge) - (r.left - sr.left) - 28;
+      show.style.setProperty('--fan-h', Math.max(160, Math.round((room - 16) / 2.4)) + 'px');
+    };
+    fitFan();
+    window.addEventListener('resize', fitFan);
+    window.addEventListener('load', fitFan);
+    if (doc.fonts && doc.fonts.ready) { doc.fonts.ready.then(fitFan); }
+    setFilm(0);
+    fitRow();
+    window.addEventListener('resize', fitRow);
+    if (doc.fonts && doc.fonts.ready) { doc.fonts.ready.then(fitRow); }
+    window.addEventListener('load', fitRow);
+    if (window.ResizeObserver) {
+      var copy = $('.hero-copy', show);
+      if (copy) { new ResizeObserver(function () { fitRow(); }).observe(copy); }
+    }
     var dots = $$('[data-slide-to]', show);
     var current = 0;
     var timer = null;
     var goTo = function (n) {
       current = (n + slides.length) % slides.length;
+      setFilm(current);
+      $$('[data-line]', show).forEach(function (ln, i) {
+        var on = i === current;
+        ln.classList.toggle('is-active', on);
+        if (on) { ln.removeAttribute('aria-hidden'); } else { ln.setAttribute('aria-hidden', 'true'); }
+      });
       slides.forEach(function (s, i) {
         var on = i === current;
         s.classList.toggle('is-active', on);
@@ -61,6 +156,9 @@
     };
     dots.forEach(function (d) {
       d.addEventListener('click', function () { goTo(+d.getAttribute('data-slide-to')); start(); });
+    });
+    $$('[data-slide-step]', show).forEach(function (b) {
+      b.addEventListener('click', function () { goTo(current + (+b.getAttribute('data-slide-step'))); start(); });
     });
     doc.addEventListener('visibilitychange', start);
     /* swipe on touch screens */
@@ -387,4 +485,57 @@
       });
     });
   }
+
+  /* Photo grids become slideshows: one photo at a time, arrows, dots, swipe, auto-advance every 4 s */
+  $$('.sg-grid').forEach(function (grid) {
+    var figs = $$('.sg-fig', grid);
+    if (figs.length < 2) { return; }
+    var rtl = doc.documentElement.dir === 'rtl';
+    grid.classList.add('sg-slider');
+    var stage = doc.createElement('div'); stage.className = 'sg-stage';
+    figs.forEach(function (f) { stage.appendChild(f); });
+    grid.appendChild(stage);
+    var prev = doc.createElement('button'), next = doc.createElement('button');
+    prev.type = 'button'; next.type = 'button'; prev.className = 'sg-btn sg-prev'; next.className = 'sg-btn sg-next';
+    prev.setAttribute('aria-label', 'Previous photo'); next.setAttribute('aria-label', 'Next photo');
+    prev.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    next.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    stage.appendChild(prev); stage.appendChild(next);
+    var count = doc.createElement('span'); count.className = 'sg-count'; count.setAttribute('aria-hidden', 'true'); stage.appendChild(count);
+    ['tl', 'tr', 'bl', 'br'].forEach(function (c) { var k = doc.createElement('span'); k.className = 'sg-corner sg-' + c; k.setAttribute('aria-hidden', 'true'); stage.appendChild(k); });
+    var dots = doc.createElement('div'); dots.className = 'sg-dots';
+    var cur = 0, timer = null;
+    var go = function (n) {
+      cur = (n + figs.length) % figs.length;
+      figs.forEach(function (f, i) {
+        f.classList.toggle('is-on', i === cur);
+        if (i === cur) { var im = $('img', f); if (im) { im.loading = 'eager'; } }
+      });
+      var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+      count.textContent = pad(cur + 1) + ' / ' + pad(figs.length);
+      $$('button', dots).forEach(function (d, i) { if (i === cur) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); } });
+      var nx = $('img', figs[(cur + 1) % figs.length]); if (nx) { nx.loading = 'eager'; }
+    };
+    var restart = function () {
+      clearInterval(timer);
+      if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        timer = setInterval(function () { if (!doc.hidden) { go(cur + 1); } }, 4000);
+      }
+    };
+    figs.forEach(function (f, i) {
+      var d = doc.createElement('button'); d.type = 'button'; d.setAttribute('aria-label', 'Photo ' + (i + 1) + ' of ' + figs.length);
+      d.addEventListener('click', function () { go(i); restart(); }); dots.appendChild(d);
+    });
+    grid.appendChild(dots);
+    prev.addEventListener('click', function () { go(cur + (rtl ? 1 : -1)); restart(); });
+    next.addEventListener('click', function () { go(cur + (rtl ? -1 : 1)); restart(); });
+    var x0 = null;
+    stage.addEventListener('touchstart', function (ev) { x0 = ev.touches[0].clientX; }, { passive: true });
+    stage.addEventListener('touchend', function (ev) {
+      if (x0 === null) { return; }
+      var dx = ev.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) { go(cur + ((dx < 0) !== rtl ? 1 : -1)); restart(); }
+    });
+    go(0); restart();
+  });
 })();

@@ -12,7 +12,10 @@
   "slide_n": "Immagine {n} di {total}",
   "slide_show": "Mostra l'immagine {n}",
   "slide_pause": "Metti in pausa la presentazione",
-  "slide_play": "Avvia la presentazione"
+  "slide_play": "Avvia la presentazione",
+  "filter_lake": "Laghi e grotte",
+  "type_lake": "Lago e grotta",
+  "reviewed_value": "novembre 2026"
  },
  "ROUTE_NAMES": {
   "first": "DSD (Prova di immersione)",
@@ -232,6 +235,18 @@
      "role": "Divemaster",
      "intro": "Divemaster filippino del team W Divers, accompagna i subacquei in barca e sott'acqua.",
      "creds_h": "Brevetto"
+    },
+    {
+     "role": "Consulente e interprete",
+     "tag": "Interpreta in inglese e tagalog a livello madrelingua",
+     "intro": "Gunan aiuta gli ospiti a organizzare il soggiorno a Coron, fa da interprete durante briefing e uscite, e cura promozioni e video di W Divers.",
+     "creds_h": "Di cosa si occupa",
+     "creds": [
+      "Interpretariato: inglese e tagalog",
+      "Consulenza agli ospiti",
+      "Grafica promozionale",
+      "Montaggio video"
+     ]
     }
    ],
    "screen_h": "Sullo schermo a Coron.",
@@ -341,7 +356,86 @@
   ],
   "special_h": "Uscite speciali da Coron.",
   "special_t": "Giornate più lunghe e avventure con pernottamento, organizzate dal team W Divers in date scelte.",
-  "special_all": "Vedi tutte le uscite speciali"
+  "special_all": "Vedi tutte le uscite speciali",
+  "eyebrow": "Coron, Palawan · Dal 2015",
+  "h1": "Immergiti nei relitti di Coron.",
+  "trust": [
+   "Istruttori PADI · SSI · TDI",
+   "Inglese e coreano",
+   "Aperto tutti i giorni, dalle 7:00 alle 21:00"
+  ],
+  "hero_more": [
+   {
+    "k": "Dietro la macchina da presa",
+    "h": "La squadra dietro la squadra.",
+    "s": "Supporto subacqueo per riprese di cinema e televisione a Coron."
+   },
+   {
+    "k": "Escursioni speciali",
+    "h": "Più lontano, acque più tranquille.",
+    "s": "Island hopping, Apo Reef e gite con pernottamento lontano dai percorsi abituali."
+   },
+   {
+    "k": "Sotto la superficie",
+    "h": "Relitti del 1944, a pochi minuti di barca.",
+    "s": "Anche reef e apnea, pianificati in base al tuo livello."
+   },
+   {
+    "k": "Chi è W Divers",
+    "h": "La tua giornata in mare inizia qui.",
+    "s": "Istruttori PADI, SSI e TDI. Parliamo inglese e coreano."
+   }
+  ],
+  "hero_ocean": [
+   {
+    "h": "Immergiti nei leggendari relitti di Coron.",
+    "s": "Centro coreano dal 2015, con istruttori PADI, SSI e TDI."
+   },
+   {
+    "k": "Sul set a Coron",
+    "h": "La fiducia di cinema e televisione.",
+    "s": "Supporto subacqueo per SBS Law of the Jungle e il film The Golden Holiday."
+   },
+   {
+    "k": "Escursioni speciali",
+    "h": "Lagune nascoste e fughe sulle isole.",
+    "s": "Island hopping, Apo Reef e gite con pernottamento organizzate dal nostro team."
+   },
+   {
+    "k": "Immersioni sui relitti",
+    "h": "Esplora relitti del 1944.",
+    "s": "Relitti, reef e apnea, pianificati in base al tuo livello."
+   },
+   {
+    "k": "La nostra barca",
+    "h": "Preparati. La tua barca ti aspetta.",
+    "s": "Indicaci date ed esperienza, e pianifichiamo le tue giornate in mare."
+   }
+  ],
+  "boats_h": "Le nostre barche da immersione.",
+  "boats_t": "Bangka tradizionali con bilancieri, condotte dall'equipaggio di W Divers.",
+  "boats": [
+   {
+    "img": "boat-1",
+    "name": "W Divers Diving Boat 1",
+    "tag": "Bangka da immersione"
+   },
+   {
+    "img": "boat-2",
+    "name": "W Divers Diving Boat 2",
+    "tag": "Bangka da immersione"
+   },
+   {
+    "img": "boat-3",
+    "name": "W Divers Diving Boat 3",
+    "tag": "Bangka da immersione"
+   },
+   {
+    "img": "boat-kwreck",
+    "name": "K-WRECK",
+    "tag": "Barca da immersione rinnovata"
+   }
+  ]
  },
  "CONTACT_INTEREST": [
   [
@@ -393,84 +487,144 @@
   {
    "name": "Crociera in yacht ad Apo Reef",
    "short": "Apo Reef",
-   "card": "Uno yacht noleggiato in esclusiva verso uno dei reef più famosi delle Filippine, per massimo 10 subacquei.",
+   "card": "Una crociera di 4 notti verso la più grande barriera corallina delle Filippine, per massimo 10 subacquei.",
    "title": "Crociera in yacht ad Apo Reef | Uscite speciali | W Divers Coron",
-   "meta": "Unisciti a una crociera in yacht di W Divers Coron verso l'Apo Reef Natural Park: un piccolo gruppo di massimo 10 subacquei, più giorni di immersioni, pasti e cabine a bordo.",
-   "intro": "L'Apo Reef Natural Park è una delle mete subacquee più celebri delle Filippine. W Divers Coron vi noleggia uno yacht per uscite riservate ai subacquei, con un piccolo gruppo di massimo 10 persone.",
+   "meta": "Crociera in yacht di W Divers Coron ad Apo Reef, il più grande reef delle Filippine: 4 notti, massimo 10 subacquei, nitrox e pasti inclusi.",
+   "intro": "L'Apo Reef Natural Park, a circa 30 km dalla costa ovest di Occidental Mindoro, è la più grande barriera corallina delle Filippine ed è nella lista propositiva del Patrimonio Mondiale UNESCO. W Divers Coron noleggia lo yacht Caribbean Tigress per piccoli gruppi di soli subacquei.",
    "facts": [
     [
      "Formato",
      "Crociera in yacht, noleggio esclusivo"
     ],
     [
+     "Yacht",
+     "Caribbean Tigress"
+    ],
+    [
      "Gruppo",
      "Fino a 10 subacquei"
     ],
     [
-     "Durata tipica",
-     "3 notti, 4 giorni"
+     "Durata",
+     "4 notti, 5 giorni (partenza 2027)"
     ],
     [
      "Immersioni",
-     "Circa 10, più una notturna facoltativa"
+     "10 incluse, di più se hai energia"
+    ],
+    [
+     "Profondità e visibilità",
+     "5–40 m, spesso 15–50 m"
     ],
     [
      "Imbarco",
-     "Coron, o Manila (Batangas) in alcune partenze"
+     "Batangas, con prelievo all'aeroporto di Manila"
     ]
    ],
    "sections": [
     {
      "h": "Un reef che vale il viaggio.",
      "p": [
-      "Apo Reef si trova nello stretto di Mindoro, a ovest di Mindoro. È un parco naturale protetto con ampi reef corallini e pareti, raggiungibile dopo diverse ore di navigazione: per questo l'uscita è una crociera."
+      "Il reef copre circa 34 km², con una laguna nord e una sud. La profondità va da 5 a 40 m, la visibilità spesso da 15 a 50 m, e la corrente leggera rende quasi tutte le immersioni facili derive. Mante, squali, banchi di barracuda e pesci napoleone fanno parte dello spettacolo."
      ]
     },
     {
      "h": "La vita a bordo.",
      "p": [
-      "Nelle partenze recenti, lo yacht ha ospitato fino a 10 subacquei in cinque cabine doppie climatizzate. Pasti e spuntini erano serviti per tutto il viaggio, immersioni e guida erano inclusi, e trasferimenti da e per l'hotel erano organizzati prima e dopo."
+      "Il Caribbean Tigress ha una cabina padronale climatizzata con letto matrimoniale e cabine doppie e triple con letti singoli. Pasti, acqua, caffè e tè per tutto il viaggio, e wifi a bordo."
      ]
     },
     {
-     "h": "Cosa verificare.",
+     "h": "Incluso.",
+     "list": [
+      "Water taxi allo yacht dal porto di Batangas",
+      "10 immersioni, extra gratis se hai energia",
+      "Nitrox in ogni immersione",
+      "Immersione notturna gratuita",
+      "Trasferimenti da e per l'aeroporto di Manila",
+      "Tutti i pasti: colazione, pranzo e cena",
+      "Acqua, caffè e tè",
+      "Wifi a bordo"
+     ]
+    },
+    {
+     "h": "Non incluso.",
+     "list": [
+      "Ingresso all'Apo Reef Natural Park (100 USD)",
+      "Voli internazionali",
+      "Assicurazione subacquea",
+      "Noleggio attrezzatura",
+      "Alcolici e altre bevande (indica le tue marche prima della partenza)",
+      "Mance: guida 60 USD, equipaggio 40 USD",
+      "Spese personali"
+     ]
+    },
+    {
+     "h": "Prenotazione e cancellazione.",
      "p": [
-      "Il biglietto d'ingresso dell'Apo Reef Natural Park è stato pagato a parte (100 USD in un'uscita recente). Date, numero di immersioni e prezzo dipendono da ogni partenza, quindi chiedi i dettagli per iscritto al team."
+      "Il posto è confermato con il pagamento dell'intero importo. Trattandosi di una crociera, le cancellazioni non sono rimborsate, salvo disdetta almeno tre mesi prima: in quel caso si rimborsa il 50%. Se il meteo impedisce l'uscita, viene riprogrammata invece che rimborsata; in caso di guasto si usa uno yacht equivalente."
      ]
     }
    ],
+   "prices": {
+    "at": 1,
+    "h": "Prezzi 2027 a persona",
+    "note": "Prezzi indicativi per la partenza 2027. Le date sono ancora da confermare: chiedi il prezzo attuale al team prima di prenotare.",
+    "rows": [
+     [
+      "Cabina padronale, letto matrimoniale (2 pers.)",
+      "USD 2.500"
+     ],
+     [
+      "Cabina doppia, letti singoli",
+      "USD 2.200"
+     ],
+     [
+      "Cabina tripla, letti singoli",
+      "USD 2.000–2.100"
+     ]
+    ]
+   },
    "ask": [
-    "Prossime date e posti liberi",
-    "Prezzo totale e cosa include",
-    "Ingresso al parco",
+    "Date di partenza 2027 e posti liberi",
+    "Prezzo per la tua cabina",
+    "Ingresso al parco e mance",
     "Brevetto ed esperienza richiesti",
-    "Sistemazione in cabina",
-    "Punto d'imbarco"
+    "Voli per Manila e tempi di trasferimento",
+    "Assicurazione subacquea"
    ]
   },
   {
    "name": "Osservazione dei dugonghi",
    "short": "Dugonghi",
-   "card": "Una partenza all'alba per cercare i dugonghi nelle baie calme del nord di Busuanga.",
+   "card": "Partenza all'alba per incontrare i dugonghi a Dugong Point, al largo di Calauit, nel nord di Busuanga.",
    "title": "Giornata di osservazione dei dugonghi | Uscite speciali | W Divers Coron",
-   "meta": "Una giornata con W Divers Coron alla ricerca dei dugonghi nel nord di Busuanga, partendo presto per arrivare prima della folla, con possibile visita al Calauit Safari Park.",
-   "intro": "I dugonghi, mammiferi marini tranquilli che brucano le praterie marine, vivono nelle acque del nord di Busuanga. In questa giornata la barca di W Divers parte presto per arrivare nella zona prima delle altre barche.",
+   "meta": "Giornata di W Divers Coron a Dugong Point, nord di Busuanga: partenza alle 4, gruppi di quattro, regole ufficiali e visita facoltativa al Calauit Safari Park.",
+   "intro": "I dugonghi, tranquilli mammiferi marini che brucano le praterie marine, vivono al largo dell'isola di Calauit, nel nord di Busuanga. Si parte prima dell'alba, in van e in barca fino a Dugong Point, per osservarli in piccoli gruppi con una guida formata.",
    "facts": [
     [
      "Formato",
-     "Giornata in barca"
+     "Giornata in van e barca"
     ],
     [
      "Partenza",
-     "Di primo mattino"
+     "04:00–04:30 dal tuo alloggio"
     ],
     [
      "Dove",
-     "Nord di Busuanga (zona di Aban-Aban)"
+     "Dugong Point, al largo di Calauit, nord di Busuanga"
     ],
     [
-     "In acqua",
-     "Chiedi se è previsto snorkeling o immersione"
+     "Tragitto",
+     "1 h 40 in van, poi 25 min in barca"
+    ],
+    [
+     "Con il dugongo",
+     "Circa 15 minuti per gruppo di 4"
+    ],
+    [
+     "Rientro a Coron",
+     "Verso le 15–16, a volte 18–19"
     ],
     [
      "Extra",
@@ -481,29 +635,80 @@
     {
      "h": "Perché partire così presto.",
      "p": [
-      "Le zone più note per i dugonghi si affollano con il passare delle ore. Partire prima dell'alba dà la migliore possibilità di un incontro calmo, prima dell'arrivo delle altre barche."
+      "In alta stagione Dugong Point è affollato e i gruppi entrano in ordine di arrivo. Per questo ti preleviamo tra le 4:00 e le 4:30. Se il tuo alloggio non prepara la colazione, il diving ne fornisce una semplice per il viaggio."
      ]
     },
     {
-     "h": "Rispetto per gli animali.",
-     "p": [
-      "I dugonghi sono selvatici e protetti. I partecipanti seguono le indicazioni della guida, mantengono le distanze e non li toccano, inseguono né nutrono mai. Gli avvistamenti non sono mai garantiti."
+     "h": "Come si svolge la giornata.",
+     "list": [
+      "1 h 40 in van fino al molo di Quezon, nel nord di Busuanga",
+      "Carico dell'attrezzatura, poi registrazione e pagamento al Dugong Office, a 5 minuti dal molo",
+      "Circa 25 minuti di barca fino a Dugong Point",
+      "Se c'è molta attesa, prima un'immersione da riva all'isola di Dimipac, a 15 minuti",
+      "Una guida briefa il gruppo e cerca il dugongo",
+      "Una volta trovato, il tuo gruppo di quattro entra in acqua per circa 15 minuti",
+      "Pranzo in barca e rientro in ordine inverso"
+     ]
+    },
+    {
+     "h": "Regole di osservazione.",
+     "list": [
+      "Al massimo quattro persone in acqua con un dugongo",
+      "Restare ad almeno 5 m",
+      "Entrare in silenzio dalla scaletta e indossare l'attrezzatura in superficie: niente tuffi",
+      "Silenzio sulle barche, non gridare quando appare un dugongo",
+      "Mai toccare, inseguire o nuotare davanti a un dugongo",
+      "Niente flash né strobo",
+      "Lasciare che sia il dugongo ad avvicinarsi, mai separare madre e piccolo"
+     ],
+     "after": [
+      "Violare le regole può comportare multe pesanti e la perdita del turno per tutto il gruppo. Gli avvistamenti non sono mai garantiti: i dugonghi sono selvatici."
+     ]
+    },
+    {
+     "h": "Consigli.",
+     "list": [
+      "Non scattare al segnale della guida: risparmia energia",
+      "Circa 1 kg di zavorra in più per scendere in fretta",
+      "Protezione solare e una giacca leggera per il viaggio all'alba"
      ]
     },
     {
      "h": "Fanne una giornata intera.",
      "p": [
-      "L'uscita si può abbinare a una visita al Calauit Safari Park a Busuanga. Chiedi al team come è organizzata la giornata e cosa è incluso."
+      "Si può abbinare al Calauit Safari Park, con giraffe e zebre. Chiedi al team come è organizzata la giornata e cosa è incluso."
      ]
     }
    ],
    "ask": [
-    "Orario di partenza e trasferimento",
+    "Orario di partenza dal tuo alloggio",
     "Snorkeling o immersione, e attrezzatura",
     "Ingressi e tasse ambientali",
     "Opzione Calauit Safari Park",
     "Prezzo totale e cosa include"
-   ]
+   ],
+   "animals": {
+    "h": "Altri animali che puoi incontrare.",
+    "p": "Non solo dugonghi: durante le immersioni da riva all'isola di Dimipac si vedono spesso tartarughe marine e pesci di barriera, e il Calauit Safari Park ospita giraffe e zebre, discendenti di animali arrivati dal Kenya nel 1977, oltre al cervo endemico delle Calamian.",
+    "items": [
+     [
+      "c-fd-turtle",
+      "Le tartarughe marine compaiono spesso nelle immersioni da riva vicino a Dugong Point."
+     ],
+     [
+      "calauit-giraffes",
+      "Le giraffe girano libere nel Calauit Safari Park."
+     ],
+     [
+      "calauit-feeding",
+      "Nell'area di alimentazione puoi dare da mangiare alle giraffe."
+     ],
+     [
+      "calauit-zebras",
+      "Le zebre pascolano libere nel Calauit Safari Park."
+     ]
+    ]
+   }
   },
   {
    "name": "Isola deserta, 2 giorni 1 notte",
@@ -655,6 +860,139 @@
   "flags-bow": "Le bandiere coreana e filippina sventolano su una barca, con isole verdi all'orizzonte.",
   "yacht-salon": "Il salone dello yacht con cucina, divani e tavolo da pranzo.",
   "fd-standing": "Un'apneista in piedi su una roccia sott'acqua, sotto raggi di sole.",
-  "calauit-feeding": "Un'ospite allunga la mano verso una giraffa al Calauit Safari Park, a Busuanga."
- }
+  "calauit-feeding": "Un'ospite allunga la mano verso una giraffa al Calauit Safari Park, a Busuanga.",
+  "c-dugong": "Un dugongo bruca su una prateria marina a nord di Busuanga.",
+  "c-dugong-divers": "Subacquei osservano un dugongo a distanza rispettosa.",
+  "c-dugong-freediver": "Un'apneista nuota tranquilla accanto a un dugongo.",
+  "c-dugong-graze": "Un dugongo si nutre sul fondo mentre gli apneisti guardano dall'alto.",
+  "c-fd-reef": "Un'apneista si tiene a una roccia corallina su un reef di Coron.",
+  "c-fd-sand": "Un'apneista con pinne lunghe scivola lungo una cima sopra la sabbia bianca.",
+  "c-fd-lake": "Un'apneista riposa su un tronco nel Barracuda Lake.",
+  "c-fd-lake2": "Un'apneista in abito bianco nell'acqua limpida del Barracuda Lake.",
+  "c-fd-beam": "Un'apneista fluttua a braccia aperte in un raggio di luce in una grotta.",
+  "c-fd-cave": "Un'apneista in piedi su una roccia sotto il pozzo di luce della grotta di Pukaway.",
+  "c-fd-turtle": "Un'apneista scende verso una tartaruga marina.",
+  "c-fd-surface": "Un'apneista scivola appena sotto la superficie calma.",
+  "c-fd-wreck": "Un'apneista contro un relitto coperto di corallo, tra i pesci.",
+  "c-irako-wheel": "Un subacqueo con torcia accanto a una ruota di timone nel relitto Irako.",
+  "c-irako-engine": "File di valvole insabbiate nel relitto Irako.",
+  "c-olympia": "Un subacqueo guarda da una stanza con grate dell'Olympia Maru.",
+  "c-akitsushima": "La gru coperta di corallo dell'Akitsushima, con un subacqueo sullo sfondo.",
+  "c-kogyo": "Un bulldozer coperto di corallo nella stiva del Kogyo Maru.",
+  "c-yacht": "Lo yacht delle crociere ad Apo Reef, all'ancora.",
+  "c-yacht-apo": "Lo yacht vicino all'isola di sabbia bianca di Apo Reef.",
+  "c-yacht-cabin": "La cabina padronale dello yacht con letto matrimoniale e legno.",
+  "c-yacht-deck": "Ospiti a pranzo sul ponte ombreggiato dello yacht.",
+  "c-island-beach": "La barca di W Divers davanti a una spiaggia di sabbia bianca.",
+  "c-island-tents": "Tende sull'erba sotto le palme da cocco.",
+  "c-island-sunset": "La barca K-WRECK a riva al tramonto.",
+  "c-island-kayak": "Ospiti in kayak sull'acqua turchese.",
+  "c-kwreck": "La barca da immersione K-WRECK rinnovata, con bandiera coreana e da sub, a Coron.",
+  "c-kwreck-bow": "La K-WRECK ormeggiata nella baia di Coron, vista dalla prua.",
+  "gunan": "Ritratto di Gunan Kang, consulente e interprete di W Divers Coron.",
+  "boat-1": "Diving Boat 1, una barca da immersione di W Divers Coron",
+  "boat-2": "Diving Boat 2, una barca da immersione di W Divers Coron",
+  "boat-3": "Diving Boat 3, una barca da immersione di W Divers Coron",
+  "boat-kwreck": "K-WRECK, una barca da immersione di W Divers Coron"
+ },
+ "SITE_PAGE": {
+  "facts_h": "Dati del sito",
+  "facts_l": {
+   "kind": "Tipo",
+   "length": "Lunghezza",
+   "depth": "Profondità",
+   "vis": "Visibilità",
+   "lie": "Assetto"
+  },
+  "lie": {
+   "upright": "In navigazione",
+   "capsized": "Su un fianco",
+   "starboard": "Inclinato a dritta",
+   "port": "Inclinato a sinistra",
+   "forward": "Inclinato a prua"
+  },
+  "facts_src": "Dati dai briefing di W Divers Coron.",
+  "title_tpl": "{name} | Siti d'immersione di Coron | W Divers Coron"
+ },
+ "SITES_KIND": [
+  "Petroliera",
+  "Nave appoggio idrovolanti",
+  "Nave ausiliaria da carico e rifornimento",
+  "Nave ausiliaria da carico e rifornimento"
+ ],
+ "SITES_NEW": [
+  {
+   "card": "Una piccola cannoniera al largo di East Tangat, bassa a poppa per i principianti e set di un film coreano.",
+   "kind": "Cacciasommergibili (cannoniera)",
+   "p": [
+    "Detta anche East Tangat Gunboat, questa nave di 45 m giace sul bordo del reef: poppa a 3 m, timoneria a circa 10 m. Adatta agli Open Water e, a poppa, anche alle prove d'immersione. Il corallo copre il ponte e con fortuna si vedono pesci mandarino. Nel 2018 vi è stato girato il film coreano The Golden Holiday (국제수사). La visibilità è migliore al mattino."
+   ]
+  },
+  {
+   "card": "Il relitto più profondo e meglio conservato di Coron, per subacquei esperti.",
+   "kind": "Nave frigorifera",
+   "p": [
+    "L'Irako giace tra Tangat e Lusong, ponte a 34 m e timone a 42 m. Quasi intatto tranne la cabina del capitano, è uno dei più bei relitti di Coron, dal livello Advanced in su. Spesso c'è corrente. Ci vivono grandi cernie, tonni, pesci leone e scorfani, e a volte passano squali balena."
+   ]
+  },
+  {
+   "card": "Una nave da rifornimento su un fianco, con grandi caldaie, una sacca d'aria e mattoni refrattari.",
+   "kind": "Nave ausiliaria da carico e rifornimento",
+   "p": [
+    "La Morazan giace sul fianco di dritta vicino a Tangat, da 12 m sullo scafo a 25 m al timone. Si vedono quattro stive, due grandi caldaie e la sala macchine, e c'è ancora una sacca d'aria. Coralli molli e duri attirano carangidi, pesci leone, pesci pietra, tartarughe e aragoste."
+   ]
+  },
+  {
+   "card": "Una piccola cannoniera coperta di corallo, così bassa che a bassa marea la poppa quasi affiora.",
+   "kind": "Cacciasommergibili (cannoniera)",
+   "p": [
+    "Lunga 35 m, giace a est dell'isola di Lusong, inclinata a prua fino a 18 m. Con la bassa marea la poppa arriva quasi in superficie, ottima anche per lo snorkeling. Il corallo duro la ricopre, tra anemoni, pesci farfalla e pesci angelo. Amata da chi inizia con i relitti e dai fotografi."
+   ]
+  },
+  {
+   "card": "Una petroliera al largo di Black Island, spesso con l'acqua più limpida dei relitti di Coron.",
+   "kind": "Petroliera per combustibile",
+   "p": [
+    "Detta anche Black Island Wreck, questa petroliera di 70 m giace a circa 50 m dalla spiaggia di Black Island, a nord-ovest di Busuanga, da 18 m a 34 m. La visibilità arriva spesso a 30 m. Corallo fino a circa 20 m, poi sabbia, con pesci leone, platax, cernie e carangidi."
+   ],
+   "vis": "fino a 30 m"
+  },
+  {
+   "card": "Un mercantile intatto lontano dalla città, con auto e camion giapponesi ancora nelle stive.",
+   "kind": "Mercantile",
+   "p": [
+    "La Kyokuzan Maru si trova a nord-est di Busuanga, una giornata intera con partenza all'alba. È in assetto con leggero sbandamento, ponte principale a 24 m, timone a 40 m. Quasi intatta, conserva auto e camion giapponesi e ha di solito una visibilità eccellente. Due immersioni, prua e poppa, abbinabili a Dugong Point."
+   ],
+   "vis": "fino a 30 m"
+  },
+  {
+   "card": "Lo scheletro di una piccola barca vicino a Coron Island, ideale per snorkeling e prime immersioni.",
+   "kind": "Cacciasommergibili (cannoniera)",
+   "p": [
+    "A circa 15 minuti da Coron resta solo l'ossatura della barca, da cui il nome. La prua è a 5 m e il punto più profondo a circa 22 m. Corallo, bella luce e acqua calma la rendono perfetta per foto, prove d'immersione e snorkeling, con castagnole, pesci leone, nudibranchi e pesci pappagallo."
+   ]
+  },
+  {
+   "card": "Una chiatta di 90 m con nove stive aperte, da 18 m a prua fino a 43 m.",
+   "kind": "Chiatta",
+   "p": [
+    "Questa grande chiatta è affondata durante una pesca illegale. È lunga circa 90 m, prua a 18 m, fondo a 43 m. Nove stive aperte si osservano dall'alto. Vista la profondità è per subacquei esperti; chiedi al team come viene pianificata l'immersione."
+   ]
+  },
+  {
+   "card": "Un lago dentro Coron Island dove l'acqua salata calda sta sotto quella dolce, fino a 39 °C.",
+   "kind": "Lago con termoclino",
+   "p": [
+    "A 15 minuti di barca da Coron, a nord di Coron Island. Si salgono circa 38 gradini di legno sul calcare con l'attrezzatura, poi ci si immerge tra pareti taglienti fino a 40 m. I primi 4 m sono acqua dolce a circa 28 °C; poi l'acqua diventa calda e salata, fino a 39 °C sotto i 14 m. Una grotta a 21 m entra per circa 30 m. La piattaforma è piccola e i gruppi si alternano."
+   ],
+   "depth": "fino a 40 m"
+  },
+  {
+   "card": "Una grotta all'estremità sud di Coron Island dove la luce del sole entra dall'alto.",
+   "kind": "Grotta",
+   "p": [
+    "A circa due ore di banca da Coron. L'ingresso è un passaggio stretto di 5 m, uno alla volta, con sedimento sul fondo: consigliati brevetto Open Water e buon assetto. Dopo la sosta di sicurezza si riemerge nella grotta, dove la luce da una grande apertura fa brillare il calcare di verde: perfetta per una foto di gruppo."
+   ]
+  }
+ ]
 }

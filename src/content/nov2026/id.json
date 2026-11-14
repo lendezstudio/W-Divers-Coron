@@ -12,7 +12,10 @@
   "slide_n": "Slide {n} dari {total}",
   "slide_show": "Tampilkan slide {n}",
   "slide_pause": "Jeda tayangan slide",
-  "slide_play": "Putar tayangan slide"
+  "slide_play": "Putar tayangan slide",
+  "filter_lake": "Danau & gua",
+  "type_lake": "Danau & gua",
+  "reviewed_value": "November 2026"
  },
  "ROUTE_NAMES": {
   "first": "DSD (Uji coba selam)",
@@ -232,6 +235,18 @@
      "role": "Divemaster",
      "intro": "Divemaster Filipina di tim W Divers yang memandu penyelam di perahu dan di bawah air.",
      "creds_h": "Sertifikasi"
+    },
+    {
+     "role": "Konsultan & penerjemah",
+     "tag": "Menerjemahkan bahasa Inggris dan Tagalog setingkat penutur asli",
+     "intro": "Gunan membantu tamu merencanakan waktu di Coron, menerjemahkan saat briefing dan trip, serta mendesain promosi dan video W Divers.",
+     "creds_h": "Tugasnya",
+     "creds": [
+      "Penerjemahan: Inggris dan Tagalog",
+      "Konsultasi tamu",
+      "Desain promosi",
+      "Penyuntingan video"
+     ]
     }
    ],
    "screen_h": "Di layar, di Coron.",
@@ -341,7 +356,86 @@
   ],
   "special_h": "Trip spesial dari Coron.",
   "special_t": "Hari-hari yang lebih panjang dan petualangan bermalam, diatur tim W Divers pada tanggal tertentu.",
-  "special_all": "Lihat semua trip spesial"
+  "special_all": "Lihat semua trip spesial",
+  "eyebrow": "Coron, Palawan · Sejak 2015",
+  "h1": "Selami kapal karam Coron.",
+  "trust": [
+   "Instruktur PADI · SSI · TDI",
+   "Bahasa Inggris dan Korea",
+   "Buka setiap hari, 07.00 sampai 21.00"
+  ],
+  "hero_more": [
+   {
+    "k": "Di balik kamera",
+    "h": "Kru di balik kru.",
+    "s": "Dukungan selam untuk syuting film dan televisi di Coron."
+   },
+   {
+    "k": "Trip spesial",
+    "h": "Lebih jauh, perairan yang lebih tenang.",
+    "s": "Island hopping, Apo Reef, dan trip menginap di luar rute biasa."
+   },
+   {
+    "k": "Di bawah permukaan",
+    "h": "Kapal karam dari 1944, dekat dengan perahu.",
+    "s": "Juga terumbu dan freediving, direncanakan sesuai level Anda."
+   },
+   {
+    "k": "Tentang W Divers",
+    "h": "Hari Anda di laut dimulai di sini.",
+    "s": "Instruktur PADI, SSI, dan TDI. Berbahasa Inggris dan Korea."
+   }
+  ],
+  "hero_ocean": [
+   {
+    "h": "Selami kapal karam legendaris Coron.",
+    "s": "Dikelola orang Korea sejak 2015, dengan instruktur PADI, SSI, dan TDI."
+   },
+   {
+    "k": "Di lokasi syuting Coron",
+    "h": "Dipercaya kru film dan TV.",
+    "s": "Dukungan selam untuk SBS Law of the Jungle dan film The Golden Holiday."
+   },
+   {
+    "k": "Trip spesial",
+    "h": "Laguna tersembunyi dan pelarian ke pulau.",
+    "s": "Island hopping, Apo Reef, dan trip menginap yang diatur tim kami."
+   },
+   {
+    "k": "Selam kapal karam",
+    "h": "Jelajahi kapal karam dari 1944.",
+    "s": "Kapal karam, terumbu, dan freediving, sesuai level Anda."
+   },
+   {
+    "k": "Perahu selam kami",
+    "h": "Siapkan perlengkapan. Perahu menunggu.",
+    "s": "Beri tahu tanggal dan pengalaman Anda, kami rencanakan hari Anda di laut."
+   }
+  ],
+  "boats_h": "Perahu selam kami.",
+  "boats_t": "Perahu bangka tradisional bercadik, dioperasikan kru W Divers.",
+  "boats": [
+   {
+    "img": "boat-1",
+    "name": "W Divers Diving Boat 1",
+    "tag": "Perahu selam bangka"
+   },
+   {
+    "img": "boat-2",
+    "name": "W Divers Diving Boat 2",
+    "tag": "Perahu selam bangka"
+   },
+   {
+    "img": "boat-3",
+    "name": "W Divers Diving Boat 3",
+    "tag": "Perahu selam bangka"
+   },
+   {
+    "img": "boat-kwreck",
+    "name": "K-WRECK",
+    "tag": "Perahu selam yang direnovasi"
+   }
+  ]
  },
  "CONTACT_INTEREST": [
   [
@@ -393,84 +487,144 @@
   {
    "name": "Liveaboard yacht Apo Reef",
    "short": "Apo Reef",
-   "card": "Yacht carter penuh ke salah satu terumbu paling terkenal di Filipina, untuk maksimal 10 penyelam.",
+   "card": "Liveaboard yacht 4 malam ke terumbu karang terbesar di Filipina, untuk maksimal 10 penyelam.",
    "title": "Liveaboard yacht Apo Reef | Trip spesial | W Divers Coron",
-   "meta": "Ikuti liveaboard yacht W Divers Coron ke Apo Reef Natural Park: grup kecil maksimal 10 penyelam, beberapa hari menyelam, makan dan kabin di atas kapal.",
-   "intro": "Apo Reef Natural Park adalah salah satu tujuan selam paling terkenal di Filipina. W Divers Coron mencarter yacht untuk trip khusus penyelam ke sana, dengan grup kecil maksimal 10 orang.",
+   "meta": "Liveaboard yacht W Divers Coron ke Apo Reef, terumbu terbesar di Filipina: 4 malam, maksimal 10 penyelam, nitrox dan makan termasuk.",
+   "intro": "Apo Reef Natural Park, sekitar 30 km dari pantai barat Occidental Mindoro, adalah terumbu karang terbesar di Filipina dan masuk daftar sementara Warisan Dunia UNESCO. W Divers Coron mencarter yacht Caribbean Tigress untuk grup kecil khusus penyelam.",
    "facts": [
     [
      "Format",
      "Liveaboard yacht, carter penuh"
     ],
     [
-     "Ukuran grup",
+     "Yacht",
+     "Caribbean Tigress"
+    ],
+    [
+     "Grup",
      "Maksimal 10 penyelam"
     ],
     [
-     "Durasi umum",
-     "3 malam, 4 hari"
+     "Durasi",
+     "4 malam, 5 hari (keberangkatan 2027)"
     ],
     [
      "Penyelaman",
-     "Sekitar 10, plus penyelaman malam opsional"
+     "10 termasuk, lebih jika masih kuat"
+    ],
+    [
+     "Kedalaman dan jarak pandang",
+     "5–40 m, sering 15–50 m"
     ],
     [
      "Naik kapal",
-     "Coron, atau Manila (Batangas) pada beberapa keberangkatan"
+     "Batangas, dengan jemputan Bandara Manila"
     ]
    ],
    "sections": [
     {
      "h": "Terumbu yang layak dikunjungi.",
      "p": [
-      "Apo Reef berada di Selat Mindoro, di barat Mindoro. Ini taman alam yang dilindungi dengan terumbu karang dan dinding yang luas, dicapai setelah beberapa jam di laut, karena itu tripnya berupa liveaboard."
+      "Terumbu ini seluas sekitar 34 km² dengan laguna utara dan selatan. Kedalaman 5 hingga 40 m, jarak pandang sering 15 hingga 50 m, dan arus ringan membuat sebagian besar penyelaman berupa drift yang mudah. Pari manta, hiu, kawanan barakuda dan ikan napoleon menjadi daya tariknya."
      ]
     },
     {
      "h": "Kehidupan di kapal.",
      "p": [
-      "Pada keberangkatan terbaru, yacht menampung hingga 10 penyelam di lima kabin ganda ber-AC. Makanan dan camilan tersedia sepanjang trip, penyelaman dan pemandu sudah termasuk, dan antar-jemput hotel diatur sebelum dan sesudah trip."
+      "Caribbean Tigress memiliki kabin utama ber-AC dengan ranjang ganda, serta kabin dua dan tiga orang dengan ranjang tunggal. Makanan, air minum, kopi dan teh tersedia sepanjang trip, dengan wifi di kapal."
      ]
     },
     {
-     "h": "Yang perlu dicek.",
+     "h": "Termasuk.",
+     "list": [
+      "Water taxi ke yacht dari pelabuhan Batangas",
+      "10 penyelaman, tambahan gratis jika masih kuat",
+      "Nitrox di setiap penyelaman",
+      "Penyelaman malam gratis",
+      "Antar-jemput Bandara Manila",
+      "Semua makanan: sarapan, makan siang dan malam",
+      "Air minum, kopi dan teh",
+      "Wifi di kapal"
+     ]
+    },
+    {
+     "h": "Tidak termasuk.",
+     "list": [
+      "Tiket masuk Apo Reef Natural Park (USD 100)",
+      "Penerbangan internasional",
+      "Asuransi selam",
+      "Sewa peralatan",
+      "Alkohol dan minuman lain (sampaikan merek favorit sebelum berangkat)",
+      "Tip: pemandu USD 60, kru USD 40",
+      "Pengeluaran pribadi"
+     ]
+    },
+    {
+     "h": "Pemesanan dan pembatalan.",
      "p": [
-      "Tiket masuk Apo Reef Natural Park dibayar terpisah (USD 100 pada trip terbaru). Tanggal, jumlah penyelaman, dan harga tergantung tiap keberangkatan, jadi minta rinciannya secara tertulis kepada tim."
+      "Tempat Anda terkonfirmasi setelah pembayaran penuh. Karena ini liveaboard, pembatalan tidak dikembalikan, kecuali pembatalan paling lambat tiga bulan sebelum berangkat yang dikembalikan 50%. Jika cuaca menggagalkan trip, jadwal diganti alih-alih dikembalikan; jika mesin rusak, dipakai yacht setara."
      ]
     }
    ],
+   "prices": {
+    "at": 1,
+    "h": "Harga 2027 per orang",
+    "note": "Harga perkiraan untuk keberangkatan 2027. Tanggal masih dikonfirmasi, jadi tanyakan harga terkini sebelum memesan.",
+    "rows": [
+     [
+      "Kabin utama, ranjang ganda (2 orang)",
+      "USD 2.500"
+     ],
+     [
+      "Kabin dua orang, ranjang tunggal",
+      "USD 2.200"
+     ],
+     [
+      "Kabin tiga orang, ranjang tunggal",
+      "USD 2.000–2.100"
+     ]
+    ]
+   },
    "ask": [
-    "Tanggal keberangkatan berikutnya dan sisa tempat",
-    "Total harga dan yang termasuk",
-    "Tiket masuk taman",
+    "Tanggal keberangkatan 2027 dan sisa tempat",
+    "Harga untuk jenis kabin Anda",
+    "Tiket taman dan tip",
     "Sertifikasi dan pengalaman yang diperlukan",
-    "Pembagian kabin",
-    "Lokasi naik kapal"
+    "Penerbangan ke Manila dan waktu transfer",
+    "Asuransi selam"
    ]
   },
   {
    "name": "Melihat dugong",
    "short": "Dugong",
-   "card": "Berangkat pagi sekali untuk mencari dugong di teluk tenang Busuanga utara.",
+   "card": "Berangkat pagi buta untuk bertemu dugong di Dugong Point, dekat Calauit di Busuanga utara.",
    "title": "Trip sehari melihat dugong | Trip spesial | W Divers Coron",
-   "meta": "Trip sehari W Divers Coron mencari dugong di Busuanga utara, berangkat pagi agar tiba sebelum keramaian, dengan opsi mengunjungi Calauit Safari Park.",
-   "intro": "Dugong, mamalia laut yang lembut dan memakan lamun, hidup di perairan Busuanga utara. Dalam trip sehari ini perahu W Divers berangkat pagi agar tiba sebelum perahu lain.",
+   "meta": "Trip sehari W Divers Coron ke Dugong Point di Busuanga utara: jemput pukul 4, grup berempat, aturan resmi dan opsi Calauit Safari Park.",
+   "intro": "Dugong, mamalia laut lembut pemakan lamun, hidup di lepas Pulau Calauit di Busuanga utara. Anda berangkat sebelum fajar, naik van dan perahu ke Dugong Point, lalu mengamati dugong dalam grup kecil bersama pemandu terlatih.",
    "facts": [
     [
      "Format",
-     "Trip sehari dengan perahu"
+     "Trip sehari dengan van dan perahu"
     ],
     [
-     "Berangkat",
-     "Pagi buta"
+     "Jemputan",
+     "04.00–04.30 dari penginapan"
     ],
     [
      "Lokasi",
-     "Busuanga utara (area Aban-Aban)"
+     "Dugong Point, dekat Calauit, Busuanga utara"
     ],
     [
-     "Di air",
-     "Tanyakan apakah ada snorkeling atau menyelam"
+     "Perjalanan",
+     "1 jam 40 menit van, lalu 25 menit perahu"
+    ],
+    [
+     "Bersama dugong",
+     "Sekitar 15 menit per grup 4 orang"
+    ],
+    [
+     "Kembali ke Coron",
+     "Sekitar pukul 15–16, kadang 18–19"
     ],
     [
      "Tambahan",
@@ -481,29 +635,80 @@
     {
      "h": "Mengapa berangkat pagi.",
      "p": [
-      "Area dugong yang populer makin ramai seiring siang. Berangkat sebelum matahari terbit memberi peluang terbaik untuk pertemuan yang tenang sebelum perahu lain datang."
+      "Saat musim ramai Dugong Point penuh dan grup bergiliran sesuai urutan tiba. Karena itu kami menjemput pukul 04.00–04.30. Jika penginapan tidak bisa menyiapkan sarapan, toko menyediakan sarapan sederhana untuk di jalan."
      ]
     },
     {
-     "h": "Hormati satwanya.",
-     "p": [
-      "Dugong adalah satwa liar yang dilindungi. Peserta mengikuti arahan pemandu, menjaga jarak, dan tidak pernah menyentuh, mengejar, atau memberi makan. Penampakan tidak pernah dijamin."
+     "h": "Jalannya hari.",
+     "list": [
+      "1 jam 40 menit dengan van ke dermaga Quezon di Busuanga utara",
+      "Muat peralatan ke perahu, lalu daftar dan bayar tiket di Dugong Office, 5 menit dari dermaga",
+      "Sekitar 25 menit naik perahu ke Dugong Point",
+      "Jika banyak grup menunggu, mungkin selam pantai dulu di Pulau Dimipac, 15 menit dari sana",
+      "Pemandu dugong memberi briefing lalu mencari dugong",
+      "Setelah ditemukan, grup berempat Anda masuk air sekitar 15 menit",
+      "Makan siang di perahu, lalu pulang dengan urutan terbalik"
+     ]
+    },
+    {
+     "h": "Aturan melihat dugong.",
+     "list": [
+      "Maksimal empat tamu di air bersama dugong",
+      "Jaga jarak minimal 5 m",
+      "Masuk dengan tenang lewat tangga dan pakai peralatan di permukaan: tidak boleh melompat",
+      "Tenang di perahu, jangan berteriak saat melihat dugong",
+      "Jangan menyentuh, mengejar atau berenang di depan dugong",
+      "Tanpa flash atau strobe",
+      "Biarkan dugong mendekat sendiri, jangan pisahkan induk dan anaknya"
+     ],
+     "after": [
+      "Melanggar aturan bisa dikenai denda berat dan seluruh grup bisa kehilangan giliran. Penampakan tidak pernah dijamin: dugong adalah satwa liar."
+     ]
+    },
+    {
+     "h": "Tips.",
+     "list": [
+      "Jangan langsung berenang kencang saat diberi sinyal: hemat tenaga",
+      "Pakai pemberat sekitar 1 kg lebih dari biasanya agar cepat turun",
+      "Tabir surya dan jaket tipis untuk perjalanan pagi"
      ]
     },
     {
      "h": "Jadikan sehari penuh.",
      "p": [
-      "Trip ini bisa digabung dengan kunjungan ke Calauit Safari Park di Busuanga. Tanyakan kepada tim rencana harinya dan apa saja yang termasuk."
+      "Bisa digabung dengan Calauit Safari Park yang dihuni jerapah dan zebra. Tanyakan kepada tim rencana harinya dan apa saja yang termasuk."
      ]
     }
    ],
    "ask": [
-    "Jam berangkat dan penjemputan",
+    "Jam jemputan dari penginapan",
     "Snorkeling atau menyelam, dan peralatan",
     "Tiket masuk dan biaya lingkungan",
     "Opsi Calauit Safari Park",
     "Total harga dan yang termasuk"
-   ]
+   ],
+   "animals": {
+    "h": "Hewan lain yang bisa Anda temui.",
+    "p": "Bukan hanya dugong: penyu dan ikan karang sering terlihat saat selam pantai di Pulau Dimipac, dan Calauit Safari Park adalah rumah bagi jerapah dan zebra, keturunan hewan yang dibawa dari Kenya pada 1977, serta rusa Calamian yang endemik.",
+    "items": [
+     [
+      "c-fd-turtle",
+      "Penyu sering muncul saat selam pantai dekat Dugong Point."
+     ],
+     [
+      "calauit-giraffes",
+      "Jerapah berkeliaran bebas di Calauit Safari Park."
+     ],
+     [
+      "calauit-feeding",
+      "Di area pemberian makan Anda bisa memberi makan jerapah."
+     ],
+     [
+      "calauit-zebras",
+      "Zebra merumput dengan bebas di Calauit Safari Park."
+     ]
+    ]
+   }
   },
   {
    "name": "Pulau tak berpenghuni, 2 hari 1 malam",
@@ -655,6 +860,139 @@
   "flags-bow": "Bendera Korea dan Filipina berkibar di perahu, pulau hijau di cakrawala.",
   "yacht-salon": "Ruang salon yacht dengan dapur, sofa, dan meja makan.",
   "fd-standing": "Freediver berdiri di atas batu bawah air di bawah sinar matahari.",
-  "calauit-feeding": "Seorang tamu menjangkau jerapah di Calauit Safari Park, Busuanga."
- }
+  "calauit-feeding": "Seorang tamu menjangkau jerapah di Calauit Safari Park, Busuanga.",
+  "c-dugong": "Dugong merumput di padang lamun di Busuanga utara.",
+  "c-dugong-divers": "Para penyelam mengamati dugong dari jarak yang aman.",
+  "c-dugong-freediver": "Freediver berenang tenang di samping dugong.",
+  "c-dugong-graze": "Dugong makan di dasar laut sementara freediver mengamati dari atas.",
+  "c-fd-reef": "Freediver berpegangan pada batu karang di terumbu Coron.",
+  "c-fd-sand": "Freediver bersirip panjang meluncur di sepanjang tali di atas pasir putih.",
+  "c-fd-lake": "Freediver beristirahat di atas batang kayu di Barracuda Lake.",
+  "c-fd-lake2": "Freediver bergaun putih di air jernih Barracuda Lake.",
+  "c-fd-beam": "Freediver melayang dengan tangan terbuka dalam berkas cahaya di gua.",
+  "c-fd-cave": "Freediver berdiri di atas batu di bawah cahaya Gua Pukaway.",
+  "c-fd-turtle": "Freediver menyelam ke arah penyu.",
+  "c-fd-surface": "Freediver meluncur tepat di bawah permukaan yang tenang.",
+  "c-fd-wreck": "Freediver di kapal karam berselimut karang, dikelilingi ikan.",
+  "c-irako-wheel": "Penyelam dengan senter di samping roda kemudi di kapal karam Irako.",
+  "c-irako-engine": "Deretan katup mesin berlumpur di dalam kapal karam Irako.",
+  "c-olympia": "Penyelam melihat dari ruang berjeruji di Olympia Maru.",
+  "c-akitsushima": "Derek berselimut karang di Akitsushima, dengan penyelam di kejauhan.",
+  "c-kogyo": "Buldoser berselimut karang di palka Kogyo Maru.",
+  "c-yacht": "Yacht liveaboard untuk trip Apo Reef sedang berlabuh.",
+  "c-yacht-apo": "Yacht di dekat pulau pasir putih Apo Reef.",
+  "c-yacht-cabin": "Kabin utama yacht dengan ranjang ganda dan panel kayu.",
+  "c-yacht-deck": "Tamu makan bersama di dek yacht yang teduh.",
+  "c-island-beach": "Perahu W Divers di depan pantai pasir putih.",
+  "c-island-tents": "Tenda di atas rumput di bawah pohon kelapa.",
+  "c-island-sunset": "Perahu selam K-WRECK di pantai saat matahari terbenam.",
+  "c-island-kayak": "Tamu mendayung kayak di air toska.",
+  "c-kwreck": "Perahu selam K-WRECK yang baru direnovasi dengan bendera Korea dan bendera selam di Coron.",
+  "c-kwreck-bow": "K-WRECK tertambat di Teluk Coron, dilihat dari haluan.",
+  "gunan": "Potret Gunan Kang, konsultan dan penerjemah di W Divers Coron.",
+  "boat-1": "Diving Boat 1, perahu selam W Divers Coron",
+  "boat-2": "Diving Boat 2, perahu selam W Divers Coron",
+  "boat-3": "Diving Boat 3, perahu selam W Divers Coron",
+  "boat-kwreck": "K-WRECK, perahu selam W Divers Coron"
+ },
+ "SITE_PAGE": {
+  "facts_h": "Info titik selam",
+  "facts_l": {
+   "kind": "Jenis",
+   "length": "Panjang",
+   "depth": "Kedalaman",
+   "vis": "Jarak pandang",
+   "lie": "Posisi"
+  },
+  "lie": {
+   "upright": "Tegak",
+   "capsized": "Miring di sisi",
+   "starboard": "Miring ke kanan",
+   "port": "Miring ke kiri",
+   "forward": "Condong ke depan"
+  },
+  "facts_src": "Angka dari briefing W Divers Coron sendiri.",
+  "title_tpl": "{name} | Titik Selam Coron | W Divers Coron"
+ },
+ "SITES_KIND": [
+  "Kapal tanker",
+  "Kapal induk pesawat amfibi",
+  "Kapal kargo dan pemasok",
+  "Kapal kargo dan pemasok"
+ ],
+ "SITES_NEW": [
+  {
+   "card": "Kapal meriam kecil di lepas East Tangat, dangkal di buritan untuk pemula dan lokasi syuting film Korea.",
+   "kind": "Pemburu kapal selam (kapal meriam)",
+   "p": [
+    "Disebut juga East Tangat Gunboat, kapal 45 m ini berada di tepi terumbu: buritan di 3 m, ruang kemudi sekitar 10 m. Cocok untuk Open Water, dan buritannya bahkan untuk uji coba selam. Karang menutupi dek dan, jika beruntung, ada ikan mandarin. Pada 2018 film Korea The Golden Holiday (국제수사) disyuting di sini. Jarak pandang terbaik di pagi hari."
+   ]
+  },
+  {
+   "card": "Kapal karam terdalam dan paling utuh di Coron, untuk penyelam berpengalaman.",
+   "kind": "Kapal pendingin",
+   "p": [
+    "Irako berada di antara Tangat dan Lusong, dek di 34 m dan kemudi di 42 m. Hampir utuh kecuali kabin kapten, ini salah satu kapal karam terbaik di Coron, mulai level Advanced. Biasanya ada arus. Kerapu besar, tuna, ikan singa dan ikan kalajengking hidup di sini, kadang hiu paus terlihat."
+   ]
+  },
+  {
+   "card": "Kapal pemasok yang rebah di sisinya, dengan ketel besar, kantong udara dan bata tahan api.",
+   "kind": "Kapal kargo dan pemasok",
+   "p": [
+    "Morazan rebah di sisi kanan dekat Tangat, dari 12 m di lambung hingga 25 m di kemudi. Empat palka, dua ketel besar dan ruang mesin dapat dilihat, dan kantong udara masih ada di dalam. Karang lunak dan keras menarik ikan kuwe, ikan singa, ikan batu, penyu dan lobster."
+   ]
+  },
+  {
+   "card": "Kapal meriam kecil berselimut karang, begitu dangkal hingga buritannya hampir muncul saat surut.",
+   "kind": "Pemburu kapal selam (kapal meriam)",
+   "p": [
+    "Kapal 35 m ini berada di sisi timur Pulau Lusong, condong ke depan hingga 18 m. Saat surut buritan hampir menyentuh permukaan, jadi bagus juga untuk snorkeling. Karang keras menutupinya, dikelilingi anemon, ikan kepe-kepe dan ikan angel. Favorit pemula kapal karam dan fotografer."
+   ]
+  },
+  {
+   "card": "Kapal tanker di lepas Black Island, sering dengan air paling jernih di antara kapal karam Coron.",
+   "kind": "Tanker bahan bakar",
+   "p": [
+    "Dikenal sebagai Black Island Wreck, tanker 70 m ini berada sekitar 50 m dari pantai Black Island di barat laut Busuanga, dari 18 m hingga 34 m. Jarak pandang sering 30 m. Karang hingga sekitar 20 m lalu pasir, dengan ikan singa, ikan kelelawar, kerapu dan ikan kuwe."
+   ],
+   "vis": "hingga 30 m"
+  },
+  {
+   "card": "Kapal kargo utuh jauh dari kota, dengan mobil dan truk Jepang masih di palkanya.",
+   "kind": "Kapal kargo",
+   "p": [
+    "Kyokuzan Maru berada di timur laut Busuanga: trip sehari penuh dengan berangkat pagi. Kapal tegak dengan sedikit miring, dek utama di 24 m dan kemudi di 40 m. Hampir tidak rusak, masih ada mobil dan truk Jepang di dalam, dan jarak pandang biasanya sangat baik. Dua penyelaman, haluan dan buritan, bisa digabung dengan Dugong Point."
+   ],
+   "vis": "hingga 30 m"
+  },
+  {
+   "card": "Rangka kapal kecil dekat Coron Island, ideal untuk snorkeling dan penyelaman pertama.",
+   "kind": "Pemburu kapal selam (kapal meriam)",
+   "p": [
+    "Sekitar 15 menit dari Coron, hanya rangka kapal yang tersisa, karena itu namanya. Haluan di 5 m dan titik terdalam sekitar 22 m. Karang, cahaya bagus dan air tenang menjadikannya sempurna untuk foto, uji coba selam dan snorkeling, dengan ikan betok, ikan singa, nudibranch dan ikan kakatua."
+   ]
+  },
+  {
+   "card": "Tongkang 90 m dengan sembilan palka terbuka, dari 18 m di haluan hingga 43 m.",
+   "kind": "Tongkang",
+   "p": [
+    "Tongkang besar ini tenggelam saat dipakai untuk penangkapan ikan ilegal. Panjangnya sekitar 90 m, haluan di 18 m dan dasar di 43 m. Sembilan palka terbuka bisa dilihat dari atas. Karena dalam, cocok untuk penyelam berpengalaman; tanyakan kepada tim cara penyelamannya direncanakan."
+   ]
+  },
+  {
+   "card": "Danau di Coron Island tempat air asin hangat berada di bawah air tawar, hingga 39 °C.",
+   "kind": "Danau dengan termoklin",
+   "p": [
+    "15 menit naik perahu dari Coron, di utara Coron Island. Dengan peralatan, Anda menaiki sekitar 38 anak tangga kayu di atas batu kapur lalu turun lagi, kemudian menyelam di antara dinding tajam hingga 40 m. 4 m teratas air tawar sekitar 28 °C, di bawahnya air hangat dan asin, hingga 39 °C di bawah 14 m. Gua di 21 m masuk sekitar 30 m. Platformnya kecil, jadi grup bergantian."
+   ],
+   "depth": "hingga 40 m"
+  },
+  {
+   "card": "Gua di ujung selatan Coron Island tempat sinar matahari masuk dari atas.",
+   "kind": "Gua",
+   "p": [
+    "Sekitar dua jam naik bangka dari Coron. Pintu masuknya lorong sempit 5 m, satu per satu, dengan endapan di dasar, jadi disarankan Open Water dan daya apung yang baik. Setelah safety stop Anda muncul di dalam gua, tempat cahaya dari lubang besar membuat batu kapur bersinar hijau: sempurna untuk foto grup."
+   ]
+  }
+ ]
 }

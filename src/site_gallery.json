@@ -1,0 +1,37 @@
+{
+ "akitsushima": [
+  "s-akitsu-panel",
+  "s-akitsu-crane",
+  "s-akitsu-crane1",
+  "s-akitsu-crane2"
+ ],
+ "irako": [
+  "s-irako-12",
+  "s-irako-1",
+  "s-irako-13",
+  "s-irako-9",
+  "s-irako-10",
+  "s-irako-6"
+ ],
+ "kogyo-maru": [
+  "s-kogyo-dozer",
+  "s-kogyo-net",
+  "s-kogyo-cement"
+ ],
+ "morazan-maru": [
+  "s-morazan-bricks"
+ ],
+ "olympia-maru": [
+  "s-olympia-jail",
+  "s-olympia-boiler",
+  "s-olympia-drums"
+ ],
+ "teru-kaze-maru": [
+  "s-teru-bridge",
+  "s-teru-galley",
+  "s-teru-kitchen"
+ ],
+ "skeleton-wreck": [
+  "s-skeleton"
+ ]
+}

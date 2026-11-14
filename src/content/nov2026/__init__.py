@@ -28,4 +28,11 @@ def apply(code, ns):
     pages["contact"]["f_interest_opts"] = [tuple(x) for x in n["CONTACT_INTEREST"]]
     pages["sitemap"]["groups"] = n["SITEMAP_GROUPS"]
     ns["TRIPS"] = n["TRIPS"]
+    if "SITES_NEW" in n:
+        old = ns.get("SITES", [])[:4]
+        for rec, kind in zip(old, n.get("SITES_KIND", [])):
+            rec["kind"] = kind
+        ns["SITES"] = old + n["SITES_NEW"]
+    if "SITE_PAGE" in n:
+        pages["site"].update(n["SITE_PAGE"])
     ns.setdefault("ALT", {}).update(n["ALT"])

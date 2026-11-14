@@ -73,11 +73,13 @@ UI = {
     "sites_filter": "Filter dive sites",
     "filter_all": "All Sites",
     "filter_wreck": "Wrecks",
+    "filter_lake": "Lakes & Caves",
     "filter_reef": "Reefs & Other Sites",
     "type_wreck": "Wreck",
+    "type_lake": "Lake & Cave",
     "type_reef": "Reef",
     "video_caption": "A dugong glides past divers. Wildlife encounters are never guaranteed.",
-    "reviewed_value": "October 2026",
+    "reviewed_value": "November 2026",
     "reviewed": "Guide last reviewed",
     "read_guide": "Read the site guide",
     "read_article": "Read the article",
@@ -103,10 +105,11 @@ PAGES = {}
 PAGES["home"] = {
     "title": "W Divers Coron | Wreck and Reef Diving in Coron, Palawan",
     "meta": "Explore wreck diving, reef diving and island-hopping options in Coron, Palawan, then share your dates and experience with W Divers Coron to start planning.",
-    "eyebrow": "W Divers Coron · Palawan",
-    "h1": "Dive into Coron.",
+    "eyebrow": "Coron, Palawan · Since 2015",
+    "h1": "Dive the wrecks of Coron.",
     "support": "Wrecks. Reefs. A different perspective.",
     "body": "Explore diving and island-hopping options with W Divers Coron. Share your dates and experience, and start planning your time on the water.",
+    "trust": ["PADI · SSI · TDI instructors", "English and Korean", "Open daily, 7:00 to 21:00"],
     "secondary": "Explore the Dive Sites",
     "rail": ["Top", "Choose your route", "Wrecks and reefs", "Dive sites", "Planning", "Contact"],
     "choose_h": "Start with your kind of adventure.",
@@ -136,6 +139,11 @@ PAGES["home"] = {
     "contact_h": "Have your dates in mind?",
     "contact_t": "Send your travel dates, group size and diving experience. If you're still deciding, tell us what you'd like to do.",
     "contact_btn": "Start a Dive Inquiry",
+    "hero_more": [{"k": "Behind the camera", "h": "The crew behind the crew.", "s": "Dive and filming support for film and television in Coron."}, {"k": "Special trips", "h": "Further out, quieter waters.", "s": "Island hopping, Apo Reef and overnight trips beyond the usual routes."}, {"k": "Below the surface", "h": "Wrecks from 1944, a short boat ride away.", "s": "Reef dives and freediving too, planned around your level."}, {"k": "About W Divers", "h": "Your day on the water starts here.", "s": "PADI, SSI and TDI instructors. English and Korean spoken."}],
+    "hero_ocean": [{"h": "Dive Coron's legendary wrecks.", "s": "Korean-run since 2015, with PADI, SSI and TDI instructors."}, {"k": "On set in Coron", "h": "Trusted by film and TV crews.", "s": "Dive support for SBS Law of the Jungle and the movie The Golden Holiday."}, {"k": "Special trips", "h": "Hidden lagoons and island escapes.", "s": "Island hopping, Apo Reef and overnight trips arranged by our team."}, {"k": "Wreck diving", "h": "Explore wrecks from 1944.", "s": "Wrecks, reefs and freediving, planned around your level."}, {"k": "Your dive boat", "h": "Gear up. Your boat is waiting.", "s": "Share your dates and experience, and we'll plan your days on the water."}],
+    "boats_h": "Our dive boats.",
+    "boats_t": "Traditional bangka dive boats with outriggers, run by the W Divers crew.",
+    "boats": [{"img": "boat-1", "name": "W Divers Diving Boat 1", "tag": "Bangka dive boat"}, {"img": "boat-2", "name": "W Divers Diving Boat 2", "tag": "Bangka dive boat"}, {"img": "boat-3", "name": "W Divers Diving Boat 3", "tag": "Bangka dive boat"}, {"img": "boat-kwreck", "name": "K-WRECK", "tag": "Renovated dive boat"}],
     "slides": [
         ("Filming support for the movie \"The Golden Holiday\" (국제수사)\nFilming location: Teru Kaze Maru", "Meet our Pro's"),
         ("Filming support: SBS Law of the Jungle in Coron", "Meet our Pro's"),
@@ -143,6 +151,7 @@ PAGES["home"] = {
         ("Wreck and reef diving around Coron", "Diving"),
         ("The W Divers Coron dive boat", "About us"),
     ],
+    "slide_tabs": ["The Golden Holiday", "Law of the Jungle", "Lagoons", "Wrecks and reefs", "Our dive boat"],
     "special_h": "Special trips from Coron.",
     "special_t": "Longer days and overnight adventures, arranged by the W Divers team on selected dates.",
     "special_all": "See all special trips",
@@ -177,7 +186,7 @@ PAGES["diving"] = {
 }
 
 PAGES["wreck"] = {
-    "inline_more": [[1, "w-coral-wreck"]],
+    "inline_more": [[1, "c-irako-wheel"]],
     "title": "Wreck Diving in Coron | W Divers Coron",
     "meta": "Plan wreck diving in Coron around your certification and recent experience. Know what to share and what to confirm before you book with W Divers Coron.",
     "eyebrow": "Wreck diving",
@@ -275,7 +284,7 @@ PAGES["courses"] = {
 }
 
 PAGES["tdi"] = {
-    "inline_more": [[1, "w-machinery"]],
+    "inline_more": [[1, "c-irako-engine"]],
     "title": "TDI Advanced Diver Course in Coron | W Divers Coron",
     "meta": "Advanced and technical diver training in Coron with W Divers Coron's TDI instructors, including advanced wreck training for Coron's wrecks.",
     "eyebrow": "TDI advanced training",
@@ -299,13 +308,13 @@ PAGES["tdi"] = {
 }
 
 PAGES["freediving"] = {
-    "inline_more": [[1, "fd-standing"]],
+    "inline_more": [[1, "c-fd-lake"]],
     "title": "Free Diving in Coron | W Divers Coron",
     "meta": "Freediving in Coron with W Divers Coron: Barracuda Lake, Cathedral Cave and other clear, sheltered spots on a single breath.",
     "eyebrow": "Free diving",
     "h1": "Coron on a single breath.",
     "intro": "Clear lakes, limestone cliffs and calm, sheltered water make Coron a favourite with freedivers. W Divers Coron runs freediving tours to spots such as Barracuda Lake and Cathedral Cave.",
-    "img": "fd-cave",
+    "img": "c-fd-reef",
     "summary": {
         "h": "Before you inquire",
         "for": "For freedivers and confident snorkellers.",
@@ -316,7 +325,7 @@ PAGES["freediving"] = {
         {"h": "Tours and training.", "p": ["Ask the team about freediving tours and whether a course is available for your level. Freediving should always be done with a trained buddy watching from the surface."]},
         {"h": "Plan your day.", "p": ["Tell the team about your experience, the spots you'd like to visit and how much time you have. Ask what's included, such as the boat, equipment and entrance fees."]},
     ],
-    "inline_img": "fd-beam",
+    "inline_img": "c-fd-sand",
     "cta": "Ask About Free Diving",
     "interest": "freediving",
     "related": [("special", None), ("island", None), ("gallery", None)],
@@ -365,6 +374,11 @@ PAGES["pros"] = {
          "intro": "A Filipino divemaster on the W Divers team, guiding divers on the boat and underwater.",
          "creds_h": "Certification",
          "creds": ["SSI Divemaster"]},
+        {"name": "Gunan Kang", "role": "Consultant & Interpreter", "initials": "GK", "img": "gunan", "zoom": 1.35,
+         "tag": "Interprets in native-level English and Tagalog",
+         "intro": "Gunan helps guests plan their time in Coron, interprets during briefings and trips, and designs W Divers' promotions and videos.",
+         "creds_h": "Responsibilities",
+         "creds": ["Interpreting: English and Tagalog", "Guest consulting", "Promotion design", "Video editing"]},
     ],
     "screen_h": "On screen in Coron.",
     "screen_t": "The W Divers team has supported Korean film and TV productions shooting in Coron.",
@@ -400,6 +414,11 @@ PAGES["site"] = {
     "cta_note": "A site inquiry is not a confirmed itinerary.",
     "other_h": "Other site guides",
     "img_note": "Photo: general underwater scene, not this specific site.",
+    "facts_h": "Site facts",
+    "facts_l": {"kind": "Type", "length": "Length", "depth": "Depth", "vis": "Visibility", "lie": "Position"},
+    "lie": {"upright": "Upright", "capsized": "On its side", "starboard": "Listing to starboard", "port": "Heeled to port", "forward": "Tilted forward"},
+    "facts_src": "Figures from W Divers Coron's own site briefings.",
+    "title_tpl": "{name} | Coron Dive Sites | W Divers Coron",
 }
 
 PAGES["island"] = {
@@ -451,7 +470,7 @@ PAGES["about"] = {
     "eyebrow": "About W Divers Coron",
     "h1": "A Korean-run dive centre in Coron, since 2015.",
     "intro": "Wrecks, dugongs, hot springs and caves. W Divers Coron has guided divers through the waters of Coron, Palawan since March 2015, from first breaths to wreck penetration.",
-    "img": "flag-boat",
+    "img": "c-kwreck",
     "story_k": "Our story",
     "story_h": "From a shipyard in Korea to the wrecks of Coron.",
     "story_t": [
@@ -657,7 +676,7 @@ PAGES["404"] = {
 
 SITES = [
     {
-        "slug": "okikawa-maru", "name": "Okikawa Maru", "type": "wreck", "img": "w-machinery",
+        "slug": "okikawa-maru", "name": "Okikawa Maru", "type": "wreck", "img": "w-machinery", "kind": "Tanker", "length": "160.5 m", "depth": "12–26 m", "vis": "5–15 m", "lie": "upright",
         "card": "A large wreck with coral growth and abundant marine life around its structure.",
         "title": "Okikawa Maru Wreck Guide | Coron Dive Sites | W Divers Coron",
         "meta": "An introduction to the Okikawa Maru wreck in Coron, with the questions to ask W Divers Coron before planning a visit.",
@@ -667,7 +686,7 @@ SITES = [
         ],
     },
     {
-        "slug": "akitsushima", "name": "Akitsushima", "type": "wreck", "img": "wreck-mast",
+        "slug": "akitsushima", "name": "Akitsushima", "type": "wreck", "img": "c-akitsushima", "kind": "Seaplane tender", "length": "118 m", "depth": "20–36 m", "vis": "5–15 m", "lie": "capsized", "photo_of_site": True,
         "card": "A seaplane tender known for its distinctive crane and machinery.",
         "title": "Akitsushima Wreck Guide | Coron Dive Sites | W Divers Coron",
         "meta": "An introduction to the Akitsushima, a Japanese seaplane tender wreck in Coron, with questions to ask before planning a visit.",
@@ -677,7 +696,7 @@ SITES = [
         ],
     },
     {
-        "slug": "olympia-maru", "name": "Olympia Maru", "type": "wreck", "img": "wreck-bow",
+        "slug": "olympia-maru", "name": "Olympia Maru", "type": "wreck", "img": "c-olympia", "kind": "Auxiliary cargo and supply ship", "length": "128 m", "depth": "21–32 m", "vis": "10–20 m", "lie": "upright", "photo_of_site": True,
         "card": "A cargo wreck with an imposing underwater presence.",
         "title": "Olympia Maru Wreck Guide | Coron Dive Sites | W Divers Coron",
         "meta": "An introduction to the Olympia Maru cargo wreck in Coron, with questions to ask W Divers Coron before planning a visit.",
@@ -687,7 +706,7 @@ SITES = [
         ],
     },
     {
-        "slug": "kogyo-maru", "name": "Kogyo Maru", "type": "wreck", "img": "stock-split",
+        "slug": "kogyo-maru", "name": "Kogyo Maru", "type": "wreck", "img": "c-kogyo", "kind": "Auxiliary cargo and supply ship", "length": "129 m", "depth": "18–34 m", "vis": "15 m", "lie": "capsized", "photo_of_site": True,
         "card": "A cargo wreck associated with wartime construction supplies.",
         "title": "Kogyo Maru Wreck Guide | Coron Dive Sites | W Divers Coron",
         "meta": "An introduction to the Kogyo Maru cargo wreck in Coron, associated with wartime construction supplies, with questions to ask before planning a visit.",
@@ -696,6 +715,16 @@ SITES = [
             "That cargo gives the site a strong sense of history: rather than only seeing the outside of a ship, divers learn something about what it was carrying when it sank. Any interest in looking into holds should be raised with the team in advance, because entering an overhead environment requires appropriate training and planning.",
         ],
     },
+    {"slug": "teru-kaze-maru", "name": "Teru Kaze Maru", "type": "wreck", "img": "w-three-divers", "card": "A small gunboat off East Tangat Island, shallow enough at the stern for new divers and a filming location for a Korean movie.", "kind": "Auxiliary submarine chaser (gunboat)", "length": "45 m", "depth": "3–22 m", "vis": "15 m", "lie": "starboard", "p": ["Also called the East Tangat Gunboat, this 45 m auxiliary submarine chaser lies on the edge of the reef, with its stern only 3 m deep and the wheelhouse at about 10 m. It suits Open Water divers, and the stern is shallow enough even for Discover Scuba Diving.", "Corals cover the deck and draw plenty of fish, and with luck mandarinfish are found near the hull. In September 2018 the wreck was a filming location for the Korean movie The Golden Holiday (국제수사). Visibility is usually best in the morning."]},
+    {"slug": "irako", "name": "Irako", "type": "wreck", "img": "c-irako-wheel", "card": "Coron's deepest and best-preserved wreck, for advanced divers.", "kind": "Refrigeration ship", "photo_of_site": True, "length": "147 m", "depth": "28–42 m", "vis": "5–15 m", "lie": "port", "p": ["The Irako lies between Tangat and Lusong islands, its deck at 34 m and the rudder at 42 m. Apart from the captain's cabin it is largely intact, which makes it one of the finest wrecks in Coron and a dive for Advanced Open Water divers and above.", "There is usually current, so descents and ascents need care. Big groupers, tuna, lionfish and scorpionfish live on the wreck, and whale sharks are seen now and then."]},
+    {"slug": "morazan-maru", "name": "Morazan Maru", "type": "wreck", "img": "c-morazan", "card": "A supply ship on its side, with big boilers, an air pocket and fire bricks in its holds.", "kind": "Auxiliary cargo and supply ship", "photo_of_site": True, "length": "91.5 m", "depth": "12–25 m", "vis": "15 m", "lie": "capsized", "p": ["The Morazan lies on its starboard side near Tangat Island, from 12 m on the hull to 25 m at the rudder. Its four cargo holds, two large boilers and the engine room can all be seen, and after more than 70 years there is still an air pocket inside.", "Bricks, tiles and broken toilets lie in the holds. Soft and hard corals cover the outside and draw jacks, lionfish, stonefish, turtles and lobsters, making it one of Coron's most popular wrecks."]},
+    {"slug": "lusong-gunboat", "name": "Lusong Gunboat", "type": "wreck", "img": "c-fd-wreck", "card": "A small, coral-covered gunboat so shallow its stern almost breaks the surface at low tide.", "kind": "Submarine hunter (gunboat)", "length": "35 m", "depth": "0–18 m", "vis": "5–15 m", "lie": "forward", "p": ["This 35 m gunboat lies off the east side of Lusong Island, tilted forward from the surface to 18 m. At low tide the stern nearly reaches the surface, so snorkellers can enjoy it as well as divers.", "Hard corals cover the whole boat, and the reef around it is home to anemones, butterflyfish, angelfish and plenty of other reef fish. It is a favourite with new wreck divers and underwater photographers."]},
+    {"slug": "nanshin-maru", "name": "Nanshin Maru", "type": "wreck", "img": "w-coral-wreck", "card": "A tanker off Black Island, often with the clearest water of any Coron wreck.", "kind": "Fuel oil tanker", "length": "70 m", "depth": "18–34 m", "vis": "up to 30 m", "lie": "forward", "p": ["Also known as the Black Island Wreck, this 70 m tanker lies about 50 m off the beach at Black Island in northwest Busuanga, sloping from 18 m at the poop deck to 34 m.", "Visibility often reaches 30 m. Corals cover the wreck down to about 20 m, with sand below, and lionfish, batfish, groupers, pufferfish and jacks are regular sightings."]},
+    {"slug": "kyokuzan-maru", "name": "Kyokuzan Maru", "type": "wreck", "img": "w-valves", "card": "An intact freighter far from town, with Japanese cars and trucks still in its holds.", "kind": "Freighter", "length": "136 m", "depth": "24–40 m", "vis": "up to 30 m", "lie": "upright", "p": ["The Kyokuzan Maru lies northeast of Busuanga, far enough from Coron town that it is a full-day trip with an early start. The freighter sits upright with a slight list, its main deck at 24 m and the rudder at 40 m.", "It is almost undamaged, and Japanese cars and trucks can still be seen inside. Visibility is usually excellent. The wreck is dived twice in the day, bow and stern, and can be combined with a Dugong Point day trip."]},
+    {"slug": "skeleton-wreck", "name": "Skeleton Wreck", "type": "wreck", "img": "hero-fish", "card": "The bare frame of a small boat near Coron Island, ideal for snorkelling and first dives.", "kind": "Submarine hunter (gunboat)", "length": "25 m", "depth": "5–22 m", "vis": "10 m", "p": ["About 15 minutes from Coron town, near Coron Island, only the frame of this small boat remains, which is how it got its name. The bow is at 5 m and the deepest point at about 22 m.", "Coral, good light and calm water make it a lovely spot for underwater photography, Discover Scuba Diving and snorkelling. Damselfish, lionfish, nudibranchs, parrotfish and stonefish live around the frame."]},
+    {"slug": "barge-wreck", "name": "Philippine Barge Wreck", "type": "wreck", "img": "stock-descent", "card": "A 90 m barge with nine open cargo holds, from 18 m at the bow to 43 m.", "kind": "Barge", "length": "90 m", "depth": "18–43 m", "p": ["This large barge sank while it was being used for illegal fishing. It is about 90 m long, with the bow at 18 m and the bottom at 43 m.", "Nine open cargo holds run along the hull, and divers can look into them from above. Because of the depth it suits experienced divers; ask the team how a dive here is planned."]},
+    {"slug": "barracuda-lake", "name": "Barracuda Lake", "type": "lake", "img": "c-fd-lake", "card": "A lake inside Coron Island where warm saltwater lies beneath fresh water, reaching up to 39 °C.", "kind": "Lake with a thermocline", "photo_of_site": True, "depth": "up to 40 m", "p": ["Barracuda Lake is 15 minutes by boat from Coron town, on the north of Coron Island. From the boat you climb about 38 wooden steps over the limestone and down again with your gear, then dive between sharp limestone walls up to 40 m deep.", "The top 4 m is fresh water at about 28 °C. From 4 to 14 m it turns warm and salty, and below 14 m the water can reach 39 °C, with the thermocline clearly visible between about 4 and 13 m. A cave at 21 m runs some 30 m into the rock, wide enough for one diver at a time. The lake is named after a single large barracuda that lives here, along with catfish and freshwater shrimp. The entry platform is small, so groups take turns."]},
+    {"slug": "cathedral-cave", "name": "Cathedral Cave", "type": "lake", "img": "c-fd-beam", "card": "A cave at the southern tip of Coron Island where sunlight pours in from above.", "kind": "Cave", "p": ["Cathedral Cave is about two hours by banca from Coron town, under the cliffs at the southern tip of Coron Island. The entrance is a narrow 5 m passage taken one diver at a time, with loose sediment on the floor, so Open Water certification and good buoyancy are recommended. Beginners can join with close help from an experienced guide.", "After a safety stop you surface inside the cave, where sunlight falls through a large opening and makes the limestone glow green: a perfect place for a group photo. On the way back out there are reefs, rocks and plenty of fish to see."]}
 ]
 
 ARTICLES = [
@@ -789,35 +818,232 @@ ARTICLES = [
 
 TRIPS = [
     {
-        "slug": "apo-reef", "name": "Apo Reef Yacht Liveaboard", "short": "Apo Reef", "img": "yacht-aerial", "inline": [[0, "yacht-salon"], [1, "yacht-cabin"]],
-        "card": "A full-charter yacht trip to one of the Philippines' best-known reefs, for up to 10 divers.",
-        "title": "Apo Reef Yacht Liveaboard | Special Trips | W Divers Coron",
-        "meta": "Join a W Divers Coron yacht liveaboard to Apo Reef Natural Park: a small group of up to 10 divers, several days of diving, meals and cabins on board.",
-        "intro": "Apo Reef Natural Park is one of the most celebrated dive destinations in the Philippines. W Divers Coron charters a yacht for divers-only trips there, with a small group of up to 10 divers.",
-        "facts": [("Format", "Yacht liveaboard, full charter"), ("Group size", "Up to 10 divers"), ("Typical length", "3 nights, 4 days"), ("Dives", "Around 10, plus an optional night dive"), ("Boarding", "Coron, or Manila (Batangas) on some departures")],
-        "sections": [
-            {"h": "A reef worth the journey.", "p": ["Apo Reef lies in the Mindoro Strait, west of Mindoro. It is a protected natural park with wide coral reefs and walls, reached after several hours at sea, which is why the trip runs as a liveaboard."]},
-            {"h": "Life on board.", "p": ["On recent departures, the yacht took up to 10 divers in five double cabins with air conditioning. Meals and snacks were served throughout, diving and guiding were included, and hotel pick-up and drop-off were arranged before and after the trip."]},
-            {"h": "What to check.", "p": ["The Apo Reef Natural Park entrance fee has been charged separately (USD 100 on a recent trip). Dates, the number of dives and the price depend on each departure, so ask the team for the details in writing."]},
-        ],
-        "ask": ["Next departure dates and places left", "Total price and what's included", "Park entrance fee", "Certification and experience required", "Cabin arrangements", "Boarding point"],
+     "slug": "apo-reef",
+     "name": "Apo Reef Yacht Liveaboard",
+     "short": "Apo Reef",
+     "img": "c-yacht",
+     "inline": [
+      [
+       0,
+       "c-yacht-apo"
+      ],
+      [
+       1,
+       "c-yacht-cabin"
+      ],
+      [
+       4,
+       "c-yacht-deck"
+      ]
+     ],
+     "card": "A 4-night yacht liveaboard to the Philippines' largest coral reef, for up to 10 divers.",
+     "title": "Apo Reef Yacht Liveaboard | Special Trips | W Divers Coron",
+     "meta": "A W Divers Coron yacht liveaboard to Apo Reef Natural Park, the largest coral reef in the Philippines: 4 nights, up to 10 divers, nitrox and meals included.",
+     "intro": "Apo Reef Natural Park, about 30 km off the west coast of Occidental Mindoro, is the largest coral reef in the Philippines and on UNESCO's tentative World Heritage list. W Divers Coron charters the Caribbean Tigress yacht for small, divers-only groups.",
+     "facts": [
+      [
+       "Format",
+       "Yacht liveaboard, full charter"
+      ],
+      [
+       "Yacht",
+       "Caribbean Tigress"
+      ],
+      [
+       "Group size",
+       "Up to 10 divers"
+      ],
+      [
+       "Length",
+       "4 nights, 5 days (2027 departure)"
+      ],
+      [
+       "Dives",
+       "10 included, more if you have the energy"
+      ],
+      [
+       "Depth and visibility",
+       "5–40 m, often 15–50 m"
+      ],
+      [
+       "Boarding",
+       "Batangas, with Manila airport pick-up"
+      ]
+     ],
+     "sections": [
+      {
+       "h": "A reef worth the journey.",
+       "p": [
+        "Apo Reef covers about 34 km² and is divided into a north and a south lagoon. Depths run from 5 to 40 m, visibility is often 15 to 50 m, and gentle currents make most dives easy drift dives. Mantas, sharks, schooling barracuda and big napoleon wrasse are all part of the reef's appeal."
+       ]
+      },
+      {
+       "h": "Life on board.",
+       "p": [
+        "The Caribbean Tigress has an air-conditioned master cabin with a double bed, plus twin and triple cabins with single beds. Meals, drinking water, coffee and tea are served throughout the trip, and there is wifi on board."
+       ]
+      },
+      {
+       "h": "What's included.",
+       "list": [
+        "Water taxi to the yacht from the Batangas harbour",
+        "10 dives, with extra dives free if you have the energy",
+        "Nitrox on every dive",
+        "Free night dive",
+        "Manila airport pick-up and drop-off",
+        "All meals: breakfast, lunch and dinner",
+        "Drinking water, coffee and tea",
+        "Wifi on board"
+       ]
+      },
+      {
+       "h": "Not included.",
+       "list": [
+        "Apo Reef Natural Park entrance fee (USD 100)",
+        "International flights",
+        "Dive insurance",
+        "Equipment rental",
+        "Alcohol and other drinks (tell us your preferred brands before departure)",
+        "Tips: dive guide USD 60, yacht crew USD 40",
+        "Personal expenses"
+       ]
+      },
+      {
+       "h": "Booking and cancellation.",
+       "p": [
+        "Your place is confirmed once the full trip price is paid. Because this is a liveaboard, cancellations are not refunded, except that cancelling at least three months before departure returns 50% of the price. If weather stops the trip, it is rescheduled rather than refunded, and if the yacht has an engine problem a yacht of the same standard is used."
+       ]
+      }
+     ],
+     "prices": {
+      "at": 1,
+      "h": "2027 prices per person",
+      "note": "Indicative prices for the 2027 departure. Dates are still being confirmed, so ask the team for the current price before you book.",
+      "rows": [
+       [
+        "Master cabin, double bed (2 people)",
+        "USD 2,500"
+       ],
+       [
+        "Twin cabin, single beds (2 people)",
+        "USD 2,200"
+       ],
+       [
+        "Triple cabin, single beds (3 people)",
+        "USD 2,000–2,100"
+       ]
+      ]
+     },
+     "ask": [
+      "2027 departure dates and places left",
+      "Price for your cabin type",
+      "Park entrance fee and tips",
+      "Certification and experience required",
+      "Flights to Manila and transfer times",
+      "Dive insurance"
+     ]
     },
     {
-        "slug": "dugong-watching", "name": "Dugong Watching", "short": "Dugong Watching", "img": "dugong-diver", "inline": [[2, "calauit-zebras"]], "video": "dugong",
-        "card": "An early start to look for dugongs in the calm bays of northern Busuanga.",
-        "title": "Dugong Watching Day Trip | Special Trips | W Divers Coron",
-        "meta": "A W Divers Coron day trip to look for dugongs in northern Busuanga, leaving early to arrive before the crowds, with an option to visit Calauit Safari Park.",
-        "intro": "Dugongs, gentle sea mammals that graze on seagrass, live in the waters of northern Busuanga. On this day trip the W Divers boat leaves early to reach the dugong area before other boats arrive.",
-        "facts": [("Format", "Day trip by boat"), ("Start", "Very early morning"), ("Where", "Northern Busuanga (Aban-Aban area)"), ("In the water", "Ask whether snorkelling or diving is planned"), ("Add-on", "Calauit Safari Park visit")],
-        "sections": [
-            {"h": "Why the early start.", "p": ["Popular dugong areas get busy as the day goes on. Leaving before sunrise gives the best chance of a calm, unhurried encounter before other boats arrive."]},
-            {"h": "Respect for the animals.", "p": ["Dugongs are wild and protected. Guests follow the guide's instructions, keep their distance and never touch, chase or feed them. Sightings are never guaranteed."]},
-            {"h": "Make a day of it.", "p": ["The trip can be combined with a visit to Calauit Safari Park on Busuanga. Ask the team how the day is planned and what's included."]},
-        ],
-        "ask": ["Departure time and pick-up", "Snorkelling or diving, and equipment", "Entrance and environmental fees", "Calauit Safari Park option", "Total price and what's included"],
+     "slug": "dugong-watching",
+     "name": "Dugong Watching",
+     "short": "Dugong Watching",
+     "img": "c-dugong",
+     "video": "dugong",
+     "inline": [[0, "dugong-diver"], [1, "c-dugong-divers"], [2, "c-dugong-graze"], [3, "c-dugong-freediver"]],
+     "animals": {"h": "Other animals you may meet.", "p": "Dugong Point is not the only wildlife on this trip. Sea turtles and reef fish are common on the beach dives at Dimipac Island, and Calauit Safari Park is home to giraffes and zebras, descended from animals brought from Kenya in 1977, alongside the endemic Calamian deer.", "items": [["c-fd-turtle", "Sea turtles often appear on the beach dives near Dugong Point."], ["calauit-giraffes", "Giraffes roam freely at Calauit Safari Park."], ["calauit-feeding", "At the feeding area you can get close enough to feed the giraffes."], ["calauit-zebras", "Zebras graze in the open at Calauit Safari Park."]]},
+     "card": "An early start to meet dugongs at Dugong Point, off Calauit in northern Busuanga.",
+     "title": "Dugong Watching Day Trip | Special Trips | W Divers Coron",
+     "meta": "A W Divers Coron day trip to Dugong Point in northern Busuanga: 4 am pick-up, small groups of four, the official watching rules and an optional visit to Calauit Safari Park.",
+     "intro": "Dugongs, gentle sea mammals that graze on seagrass, live off Calauit Island in northern Busuanga. On this day trip you leave before dawn, travel by van and boat to Dugong Point, and watch the dugongs in small groups with a trained dugong guide.",
+     "facts": [
+      [
+       "Format",
+       "Day trip by van and boat"
+      ],
+      [
+       "Pick-up",
+       "04:00–04:30 from your hotel"
+      ],
+      [
+       "Where",
+       "Dugong Point, off Calauit Island, northern Busuanga"
+      ],
+      [
+       "Getting there",
+       "1 h 40 min by van, then 25 min by boat"
+      ],
+      [
+       "With the dugong",
+       "About 15 minutes per group of 4"
+      ],
+      [
+       "Back in Coron",
+       "Around 3–4 pm, sometimes 6–7 pm"
+      ],
+      [
+       "Add-on",
+       "Calauit Safari Park visit"
+      ]
+     ],
+     "sections": [
+      {
+       "h": "Why the early start.",
+       "p": [
+        "Dugong Point gets busy in peak season, and groups take turns in the order they arrive. Pick-up is between 4:00 and 4:30 am so you are among the first. If your hotel can't prepare breakfast, the shop provides a simple one to eat in the van or at the pier."
+       ]
+      },
+      {
+       "h": "How the day runs.",
+       "list": [
+        "1 hour 40 minutes by van to Quezon pier in northern Busuanga",
+        "Load the equipment onto the boat, then register and pay the admission fee at the Dugong Office, 5 minutes from the pier",
+        "About 25 minutes by boat to Dugong Point",
+        "If many groups are waiting, you may beach-dive first at Dimipac Island, 15 minutes away",
+        "A dugong guide briefs your group, then searches for the dugong",
+        "When it is found, your group of four enters and spends about 15 minutes with it",
+        "Lunch is eaten on the boat, and you return in reverse order"
+       ]
+      },
+      {
+       "h": "Dugong watching rules.",
+       "list": [
+        "No more than four guests in the water with a dugong at a time",
+        "Stay at least 5 m away",
+        "Enter quietly by the ladder and put your equipment on at the surface: no jumping in",
+        "Stay quiet on the boats and don't shout when a dugong is spotted",
+        "Never touch, chase or swim in front of a dugong",
+        "No strobes or flash photography",
+        "Let the dugong choose to come close, and never separate a mother and calf"
+       ],
+       "after": [
+        "Breaking the rules can bring a heavy penalty, and the whole group may lose its turn. Sightings are never guaranteed: dugongs are wild."
+       ]
+      },
+      {
+       "h": "Tips for the day.",
+       "list": [
+        "Don't race off at full speed when the guide signals; save your energy for the dive",
+        "Wear about 1 kg more weight than usual so you can get down quickly",
+        "Bring sun protection and a light jacket for the early drive"
+       ]
+      },
+      {
+       "h": "Make a day of it.",
+       "p": [
+        "The trip can be combined with a visit to Calauit Safari Park on Busuanga, home to giraffes and zebras. Ask the team how the day is planned and what's included."
+       ]
+      }
+     ],
+     "ask": [
+      "Pick-up time from your hotel",
+      "Snorkelling or diving, and equipment",
+      "Admission and environmental fees",
+      "Calauit Safari Park option",
+      "Total price and what's included"
+     ]
     },
     {
-        "slug": "deserted-island-overnight", "name": "Deserted Island 2 Days 1 Night", "short": "Deserted Island 2D1N", "img": "beach-walk", "inline": [[0, "heart-divers"], [1, "boat-lunch"]],
+        "slug": "deserted-island-overnight", "name": "Deserted Island 2 Days 1 Night", "short": "Deserted Island 2D1N", "img": "c-island-beach", "inline": [[0, "c-island-tents"], [1, "boat-lunch"], [2, "c-island-sunset"]],
         "card": "Five dives and a night camping on an uninhabited island, two days away from town.",
         "title": "Deserted Island 2 Days 1 Night Tour | Special Trips | W Divers Coron",
         "meta": "A W Divers Coron 2-day, 1-night diving package: 5 dives and a night camping on an uninhabited island away from Coron town.",

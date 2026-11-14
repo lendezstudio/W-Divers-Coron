@@ -19,6 +19,7 @@ IMG = os.path.join(ROOT, "assets", "images")
 PEX = os.path.join(ROOT, "assets", "Images from pexels")
 NOV = os.path.join(IMG, "November 9, 2026")
 NOV10 = os.path.join(IMG, "Enhanced Nov 10")
+CLIENT13 = os.path.join(IMG, "Client Drive Nov 13")
 
 WIDTHS = [640, 1280, 1920]
 
@@ -164,14 +165,14 @@ MEDIA = {
                 "ko": "2020년 1월 21~23일 SBS 정글의 법칙 in 코론 촬영 지원 포스터. 사진과 출연진 사인이 담겨 있습니다."},
     },
     "inhan": {
-        "src": (IMG, "Restored portrait of Inhan Kang-2.png"),
-        "kind": "business", "focus": "50% 30%", "cats": [],
+        "src": (CLIENT13, "Portrait of Inhan Kang.jpg"),
+        "kind": "business", "focus": "50% 40%", "cats": [],
         "alt": {"en": "Portrait of Inhan Kang, instructor at W Divers Coron.",
                 "ko": "W Divers Coron 강사 강인한의 인물 사진."},
     },
     "jex": {
-        "src": (IMG, "Restored portrait of Jex Lenver Tabat-1.png"),
-        "kind": "business", "focus": "50% 30%", "cats": [],
+        "src": (CLIENT13, "Portrait of Jex Lenver Tabat.jpg"),
+        "kind": "business", "focus": "50% 40%", "cats": [],
         "alt": {"en": "Portrait of Jex Lenver Tabat (GIGs), divemaster at W Divers Coron.",
                 "ko": "W Divers Coron 다이브마스터 젝스 렌버 타밧(GIGs)의 인물 사진."},
     },
@@ -195,13 +196,13 @@ MEDIA = {
     },
     "calauit-zebras": {
         "src": (NOV10, "Natural underwater diving scene-8.png"),
-        "kind": "business", "focus": "50% 60%", "cats": ["islands"],
+        "kind": "business", "focus": "40% 60%", "cats": ["islands"],
         "alt": {"en": "Zebras graze near a ranger station at Calauit Safari Park on Busuanga.",
                 "ko": "부수앙가 칼라위트 사파리 파크의 관리소 근처에서 풀을 뜯는 얼룩말들."},
     },
     "calauit-giraffes": {
         "src": (NOV10, "Underwater adventure in natural light-3.png"),
-        "kind": "business", "focus": "50% 30%", "cats": ["islands"],
+        "kind": "business", "focus": "50% 18%", "cats": ["islands"],
         "alt": {"en": "Two giraffes lean toward the camera under a blue sky at Calauit Safari Park.",
                 "ko": "칼라위트 사파리 파크의 파란 하늘 아래 카메라 쪽으로 다가온 기린 두 마리."},
     },
@@ -333,9 +334,398 @@ MEDIA = {
     },
     "calauit-feeding": {
         "src": (NOV10, "Natural underwater travel scene-10.png"),
-        "kind": "business", "focus": "50% 45%", "cats": ["islands"],
+        "kind": "business", "focus": "50% 42%", "cats": ["islands"],
         "alt": {"en": "A guest reaches toward a giraffe at Calauit Safari Park on Busuanga.",
                 "ko": "부수앙가 칼라위트 사파리 파크에서 기린에게 손을 뻗는 손님."},
+    },
+    "c-dugong": {
+        "src": (CLIENT13, "Dugong over the seagrass.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["underwater"],
+        "alt": {"en": "A dugong grazes over a sandy seagrass bed in northern Busuanga.",
+                "ko": "부수앙가 북쪽 해초 모래밭에서 풀을 뜯는 듀공."},
+    },
+    "c-dugong-divers": {
+        "src": (CLIENT13, "Divers watching a dugong.jpg"),
+        "kind": "business", "focus": "50% 45%", "cats": ["underwater"],
+        "alt": {"en": "A group of divers watches a dugong from a respectful distance.",
+                "ko": "다이버들이 거리를 두고 듀공을 지켜보는 모습."},
+    },
+    "c-dugong-freediver": {
+        "src": (CLIENT13, "Freediver beside a dugong.jpg"),
+        "kind": "business", "focus": "50% 45%", "cats": ["underwater"],
+        "alt": {"en": "A freediver swims calmly beside a dugong.",
+                "ko": "듀공 옆에서 차분히 헤엄치는 프리다이버."},
+    },
+    "c-dugong-graze": {
+        "src": (CLIENT13, "Freediver and grazing dugong.jpg"),
+        "kind": "business", "focus": "50% 60%", "cats": ["underwater"],
+        "alt": {"en": "A dugong feeds on the seabed as freedivers look on from above.",
+                "ko": "프리다이버들이 위에서 지켜보는 가운데 해저에서 먹이를 먹는 듀공."},
+    },
+    "c-fd-reef": {
+        "src": (CLIENT13, "Freediver on a Coron reef.jpg"),
+        "kind": "business", "focus": "45% 50%", "cats": ["underwater"],
+        "alt": {"en": "A freediver holds onto a coral rock on a Coron reef.",
+                "ko": "코론 리프의 산호 바위를 잡고 있는 프리다이버."},
+    },
+    "c-fd-sand": {
+        "src": (CLIENT13, "Freediver gliding over sand.jpg"),
+        "kind": "business", "focus": "55% 55%", "cats": ["underwater"],
+        "alt": {"en": "A freediver with long fins glides along a guide line over white sand.",
+                "ko": "롱핀을 신은 프리다이버가 흰 모래 위 가이드라인을 따라 미끄러지듯 나아가는 모습."},
+    },
+    "c-fd-lake": {
+        "src": (CLIENT13, "Freediver resting in Barracuda Lake.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A freediver rests on a log between the limestone rocks of Barracuda Lake.",
+                "ko": "바라쿠다 호수의 석회암 바위 사이 통나무 위에서 쉬는 프리다이버."},
+    },
+    "c-fd-lake2": {
+        "src": (CLIENT13, "Freediver in Barracuda Lake.jpg"),
+        "kind": "business", "focus": "50% 45%", "cats": ["underwater"],
+        "alt": {"en": "A freediver in a white dress poses in the clear water of Barracuda Lake.",
+                "ko": "바라쿠다 호수의 맑은 물속에서 흰 드레스를 입고 포즈를 취한 프리다이버."},
+    },
+    "c-fd-beam": {
+        "src": (CLIENT13, "Freediver in a cave light beam.jpg"),
+        "kind": "business", "focus": "50% 45%", "cats": ["underwater"],
+        "alt": {"en": "A freediver floats with open arms in a beam of light inside a cave.",
+                "ko": "동굴 안 빛줄기 속에서 팔을 벌리고 떠 있는 프리다이버."},
+    },
+    "c-fd-cave": {
+        "src": (CLIENT13, "Freediver on a rock in Pukaway Cave.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["underwater"],
+        "alt": {"en": "A freediver stands on a rock under the light shaft of Pukaway Cave.",
+                "ko": "푸카웨이 동굴의 빛줄기 아래 바위 위에 선 프리다이버."},
+    },
+    "c-fd-turtle": {
+        "src": (CLIENT13, "Freediver above a sea turtle.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["underwater"],
+        "alt": {"en": "A freediver dives down toward a sea turtle over coral and sand.",
+                "ko": "산호와 모래 위 바다거북을 향해 내려가는 프리다이버."},
+    },
+    "c-fd-surface": {
+        "src": (CLIENT13, "Freediver under the surface.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["underwater"],
+        "alt": {"en": "A freediver glides just below the calm surface over pale sand.",
+                "ko": "잔잔한 수면 바로 아래 밝은 모래 위를 미끄러지는 프리다이버."},
+    },
+    "c-fd-wreck": {
+        "src": (CLIENT13, "Freediver at a coral-covered wreck.jpg"),
+        "kind": "business", "focus": "55% 50%", "cats": ["underwater"],
+        "alt": {"en": "A freediver rests against a coral-covered shipwreck as fish swim past.",
+                "ko": "물고기가 지나가는 산호 덮인 난파선에 기대 쉬는 프리다이버."},
+    },
+    "c-irako-wheel": {
+        "src": (CLIENT13, "Diver at a ship's wheel in a wreck.jpg"),
+        "kind": "business", "focus": "50% 45%", "cats": ["underwater"],
+        "alt": {"en": "A diver with a torch beside a ship's wheel inside the Irako wreck.",
+                "ko": "이라코 난파선 내부의 조타륜 옆에서 라이트를 든 다이버."},
+    },
+    "c-irako-engine": {
+        "src": (CLIENT13, "Engine valves inside a wreck.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Rows of silted engine valves inside the Irako wreck.",
+                "ko": "이라코 난파선 안에 줄지어 있는 퇴적물 덮인 엔진 밸브."},
+    },
+    "c-olympia": {
+        "src": (CLIENT13, "Diver in the Olympia Maru wreck.jpg"),
+        "kind": "business", "focus": "50% 45%", "cats": ["underwater"],
+        "alt": {"en": "A diver looks out through a grated room inside the Olympia Maru.",
+                "ko": "올림피아 마루 내부 창살 구조물 사이로 내다보는 다이버."},
+    },
+    "c-akitsushima": {
+        "src": (CLIENT13, "Akitsushima crane on the seabed.jpg"),
+        "kind": "business", "focus": "55% 55%", "cats": ["underwater"],
+        "alt": {"en": "The coral-covered crane of the Akitsushima wreck, with a diver beyond.",
+                "ko": "산호로 덮인 아키츠시마 난파선의 크레인과 그 너머의 다이버."},
+    },
+    "c-kogyo": {
+        "src": (CLIENT13, "Bulldozer inside the Kogyo Maru.jpg"),
+        "kind": "business", "focus": "45% 50%", "cats": ["underwater"],
+        "alt": {"en": "A coral-covered bulldozer in the cargo hold of the Kogyo Maru.",
+                "ko": "코교 마루 화물칸에 있는 산호 덮인 불도저."},
+    },
+    "boat-1": {
+        "src": (CLIENT13, "W Divers Diving Boat 1.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["boats"],
+        "alt": {"en": "Diving Boat 1, a W Divers Coron dive boat",
+                "ko": "W Divers Coron 다이빙 보트 Diving Boat 1"},
+    },
+    "boat-2": {
+        "src": (CLIENT13, "W Divers Diving Boat 2.jpg"),
+        "kind": "business", "focus": "45% 50%", "cats": ["boats"],
+        "alt": {"en": "Diving Boat 2, a W Divers Coron dive boat",
+                "ko": "W Divers Coron 다이빙 보트 Diving Boat 2"},
+    },
+    "boat-3": {
+        "src": (CLIENT13, "W Divers Diving Boat 3.jpg"),
+        "kind": "business", "focus": "50% 60%", "cats": ["boats"],
+        "alt": {"en": "Diving Boat 3, a W Divers Coron dive boat",
+                "ko": "W Divers Coron 다이빙 보트 Diving Boat 3"},
+    },
+    "boat-kwreck": {
+        "src": (CLIENT13, "K-WRECK dive boat.jpg"),
+        "kind": "business", "focus": "55% 70%", "cats": ["boats"],
+        "alt": {"en": "K-WRECK, a W Divers Coron dive boat",
+                "ko": "W Divers Coron 다이빙 보트 K-WRECK"},
+    },
+    "s-akitsu-panel": {
+        "src": (CLIENT13, "Site s-akitsu-panel.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Gauges and valves on a control panel inside the Akitsushima wreck."},
+    },
+    "s-akitsu-crane": {
+        "src": (CLIENT13, "Site s-akitsu-crane.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "The Akitsushima's seaplane crane lying on the sand."},
+    },
+    "s-akitsu-crane1": {
+        "src": (CLIENT13, "Site s-akitsu-crane1.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A diver swims past the coral-covered crane of the Akitsushima."},
+    },
+    "s-akitsu-crane2": {
+        "src": (CLIENT13, "Site s-akitsu-crane2.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "The crane's winch drum on the Akitsushima, with reef fish around it."},
+    },
+    "s-irako-12": {
+        "src": (CLIENT13, "Site s-irako-12.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A diver beside a large wheel deep inside the Irako."},
+    },
+    "s-irako-1": {
+        "src": (CLIENT13, "Site s-irako-1.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Rows of engine valves inside the Irako's engine room."},
+    },
+    "s-irako-13": {
+        "src": (CLIENT13, "Site s-irako-13.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A ventilator on the Irako with small fish around it."},
+    },
+    "s-irako-9": {
+        "src": (CLIENT13, "Site s-irako-9.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A diver over machinery inside the Irako."},
+    },
+    "s-irako-10": {
+        "src": (CLIENT13, "Site s-irako-10.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Silt-covered machinery inside the Irako."},
+    },
+    "s-irako-6": {
+        "src": (CLIENT13, "Site s-irako-6.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Engine parts in the hold of the Irako."},
+    },
+    "s-kogyo-dozer": {
+        "src": (CLIENT13, "Site s-kogyo-dozer.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Construction machinery in the hold of the Kogyo Maru."},
+    },
+    "s-kogyo-net": {
+        "src": (CLIENT13, "Site s-kogyo-net.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Rolls of steel wire mesh cargo inside the Kogyo Maru."},
+    },
+    "s-kogyo-cement": {
+        "src": (CLIENT13, "Site s-kogyo-cement.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Hardened cement bags stacked in the Kogyo Maru's hold."},
+    },
+    "s-morazan-bricks": {
+        "src": (CLIENT13, "Site s-morazan-bricks.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Stamped fire bricks lying inside the Morazan Maru."},
+    },
+    "s-olympia-jail": {
+        "src": (CLIENT13, "Site s-olympia-jail.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A diver looks through a barred frame inside the Olympia Maru."},
+    },
+    "s-olympia-boiler": {
+        "src": (CLIENT13, "Site s-olympia-boiler.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "A diver's light on the small boiler of the Olympia Maru."},
+    },
+    "s-olympia-drums": {
+        "src": (CLIENT13, "Site s-olympia-drums.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Broken oil drums on the deck of the Olympia Maru."},
+    },
+    "s-teru-bridge": {
+        "src": (CLIENT13, "Site s-teru-bridge.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "The bridge and window frames of the Teru Kaze Maru."},
+    },
+    "s-teru-galley": {
+        "src": (CLIENT13, "Site s-teru-galley.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Light falls into the galley area of the Teru Kaze Maru."},
+    },
+    "s-teru-kitchen": {
+        "src": (CLIENT13, "Site s-teru-kitchen.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Inside the kitchen of the Teru Kaze Maru."},
+    },
+    "s-skeleton": {
+        "src": (CLIENT13, "Site s-skeleton.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["underwater"],
+        "alt": {"en": "Divers above the coral-covered frame of the Skeleton Wreck."},
+    },
+    "i-sunset-boat": {
+        "src": (CLIENT13, "Island i-sunset-boat.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "The dive boat moored off the island at sunset."},
+    },
+    "i-dawn-beach": {
+        "src": (CLIENT13, "Island i-dawn-beach.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "Calm water and a sandy beach at dawn."},
+    },
+    "i-sunset-sail": {
+        "src": (CLIENT13, "Island i-sunset-sail.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "The sun sets behind a sailing boat off Coron."},
+    },
+    "i-palm-beach": {
+        "src": (CLIENT13, "Island i-palm-beach.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "A white-sand beach lined with palm trees."},
+    },
+    "i-golden-shore": {
+        "src": (CLIENT13, "Island i-golden-shore.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "Golden light over the shore at the island."},
+    },
+    "i-camp": {
+        "src": (CLIENT13, "Island i-camp.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "Tents under the palm trees at the island campsite."},
+    },
+    "i-boat-shore": {
+        "src": (CLIENT13, "Island i-boat-shore.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "The dive boat at the island shore under a big sky."},
+    },
+    "y-room-twin": {
+        "src": (CLIENT13, "Yacht y-room-twin.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "A twin cabin with single beds on the Caribbean Tigress."},
+    },
+    "y-room-single": {
+        "src": (CLIENT13, "Yacht y-room-single.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "A single bunk with storage in a cabin on the Caribbean Tigress."},
+    },
+    "y-room-bunk": {
+        "src": (CLIENT13, "Yacht y-room-bunk.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "A cabin with bunk beds and wooden cupboards on the Caribbean Tigress."},
+    },
+    "y-room-bed": {
+        "src": (CLIENT13, "Yacht y-room-bed.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "A made bed in one of the Caribbean Tigress cabins."},
+    },
+    "y-salon": {
+        "src": (CLIENT13, "Yacht y-salon.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "The wood-panelled lounge on the Caribbean Tigress at dusk."},
+    },
+    "y-dining": {
+        "src": (CLIENT13, "Yacht y-dining.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "A shared meal laid out on the dining table on board."},
+    },
+    "i-apo-beach": {
+        "src": (CLIENT13, "Island i-apo-beach.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["islands"],
+        "alt": {"en": "The white-sand beach and welcome sign at Apo Reef Natural Park."},
+    },
+    "i-hop-boat": {
+        "src": (CLIENT13, "Island i-hop-boat.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["islands"],
+        "alt": {"en": "Guests on the boat during an island-hopping day, with islands behind."},
+    },
+    "i-yacht-island": {
+        "src": (CLIENT13, "Island i-yacht-island.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["islands"],
+        "alt": {"en": "The liveaboard yacht anchored beside a green island."},
+    },
+    "c-yacht": {
+        "src": (CLIENT13, "Liveaboard yacht at anchor 4x3.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": ["islands"],
+        "alt": {"en": "The liveaboard yacht used for Apo Reef trips, at anchor in calm water.",
+                "ko": "아포리프 트립에 쓰는 리브어보드 요트가 잔잔한 바다에 정박한 모습."},
+    },
+    "c-yacht-apo": {
+        "src": (CLIENT13, "Liveaboard yacht near Apo Reef.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "The liveaboard yacht near the white-sand island of Apo Reef.",
+                "ko": "아포리프의 흰 모래섬 근처에 떠 있는 리브어보드 요트."},
+    },
+    "c-yacht-cabin": {
+        "src": (CLIENT13, "Yacht master cabin.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": [],
+        "alt": {"en": "The yacht's master cabin with a double bed and wood panelling.",
+                "ko": "더블 침대와 원목 마감이 있는 요트 마스터 캐빈."},
+    },
+    "c-yacht-deck": {
+        "src": (CLIENT13, "Lunch on the yacht sun deck.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["moments"],
+        "alt": {"en": "Guests share a meal at the table on the yacht's shaded deck.",
+                "ko": "요트의 그늘진 갑판 테이블에서 식사를 함께하는 손님들."},
+    },
+    "c-island-beach": {
+        "src": (CLIENT13, "Island beach with the dive boat.jpg"),
+        "kind": "business", "focus": "50% 60%", "cats": ["islands"],
+        "alt": {"en": "The W Divers boat anchored off a white-sand island beach.",
+                "ko": "흰 모래 섬 해변 앞에 정박한 W Divers 보트."},
+    },
+    "c-island-tents": {
+        "src": (CLIENT13, "Tents under the palms.jpg"),
+        "kind": "business", "focus": "50% 60%", "cats": ["islands"],
+        "alt": {"en": "Pop-up tents set up on the grass under coconut palms on the island.",
+                "ko": "섬의 야자수 아래 잔디 위에 설치된 팝업 텐트."},
+    },
+    "c-island-sunset": {
+        "src": (CLIENT13, "Dive boat at sunset.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["islands"],
+        "alt": {"en": "The K-WRECK dive boat at the shore as the sun sets behind the islands.",
+                "ko": "섬 너머로 해가 지는 해변에 있는 K-WRECK 다이빙 보트."},
+    },
+    "c-island-kayak": {
+        "src": (CLIENT13, "Kayaking in clear water.jpg"),
+        "kind": "business", "focus": "50% 55%", "cats": ["moments"],
+        "alt": {"en": "Guests paddle a kayak over clear turquoise water.",
+                "ko": "맑은 청록빛 바다에서 카약을 타는 손님들."},
+    },
+    "c-kwreck": {
+        "src": (CLIENT13, "K-WRECK dive boat with flags.jpg"),
+        "kind": "business", "focus": "50% 60%", "cats": ["islands"],
+        "alt": {"en": "The renovated K-WRECK dive boat flying the Korean and dive flags in Coron.",
+                "ko": "코론에서 태극기와 다이브 깃발을 단 새 단장한 K-WRECK 다이빙 보트."},
+    },
+    "c-kwreck-bow": {
+        "src": (CLIENT13, "K-WRECK moored in Coron Bay.jpg"),
+        "kind": "business", "focus": "50% 60%", "cats": ["islands"],
+        "alt": {"en": "The K-WRECK dive boat moored in Coron Bay, seen from the bow.",
+                "ko": "코론 만에 정박한 K-WRECK 다이빙 보트를 뱃머리 쪽에서 본 모습."},
+    },
+    "gunan": {
+        "src": (CLIENT13, "Portrait of Gunan Kang.jpg"),
+        "kind": "business", "focus": "50% 50%", "cats": [],
+        "alt": {"en": "Portrait of Gunan Kang, consultant and interpreter at W Divers Coron.",
+                "ko": "W Divers Coron 컨설턴트 겸 통역 Gunan Kang의 인물 사진."},
+    },
+    "c-morazan": {
+        "src": (CLIENT13, "Fire bricks inside the Morazan Maru.jpg"),
+        "kind": "business", "focus": "45% 50%", "cats": ["underwater"],
+        "alt": {"en": "Fire bricks stamped KAOLIN and NO 1 ARCH on a boiler inside the Morazan Maru.",
+                "ko": "모라잔 마루 내부 보일러 위에 놓인 KAOLIN, NO 1 ARCH 각인 내화 벽돌."},
     },
     "jungle-crew": {
         "src": (NOV, "Four divers posing aboard a boat-3.png"),
@@ -443,8 +833,47 @@ VIDEOS = {
 LOGO_SRC = (IMG, "Restored divers coron logo, crisp and transparent.png")
 
 
+# Bump when the enhancement below changes: every derivative is rebuilt once.
+PIPELINE_V = "enhance-2026-11-14"
+_STALE = set()
+
+
 def _fresh(out, src):
+    if os.path.dirname(out) in _STALE:
+        return False
     return os.path.exists(out) and os.path.getmtime(out) >= os.path.getmtime(src)
+
+
+def _check_version(folder):
+    """Treat a whole output folder as stale when the pipeline version changed."""
+    os.makedirs(folder, exist_ok=True)
+    mark = os.path.join(folder, ".pipeline")
+    cur = open(mark).read().strip() if os.path.exists(mark) else ""
+    if cur != PIPELINE_V:
+        _STALE.add(folder)
+        open(mark, "w").write(PIPELINE_V)
+
+
+def enhance(im):
+    """Gentle, natural clean-up applied to every photo before resizing:
+    tone range, local contrast (clarity), a little colour, and light denoise on small sources."""
+    from PIL import ImageChops, ImageEnhance
+    w, h = im.size
+    if max(w, h) < 1400:                       # small source: soften JPEG noise, then enlarge
+        im = im.filter(ImageFilter.GaussianBlur(0.45))
+        k = 1600 / max(w, h)
+        im = im.resize((int(w * k), int(h * k)), Image.LANCZOS)
+    im = ImageOps.autocontrast(im, cutoff=0.25, preserve_tone=True)   # widen tones without shifting colour
+    blur = im.filter(ImageFilter.GaussianBlur(max(8, int(max(im.size) / 90))))
+    clear = ImageChops.add(im, ImageChops.subtract(im, blur, 1, 0), 1, 0)  # local contrast
+    im = Image.blend(im, clear, 0.12)
+    im = ImageEnhance.Color(im).enhance(1.05)
+    return im
+
+
+def _sharpen_for(w):
+    """Output sharpening matched to the downscale."""
+    return ImageFilter.UnsharpMask(radius=0.8 if w <= 640 else 1.1, percent=70, threshold=2)
 
 
 def _open(path):
@@ -455,7 +884,7 @@ def _open(path):
 def process(dist):
     """Write responsive WebP/JPEG derivatives, logo variants, icons and video."""
     out_dir = os.path.join(dist, "assets", "img")
-    os.makedirs(out_dir, exist_ok=True)
+    _check_version(out_dir)
     sizes = {}
     for key, m in MEDIA.items():
         src = os.path.join(*m["src"])
@@ -463,6 +892,8 @@ def process(dist):
         w0, h0 = Image.open(src).size
         if Image.open(src).getexif().get(274) in (5, 6, 7, 8):
             w0, h0 = h0, w0
+        if max(w0, h0) < 1400:
+            k = 1600 / max(w0, h0); w0, h0 = int(w0 * k), int(h0 * k)
         sizes[key] = (w0, h0)
         for w in WIDTHS:
             if w > w0 and w != WIDTHS[0]:
@@ -474,13 +905,14 @@ def process(dist):
                 if _fresh(out, src):
                     continue
                 if im is None:
-                    im = _open(src)
+                    im = enhance(_open(src))
                 r = im.copy()
-                r.thumbnail((w, w * 3))
+                r.thumbnail((w, w * 3), Image.LANCZOS)
+                r = r.filter(_sharpen_for(w))
                 if ext == "webp":
-                    r.save(out, "WEBP", quality=78, method=5)
+                    r.save(out, "WEBP", quality=86, method=6)
                 else:
-                    r.save(out, "JPEG", quality=80, optimize=True, progressive=True)
+                    r.save(out, "JPEG", quality=88, optimize=True, progressive=True, subsampling=0)
 
     # Blurred, darkened backdrop derived from the hero image
     hero_src = os.path.join(*MEDIA["hero-fish"]["src"])
@@ -534,13 +966,23 @@ def _logos(dist):
 
 def _videos(dist):
     out_dir = os.path.join(dist, "assets", "video")
-    os.makedirs(out_dir, exist_ok=True)
+    _check_version(out_dir)
+    ff = shutil.which("ffmpeg")
     for key, v in VIDEOS.items():
         src = os.path.join(*v["src"])
         mp4 = os.path.join(out_dir, f"{key}.mp4")
-        if not _fresh(mp4, src):
-            shutil.copy2(src, mp4)
         poster = os.path.join(out_dir, f"{key}-poster.jpg")
-        if not os.path.exists(poster) and shutil.which("ffmpeg"):
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(v["poster_at"]), "-i", src,
-                            "-frames:v", "1", "-q:v", "4", poster], check=False)
+        if not _fresh(mp4, src):
+            if ff:   # enhanced: denoise, upscale to 720p, gentle sharpen and colour, web-friendly encode
+                vf = ("hqdn3d=2:2:6:6,scale=-2:720:flags=lanczos,unsharp=5:5:0.7:5:5:0.0,"
+                      "eq=contrast=1.05:saturation=1.10:gamma=1.02")
+                r = subprocess.run([ff, "-v", "error", "-y", "-i", src, "-vf", vf, "-c:v", "libx264", "-preset", "slow",
+                                    "-crf", "20", "-pix_fmt", "yuv420p", "-profile:v", "high", "-movflags", "+faststart",
+                                    "-c:a", "aac", "-b:a", "128k", mp4], check=False)
+                if r.returncode != 0:
+                    shutil.copy2(src, mp4)
+            else:
+                shutil.copy2(src, mp4)
+        if not _fresh(poster, mp4) and ff:
+            subprocess.run([ff, "-v", "error", "-y", "-ss", str(v["poster_at"]), "-i", mp4,
+                            "-frames:v", "1", "-q:v", "2", poster], check=False)

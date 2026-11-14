@@ -10,6 +10,7 @@ import json
 import os
 import re
 import shutil
+import stat
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +21,9 @@ import media  # noqa: E402
 
 SRC = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(SRC)
-DIST = os.path.join(ROOT, "dist")
+DIST = os.environ.get("SITE_OUT") or os.path.join(ROOT, "dist")
+HERO_V2 = os.environ.get("HERO_V2") == "1"   # preview of the suggested hero redesign
+OCEAN = os.environ.get("DESIGN", "ocean") == "ocean"   # bright white-and-blue design (the live one); DESIGN=classic builds the dark design
 YEAR = datetime.date.today().year
 ASSET_V = datetime.datetime.now().strftime("%Y%m%d%H%M")
 
@@ -47,6 +50,15 @@ SIZES = {}
 e = html.escape
 
 
+def ev(v):
+    """Escape a fact value and keep numbers with their units on one line (5 m, 15 to 50 m, USD 2,500)."""
+    nb, wj = " ", "⁠"   # no-break space, word joiner
+    v = re.sub(r"(\d)\s+(m|km|ft|cm|kg|h|hrs?|min|nm|°C|meters?|metres?|미터|米|公尺|м)(?!\w)", lambda m: m[1] + nb + m[2], v)
+    v = re.sub(r"(USD|PHP|US\$|₱)\s+(\d)", lambda m: m[1] + nb + m[2], v)
+    v = re.sub(r"(\d)([–-])(\d)", lambda m: m[1] + wj + m[2] + wj + m[3], v)
+    return e(v)
+
+
 # ----------------------------------------------------------------- helpers
 
 # Scripts whose display type needs heavier weights and no Latin letter-spacing.
@@ -64,9 +76,10 @@ def merge(base, over):
         for k, v in over.items():
             out[k] = merge(base[k], v) if k in base else v
         return out
-    if (isinstance(base, list) and isinstance(over, list) and len(base) == len(over)
+    if (isinstance(base, list) and isinstance(over, list) and len(over) <= len(base) and over
             and all(isinstance(x, dict) for x in base + over)):
-        return [merge(b, o) for b, o in zip(base, over)]
+        # translated items overlay English by position; items not yet translated stay English
+        return [merge(b, o) for b, o in zip(base, over)] + base[len(over):]
     return over
 
 
@@ -186,7 +199,7 @@ def btn(href, label, cls="btn"):
 
 def logo(L, cls="brand"):
     return (f'<a class="{cls}" href="{url(L.code, "home")}">'
-            f'<img src="/assets/brand/logo-white.png" alt="W Divers Coron" width="150" height="150">'
+            f'<img src="/assets/brand/{"logo-black" if OCEAN else "logo-white"}.png" alt="W Divers Coron" width="150" height="150">'
             f'<span class="vh">{e(L.ui["home"])}</span></a>')
 
 
@@ -409,19 +422,19 @@ def head(L, route, title, meta, extra_head="", jsonld=None, og_image=None):
 <meta property="og:image" content="{og}">
 <meta property="og:locale" content="{L.og_locale}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#04171E">
+<meta name="theme-color" content="{"#0B4FA8" if OCEAN else "#04171E"}">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
-<script>document.documentElement.classList.add('js')</script>
+{OCEAN_CSS if OCEAN else ""}<script>document.documentElement.classList.add('js')</script>
 {extra_head}{ld}</head>'''
 
 
 def layout(L, route, title, meta, opening, body, extra_head="", jsonld=None, body_cls="", og_image=None):
     current = url(L.code, *route)
     return f'''{head(L, route, title, meta, extra_head, jsonld, og_image)}
-<body class="{body_cls}">
+<body class="{body_cls}{" theme-ocean" if OCEAN else ""}">
 <a class="skip" href="#main">{e(L.ui["skip"])}</a>
 {sticky_bar(L, route, current)}
 {nav_panel(L, route, current)}
@@ -464,11 +477,12 @@ def opening(L, eyebrow, h1, intro, img=None, trail=None, extra="", note=None):
       <p class="eyebrow">{e(eyebrow)}</p>
       <h1 class="po-title">{e(h1)}</h1>
       <span class="rule" aria-hidden="true"></span>
-      <p class="lead">{e(intro)}</p>
+      {f'<p class="lead">{e(intro)}</p>' if intro else ""}
       {extra}
       {nt}
     </div>
   </div>
+  {WAVE if OCEAN else ""}
 </section>'''
 
 
@@ -545,6 +559,8 @@ def collage(keys, L, load):
 
 
 def render_home(L):
+    if OCEAN:
+        return render_home_ocean(L)
     P = L.p["home"]
     c = L.code
     u = L.ui
@@ -570,28 +586,47 @@ def render_home(L):
         <figcaption class="slide-cap"><span>{cap_html}</span>
           <a href="{url(c, to)}"{"" if i == 0 else " tabindex=\"-1\""}>{e(link)}{icon("arrow")}</a></figcaption>
       </figure>'''
-        dots += (f'<li><button type="button" data-slide-to="{i}" aria-label="{e(u["slide_show"].format(n=i + 1))}: {e(cap)}"'
-                 f'{" aria-current=\"true\"" if i == 0 else ""}><span></span></button></li>')
-    hero = f'''<section class="hero" id="top">
+        if HERO_V2:
+            tab = P.get("slide_tabs", [link] * total)[i]
+            dots += (f'<li><button type="button" data-slide-to="{i}" aria-label="{e(u["slide_show"].format(n=i + 1))}: {e(cap)}"'
+                     f'{" aria-current=\"true\"" if i == 0 else ""}><span class="tab-bar"></span>'
+                     f'<span class="tab-label">{e(tab)}</span></button></li>')
+        else:
+            dots += (f'<li><button type="button" data-slide-to="{i}" aria-label="{e(u["slide_show"].format(n=i + 1))}: {e(cap)}"'
+                     f'{" aria-current=\"true\"" if i == 0 else ""}><span></span></button></li>')
+    # each slide has its own label, headline and line; slide 1 carries the page's h1
+    lines = ""
+    more = P.get("hero_more") or []
+    for i in range(total):
+        if i == 0:
+            k, h, s_ = P["eyebrow"], P["h1"], P["support"]
+        else:
+            m = more[i - 1] if i - 1 < len(more) else {"k": P["eyebrow"], "h": P["h1"], "s": P["support"]}
+            k, h, s_ = m["k"], m["h"], m["s"]
+        tag = "h1" if i == 0 else "p"
+        lines += (f'<div class="hero-line{" is-active" if i == 0 else ""}" data-line="{i}"{"" if i == 0 else " aria-hidden=\"true\""}>'
+                  f'<p class="eyebrow">{e(k)}</p><{tag} class="hero-title">{e(h)}</{tag}>'
+                  f'<p class="hero-support">{e(s_)}</p></div>')
+    strip = ""
+    if HERO_V2 and P.get("trust"):
+        strip = '<ul class="hero-strip">' + "".join(f"<li>{e(x)}</li>" for x in P["trust"]) + "</ul>"
+    hero = f'''<section class="hero{" hero-v2" if HERO_V2 else ""}" id="top">
   <div class="hero-backdrop" aria-hidden="true"></div>
   <div class="frame hero-frame" data-slideshow aria-roledescription="carousel" aria-label="{e(u["slides_label"])}">
     <div class="hero-media">{slides}</div>
     <div class="slide-controls">
-      <ul class="slide-dots">{dots}</ul>
+      <ol class="{"slide-tabs" if HERO_V2 else "slide-dots"}">{dots}</ol>
     </div>
     <div class="hero-copy">
-      <p class="eyebrow">{e(P["eyebrow"])}</p>
-      <h1 class="hero-title">{e(P["h1"])}</h1>
-      <p class="hero-support">{e(P["support"])}</p>
-      <span class="rule" aria-hidden="true"></span>
-      <p class="hero-body">{e(P["body"])}</p>
+      <div class="hero-lines">{lines}</div>
       <div class="hero-actions">
-        {btn(url(c, "contact"), L.ui["plan_cta"], "btn btn-outline")}
+        {btn(url(c, "contact"), L.ui["plan_cta"], "btn btn-solid")}
         {arrow_link(url(c, "sites"), P["secondary"], "arrow-link light")}
       </div>
     </div>
-    {social_list(L, ("facebook", "instagram", "whatsapp", "kakao", "naver"), "social hero-social")}
+    {"" if HERO_V2 else social_list(L, ("facebook", "instagram", "whatsapp", "kakao", "naver"), "social hero-social")}
   </div>
+  {strip}
 </section>'''
 
     routes = "".join(f'''<li class="route reveal">
@@ -608,7 +643,7 @@ def render_home(L):
       <span class="site-type">{e(L.ui["type_" + s["type"]])}</span>
       <span class="site-name">{e(s["name"])}</span>
       <span class="site-card">{e(s["card"])}</span>
-      {icon("arrow")}</a></li>''' for s in L.sites)
+      {icon("arrow")}</a></li>''' for s in L.sites[:4])
 
     plan_items = "".join(
         f'<li><a href="{url(c, it["to"])}{"#" + it["hash"] if it.get("hash") else ""}">{e(it["t"])}{icon("arrow")}</a></li>'
@@ -678,6 +713,182 @@ def render_home(L):
     return layout(L, ("home",), P["title"], P["meta"], hero, body, jsonld=[business_ld(L)], body_cls="is-home")
 
 
+# ------------------------------------------------------------ ocean design
+# A bright white-and-blue redesign (built with DESIGN=ocean). Same content, new look.
+
+OCEAN_CSS = '<link rel="stylesheet" href="/assets/css/ocean.css?v={v}">\n'.replace("{v}", ASSET_V)
+WAVE = ('<svg class="oc-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">'
+        '<path d="M0 52C140 22 260 18 400 40s260 52 420 40 300-62 460-58 160 24 160 24V90H0z" fill="currentColor" opacity=".35"/>'
+        '<path d="M0 62c160-30 300-34 460-12s300 44 470 30 320-58 510-36V90H0z" fill="currentColor"/></svg>')
+OC_ICONS = {
+    # certified divers: a dive mask
+    "diving": '<path d="M6 17c-1.7 0-3-1.6-3-3.6V12c0-2.2 1.8-4 4-4h18c2.2 0 4 1.8 4 4v1.4c0 2-1.3 3.6-3 3.6h-5.2c-1 0-1.8-.6-2.2-1.4l-.4-.9a1.4 1.4 0 0 0-2.4 0l-.4.9c-.4.8-1.2 1.4-2.2 1.4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M30 10v12a5 5 0 0 1-5 5h-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+    # first dive: rising bubbles
+    "first": '<circle cx="12" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="21" cy="14" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="8" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="25" cy="5.5" r="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/>',
+    # training: a certification badge
+    "courses": '<circle cx="16" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 13l2.4 2.4 4.6-4.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 20l-2.5 8 4.5-2 3 3.5M21 20l2.5 8-4.5-2-3 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
+    # beyond diving: an island palm
+    "island": '<path d="M16 28c.4-6 .2-11-1.6-16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M14.6 12C12 8 7.5 7.5 4.5 9.5c3.5-.2 6.5 1 8.5 3.5M14.6 12c1.5-4.5 6-6 9.5-4.6-3.3.4-6 2.3-7.4 5.2M14.6 12c4.4-.6 8 1.8 9 5.4-2.4-2.2-5.6-3-8.6-2.4M14.6 12c-3.8.4-6.4 3.4-6.4 7 1.4-2.8 4-4.6 7-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 28c3-2 6-2 9 0s6 2 9 0 5-1.4 6-1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+    "wreck": '<path d="M4 21h24l-3 6H8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 21v-6h9l3 6M13 15v-4h4v4M8 9l3 3M23 8l-2 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
+    "reef": '<path d="M16 28V16M16 20c-3 0-5-2-5-5M16 18c3 0 5-2 5-6M11 15v-4M21 12V8M8 28c0-4 1.5-6 3-7M24 28c0-4-1.5-6-3-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M5 28h22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+}
+
+
+def oc_icon(name):
+    return f'<svg class="oc-ico" viewBox="0 0 32 32" aria-hidden="true" focusable="false">{OC_ICONS[name]}</svg>'
+
+
+def oc_head(h, t="", hid="", link=None):
+    """Centred section heading with an optional line and button, like the reference design."""
+    tt = f'<p class="oc-sub">{e(t)}</p>' if t else ""
+    bt = f'<p class="oc-head-btn">{btn(link[0], link[1], "btn oc-btn")}</p>' if link else ""
+    return f'<div class="oc-head reveal"><h2 class="oc-h2"{f" id=\"{hid}\"" if hid else ""}>{e(h)}</h2>{tt}{bt}</div>'
+
+
+def render_home_ocean(L):
+    P = L.p["home"]
+    c = L.code
+    u = L.ui
+    total = len(HERO_SLIDES)
+    more = P.get("hero_more") or []
+    slides = lines = dots = ""
+    for i, (key, fit, to) in enumerate(HERO_SLIDES):
+        cap, link = P["slides"][i]
+        title, _, sub = cap.partition("\n")
+        keys = key if isinstance(key, tuple) else (key,)
+        load = {"loading": "eager", "fetchpriority": "high"} if i == 0 else {}
+        bg = picture("s-teru-bridge" if fit == "collage" else keys[0], L, "100vw", alt="" if fit == "collage" else None, **load)   # film slide: the filming location as backdrop
+        fan = ""
+        if fit == "collage":
+            fan = '<div class="oc-fan">' + "".join(
+                f'<span class="oc-fan-card">{picture(k, L, "(min-width: 900px) 18vw, 33vw", **load)}</span>' for k in keys) + "</div>"
+        on = i == 0
+        capl = e(title) + (f'<small>{e(sub)}</small>' if sub else "")
+        slides += (f'<figure class="oc-slide{" is-collage" if fan else ""}{" is-active" if on else ""}" data-slide role="group" '
+                   f'aria-roledescription="slide" aria-label="{e(u["slide_n"].format(n=i + 1, total=total))}"{"" if on else " aria-hidden=\"true\""}>'
+                   f'<div class="oc-bg">{bg}</div>{fan}<figcaption class="oc-cap"><span>{capl}</span>'
+                   f'<a href="{url(c, to)}"{"" if on else " tabindex=\"-1\""}>{e(link)}{icon("arrow")}</a></figcaption></figure>')
+        oc = P.get("hero_ocean") or []
+        if i < len(oc):                      # the headlines written for this design
+            k, h, s_ = oc[i].get("k") or P["eyebrow"], oc[i]["h"], oc[i]["s"]
+        elif i == 0:
+            k, h, s_ = P["eyebrow"], P["h1"], P["support"]
+        else:
+            m = more[i - 1] if i - 1 < len(more) else {"k": P["eyebrow"], "h": P["h1"], "s": P["support"]}
+            k, h, s_ = m["k"], m["h"], m["s"]
+        tag = "h1" if i == 0 else "p"
+        lines += (f'<div class="hero-line{" is-active" if on else ""}" data-line="{i}"{"" if on else " aria-hidden=\"true\""}>'
+                  f'<p class="oc-kicker">{e(k)}</p><{tag} class="oc-title">{e(h)}</{tag}>'
+                  f'<p class="oc-lede">{e(s_)}</p></div>')
+        dots += (f'<li><button type="button" data-slide-to="{i}" aria-label="{e(u["slide_show"].format(n=i + 1))}: {e(title)}"'
+                 f'{" aria-current=\"true\"" if on else ""}><span></span></button></li>')
+    hero = f'''<section class="oc-hero" id="top" data-slideshow aria-roledescription="carousel" aria-label="{e(u["slides_label"])}">
+  <div class="oc-slides">{slides}</div>
+  <div class="oc-hero-inner">
+    <div class="oc-copy"><div class="hero-lines">{lines}</div>
+      <p class="oc-plan">{arrow_link(url(c, "sites"), P["secondary"], "arrow-link light")}</p>
+    </div>
+  </div>
+  <ol class="oc-dots">{dots}</ol>
+  {WAVE}
+</section>'''
+
+    feats = "".join(f'''<li class="oc-feat reveal"><a href="{url(c, r["to"])}">
+      <span class="oc-feat-img">{picture(ROUTE_IMG[r["to"]], L, "(min-width: 1100px) 22vw, (min-width: 640px) 45vw, 92vw", alt="")}</span>
+      <span class="oc-feat-ico">{oc_icon(r["to"])}</span>
+      <span class="oc-feat-k">{e(r["k"])}</span>
+      <span class="oc-feat-t">{e(r["t"])}</span>
+      <span class="oc-feat-link">{e(r["link"])}{icon("arrow")}</span></a></li>''' for r in P["routes"])
+
+    def mini(key, label, text):
+        return (f'<li><a href="{url(c, key)}"><span class="oc-mini-ico">{oc_icon(key)}</span>'
+                f'<span><span class="oc-mini-k">{e(label)}{icon("arrow")}</span><span class="oc-mini-t">{e(text)}</span></span></a></li>')
+
+    sites = "".join(f'''<li class="oc-card reveal"><a href="{url(c, "site", s["slug"])}">
+      <span class="oc-card-img">{picture(s["img"], L, "(min-width: 900px) 30vw, 92vw", alt="")}<span class="oc-chip">{e(u["type_" + s["type"]])}</span></span>
+      <span class="oc-card-body"><span class="oc-card-h">{e(s["name"])}</span><span class="oc-card-t">{e(s["card"])}</span>
+      <span class="oc-card-link">{e(u["read_guide"])}{icon("arrow")}</span></span></a></li>''' for s in L.sites[:6])
+
+    trips = "".join(f'''<li class="oc-card reveal"><a href="{url(c, "trip", t["slug"])}">
+      <span class="oc-card-img">{picture(t["img"], L, "(min-width: 900px) 30vw, 92vw", alt="")}</span>
+      <span class="oc-card-body"><span class="oc-card-h">{e(t["name"])}</span><span class="oc-card-t">{e(t["card"])}</span>
+      <span class="oc-card-link">{e(u["read_trip"])}{icon("arrow")}</span></span></a></li>''' for t in L.trips)
+
+    plan_items = "".join(
+        f'<li><a href="{url(c, it["to"])}{"#" + it["hash"] if it.get("hash") else ""}">{e(it["t"])}{icon("arrow")}</a></li>'
+        for it in P["plan_items"])
+
+    boats = "".join(f'''<li class="oc-boat reveal"><figure>
+      <span class="oc-boat-img">{picture(b["img"], L, "(min-width: 900px) 40vw, 92vw")}</span>
+      <figcaption><span class="oc-boat-name">{e(b["name"])}</span></figcaption>
+    </figure></li>''' for b in P.get("boats", []))
+
+    body = f'''
+<section class="oc-sec oc-features" id="routes" aria-labelledby="routes-h">
+  <div class="wrap">
+    {oc_head(P["choose_h"], hid="routes-h")}
+    <ul class="oc-feat-grid">{feats}</ul>
+  </div>
+</section>
+
+<section class="oc-sec oc-split" id="feature" aria-labelledby="feature-h">
+  <div class="wrap oc-split-grid">
+    <div class="oc-orb reveal"><span class="oc-ring" aria-hidden="true"></span>
+      <figure class="oc-orb-photo">{picture("c-fd-turtle", L, "(min-width: 900px) 26vw, 60vw")}</figure></div>
+    <div class="oc-split-copy reveal">
+      <h2 class="oc-h2" id="feature-h">{e(P["feature_h"])}</h2>
+      <p>{e(P["feature_t"])}</p>
+      <ul class="oc-minis">
+        {mini("wreck", P["feature_wreck"], L.p["wreck"]["h1"])}
+        {mini("reef", P["feature_reef"], L.p["reef"]["h1"])}
+      </ul>
+      {btn(url(c, "sites"), P["feature_link"], "btn oc-btn")}
+    </div>
+  </div>
+</section>
+
+<section class="oc-sec oc-boats" id="boats" aria-labelledby="boats-h">
+  <div class="wrap">
+    {oc_head(P["boats_h"], P["boats_t"], "boats-h")}
+    <ul class="oc-boat-grid">{boats}</ul>
+  </div>
+</section>
+
+<section class="oc-sec oc-tint" id="sites" aria-labelledby="sites-h">
+  <div class="wrap">
+    {oc_head(P["sites_h"], P["sites_t"], "sites-h", (url(c, "sites"), P["sites_all"]))}
+    <ul class="oc-cards">{sites}</ul>
+    <p class="img-note oc-note">{e(L.p["sites"]["img_note"])}</p>
+  </div>
+</section>
+
+<section class="oc-sec" id="special" aria-labelledby="special-h">
+  <div class="wrap">
+    {oc_head(P["special_h"], P["special_t"], "special-h", (url(c, "special"), P["special_all"]))}
+    <ul class="oc-cards oc-cards-4">{trips}</ul>
+  </div>
+</section>
+
+<section class="oc-sec oc-plan-sec" id="planning" aria-labelledby="planning-h">
+  <div class="wrap oc-plan-box reveal">
+    <div>
+      <h2 class="oc-h2" id="planning-h">{e(P["plan_h"])}</h2>
+      <p>{e(P["plan_t"])}</p>
+      {btn(url(c, "plan"), P["plan_link"], "btn oc-btn")}
+    </div>
+    <ul class="oc-plan-links">{plan_items}</ul>
+  </div>
+</section>
+
+<section class="oc-moment" aria-label="{e(P["moment_caption"])}">
+  <figure class="reveal">{picture("boat-group", L, "100vw")}<figcaption>{e(P["moment_caption"])}</figcaption></figure>
+</section>
+
+{cta_band(L, P["contact_h"], P["contact_t"], P["contact_btn"])}
+'''
+    return layout(L, ("home",), P["title"], P["meta"], hero, body, jsonld=[business_ld(L)], body_cls="is-home")
+
+
 def render_diving(L):
     P = L.p["diving"]
     c = L.code
@@ -686,7 +897,12 @@ def render_diving(L):
         for ch in P["chooser"])
     extra = f'''<div class="chooser"><p class="chooser-h" id="chooser-h">{e(P["chooser_h"])}</p>
       <ul aria-labelledby="chooser-h">{chooser}</ul></div>'''
-    op = opening(L, P["eyebrow"], P["h1"], P["intro"], "stock-wall", [(L.names["diving"], url(c, "diving"))], extra)
+    if OCEAN:   # the intro and the chooser sit below the banner, on the page itself
+        op = opening(L, P["eyebrow"], P["h1"], "", "stock-wall", [(L.names["diving"], url(c, "diving"))])
+        lead_sec = f'''<section class="wrap oc-chooser reveal"><p class="lead">{e(P["intro"])}</p>{extra}</section>'''
+    else:
+        op = opening(L, P["eyebrow"], P["h1"], P["intro"], "stock-wall", [(L.names["diving"], url(c, "diving"))], extra)
+        lead_sec = ""
     big = "".join(f'''<article class="big-panel reveal">
       <a href="{url(c, b["to"])}" class="frame big-frame">
         {picture(b["img"], L, "(min-width: 900px) 44vw, 100vw")}
@@ -695,7 +911,7 @@ def render_diving(L):
     small = "".join(f'''<li class="reveal"><h3>{e(s["h"])}</h3><p>{e(s["t"])}</p>{arrow_link(url(c, s["to"]), s["btn"], "arrow-link light")}</li>'''
                     for s in P["small"])
     checklist = "".join(f"<li>{e(x)}</li>" for x in P["practical"])
-    body = f'''
+    body = f'''{lead_sec}
 <section class="wrap big-grid">{big}</section>
 <section class="wrap"><ul class="small-list">{small}</ul></section>
 <section class="paper">
@@ -733,7 +949,7 @@ def render_service(L, key):
     body = f'''
 <div class="paper">
   <div class="wrap with-aside">
-    <div class="prose">{secs}{catalog}</div>
+    <div class="prose">{secs}{page_photos(L, key)}{catalog}</div>
     <aside class="summary reveal" aria-labelledby="sum-h">
       <h2 class="summary-h" id="sum-h">{e(S["h"])}</h2>
       <p class="summary-for">{e(S["for"])}</p>
@@ -766,7 +982,7 @@ def render_sites(L):
     P = L.p["sites"]
     c = L.code
     op = opening(L, P["eyebrow"], P["h1"], P["intro"], P["img"], [(L.names["sites"], url(c, "sites"))], note=P["img_note"])
-    types = sorted({s["type"] for s in L.sites})
+    types = sorted({s["type"] for s in L.sites}, key=lambda t: (t != "wreck", t))
     filt = ""
     if len(types) > 1:
         b = [f'<button type="button" aria-pressed="true" data-filter="all">{e(L.ui["filter_all"])}</button>']
@@ -792,6 +1008,36 @@ def render_sites(L):
     return layout(L, ("sites",), P["title"], P["meta"], op, body)
 
 
+SITE_GALLERY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "site_gallery.json"), encoding="utf-8"))
+GALLERY_H = {"en": "Inside the wreck.", "ko": "난파선 속 모습.", "ja": "沈船の中の様子。", "zh-hans": "沉船内部。", "zh-hant": "沉船內部。",
+             "es": "Dentro del pecio.", "fr": "À l'intérieur de l'épave.", "de": "Im Inneren des Wracks.", "it": "Dentro il relitto.",
+             "ru": "Внутри затонувшего корабля.", "vi": "Bên trong xác tàu.", "th": "ภายในเรือจม", "id": "Di dalam kapal karam.", "ar": "داخل الحطام."}
+
+
+def site_gallery(L, slug):
+    """The client's own photos of this site, as a photo grid (no captions)."""
+    keys = SITE_GALLERY.get(slug) or []
+    if not keys:
+        return ""
+    figs = "".join(f'<figure class="sg-fig frame">{picture(k, L, "(min-width: 900px) 28vw, 46vw")}</figure>' for k in keys)
+    return (f'<section class="prose-sec site-gal reveal"><h2>{e(GALLERY_H.get(L.code, GALLERY_H["en"]))}</h2>'
+            f'<div class="sg-grid sg-n{min(len(keys), 6)}">{figs}</div></section>')
+
+
+PAGE_GALLERY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "page_gallery.json"), encoding="utf-8"))
+PHOTOS_H = {"en": "Photos.", "ko": "사진.", "ja": "写真。", "zh-hans": "照片。", "zh-hant": "照片。", "es": "Fotos.", "fr": "Photos.",
+            "de": "Fotos.", "it": "Foto.", "ru": "Фотографии.", "vi": "Hình ảnh.", "th": "ภาพถ่าย", "id": "Foto.", "ar": "صور."}
+
+
+def page_photos(L, key):
+    keys = PAGE_GALLERY.get(key) or []
+    if not keys:
+        return ""
+    figs = "".join(f'<figure class="sg-fig frame">{picture(k, L, "(min-width: 900px) 28vw, 46vw")}</figure>' for k in keys)
+    return (f'<section class="prose-sec site-gal reveal"><h2>{e(PHOTOS_H.get(L.code, PHOTOS_H["en"]))}</h2>'
+            f'<div class="sg-grid sg-n{min(len(keys), 6)}">{figs}</div></section>')
+
+
 def render_site(L, s):
     P = L.p["site"]
     c = L.code
@@ -799,9 +1045,26 @@ def render_site(L, s):
     reviewed = L.ui.get("reviewed_value") or data.REVIEWED_LABEL[meta["reviewed"]]["en"]
     name_plain = s["name"]
     op = opening(L, P["eyebrow"], s["name"], s["card"], s["img"],
-                 [(L.names["sites"], url(c, "sites")), (s["name"], url(c, "site", s["slug"]))], note=P["img_note"])
+                 [(L.names["sites"], url(c, "sites")), (s["name"], url(c, "site", s["slug"]))],
+                 note=None if s.get("photo_of_site") else P["img_note"])
     ask = "".join(f"<li>{e(x)}</li>" for x in P["ask"])
-    others = "".join(f'<li><a href="{url(c, "site", o["slug"])}"><span class="sr-name">{e(o["name"])}</span>{icon("arrow")}</a></li>'
+    rows = []
+    if s.get("kind"):
+        rows.append((P["facts_l"]["kind"], s["kind"]))
+    for k in ("length", "depth", "vis"):
+        if s.get(k):
+            rows.append((P["facts_l"][k], s[k]))
+    if s.get("lie"):
+        rows.append((P["facts_l"]["lie"], P["lie"][s["lie"]]))
+    facts = ""
+    if rows:
+        facts = (f'<h3 class="summary-sub">{e(P["facts_h"])}</h3><dl class="facts">'
+                 + "".join(f"<dt>{e(k)}</dt><dd>{ev(v)}</dd>" for k, v in rows)
+                 + f'</dl><p class="small summary-note">{e(P["facts_src"])}</p>')
+    others = "".join(f'<li><a href="{url(c, "site", o["slug"])}">'
+                     + (f'<span class="sr-img">{picture(o["img"], L, "(min-width: 900px) 24vw, 46vw", alt="")}</span>'
+                        f'<span class="sr-type">{e(L.ui["type_" + o["type"]])}</span>' if OCEAN else "")
+                     + f'<span class="sr-name">{e(o["name"])}</span>{icon("arrow")}</a></li>'
                      for o in L.sites if o["slug"] != s["slug"])
     cta_label = P["cta"].format(name=name_plain)
     body = f'''
@@ -811,8 +1074,10 @@ def render_site(L, s):
       <section class="prose-sec reveal"><h2>{e(P["distinct_h"])}</h2>{paras(s["p"])}
         <p class="reviewed small">{e(L.ui["reviewed"])}: <time datetime="{meta["reviewed"]}">{e(reviewed)}</time></p></section>
       <section class="prose-sec reveal"><h2>{e(P["fit_h"])}</h2><p>{e(P["fit_t"])}</p></section>
+      {site_gallery(L, s["slug"])}
     </div>
     <aside class="summary reveal" aria-labelledby="ask-h">
+      {facts}
       <h2 class="summary-h" id="ask-h">{e(P["ask_h"])}</h2>
       <ul class="checklist">{ask}</ul>
       {btn(contact_url(c, "wreck", s["slug"]), cta_label, "btn btn-dark")}
@@ -823,7 +1088,8 @@ def render_site(L, s):
 <section class="wrap other-sites reveal" aria-labelledby="other-h"><h2 class="related-h" id="other-h">{e(P["other_h"])}</h2><ul>{others}</ul></section>
 {cta_band(L, cta_label, "", L.ui["plan_cta"], "wreck", s["slug"], P["cta_note"])}
 '''
-    return layout(L, ("site", s["slug"]), s["title"], s["meta"], op, body)
+    title = s.get("title") or P["title_tpl"].format(name=s["name"])
+    return layout(L, ("site", s["slug"]), title, s.get("meta") or s["card"], op, body)
 
 
 def render_plan(L):
@@ -868,7 +1134,7 @@ def render_about(L):
     ch = "".join(f'<li>{ext(h, i + "<span>" + e(t) + "</span>", "chan", L)}</li>' for i, t, h in channels)
     ch += f'<li><a class="chan" href="{url(c, "contact")}">{icon("arrow")}<span>{e(P["contact_link"])}</span></a></li>'
     story = "".join(f"<p>{e(t)}</p>" for t in P["story_t"])
-    facts = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in P["facts"])
+    facts = "".join(f"<dt>{e(k)}</dt><dd>{ev(v)}</dd>" for k, v in P["facts"])
     body = f'''
 <section class="wrap about-story">
   <div class="about-story-copy reveal">
@@ -937,18 +1203,20 @@ GALLERY = [
     # Each section is built from blocks that fill whole rows of the 4-column grid:
     # [lg + tall + 2 singles] (2 rows), [wide + 2 singles] (1 row), and the mirrored
     # [tall + single + lg-right + single] (2 rows). Portrait photos take the tall tiles.
-    ("underwater", [("dugong-diver", "lg"), ("under-boat", "tall"), ("hero-fish", ""), ("w-three-divers", ""),
-                    ("w-coral-wreck", "wide"), ("stock-reef-snake", ""), ("w-valves", ""),
-                    ("rope", "tall"), ("stock-pair", ""), ("stock-turtle", "lg lg-right"), ("stock-wall", ""),
-                    ("w-engine-room", "wide"), ("rock-walls", ""), ("stock-descent", ""),
-                    ("w-machinery", "lg"), ("fd-beam", "tall"), ("wreck-bow", ""), ("wreck-mast", "")]),
+    ("underwater", [("c-dugong", "lg"), ("c-fd-beam", "tall"), ("c-dugong-freediver", ""), ("c-irako-wheel", ""),
+                    ("c-fd-wreck", "wide"), ("c-fd-turtle", ""), ("c-akitsushima", ""),
+                    ("c-fd-cave", "tall"), ("c-dugong-graze", ""), ("dugong-diver", "lg lg-right"), ("c-olympia", ""),
+                    ("c-fd-reef", "wide"), ("c-irako-engine", ""), ("c-kogyo", ""),
+                    ("c-dugong-divers", "lg"), ("c-fd-lake2", "tall"), ("c-fd-surface", ""), ("w-three-divers", ""),
+                    ("stock-turtle", "wide"), ("hero-fish", ""), ("stock-reef-snake", "")]),
     ("video", "dugong"),
-    ("islands", [("island-aerial", "lg"), ("beach-walk", "tall"), ("boat-group", ""), ("lagoon-boats", ""),
-                 ("yacht-aerial", "wide"), ("island-small", ""), ("fd-cave", ""),
-                 ("calauit-giraffes", "tall"), ("flag-boat", ""), ("calauit-zebras", "lg lg-right"), ("calauit-feeding", "")]),
-    ("moments", [("shop-guests", "lg"), ("heart-divers", "tall"), ("boat-briefing", ""), ("boat-lunch", ""),
+    ("islands", [("c-island-beach", "lg"), ("c-kwreck-bow", "tall"), ("c-kwreck", ""), ("lagoon-boats", ""),
+                 ("c-yacht-apo", "wide"), ("c-yacht", ""), ("c-island-tents", ""),
+                 ("calauit-giraffes", "tall"), ("c-island-sunset", ""), ("island-aerial", "lg lg-right"), ("fd-cave", ""),
+                 ("yacht-aerial", "wide"), ("calauit-zebras", ""), ("flag-boat", "")]),
+    ("moments", [("shop-guests", "lg"), ("c-island-kayak", "tall"), ("c-yacht-deck", ""), ("boat-lunch", ""),
                  ("harbor-group", "wide"), ("diver-sand", ""), ("crew-briefing", ""),
-                 ("briefing-blue", "tall"), ("pool-skills", ""), ("shop-guests-2", "lg lg-right"), ("seabed-group", ""),
+                 ("heart-divers", "tall"), ("pool-skills", ""), ("shop-guests-2", "lg lg-right"), ("seabed-group", ""),
                  ("pool-indoor", "wide"), ("pool-pair", ""), ("surface-group", ""),
                  ("tanks-boat", ""), ("gear-crates", ""), ("pool-lesson", ""), ("van-transfer", "")]),
 ]
@@ -1031,7 +1299,7 @@ HERO_SLIDES = [
     (("film-crew", "film-crew-2", "film-crew-3"), "collage", "pros"),
     ("jungle-crew", "contain", "pros"),
     ("lagoon-boats", "contain fit-broad", "special"),
-    ("hero-fish", "contain", "diving"),
+    ("c-fd-wreck", "contain", "diving"),
     ("dive-boat", "contain fit-broad", "about"),
 ]
 
@@ -1056,6 +1324,17 @@ def render_special(L):
     return layout(L, ("special",), P["title"], P["meta"], op, body)
 
 
+CABINS_H = {"en": "Cabins on board.", "ko": "객실 안내.", "ja": "船内のキャビン。", "zh-hans": "船上舱房。", "zh-hant": "船上艙房。",
+            "es": "Camarotes a bordo.", "fr": "Cabines à bord.", "de": "Kabinen an Bord.", "it": "Cabine a bordo.", "ru": "Каюты на борту.",
+            "vi": "Các cabin trên tàu.", "th": "ห้องพักบนเรือ", "id": "Kabin di kapal.", "ar": "الكبائن على متن اليخت."}
+
+
+def room_grid(L, slug):
+    keys = PAGE_GALLERY.get(slug + "-cabins") or []
+    figs = "".join(f'<figure class="sg-fig frame">{picture(k, L, "(min-width: 900px) 28vw, 46vw")}</figure>' for k in keys)
+    return f'<div class="sg-grid sg-n6 room-grid">{figs}</div>' if keys else ""
+
+
 def render_trip(L, t):
     P = L.p["trip"]
     c = L.code
@@ -1063,13 +1342,26 @@ def render_trip(L, t):
                  [(L.names["special"], url(c, "special")), (t["name"], url(c, "trip", t["slug"]))])
     secs = ""
     for i, s in enumerate(t["sections"]):
-        secs += f'<section class="prose-sec reveal"><h2>{e(s["h"])}</h2>{paras(s["p"])}</section>'
+        lst = "".join(f"<li>{e(x)}</li>" for x in s.get("list", []))
+        lst = f'<ul class="checklist prose-list">{lst}</ul>' if lst else ""
+        secs += f'<section class="prose-sec reveal"><h2>{e(s["h"])}</h2>{paras(s.get("p", []))}{lst}{paras(s.get("after", []))}</section>'
+        if t.get("prices") and t["prices"].get("at") == i:
+            pr = t["prices"]
+            rows = "".join(f"<li>{e(a)}</li>" for a, b in pr["rows"])   # room types only, no prices
+            secs += (f'<section class="prose-sec price-box reveal"><h2>{e(CABINS_H.get(L.code, CABINS_H["en"]))}</h2>'
+                     f'<ul class="checklist room-list">{rows}</ul>{room_grid(L, t["slug"])}</section>')
         if i == 0 and t.get("video"):
             secs += f'<div class="inline-video reveal">{video_figure(L, t["video"])}</div>'
         for at, key in t.get("inline", []):
             if at == i:
                 secs += f'<figure class="frame inline-fig reveal">{picture(key, L, "(min-width: 900px) 56vw, 100vw")}</figure>'
-    facts = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in t["facts"])
+    if t.get("animals"):
+        an = t["animals"]
+        figs = "".join(f'<figure class="animal-fig"><div class="frame">{picture(k, L, "(min-width: 900px) 18vw, 92vw")}</div>'
+                       f'<figcaption>{e(cap)}</figcaption></figure>' for k, cap in an["items"])
+        secs += (f'<section class="prose-sec animals reveal"><h2>{e(an["h"])}</h2>{paras([an["p"]])}'
+                 f'<div class="animal-grid">{figs}</div></section>')
+    facts = "".join(f"<dt>{e(k)}</dt><dd>{ev(v)}</dd>" for k, v in t["facts"])
     ask = "".join(f"<li>{e(x)}</li>" for x in t["ask"])
     cta = P["cta"].format(name=t["short"])
     others = "".join(f'<li><a href="{url(c, "trip", o["slug"])}"><span class="sr-name">{e(o["name"])}</span>{icon("arrow")}</a></li>'
@@ -1077,7 +1369,7 @@ def render_trip(L, t):
     body = f'''
 <div class="paper">
   <div class="wrap with-aside">
-    <div class="prose">{secs}</div>
+    <div class="prose">{secs}{page_photos(L, t["slug"])}</div>
     <aside class="summary reveal" aria-labelledby="glance-h">
       <h2 class="summary-h" id="glance-h">{e(P["glance_h"])}</h2>
       <dl class="facts">{facts}</dl>
@@ -1365,7 +1657,7 @@ def render_404():
 <title>{e(L.p["404"]["title"])}</title><meta name="robots" content="noindex">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
-<script>document.documentElement.classList.add('js')</script></head>
+{OCEAN_CSS if OCEAN else ""}<script>document.documentElement.classList.add('js')</script></head>
 <body class="is-404">
 <main id="main" class="nf">
   <a class="brand" href="/">{'<img src="/assets/brand/logo-white.png" alt="W Divers Coron" width="110" height="110">'}</a>
@@ -1393,7 +1685,7 @@ def render_root():
 <meta name="description" content="{e(en.p["home"]["meta"])}">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
-<script>
+{OCEAN_CSS if OCEAN else ""}<script>
 {LANG_PICK_JS}
 location.replace('{config.BASE_PATH.rstrip("/")}/'+wdPick({codes})+'/');
 </script></head>
@@ -1415,8 +1707,18 @@ def with_base(content):
     return content.replace('"image": "/assets/', f'"image": "{b}/assets/')
 
 
+# Headings never end with a full stop (h1 to h4, and hero headlines that are paragraphs)
+_HEAD_DOT = re.compile(r'(<(h[1-4])\b[^>]*>(?:(?!</\2>).)*?)[.。](\s*(?:</(?:a|span)>\s*)?</\2>)', re.S)
+_TITLE_DOT = re.compile(r'(<p class="(?:oc-title|hero-title)"[^>]*>(?:(?!</p>).)*?)[.。](\s*</p>)', re.S)
+
+
+def strip_heading_dots(html_text):
+    html_text = _HEAD_DOT.sub(lambda m: m.group(1) + m.group(3), html_text)
+    return _TITLE_DOT.sub(lambda m: m.group(1) + m.group(2), html_text)
+
+
 def write(path, content):
-    content = with_base(content)
+    content = strip_heading_dots(with_base(content))
     full = os.path.join(DIST, path.lstrip("/"))
     if full.endswith("/") or full.endswith(os.sep):
         full = os.path.join(full, "index.html")
@@ -1425,12 +1727,19 @@ def write(path, content):
         f.write(content)
 
 
+def _clear_readonly(func, path, _exc):
+    """Windows: folders synced or copied with a read-only flag can't be removed until it is cleared."""
+    os.chmod(path, stat.S_IWRITE)
+    func(path)
+
+
 def copy_static():
     for sub in ("css", "js", "fonts"):
         src = os.path.join(SRC, "static", sub)
         dst = os.path.join(DIST, "assets", sub)
         if os.path.exists(dst):
-            shutil.rmtree(dst)
+            os.chmod(dst, stat.S_IWRITE)
+            shutil.rmtree(dst, onerror=_clear_readonly)
         shutil.copytree(src, dst)
 
 

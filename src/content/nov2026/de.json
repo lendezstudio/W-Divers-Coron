@@ -12,7 +12,10 @@
   "slide_n": "Bild {n} von {total}",
   "slide_show": "Bild {n} zeigen",
   "slide_pause": "Diashow anhalten",
-  "slide_play": "Diashow abspielen"
+  "slide_play": "Diashow abspielen",
+  "filter_lake": "Seen & Höhlen",
+  "type_lake": "See & Höhle",
+  "reviewed_value": "November 2026"
  },
  "ROUTE_NAMES": {
   "first": "DSD (Discover Scuba Diving)",
@@ -232,6 +235,18 @@
      "role": "Divemaster",
      "intro": "Ein philippinischer Divemaster im W Divers Team, der Taucher an Bord und unter Wasser begleitet.",
      "creds_h": "Brevet"
+    },
+    {
+     "role": "Berater & Dolmetscher",
+     "tag": "Dolmetscht auf Englisch und Tagalog auf Muttersprachniveau",
+     "intro": "Gunan hilft Gästen bei der Planung ihrer Zeit in Coron, dolmetscht bei Briefings und Touren und gestaltet Werbung und Videos für W Divers.",
+     "creds_h": "Aufgaben",
+     "creds": [
+      "Dolmetschen: Englisch und Tagalog",
+      "Gästeberatung",
+      "Werbegestaltung",
+      "Videoschnitt"
+     ]
     }
    ],
    "screen_h": "Vor der Kamera in Coron.",
@@ -341,7 +356,86 @@
   ],
   "special_h": "Spezialtouren ab Coron.",
   "special_t": "Längere Tage und Abenteuer mit Übernachtung, organisiert vom W Divers Team an ausgewählten Terminen.",
-  "special_all": "Alle Spezialtouren ansehen"
+  "special_all": "Alle Spezialtouren ansehen",
+  "eyebrow": "Coron, Palawan · Seit 2015",
+  "h1": "Tauche zu den Wracks von Coron.",
+  "trust": [
+   "PADI · SSI · TDI Tauchlehrer",
+   "Englisch und Koreanisch",
+   "Täglich 7:00 bis 21:00 Uhr"
+  ],
+  "hero_more": [
+   {
+    "k": "Hinter der Kamera",
+    "h": "Die Crew hinter der Crew.",
+    "s": "Tauch-Support für Film- und Fernsehdrehs in Coron."
+   },
+   {
+    "k": "Spezialtouren",
+    "h": "Weiter draußen, ruhigeres Wasser.",
+    "s": "Island Hopping, Apo Reef und Touren mit Übernachtung abseits der üblichen Routen."
+   },
+   {
+    "k": "Unter der Oberfläche",
+    "h": "Wracks von 1944, nur eine kurze Bootsfahrt entfernt.",
+    "s": "Auch Riffe und Freediving, passend zu deinem Level geplant."
+   },
+   {
+    "k": "Über W Divers",
+    "h": "Dein Tag auf dem Wasser beginnt hier.",
+    "s": "PADI-, SSI- und TDI-Instruktoren. Wir sprechen Englisch und Koreanisch."
+   }
+  ],
+  "hero_ocean": [
+   {
+    "h": "Tauche zu Corons legendären Wracks.",
+    "s": "Seit 2015 koreanisch geführt, mit PADI-, SSI- und TDI-Instruktoren."
+   },
+   {
+    "k": "Am Set in Coron",
+    "h": "Das Team, dem Film und TV vertrauen.",
+    "s": "Tauch-Support für SBS Law of the Jungle und den Film The Golden Holiday."
+   },
+   {
+    "k": "Spezialtouren",
+    "h": "Versteckte Lagunen und Inselabenteuer.",
+    "s": "Island Hopping, Apo Reef und Touren mit Übernachtung, organisiert von unserem Team."
+   },
+   {
+    "k": "Wracktauchen",
+    "h": "Entdecke Wracks von 1944.",
+    "s": "Wracks, Riffe und Freediving, passend zu deinem Level."
+   },
+   {
+    "k": "Unser Tauchboot",
+    "h": "Ausrüstung an. Dein Boot wartet.",
+    "s": "Nenne uns Daten und Erfahrung, und wir planen deine Tage auf dem Wasser."
+   }
+  ],
+  "boats_h": "Unsere Tauchboote.",
+  "boats_t": "Traditionelle Bangka-Boote mit Auslegern, gefahren von der W Divers Crew.",
+  "boats": [
+   {
+    "img": "boat-1",
+    "name": "W Divers Diving Boat 1",
+    "tag": "Bangka-Tauchboot"
+   },
+   {
+    "img": "boat-2",
+    "name": "W Divers Diving Boat 2",
+    "tag": "Bangka-Tauchboot"
+   },
+   {
+    "img": "boat-3",
+    "name": "W Divers Diving Boat 3",
+    "tag": "Bangka-Tauchboot"
+   },
+   {
+    "img": "boat-kwreck",
+    "name": "K-WRECK",
+    "tag": "Renoviertes Tauchboot"
+   }
+  ]
  },
  "CONTACT_INTEREST": [
   [
@@ -393,117 +487,228 @@
   {
    "name": "Apo Reef Yacht-Liveaboard",
    "short": "Apo Reef",
-   "card": "Eine voll gecharterte Yachttour zu einem der bekanntesten Riffe der Philippinen, für bis zu 10 Taucher.",
+   "card": "Ein 4-Nächte-Yacht-Liveaboard zum größten Korallenriff der Philippinen, für bis zu 10 Taucher.",
    "title": "Apo Reef Yacht-Liveaboard | Spezialtouren | W Divers Coron",
-   "meta": "Komm mit auf ein W Divers Coron Yacht-Liveaboard zum Apo Reef Natural Park: eine kleine Gruppe von bis zu 10 Tauchern, mehrere Tauchtage, Mahlzeiten und Kabinen an Bord.",
-   "intro": "Der Apo Reef Natural Park ist eines der berühmtesten Tauchziele der Philippinen. W Divers Coron chartert dafür eine Yacht für reine Tauchertouren mit einer kleinen Gruppe von bis zu 10 Tauchern.",
+   "meta": "Yacht-Liveaboard von W Divers Coron zum Apo Reef, dem größten Korallenriff der Philippinen: 4 Nächte, bis zu 10 Taucher, Nitrox und Mahlzeiten inklusive.",
+   "intro": "Der Apo Reef Natural Park, etwa 30 km vor der Westküste von Occidental Mindoro, ist das größte Korallenriff der Philippinen und steht auf der vorläufigen Welterbeliste der UNESCO. W Divers Coron chartert die Yacht Caribbean Tigress für kleine Gruppen nur mit Tauchern.",
    "facts": [
     [
      "Format",
      "Yacht-Liveaboard, Vollcharter"
     ],
     [
-     "Gruppengröße",
+     "Yacht",
+     "Caribbean Tigress"
+    ],
+    [
+     "Gruppe",
      "Bis zu 10 Taucher"
     ],
     [
-     "Übliche Dauer",
-     "3 Nächte, 4 Tage"
+     "Dauer",
+     "4 Nächte, 5 Tage (Abfahrt 2027)"
     ],
     [
      "Tauchgänge",
-     "Etwa 10, plus optionaler Nachttauchgang"
+     "10 inklusive, mehr wenn du Kraft hast"
+    ],
+    [
+     "Tiefe und Sicht",
+     "5–40 m, oft 15–50 m"
     ],
     [
      "Einschiffung",
-     "Coron oder bei manchen Abfahrten Manila (Batangas)"
+     "Batangas, mit Abholung am Flughafen Manila"
     ]
    ],
    "sections": [
     {
      "h": "Ein Riff, das die Reise lohnt.",
      "p": [
-      "Das Apo Reef liegt in der Straße von Mindoro, westlich von Mindoro. Es ist ein geschützter Naturpark mit weiten Korallenriffen und Steilwänden, erreichbar nach mehreren Stunden auf See, weshalb die Tour als Liveaboard stattfindet."
+      "Das Riff umfasst rund 34 km² mit einer Nord- und einer Südlagune. Die Tiefe reicht von 5 bis 40 m, die Sicht oft von 15 bis 50 m, und sanfte Strömung macht die meisten Tauchgänge zu entspannten Strömungstauchgängen. Mantas, Haie, Barrakudaschwärme und Napoleonfische gehören dazu."
      ]
     },
     {
      "h": "Leben an Bord.",
      "p": [
-      "Bei den letzten Abfahrten nahm die Yacht bis zu 10 Taucher in fünf klimatisierten Doppelkabinen auf. Mahlzeiten und Snacks gab es die ganze Zeit, Tauchen und Guiding waren inklusive, und Hotelabholung und -rückbringung wurden vor und nach der Tour organisiert."
+      "Die Caribbean Tigress hat eine klimatisierte Masterkabine mit Doppelbett sowie Zweier- und Dreierkabinen mit Einzelbetten. Mahlzeiten, Trinkwasser, Kaffee und Tee gibt es die ganze Zeit, dazu WLAN an Bord."
      ]
     },
     {
-     "h": "Was du prüfen solltest.",
+     "h": "Inklusive.",
+     "list": [
+      "Wassertaxi zur Yacht ab dem Hafen Batangas",
+      "10 Tauchgänge, weitere kostenlos, wenn du Kraft hast",
+      "Nitrox bei jedem Tauchgang",
+      "Kostenloser Nachttauchgang",
+      "Abholung und Rücktransfer Flughafen Manila",
+      "Alle Mahlzeiten: Frühstück, Mittag- und Abendessen",
+      "Trinkwasser, Kaffee und Tee",
+      "WLAN an Bord"
+     ]
+    },
+    {
+     "h": "Nicht inklusive.",
+     "list": [
+      "Eintritt Apo Reef Natural Park (100 USD)",
+      "Internationale Flüge",
+      "Tauchversicherung",
+      "Leihausrüstung",
+      "Alkohol und andere Getränke (Lieblingsmarken vor der Abfahrt nennen)",
+      "Trinkgeld: Tauchguide 60 USD, Crew 40 USD",
+      "Persönliche Ausgaben"
+     ]
+    },
+    {
+     "h": "Buchung und Stornierung.",
      "p": [
-      "Die Eintrittsgebühr für den Apo Reef Natural Park wurde separat berechnet (100 USD bei einer kürzlichen Tour). Termine, Anzahl der Tauchgänge und Preis hängen von jeder Abfahrt ab, also lass dir die Details vom Team schriftlich geben."
+      "Dein Platz ist bestätigt, sobald der volle Preis bezahlt ist. Als Liveaboard wird bei Stornierung nicht erstattet, außer bei Absage mindestens drei Monate vor Abfahrt: dann gibt es 50 % zurück. Fällt die Tour wegen Wetter aus, wird sie verschoben statt erstattet; bei einem Motorschaden kommt eine gleichwertige Yacht zum Einsatz."
      ]
     }
    ],
+   "prices": {
+    "at": 1,
+    "h": "Preise 2027 pro Person",
+    "note": "Richtpreise für die Abfahrt 2027. Die Termine werden noch bestätigt, frag das Team vor der Buchung nach dem aktuellen Preis.",
+    "rows": [
+     [
+      "Masterkabine, Doppelbett (2 Personen)",
+      "USD 2.500"
+     ],
+     [
+      "Zweierkabine, Einzelbetten",
+      "USD 2.200"
+     ],
+     [
+      "Dreierkabine, Einzelbetten",
+      "USD 2.000–2.100"
+     ]
+    ]
+   },
    "ask": [
-    "Nächste Abfahrtstermine und freie Plätze",
-    "Gesamtpreis und Leistungen",
-    "Parkeintrittsgebühr",
+    "Abfahrtstermine 2027 und freie Plätze",
+    "Preis für deinen Kabinentyp",
+    "Parkeintritt und Trinkgelder",
     "Erforderliches Brevet und Erfahrung",
-    "Kabinenaufteilung",
-    "Einschiffungsort"
+    "Flüge nach Manila und Transferzeiten",
+    "Tauchversicherung"
    ]
   },
   {
    "name": "Dugong-Beobachtung",
    "short": "Dugong-Beobachtung",
-   "card": "Ein früher Start, um in den ruhigen Buchten im Norden von Busuanga nach Dugongs zu suchen.",
+   "card": "Früh los zu den Dugongs am Dugong Point vor Calauit im Norden Busuangas.",
    "title": "Dugong-Beobachtung Tagestour | Spezialtouren | W Divers Coron",
-   "meta": "Eine Tagestour von W Divers Coron zur Dugong-Suche im Norden von Busuanga, früh los, um vor dem Andrang da zu sein, mit optionalem Besuch des Calauit Safari Parks.",
-   "intro": "Dugongs, sanfte Meeressäuger, die Seegras fressen, leben in den Gewässern im Norden von Busuanga. Auf dieser Tagestour startet das W Divers Boot früh, um das Dugong-Gebiet vor anderen Booten zu erreichen.",
+   "meta": "Tagestour von W Divers Coron zum Dugong Point im Norden Busuangas: Abholung um 4 Uhr, Vierergruppen, offizielle Regeln und optional Calauit Safari Park.",
+   "intro": "Dugongs, sanfte Meeressäuger, die Seegras fressen, leben vor Calauit Island im Norden Busuangas. Du startest vor Sonnenaufgang, fährst mit Van und Boot zum Dugong Point und beobachtest die Tiere in kleinen Gruppen mit einem ausgebildeten Dugong-Guide.",
    "facts": [
     [
      "Format",
-     "Tagestour mit dem Boot"
+     "Tagestour mit Van und Boot"
     ],
     [
-     "Start",
-     "Sehr früh am Morgen"
+     "Abholung",
+     "04:00–04:30 an deiner Unterkunft"
     ],
     [
      "Wo",
-     "Nördliches Busuanga (Gebiet Aban-Aban)"
+     "Dugong Point vor Calauit, Nord-Busuanga"
     ],
     [
-     "Im Wasser",
-     "Frag, ob Schnorcheln oder Tauchen geplant ist"
+     "Anfahrt",
+     "1 Std. 40 Min. Van, dann 25 Min. Boot"
+    ],
+    [
+     "Beim Dugong",
+     "Etwa 15 Minuten pro Vierergruppe"
+    ],
+    [
+     "Zurück in Coron",
+     "Gegen 15–16 Uhr, manchmal 18–19 Uhr"
     ],
     [
      "Extra",
-     "Besuch des Calauit Safari Parks"
+     "Besuch im Calauit Safari Park"
     ]
    ],
    "sections": [
     {
      "h": "Warum so früh.",
      "p": [
-      "Beliebte Dugong-Gebiete füllen sich im Laufe des Tages. Ein Start vor Sonnenaufgang bietet die beste Chance auf eine ruhige, entspannte Begegnung, bevor andere Boote kommen."
+      "In der Hochsaison ist Dugong Point voll, und die Gruppen sind in Ankunftsreihenfolge dran. Deshalb holen wir dich zwischen 4:00 und 4:30 Uhr ab. Kann deine Unterkunft kein Frühstück machen, gibt es ein einfaches Frühstück für unterwegs."
      ]
     },
     {
-     "h": "Respekt vor den Tieren.",
-     "p": [
-      "Dugongs sind wild und geschützt. Gäste folgen den Anweisungen des Guides, halten Abstand und berühren, jagen oder füttern sie nie. Sichtungen sind nie garantiert."
+     "h": "So läuft der Tag.",
+     "list": [
+      "1 Std. 40 Min. mit dem Van zum Quezon-Pier im Norden Busuangas",
+      "Ausrüstung aufs Boot laden, im Dugong Office (5 Min. vom Pier) anmelden und Eintritt zahlen",
+      "Etwa 25 Minuten mit dem Boot zum Dugong Point",
+      "Warten viele Gruppen, geht es vielleicht erst zum Strandtauchgang an Dimipac Island (15 Min. entfernt)",
+      "Ein Dugong-Guide brieft deine Gruppe und sucht den Dugong",
+      "Ist er gefunden, geht deine Vierergruppe ins Wasser, für etwa 15 Minuten",
+      "Mittagessen gibt es auf dem Boot, zurück geht es in umgekehrter Reihenfolge"
+     ]
+    },
+    {
+     "h": "Regeln für die Dugong-Beobachtung.",
+     "list": [
+      "Höchstens vier Gäste gleichzeitig mit einem Dugong im Wasser",
+      "Mindestens 5 m Abstand",
+      "Leise über die Leiter einsteigen, Ausrüstung an der Oberfläche anlegen: kein Springen",
+      "Auf den Booten leise sein, nicht rufen, wenn ein Dugong auftaucht",
+      "Dugongs nie berühren, verfolgen oder vor ihnen schwimmen",
+      "Kein Blitz und keine Strobes",
+      "Den Dugong selbst näher kommen lassen, Mutter und Kalb nie trennen"
+     ],
+     "after": [
+      "Regelverstöße können hart bestraft werden, und die ganze Gruppe verliert womöglich ihren Platz. Sichtungen sind nie garantiert: Dugongs sind wild."
+     ]
+    },
+    {
+     "h": "Tipps für den Tag.",
+     "list": [
+      "Beim Signal des Guides nicht losspurten, Kraft für den Tauchgang sparen",
+      "Etwa 1 kg mehr Blei als sonst, um schnell abzutauchen",
+      "Sonnenschutz und eine leichte Jacke für die frühe Fahrt"
      ]
     },
     {
      "h": "Mach einen ganzen Tag daraus.",
      "p": [
-      "Die Tour lässt sich mit einem Besuch des Calauit Safari Parks auf Busuanga verbinden. Frag das Team, wie der Tag geplant ist und was enthalten ist."
+      "Die Tour lässt sich mit einem Besuch im Calauit Safari Park mit Giraffen und Zebras verbinden. Frag das Team, wie der Tag geplant ist und was inklusive ist."
      ]
     }
    ],
    "ask": [
-    "Abfahrtszeit und Abholung",
+    "Abholzeit an deiner Unterkunft",
     "Schnorcheln oder Tauchen und Ausrüstung",
     "Eintritts- und Umweltgebühren",
     "Option Calauit Safari Park",
     "Gesamtpreis und Leistungen"
-   ]
+   ],
+   "animals": {
+    "h": "Weitere Tiere, die du treffen kannst.",
+    "p": "Nicht nur Dugongs: Bei den Strandtauchgängen an Dimipac Island sieht man oft Meeresschildkröten und Rifffische, und im Calauit Safari Park leben Giraffen und Zebras, Nachfahren von 1977 aus Kenia gebrachten Tieren, sowie der endemische Calamian-Hirsch.",
+    "items": [
+     [
+      "c-fd-turtle",
+      "Meeresschildkröten zeigen sich oft bei den Strandtauchgängen nahe Dugong Point."
+     ],
+     [
+      "calauit-giraffes",
+      "Giraffen laufen frei im Calauit Safari Park herum."
+     ],
+     [
+      "calauit-feeding",
+      "An der Futterstelle kannst du die Giraffen selbst füttern."
+     ],
+     [
+      "calauit-zebras",
+      "Zebras grasen frei im Calauit Safari Park."
+     ]
+    ]
+   }
   },
   {
    "name": "Einsame Insel, 2 Tage 1 Nacht",
@@ -655,6 +860,139 @@
   "flags-bow": "Koreanische und philippinische Flaggen wehen an einem Boot, am Horizont grüne Inseln.",
   "yacht-salon": "Der Salon der Yacht mit Küche, Sofa und Esstisch.",
   "fd-standing": "Eine Freitaucherin steht auf einem Unterwasserfelsen unter Sonnenstrahlen.",
-  "calauit-feeding": "Ein Gast streckt die Hand nach einer Giraffe im Calauit Safari Park auf Busuanga aus."
- }
+  "calauit-feeding": "Ein Gast streckt die Hand nach einer Giraffe im Calauit Safari Park auf Busuanga aus.",
+  "c-dugong": "Ein Dugong grast auf einem Seegrasbett im Norden von Busuanga.",
+  "c-dugong-divers": "Taucher beobachten einen Dugong mit respektvollem Abstand.",
+  "c-dugong-freediver": "Eine Freitaucherin schwimmt ruhig neben einem Dugong.",
+  "c-dugong-graze": "Ein Dugong frisst am Meeresgrund, Freitaucher schauen von oben zu.",
+  "c-fd-reef": "Eine Freitaucherin hält sich an einem Korallenfelsen in Coron fest.",
+  "c-fd-sand": "Eine Freitaucherin mit Langflossen gleitet an einer Leine über weißen Sand.",
+  "c-fd-lake": "Eine Freitaucherin ruht auf einem Baumstamm im Barracuda Lake.",
+  "c-fd-lake2": "Eine Freitaucherin im weißen Kleid im klaren Wasser des Barracuda Lake.",
+  "c-fd-beam": "Eine Freitaucherin schwebt mit ausgebreiteten Armen im Lichtstrahl einer Höhle.",
+  "c-fd-cave": "Eine Freitaucherin steht auf einem Felsen unter dem Lichtschacht der Pukaway-Höhle.",
+  "c-fd-turtle": "Eine Freitaucherin taucht zu einer Meeresschildkröte hinab.",
+  "c-fd-surface": "Eine Freitaucherin gleitet knapp unter der ruhigen Oberfläche.",
+  "c-fd-wreck": "Eine Freitaucherin an einem korallenbewachsenen Wrack, umgeben von Fischen.",
+  "c-irako-wheel": "Ein Taucher mit Lampe neben einem Steuerrad im Wrack der Irako.",
+  "c-irako-engine": "Reihen verschlammter Motorventile im Wrack der Irako.",
+  "c-olympia": "Ein Taucher blickt durch einen vergitterten Raum der Olympia Maru.",
+  "c-akitsushima": "Der korallenbewachsene Kran der Akitsushima, dahinter ein Taucher.",
+  "c-kogyo": "Ein korallenbewachsener Bulldozer im Laderaum der Kogyo Maru.",
+  "c-yacht": "Die Liveaboard-Yacht für Apo-Reef-Touren vor Anker.",
+  "c-yacht-apo": "Die Liveaboard-Yacht nahe der weißen Sandinsel des Apo Reef.",
+  "c-yacht-cabin": "Die Masterkabine der Yacht mit Doppelbett und Holzverkleidung.",
+  "c-yacht-deck": "Gäste essen gemeinsam auf dem schattigen Deck der Yacht.",
+  "c-island-beach": "Das W Divers Boot vor einem weißen Inselstrand.",
+  "c-island-tents": "Wurfzelte auf dem Rasen unter Kokospalmen.",
+  "c-island-sunset": "Das Tauchboot K-WRECK am Ufer bei Sonnenuntergang.",
+  "c-island-kayak": "Gäste paddeln im Kajak über klares türkisfarbenes Wasser.",
+  "c-kwreck": "Das renovierte Tauchboot K-WRECK mit koreanischer Flagge und Tauchflagge in Coron.",
+  "c-kwreck-bow": "Die K-WRECK in der Bucht von Coron, vom Bug aus gesehen.",
+  "gunan": "Porträt von Gunan Kang, Berater und Dolmetscher bei W Divers Coron.",
+  "boat-1": "Diving Boat 1, ein Tauchboot von W Divers Coron",
+  "boat-2": "Diving Boat 2, ein Tauchboot von W Divers Coron",
+  "boat-3": "Diving Boat 3, ein Tauchboot von W Divers Coron",
+  "boat-kwreck": "K-WRECK, ein Tauchboot von W Divers Coron"
+ },
+ "SITE_PAGE": {
+  "facts_h": "Fakten zum Tauchplatz",
+  "facts_l": {
+   "kind": "Typ",
+   "length": "Länge",
+   "depth": "Tiefe",
+   "vis": "Sicht",
+   "lie": "Lage"
+  },
+  "lie": {
+   "upright": "Aufrecht",
+   "capsized": "Auf der Seite",
+   "starboard": "Schlagseite nach Steuerbord",
+   "port": "Schlagseite nach Backbord",
+   "forward": "Nach vorn geneigt"
+  },
+  "facts_src": "Angaben aus den eigenen Briefings von W Divers Coron.",
+  "title_tpl": "{name} | Tauchplätze in Coron | W Divers Coron"
+ },
+ "SITES_KIND": [
+  "Tanker",
+  "Flugzeugmutterschiff",
+  "Hilfsfracht- und Versorgungsschiff",
+  "Hilfsfracht- und Versorgungsschiff"
+ ],
+ "SITES_NEW": [
+  {
+   "card": "Ein kleines Kanonenboot vor East Tangat, am Heck flach genug für Einsteiger und Drehort eines koreanischen Films.",
+   "kind": "U-Boot-Jäger (Kanonenboot)",
+   "p": [
+    "Das 45 m lange Boot, auch East Tangat Gunboat genannt, liegt am Riffhang: das Heck in 3 m, das Steuerhaus in etwa 10 m Tiefe. Es eignet sich für Open-Water-Taucher, das Heck sogar für Schnuppertaucher. Korallen bedecken das Deck, mit Glück zeigen sich Mandarinfische. 2018 wurde hier der koreanische Film The Golden Holiday (국제수사) gedreht. Die Sicht ist morgens am besten."
+   ]
+  },
+  {
+   "card": "Corons tiefstes und am besten erhaltenes Wrack, für fortgeschrittene Taucher.",
+   "kind": "Kühlschiff",
+   "p": [
+    "Die Irako liegt zwischen Tangat und Lusong, das Deck in 34 m, das Ruder in 42 m. Bis auf die Kapitänskajüte ist sie fast unversehrt und eines der schönsten Wracks Corons, ab Advanced Open Water. Meist gibt es Strömung. Große Zackenbarsche, Thunfische, Rotfeuerfische und Skorpionfische leben hier, gelegentlich auch Walhaie."
+   ]
+  },
+  {
+   "card": "Ein Versorgungsschiff auf der Seite, mit großen Kesseln, einer Lufttasche und Schamottesteinen.",
+   "kind": "Hilfsfracht- und Versorgungsschiff",
+   "p": [
+    "Die Morazan liegt nahe Tangat auf der Steuerbordseite, von 12 m am Rumpf bis 25 m am Ruder. Vier Laderäume, zwei große Kessel und der Maschinenraum sind zu sehen, und noch heute gibt es eine Lufttasche. Weich- und Hartkorallen ziehen Makrelen, Rotfeuerfische, Steinfische, Schildkröten und Hummer an."
+   ]
+  },
+  {
+   "card": "Ein kleines, korallenbewachsenes Kanonenboot, so flach, dass das Heck bei Ebbe fast aus dem Wasser ragt.",
+   "kind": "U-Boot-Jäger (Kanonenboot)",
+   "p": [
+    "Das 35 m lange Boot liegt vor der Ostseite von Lusong, nach vorn geneigt bis 18 m. Bei Ebbe reicht das Heck fast an die Oberfläche, ideal auch für Schnorchler. Hartkorallen bedecken das Boot, ringsum leben Anemonen, Falter- und Kaiserfische. Beliebt bei Wrack-Einsteigern und Fotografen."
+   ]
+  },
+  {
+   "card": "Ein Tanker vor Black Island, oft mit der klarsten Sicht aller Wracks in Coron.",
+   "kind": "Treibstofftanker",
+   "p": [
+    "Das 70 m lange Black Island Wreck liegt rund 50 m vor dem Strand von Black Island im Nordwesten Busuangas, von 18 m am Achterdeck bis 34 m. Die Sicht erreicht oft 30 m. Bis etwa 20 m wachsen Korallen, darunter Sand, mit Rotfeuerfischen, Fledermausfischen, Zackenbarschen und Makrelen."
+   ],
+   "vis": "bis 30 m"
+  },
+  {
+   "card": "Ein intaktes Frachtschiff weit vor der Stadt, mit japanischen Autos und Lastwagen im Laderaum.",
+   "kind": "Frachtschiff",
+   "p": [
+    "Die Kyokuzan Maru liegt nordöstlich von Busuanga, ein Tagesausflug mit frühem Start. Sie steht aufrecht mit leichter Schlagseite, das Hauptdeck in 24 m, das Ruder in 40 m. Fast unbeschädigt, mit japanischen Autos und Lastwagen im Inneren und meist hervorragender Sicht. Zwei Tauchgänge, Bug und Heck, kombinierbar mit Dugong Point."
+   ],
+   "vis": "bis 30 m"
+  },
+  {
+   "card": "Das blanke Gerippe eines kleinen Boots vor Coron Island, ideal zum Schnorcheln und für erste Tauchgänge.",
+   "kind": "U-Boot-Jäger (Kanonenboot)",
+   "p": [
+    "Rund 15 Minuten von Coron entfernt ist nur noch das Gerippe des Boots übrig, daher der Name. Der Bug liegt in 5 m, die tiefste Stelle bei etwa 22 m. Korallen, gutes Licht und ruhiges Wasser machen es ideal für Fotos, Schnuppertauchen und Schnorcheln, mit Riffbarschen, Rotfeuerfischen, Nacktschnecken und Papageifischen."
+   ]
+  },
+  {
+   "card": "Ein 90 m langer Lastkahn mit neun offenen Laderäumen, von 18 m am Bug bis 43 m.",
+   "kind": "Lastkahn",
+   "p": [
+    "Der große Lastkahn sank bei illegaler Fischerei. Er ist rund 90 m lang, der Bug liegt in 18 m, der Grund in 43 m. Neun offene Laderäume lassen sich von oben einsehen. Wegen der Tiefe nur für erfahrene Taucher; frag das Team, wie der Tauchgang geplant wird."
+   ]
+  },
+  {
+   "card": "Ein See in Coron Island, in dem warmes Salzwasser unter Süßwasser liegt, bis zu 39 °C.",
+   "kind": "See mit Thermokline",
+   "p": [
+    "Der See liegt 15 Bootsminuten von Coron im Norden von Coron Island. Mit der Ausrüstung geht es rund 38 Holzstufen über den Kalkstein und wieder hinunter, dann taucht man zwischen scharfen Felswänden bis 40 m. Die oberen 4 m sind Süßwasser mit etwa 28 °C, darunter wird es warm und salzig, unter 14 m bis 39 °C. Bei 21 m führt eine Höhle rund 30 m in den Fels. Der Einstieg ist eng, Gruppen wechseln sich ab."
+   ],
+   "depth": "bis 40 m"
+  },
+  {
+   "card": "Eine Höhle an der Südspitze von Coron Island, in die von oben Sonnenlicht fällt.",
+   "kind": "Höhle",
+   "p": [
+    "Die Höhle liegt rund zwei Bancastunden von Coron entfernt. Der Eingang ist ein enger, 5 m langer Gang, einer nach dem anderen, mit losem Sediment, daher werden Open Water und gute Tarierung empfohlen. Nach dem Sicherheitsstopp taucht man in der Höhle auf, wo Licht durch eine große Öffnung fällt und den Kalkstein grün leuchten lässt."
+   ]
+  }
+ ]
 }

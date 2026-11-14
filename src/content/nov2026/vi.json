@@ -12,7 +12,10 @@
   "slide_n": "Ảnh {n} / {total}",
   "slide_show": "Xem ảnh {n}",
   "slide_pause": "Tạm dừng trình chiếu",
-  "slide_play": "Phát trình chiếu"
+  "slide_play": "Phát trình chiếu",
+  "filter_lake": "Hồ & hang",
+  "type_lake": "Hồ & hang",
+  "reviewed_value": "tháng 11 năm 2026"
  },
  "ROUTE_NAMES": {
   "first": "DSD (Lặn trải nghiệm)",
@@ -232,6 +235,18 @@
      "role": "Divemaster",
      "intro": "Divemaster người Philippines trong đội W Divers, dẫn thợ lặn trên thuyền và dưới nước.",
      "creds_h": "Chứng chỉ"
+    },
+    {
+     "role": "Tư vấn & phiên dịch",
+     "tag": "Phiên dịch tiếng Anh và Tagalog ở mức bản ngữ",
+     "intro": "Gunan giúp khách lên kế hoạch thời gian ở Coron, phiên dịch trong các buổi hướng dẫn và chuyến đi, đồng thời thiết kế quảng bá và video cho W Divers.",
+     "creds_h": "Công việc",
+     "creds": [
+      "Phiên dịch: tiếng Anh và Tagalog",
+      "Tư vấn khách",
+      "Thiết kế quảng bá",
+      "Biên tập video"
+     ]
     }
    ],
    "screen_h": "Trên màn ảnh ở Coron.",
@@ -341,7 +356,86 @@
   ],
   "special_h": "Chuyến đặc biệt từ Coron.",
   "special_t": "Những ngày dài hơn và chuyến phiêu lưu qua đêm, do đội W Divers tổ chức vào ngày chọn sẵn.",
-  "special_all": "Xem tất cả chuyến đặc biệt"
+  "special_all": "Xem tất cả chuyến đặc biệt",
+  "eyebrow": "Coron, Palawan · Từ năm 2015",
+  "h1": "Lặn khám phá xác tàu Coron.",
+  "trust": [
+   "Huấn luyện viên PADI · SSI · TDI",
+   "Tiếng Anh và tiếng Hàn",
+   "Mở cửa hằng ngày, 7:00 đến 21:00"
+  ],
+  "hero_more": [
+   {
+    "k": "Phía sau ống kính",
+    "h": "Đội ngũ phía sau đoàn làm phim.",
+    "s": "Hỗ trợ lặn cho các đoàn quay phim điện ảnh và truyền hình tại Coron."
+   },
+   {
+    "k": "Chuyến đi đặc biệt",
+    "h": "Xa hơn, vùng nước yên bình hơn.",
+    "s": "Island hopping, Apo Reef và chuyến đi qua đêm ngoài các tuyến quen thuộc."
+   },
+   {
+    "k": "Dưới mặt nước",
+    "h": "Xác tàu từ năm 1944, chỉ một chuyến tàu ngắn.",
+    "s": "Có cả lặn rạn và lặn tự do, lên kế hoạch theo trình độ của bạn."
+   },
+   {
+    "k": "Về W Divers",
+    "h": "Một ngày trên biển của bạn bắt đầu từ đây.",
+    "s": "Huấn luyện viên PADI, SSI và TDI. Nói tiếng Anh và tiếng Hàn."
+   }
+  ],
+  "hero_ocean": [
+   {
+    "h": "Lặn khám phá xác tàu huyền thoại ở Coron.",
+    "s": "Do người Hàn điều hành từ 2015, với huấn luyện viên PADI, SSI và TDI."
+   },
+   {
+    "k": "Phim trường ở Coron",
+    "h": "Được các đoàn phim và truyền hình tin chọn.",
+    "s": "Hỗ trợ lặn cho SBS Law of the Jungle và phim The Golden Holiday."
+   },
+   {
+    "k": "Chuyến đi đặc biệt",
+    "h": "Đầm phá ẩn mình và những hòn đảo hoang sơ.",
+    "s": "Island hopping, Apo Reef và chuyến đi qua đêm do đội ngũ chúng tôi sắp xếp."
+   },
+   {
+    "k": "Lặn xác tàu",
+    "h": "Khám phá xác tàu từ năm 1944.",
+    "s": "Xác tàu, rạn san hô và lặn tự do, theo trình độ của bạn."
+   },
+   {
+    "k": "Tàu lặn của chúng tôi",
+    "h": "Chuẩn bị đồ nghề. Tàu đang chờ bạn.",
+    "s": "Cho chúng tôi biết ngày và kinh nghiệm, chúng tôi sẽ lên kế hoạch cho bạn."
+   }
+  ],
+  "boats_h": "Tàu lặn của chúng tôi.",
+  "boats_t": "Tàu bangka truyền thống có phao hai bên, do thủy thủ đoàn W Divers vận hành.",
+  "boats": [
+   {
+    "img": "boat-1",
+    "name": "W Divers Diving Boat 1",
+    "tag": "Tàu lặn bangka"
+   },
+   {
+    "img": "boat-2",
+    "name": "W Divers Diving Boat 2",
+    "tag": "Tàu lặn bangka"
+   },
+   {
+    "img": "boat-3",
+    "name": "W Divers Diving Boat 3",
+    "tag": "Tàu lặn bangka"
+   },
+   {
+    "img": "boat-kwreck",
+    "name": "K-WRECK",
+    "tag": "Tàu lặn đã được tân trang"
+   }
+  ]
  },
  "CONTACT_INTEREST": [
   [
@@ -393,84 +487,144 @@
   {
    "name": "Du thuyền lặn Apo Reef",
    "short": "Apo Reef",
-   "card": "Du thuyền thuê trọn gói đến một trong những rạn san hô nổi tiếng nhất Philippines, tối đa 10 thợ lặn.",
+   "card": "Du thuyền 4 đêm đến rạn san hô lớn nhất Philippines, tối đa 10 thợ lặn.",
    "title": "Du thuyền lặn Apo Reef | Chuyến đặc biệt | W Divers Coron",
-   "meta": "Tham gia du thuyền lặn của W Divers Coron đến Apo Reef Natural Park: nhóm nhỏ tối đa 10 thợ lặn, nhiều ngày lặn, ăn uống và cabin trên tàu.",
-   "intro": "Apo Reef Natural Park là một trong những điểm lặn nổi tiếng nhất Philippines. W Divers Coron thuê du thuyền cho chuyến đi chỉ dành cho thợ lặn, nhóm nhỏ tối đa 10 người.",
+   "meta": "Du thuyền lặn của W Divers Coron đến Apo Reef, rạn san hô lớn nhất Philippines: 4 đêm, tối đa 10 thợ lặn, đã gồm nitrox và bữa ăn.",
+   "intro": "Apo Reef Natural Park, cách bờ tây Occidental Mindoro khoảng 30 km, là rạn san hô lớn nhất Philippines và nằm trong danh sách dự kiến Di sản Thế giới của UNESCO. W Divers Coron thuê du thuyền Caribbean Tigress cho các nhóm nhỏ chỉ gồm thợ lặn.",
    "facts": [
     [
      "Hình thức",
      "Du thuyền lặn, thuê trọn gói"
     ],
     [
+     "Du thuyền",
+     "Caribbean Tigress"
+    ],
+    [
      "Số người",
      "Tối đa 10 thợ lặn"
     ],
     [
-     "Thời gian thường",
-     "3 đêm 4 ngày"
+     "Thời gian",
+     "4 đêm 5 ngày (chuyến 2027)"
     ],
     [
      "Số lần lặn",
-     "Khoảng 10, cộng lặn đêm tùy chọn"
+     "Gồm 10 lần, thêm nếu còn sức"
+    ],
+    [
+     "Độ sâu và tầm nhìn",
+     "5–40 m, thường 15–50 m"
     ],
     [
      "Lên tàu",
-     "Coron, hoặc Manila (Batangas) ở một số chuyến"
+     "Batangas, có đón tại sân bay Manila"
     ]
    ],
    "sections": [
     {
      "h": "Rạn san hô xứng đáng với hành trình.",
      "p": [
-      "Apo Reef nằm ở eo biển Mindoro, phía tây Mindoro. Đây là công viên tự nhiên được bảo vệ với rạn san hô và vách đá rộng lớn, đi biển mất vài giờ, vì vậy chuyến đi là du thuyền ở lại trên tàu."
+      "Rạn rộng khoảng 34 km², chia thành đầm phía bắc và phía nam. Độ sâu 5 đến 40 m, tầm nhìn thường 15 đến 50 m, dòng chảy nhẹ nên hầu hết là lặn trôi dễ dàng. Cá đuối manta, cá mập, đàn cá nhồng và cá napoleon là điểm nhấn."
      ]
     },
     {
      "h": "Cuộc sống trên tàu.",
      "p": [
-      "Ở các chuyến gần đây, du thuyền đón tối đa 10 thợ lặn trong năm cabin đôi có điều hòa. Bữa ăn và đồ ăn nhẹ được phục vụ suốt chuyến, lặn và hướng dẫn đã bao gồm, và đưa đón khách sạn được sắp xếp trước và sau chuyến đi."
+      "Caribbean Tigress có cabin chính có điều hòa với giường đôi, cùng cabin hai và ba người với giường đơn. Bữa ăn, nước uống, cà phê và trà suốt chuyến, có wifi trên tàu."
      ]
     },
     {
-     "h": "Những điều cần kiểm tra.",
+     "h": "Đã bao gồm.",
+     "list": [
+      "Taxi nước đến du thuyền từ cảng Batangas",
+      "10 lần lặn, lặn thêm miễn phí nếu còn sức",
+      "Nitrox cho mọi lần lặn",
+      "Lặn đêm miễn phí",
+      "Đưa đón sân bay Manila",
+      "Tất cả bữa ăn: sáng, trưa và tối",
+      "Nước uống, cà phê và trà",
+      "Wifi trên tàu"
+     ]
+    },
+    {
+     "h": "Chưa bao gồm.",
+     "list": [
+      "Phí vào Apo Reef Natural Park (100 USD)",
+      "Vé máy bay quốc tế",
+      "Bảo hiểm lặn",
+      "Thuê thiết bị",
+      "Rượu và đồ uống khác (báo nhãn hiệu yêu thích trước khi khởi hành)",
+      "Tiền tip: hướng dẫn viên 60 USD, thủy thủ đoàn 40 USD",
+      "Chi tiêu cá nhân"
+     ]
+    },
+    {
+     "h": "Đặt chỗ và hủy.",
      "p": [
-      "Phí vào Apo Reef Natural Park được tính riêng (100 USD ở một chuyến gần đây). Ngày, số lần lặn và giá phụ thuộc từng chuyến, nên hãy xin đội ngũ thông tin chi tiết bằng văn bản."
+      "Chỗ của bạn được xác nhận khi thanh toán đủ. Vì là du thuyền nên hủy không được hoàn tiền, trừ khi hủy ít nhất ba tháng trước khởi hành thì hoàn 50%. Nếu thời tiết khiến chuyến không đi được, lịch sẽ dời thay vì hoàn tiền; nếu tàu hỏng máy, sẽ dùng du thuyền cùng hạng."
      ]
     }
    ],
+   "prices": {
+    "at": 1,
+    "h": "Giá 2027 mỗi người",
+    "note": "Giá tham khảo cho chuyến năm 2027. Ngày vẫn đang được xác nhận, hãy hỏi đội ngũ giá hiện tại trước khi đặt.",
+    "rows": [
+     [
+      "Cabin chính, giường đôi (2 người)",
+      "2.500 USD"
+     ],
+     [
+      "Cabin đôi, giường đơn",
+      "2.200 USD"
+     ],
+     [
+      "Cabin ba người, giường đơn",
+      "2.000–2.100 USD"
+     ]
+    ]
+   },
    "ask": [
-    "Ngày khởi hành tới và số chỗ còn lại",
-    "Tổng giá và những gì bao gồm",
-    "Phí vào công viên",
+    "Ngày khởi hành 2027 và số chỗ còn lại",
+    "Giá theo loại cabin",
+    "Phí vào công viên và tiền tip",
     "Chứng chỉ và kinh nghiệm cần có",
-    "Bố trí cabin",
-    "Nơi lên tàu"
+    "Chuyến bay đến Manila và thời gian di chuyển",
+    "Bảo hiểm lặn"
    ]
   },
   {
    "name": "Ngắm bò biển",
    "short": "Bò biển",
-   "card": "Khởi hành thật sớm để tìm bò biển ở những vịnh yên tĩnh phía bắc Busuanga.",
+   "card": "Khởi hành thật sớm để gặp bò biển ở Dugong Point, gần Calauit, bắc Busuanga.",
    "title": "Chuyến trong ngày ngắm bò biển | Chuyến đặc biệt | W Divers Coron",
-   "meta": "Chuyến trong ngày của W Divers Coron đi tìm bò biển ở bắc Busuanga, khởi hành sớm để đến trước đám đông, có thể ghé Calauit Safari Park.",
-   "intro": "Bò biển, loài thú biển hiền lành ăn cỏ biển, sống ở vùng nước phía bắc Busuanga. Trong chuyến đi này, thuyền W Divers khởi hành sớm để đến khu vực có bò biển trước các thuyền khác.",
+   "meta": "Chuyến đi trong ngày của W Divers Coron đến Dugong Point ở bắc Busuanga: đón lúc 4 giờ, nhóm bốn người, quy định chính thức và tùy chọn Calauit Safari Park.",
+   "intro": "Bò biển, loài thú biển hiền lành ăn cỏ biển, sống ngoài khơi đảo Calauit ở bắc Busuanga. Bạn khởi hành trước bình minh, đi xe và thuyền đến Dugong Point, rồi ngắm bò biển theo nhóm nhỏ cùng hướng dẫn viên được đào tạo.",
    "facts": [
     [
      "Hình thức",
-     "Chuyến đi thuyền trong ngày"
+     "Chuyến trong ngày bằng xe và thuyền"
     ],
     [
-     "Khởi hành",
-     "Rất sớm buổi sáng"
+     "Đón",
+     "04:00–04:30 tại chỗ ở"
     ],
     [
      "Ở đâu",
-     "Bắc Busuanga (khu vực Aban-Aban)"
+     "Dugong Point, gần Calauit, bắc Busuanga"
     ],
     [
-     "Dưới nước",
-     "Hỏi xem có lặn ống thở hay lặn bình không"
+     "Di chuyển",
+     "1 giờ 40 phút đi xe, rồi 25 phút đi thuyền"
+    ],
+    [
+     "Cùng bò biển",
+     "Khoảng 15 phút mỗi nhóm 4 người"
+    ],
+    [
+     "Về Coron",
+     "Khoảng 15–16 giờ, đôi khi 18–19 giờ"
     ],
     [
      "Thêm",
@@ -481,29 +635,80 @@
     {
      "h": "Vì sao đi sớm.",
      "p": [
-      "Những khu vực bò biển nổi tiếng đông dần theo giờ. Đi trước bình minh cho cơ hội tốt nhất để gặp chúng một cách yên tĩnh, trước khi thuyền khác đến."
+      "Mùa cao điểm Dugong Point rất đông và các nhóm vào theo thứ tự đến. Vì vậy chúng tôi đón bạn từ 4:00 đến 4:30. Nếu chỗ ở không chuẩn bị được bữa sáng, cửa hàng sẽ chuẩn bị bữa sáng đơn giản ăn trên đường."
      ]
     },
     {
-     "h": "Tôn trọng động vật.",
-     "p": [
-      "Bò biển là động vật hoang dã được bảo vệ. Khách làm theo hướng dẫn, giữ khoảng cách và không bao giờ chạm, đuổi theo hay cho ăn. Không bao giờ đảm bảo sẽ nhìn thấy."
+     "h": "Diễn biến trong ngày.",
+     "list": [
+      "1 giờ 40 phút đi xe đến bến Quezon ở bắc Busuanga",
+      "Chất thiết bị lên thuyền, đăng ký và trả phí tại Dugong Office cách bến 5 phút",
+      "Khoảng 25 phút đi thuyền đến Dugong Point",
+      "Nếu nhiều nhóm đang chờ, có thể lặn bờ trước ở đảo Dimipac cách 15 phút",
+      "Hướng dẫn viên bò biển phổ biến cho nhóm rồi tìm bò biển",
+      "Khi tìm thấy, nhóm bốn người của bạn xuống nước khoảng 15 phút",
+      "Ăn trưa trên thuyền, rồi về theo thứ tự ngược lại"
+     ]
+    },
+    {
+     "h": "Quy định khi ngắm bò biển.",
+     "list": [
+      "Tối đa bốn khách dưới nước cùng một con bò biển",
+      "Giữ khoảng cách ít nhất 5 m",
+      "Xuống nước nhẹ nhàng bằng thang và mặc thiết bị trên mặt nước: không nhảy",
+      "Giữ yên lặng trên thuyền, không la khi thấy bò biển",
+      "Không chạm, đuổi theo hay bơi chắn trước bò biển",
+      "Không dùng đèn flash hay strobe",
+      "Để bò biển tự đến gần, không bao giờ tách mẹ và con"
+     ],
+     "after": [
+      "Vi phạm có thể bị phạt nặng và cả nhóm có thể mất lượt. Không bao giờ đảm bảo sẽ nhìn thấy: bò biển là động vật hoang dã."
+     ]
+    },
+    {
+     "h": "Mẹo.",
+     "list": [
+      "Đừng lao đi hết sức khi có tín hiệu: giữ sức cho lần lặn",
+      "Đeo thêm khoảng 1 kg chì để xuống nhanh",
+      "Kem chống nắng và áo khoác nhẹ cho chuyến đi sớm"
      ]
     },
     {
      "h": "Trọn một ngày.",
      "p": [
-      "Chuyến đi có thể kết hợp tham quan Calauit Safari Park ở Busuanga. Hãy hỏi đội ngũ lịch trình trong ngày và những gì bao gồm."
+      "Có thể kết hợp tham quan Calauit Safari Park với hươu cao cổ và ngựa vằn. Hãy hỏi đội ngũ lịch trình trong ngày và những gì bao gồm."
      ]
     }
    ],
    "ask": [
-    "Giờ khởi hành và đón khách",
+    "Giờ đón tại chỗ ở",
     "Lặn ống thở hay lặn bình, và thiết bị",
     "Vé vào cửa và phí môi trường",
     "Lựa chọn Calauit Safari Park",
     "Tổng giá và những gì bao gồm"
-   ]
+   ],
+   "animals": {
+    "h": "Những loài vật khác bạn có thể gặp.",
+    "p": "Không chỉ có bò biển: rùa biển và cá rạn thường thấy khi lặn bờ ở đảo Dimipac, còn Calauit Safari Park là nơi sống của hươu cao cổ và ngựa vằn, hậu duệ của những con được đưa từ Kenya sang năm 1977, cùng loài hươu Calamian đặc hữu.",
+    "items": [
+     [
+      "c-fd-turtle",
+      "Rùa biển thường xuất hiện khi lặn bờ gần Dugong Point."
+     ],
+     [
+      "calauit-giraffes",
+      "Hươu cao cổ đi lại tự do ở Calauit Safari Park."
+     ],
+     [
+      "calauit-feeding",
+      "Ở khu cho ăn, bạn có thể tự tay cho hươu cao cổ ăn."
+     ],
+     [
+      "calauit-zebras",
+      "Ngựa vằn gặm cỏ tự do ở Calauit Safari Park."
+     ]
+    ]
+   }
   },
   {
    "name": "Đảo hoang 2 ngày 1 đêm",
@@ -655,6 +860,139 @@
   "flags-bow": "Cờ Hàn Quốc và Philippines tung bay trên thuyền, đảo xanh nơi chân trời.",
   "yacht-salon": "Phòng khách du thuyền với bếp, ghế sofa và bàn ăn.",
   "fd-standing": "Người lặn tự do đứng trên tảng đá dưới nước giữa những tia nắng.",
-  "calauit-feeding": "Một vị khách đưa tay về phía hươu cao cổ ở Calauit Safari Park, Busuanga."
- }
+  "calauit-feeding": "Một vị khách đưa tay về phía hươu cao cổ ở Calauit Safari Park, Busuanga.",
+  "c-dugong": "Một con bò biển gặm cỏ biển ở phía bắc Busuanga.",
+  "c-dugong-divers": "Các thợ lặn ngắm bò biển từ khoảng cách tôn trọng.",
+  "c-dugong-freediver": "Một người lặn tự do bơi nhẹ nhàng bên bò biển.",
+  "c-dugong-graze": "Bò biển kiếm ăn dưới đáy, người lặn tự do quan sát từ trên.",
+  "c-fd-reef": "Người lặn tự do bám vào tảng đá san hô ở rạn Coron.",
+  "c-fd-sand": "Người lặn tự do với chân vịt dài lướt dọc dây trên cát trắng.",
+  "c-fd-lake": "Người lặn tự do nghỉ trên khúc gỗ ở Barracuda Lake.",
+  "c-fd-lake2": "Người lặn tự do mặc váy trắng trong làn nước trong của Barracuda Lake.",
+  "c-fd-beam": "Người lặn tự do dang tay trong luồng sáng giữa hang động.",
+  "c-fd-cave": "Người lặn tự do đứng trên tảng đá dưới giếng sáng của hang Pukaway.",
+  "c-fd-turtle": "Người lặn tự do lặn xuống phía một con rùa biển.",
+  "c-fd-surface": "Người lặn tự do lướt ngay dưới mặt nước êm.",
+  "c-fd-wreck": "Người lặn tự do bên xác tàu phủ san hô, quanh là đàn cá.",
+  "c-irako-wheel": "Thợ lặn cầm đèn bên bánh lái trong xác tàu Irako.",
+  "c-irako-engine": "Những hàng van động cơ phủ bùn trong xác tàu Irako.",
+  "c-olympia": "Thợ lặn nhìn ra từ căn phòng có song sắt trên tàu Olympia Maru.",
+  "c-akitsushima": "Cần cẩu phủ san hô của tàu Akitsushima, phía xa có thợ lặn.",
+  "c-kogyo": "Chiếc máy ủi phủ san hô trong khoang tàu Kogyo Maru.",
+  "c-yacht": "Du thuyền cho chuyến đi Apo Reef đang neo đậu.",
+  "c-yacht-apo": "Du thuyền gần hòn đảo cát trắng ở Apo Reef.",
+  "c-yacht-cabin": "Cabin chính của du thuyền với giường đôi và ốp gỗ.",
+  "c-yacht-deck": "Khách dùng bữa trên boong có mái che của du thuyền.",
+  "c-island-beach": "Thuyền W Divers neo trước bãi cát trắng.",
+  "c-island-tents": "Lều dựng trên bãi cỏ dưới hàng dừa.",
+  "c-island-sunset": "Thuyền lặn K-WRECK bên bờ lúc hoàng hôn.",
+  "c-island-kayak": "Khách chèo thuyền kayak trên làn nước xanh ngọc.",
+  "c-kwreck": "Thuyền lặn K-WRECK vừa sửa mới, treo cờ Hàn Quốc và cờ lặn ở Coron.",
+  "c-kwreck-bow": "K-WRECK neo ở vịnh Coron, nhìn từ mũi thuyền.",
+  "gunan": "Chân dung Gunan Kang, tư vấn và phiên dịch tại W Divers Coron.",
+  "boat-1": "Diving Boat 1, tàu lặn của W Divers Coron",
+  "boat-2": "Diving Boat 2, tàu lặn của W Divers Coron",
+  "boat-3": "Diving Boat 3, tàu lặn của W Divers Coron",
+  "boat-kwreck": "K-WRECK, tàu lặn của W Divers Coron"
+ },
+ "SITE_PAGE": {
+  "facts_h": "Thông tin điểm lặn",
+  "facts_l": {
+   "kind": "Loại",
+   "length": "Chiều dài",
+   "depth": "Độ sâu",
+   "vis": "Tầm nhìn",
+   "lie": "Tư thế"
+  },
+  "lie": {
+   "upright": "Đứng thẳng",
+   "capsized": "Nằm nghiêng",
+   "starboard": "Nghiêng mạn phải",
+   "port": "Nghiêng mạn trái",
+   "forward": "Chúi mũi"
+  },
+  "facts_src": "Số liệu từ tài liệu hướng dẫn của W Divers Coron.",
+  "title_tpl": "{name} | Điểm lặn Coron | W Divers Coron"
+ },
+ "SITES_KIND": [
+  "Tàu chở dầu",
+  "Tàu mẹ thủy phi cơ",
+  "Tàu hàng tiếp tế phụ trợ",
+  "Tàu hàng tiếp tế phụ trợ"
+ ],
+ "SITES_NEW": [
+  {
+   "card": "Pháo hạm nhỏ ngoài khơi East Tangat, đuôi tàu nông cho người mới và là nơi quay một bộ phim Hàn Quốc.",
+   "kind": "Tàu săn ngầm (pháo hạm)",
+   "p": [
+    "Còn gọi là East Tangat Gunboat, con tàu dài 45 m nằm ở mép rạn: đuôi ở 3 m, buồng lái khoảng 10 m. Phù hợp với Open Water, và đuôi tàu cả cho lặn trải nghiệm. San hô phủ boong, nếu may mắn sẽ thấy cá mandarin. Năm 2018 phim Hàn Quốc The Golden Holiday (국제수사) quay tại đây. Tầm nhìn tốt nhất vào buổi sáng."
+   ]
+  },
+  {
+   "card": "Xác tàu sâu nhất và còn nguyên vẹn nhất ở Coron, dành cho thợ lặn nâng cao.",
+   "kind": "Tàu đông lạnh",
+   "p": [
+    "Irako nằm giữa Tangat và Lusong, boong ở 34 m và bánh lái ở 42 m. Gần như nguyên vẹn trừ cabin thuyền trưởng, đây là một trong những xác tàu đẹp nhất Coron, từ trình độ Advanced. Thường có dòng chảy. Cá mú lớn, cá ngừ, cá sư tử và cá mù làm sống ở đây, đôi khi thấy cả cá mập voi."
+   ]
+  },
+  {
+   "card": "Tàu tiếp tế nằm nghiêng, có nồi hơi lớn, túi khí và gạch chịu lửa.",
+   "kind": "Tàu hàng tiếp tế phụ trợ",
+   "p": [
+    "Morazan nằm nghiêng mạn phải gần Tangat, từ 12 m trên thân đến 25 m ở bánh lái. Có thể thấy bốn khoang hàng, hai nồi hơi lớn và phòng máy, bên trong vẫn còn túi khí. San hô mềm và cứng thu hút cá khế, cá sư tử, cá đá, rùa và tôm hùm."
+   ]
+  },
+  {
+   "card": "Pháo hạm nhỏ phủ san hô, nông đến mức đuôi tàu gần nhô lên khi nước ròng.",
+   "kind": "Tàu săn ngầm (pháo hạm)",
+   "p": [
+    "Con tàu 35 m nằm phía đông đảo Lusong, chúi mũi xuống đến 18 m. Khi nước ròng đuôi tàu gần chạm mặt nước, nên rất hợp cả cho lặn ống thở. San hô cứng phủ kín tàu, xung quanh là hải quỳ, cá bướm và cá thiên thần. Điểm yêu thích của người mới lặn xác tàu và nhiếp ảnh gia."
+   ]
+  },
+  {
+   "card": "Tàu chở dầu ngoài khơi Black Island, thường có nước trong nhất trong các xác tàu ở Coron.",
+   "kind": "Tàu chở nhiên liệu",
+   "p": [
+    "Còn gọi là Black Island Wreck, tàu dầu dài 70 m nằm cách bãi biển Black Island khoảng 50 m, ở tây bắc Busuanga, từ 18 m đến 34 m. Tầm nhìn thường đạt 30 m. San hô đến khoảng 20 m rồi là cát, có cá sư tử, cá dơi, cá mú và cá khế."
+   ],
+   "vis": "đến 30 m"
+  },
+  {
+   "card": "Tàu hàng còn nguyên vẹn xa thị trấn, vẫn còn ô tô và xe tải Nhật trong khoang.",
+   "kind": "Tàu chở hàng",
+   "p": [
+    "Kyokuzan Maru nằm ở đông bắc Busuanga: chuyến đi trọn ngày, khởi hành sớm. Tàu đứng thẳng hơi nghiêng, boong chính ở 24 m và bánh lái ở 40 m. Gần như không hư hại, vẫn còn ô tô và xe tải Nhật bên trong, tầm nhìn thường rất tốt. Hai lần lặn, mũi và đuôi, có thể kết hợp với Dugong Point."
+   ],
+   "vis": "đến 30 m"
+  },
+  {
+   "card": "Bộ khung trơ trọi của một con thuyền nhỏ gần Coron Island, lý tưởng để lặn ống thở và lặn lần đầu.",
+   "kind": "Tàu săn ngầm (pháo hạm)",
+   "p": [
+    "Cách Coron khoảng 15 phút, chỉ còn lại khung thuyền nên mới có tên này. Mũi ở 5 m và điểm sâu nhất khoảng 22 m. San hô, ánh sáng đẹp và nước yên tĩnh khiến nơi đây hoàn hảo để chụp ảnh, lặn trải nghiệm và lặn ống thở, với cá thia, cá sư tử, sên biển và cá vẹt."
+   ]
+  },
+  {
+   "card": "Sà lan dài 90 m với chín khoang hàng mở, từ 18 m ở mũi đến 43 m.",
+   "kind": "Sà lan",
+   "p": [
+    "Chiếc sà lan lớn này chìm khi đang dùng để đánh bắt trái phép. Dài khoảng 90 m, mũi ở 18 m và đáy ở 43 m. Chín khoang mở có thể nhìn từ trên xuống. Vì độ sâu nên dành cho thợ lặn có kinh nghiệm; hãy hỏi đội ngũ cách lên kế hoạch lặn."
+   ]
+  },
+  {
+   "card": "Hồ trong Coron Island, nơi nước mặn ấm nằm dưới nước ngọt, lên đến 39 °C.",
+   "kind": "Hồ có lớp nêm nhiệt",
+   "p": [
+    "Cách Coron 15 phút đi thuyền, ở phía bắc Coron Island. Mang thiết bị leo khoảng 38 bậc gỗ qua đá vôi rồi xuống lại, sau đó lặn giữa các vách sắc nhọn đến 40 m. 4 m trên cùng là nước ngọt khoảng 28 °C, bên dưới là nước mặn ấm, dưới 14 m lên đến 39 °C. Hang ở 21 m sâu khoảng 30 m. Bục xuống nước nhỏ nên các nhóm lần lượt."
+   ],
+   "depth": "đến 40 m"
+  },
+  {
+   "card": "Hang ở mũi nam Coron Island, nơi ánh nắng rọi xuống từ trên cao.",
+   "kind": "Hang động",
+   "p": [
+    "Cách Coron khoảng hai giờ đi banca. Lối vào là đường hẹp dài 5 m, từng người một, đáy nhiều trầm tích, nên khuyến nghị Open Water và kiểm soát nổi tốt. Sau dừng an toàn bạn nổi lên trong hang, nơi ánh sáng từ một lỗ lớn khiến đá vôi ánh xanh lục: tuyệt vời để chụp ảnh nhóm."
+   ]
+  }
+ ]
 }
