@@ -59,7 +59,7 @@
     var slides = $$('[data-slide]', show);
     /* film slide: the hero text is shorter while it shows ("film-on"), and the photo row
        is sized to end just above that text */
-    var setFilm = function (i) { show.classList.toggle('film-on', !!slides[i] && slides[i].classList.contains('fit-collage')); };
+    var setFilm = function (i) { show.classList.toggle('film-on', !!slides[i] && (slides[i].classList.contains('fit-collage') || slides[i].classList.contains('is-collage'))); if (window.fitFan) { window.fitFan(); } };
     /* top of an element relative to the slideshow, ignoring its rise-in animation */
     var restTop = function (el, base) {
       var t = el.getBoundingClientRect().top - base;
@@ -115,6 +115,7 @@
       var room = rtlDir() ? (edge - sr.left) - (sr.right - r.right) - 28 : (sr.right - edge) - (r.left - sr.left) - 28;
       show.style.setProperty('--fan-h', Math.max(160, Math.round((room - 16) / 2.4)) + 'px');
     };
+    window.fitFan = fitFan;
     fitFan();
     window.addEventListener('resize', fitFan);
     window.addEventListener('load', fitFan);
