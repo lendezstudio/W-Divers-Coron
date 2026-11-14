@@ -340,7 +340,7 @@ MEDIA = {
     },
     "c-dugong": {
         "src": (CLIENT13, "Dugong over the seagrass.jpg"),
-        "kind": "business", "focus": "50% 55%", "cats": ["underwater"],
+        "kind": "business", "focus": "50% 76%", "cats": ["underwater"],
         "alt": {"en": "A dugong grazes over a sandy seagrass bed in northern Busuanga.",
                 "ko": "부수앙가 북쪽 해초 모래밭에서 풀을 뜯는 듀공."},
     },
